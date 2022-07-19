@@ -90,7 +90,8 @@ body {
 .main_sample .script{
     
 }
-.main_sample .result{
+.main_sample .result {
+    margin-bottom: 80px;
 
 }
 
