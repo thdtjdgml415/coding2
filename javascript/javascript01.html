@@ -383,7 +383,7 @@ document.write(obj.c);
                 <div class="script">
 <pre><code class="js-language">const obj = {a:100, b:200, c:"javascript"};
 
-    document.write(obj.a);
+document.write(obj.a);
 document.write(obj.b);
 document.write(obj.c);
 </code></pre>                
@@ -423,16 +423,16 @@ document.write(obj[0].c);
             <!-- sample 14 -->
 
             <div id="sample15" class="sample">
-                <h3>객체 : 데이터 저장(키+값) : 표현 방법6</h3>
+                <h3>15. 객체 : 데이터 저장(키+값) : 표현 방법6</h3>
                 <p> 
                     객체는 키와 값으로 구성된 데이터 값을 저장합니다.
                 </p>
                 <div class="script">
 <pre><code class="js-language">const obj = {
-    a: 100,
-    b: [200, 300],
-    c: {x: 400, y: 500},
-    d: "javascript"
+a: 100,
+b: [200, 300],
+c: {x: 400, y: 500},
+d: "javascript"
 }
 
 document.write(obj.a);
@@ -616,9 +616,9 @@ document.write(obj.d);
             obj[1] = 200;
             obj[2] = "javascript";
 
-            document.write(obj[0], "<br>");
-            document.write(obj[1], "<br>");
-            document.write(obj[2], "<br>");
+            // document.write(obj[0], "<br>");
+            // document.write(obj[1], "<br>");
+            // document.write(obj[2], "<br>");
             
             document.querySelector(".sample10_result").innerHTML = obj[0] + "<br>" + obj[1] + "<br>" + obj[2];
         }
@@ -630,9 +630,9 @@ document.write(obj.d);
             obj.b = 200;
             obj.c = "javascript";
 
-            document.write(obj.a);
-            document.write(obj.b);
-            document.write(obj.c);
+            // document.write(obj.a);
+            // document.write(obj.b);
+            // document.write(obj.c);
 
             document.querySelector(".sample11_result").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.c;
         }
@@ -644,9 +644,9 @@ document.write(obj.d);
             obj.b = 200;
             obj.c = "javascript";
 
-            document.write(obj.a);
-            document.write(obj.b);
-            document.write(obj.c);
+            // document.write(obj.a);
+            // document.write(obj.b);
+            // document.write(obj.c);
 
             document.querySelector(".sample12_result").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.c;
         }
@@ -654,9 +654,9 @@ document.write(obj.d);
         {
             const obj = {a:100, b:200, c:"javascript"};
 
-            document.write(obj.a);
-            document.write(obj.b);
-            document.write(obj.c);
+            // document.write(obj.a);
+            // document.write(obj.b);
+            // document.write(obj.c);
 
             document.querySelector(".sample13_result").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.c;
         }
@@ -667,9 +667,9 @@ document.write(obj.d);
             {c:"javascript"}
             ];
                //배열표시 안에 객체
-            document.write(obj[0].a);
-            document.write(obj[0].b);
-            document.write(obj[0].c);
+            // document.write(obj[0].a);
+            // document.write(obj[0].b);
+            // document.write(obj[0].c);
             
             document.querySelector(".sample14_result").innerHTML = obj[0].a + "<br>" + obj[0].b + "<br>" + obj[1].c;
         }
@@ -682,12 +682,12 @@ document.write(obj.d);
                 d: "javascript"
             }
 
-            document.write(obj.a);
-            document.write(obj.b[0]);
-            document.write(obj.b[1]);
-            document.write(obj.c.x);
-            document.write(obj.c.y);
-            document.write(obj.d);
+            // document.write(obj.a);
+            // document.write(obj.b[0]);
+            // document.write(obj.b[1]);
+            // document.write(obj.c.x);
+            // document.write(obj.c.y);
+            // document.write(obj.d);
 
             document.querySelector(".sample15_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1]+"<br>" + obj.c.x + "<br>" + obj.c.y+ "<br>" + obj.d;
         }
