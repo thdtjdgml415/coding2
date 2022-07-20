@@ -121,7 +121,6 @@
     </header>
     <section id="contents">
         <nav class="menu">
-            <article class="article">
             <ul>
                 <li><a href="basic.html">기본 문서</a></li>
                 <li><a href="markup.html">기본 규칙</a></li>
@@ -130,38 +129,38 @@
                 <li><a href="block.html">블록/인라인 요소</a></li>
             </ul>
         </nav>    
+        <article class="article">
         <h2>01. 시멘틱 마크업</h2>
-        <pre class="box">
-            &lt;DOCTYPE html&gt;
-           &lt;html lang="ko"&gt;
-            &lt;head&gt;
-                &lt;meta charset="UTF-8"&gt;
-                &lt;title>시멘틱 마크업&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-                    반응형웹
-            &lt;/body&gt;
-            &lt;/html&gt;
-        </pre>
+    <pre class="box">
+&lt;DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title>시멘틱 마크업&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        반응형웹
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
             만약 '반응형웹'이 HTML 문서에서 제목으로 사용된다고 가정할 경우[예시1-2]처럼 마크업하면,
             스크린 리더(음성낭독프로그램)에서는 그저 '반응형웹'이라고만 읽어주기 때문에 그 것이 제목인지를 알 수가 없다.
-        <pre class="box">
-            &lt;DOCTYPE html&gt;
-            &lt;html lang="ko"&gt;
-            &lt;head&gt;
-                &lt;meta charset="UTF-8"&gt;
-                &lt;title>시멘틱 마크업&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-                &lt;h1&gt;반응형웹&lt;/h1&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
-        </pre>
+    <pre class="box">
+&lt;DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title>시멘틱 마크업&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;반응형웹&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
         <h3>note</h3>
-        <pre>  
-            실제 마크업을 할 때는 작업자마다 콘텐츠의 의미를 해석하는 차이가 조금 있을 수도 씨지만 가급적 시멘틱하게<br>
-            마크업을 하려고 노력하는 것이 중요합니다.
-        </pre>
+<pre class="box">실제 마크업을 할 때는 작업자마다 콘텐츠의 의미를 해석하는 차이가 조금 있을 수도 씨지만 가급적 시멘틱하게<br>
+마크업을 하려고 노력하는 것이 중요합니다.
+</pre>
             </article>
         </section>
     </body>
