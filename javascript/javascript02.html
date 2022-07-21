@@ -208,8 +208,7 @@ document.write(arr.length);</code></pre>
                     for문을 사용해 코드를 효과적으로 줄여서 사용한다.
                 </p>
                 <div class="script">
-<pre><code class="language-js">
-const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900]
+<pre><code class="language-js">const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 
 // document.write(arr[0]);
 // document.write(arr[1]);
@@ -246,8 +245,7 @@ for (let i = 0; i < arr.length; i++){
                 <h3>07. 배열 : 데이터 불러오기 : forEach()</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js">
-const num = [100, 200, 300, 400, 500];
+<pre><code class="language-js">const num = [100, 200, 300, 400, 500];
 
 //for문을 이용해서 출력
 for(let i = 0; i&lt;num.length; i++){
@@ -342,17 +340,17 @@ for( let i in arr){
                 </p>
                 <div class="script">
 <pre><code class="language-js">const arr = [100 ,200, 300, 400, 500];  // forEach문은 값을 값으로 저장
-arr.forEach(function(el){
+    arr.forEach(function(el){
     //document.write(el);
     //console.log(el);
 });      //forEach 값
 
-arr.map(function(el){    // map은 값을 배열로 저장
+    arr.map(function(el){    // map은 값을 배열로 저장
     document.write(el);
     console.log(el);
 });
 
-arr.map(function(el, index, array){ //forEach문과 마찬가지로 3가지 값이 모두 출력가능하다.
+    arr.map(function(el, index, array){ //forEach문과 마찬가지로 3가지 값이 모두 출력가능하다.
     //document.write(el);
     //document.write(index);
     //document.write(array); // map 값

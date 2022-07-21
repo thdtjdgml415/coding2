@@ -153,19 +153,19 @@ document.write(z);
 <pre><code class="js-language">let x1 = 100; //전역변수
 let y1 = 200;
 
-function func(){
-let x1 = 100;    //지역변수
-let z1 = "javascript"; //지역변수
-x1 = 200; //지역변수 x1 100 --> 200
-y1 = 300; //전역변수 y1 200 --> 300
+    function func(){
+    let x1 = 100;    //지역변수
+    let z1 = "javascript"; //지역변수
+    x1 = 200; //지역변수 x1 100 --> 200
+    y1 = 300; //전역변수 y1 200 --> 300
 
-x = 300;   //지역변수 x에 값이 100에서 300으로 변경
+    x = 300;   //지역변수 x에 값이 100에서 300으로 변경
 
-document.write("04. 변수 : 함수 안");
-document.write(x1);
-document.write(y1);
-document.write(z1);
-}
+    document.write("04. 변수 : 함수 안");
+    document.write(x1);
+    document.write(y1);
+    document.write(z1);
+    }
 func();
 
 document.write("04. 변수 : 함수 밖");
@@ -228,9 +228,9 @@ document.write(z);
                 </p>
                 <div class="script">
 <pre><code class="js-language">const arr = new Arry();
-arr[0] = 100; //0번째 배열
-arr[1] = 200; //1번째 배열
-arr[2] = "javascript"; // 2번째 배열
+    arr[0] = 100; //0번째 배열
+    arr[1] = 200; //1번째 배열
+    arr[2] = "javascript"; // 2번째 배열
 
 document.write(arr[0]);
 document.write(arr[1]);
@@ -255,15 +255,14 @@ document.write(arr[2]);
                     배열은 여러개의 데이터를 저장할 수 있는 저장소입니다.
                 </p>
                 <div class="script">
-<pre><code class="js-language">const arr = new Arry();
-arr[0] = 100; 
-arr[1] = 200;
-arr[2] = "javascript";
+<pre><code class="js-language">const arr = new Array();
+    arr[0] = 100; 
+    arr[1] = 200;
+    arr[2] = "javascript";
 
 document.write(arr[0]);
 document.write(arr[1]);
-document.write(arr[2]);
-        </code></pre>                
+document.write(arr[2]);</code></pre>                
                 </div> 
                     <div class="result">
                         <details>
@@ -282,9 +281,9 @@ document.write(arr[2]);
                 </p>
                 <div class="script">
 <pre><code class="js-language">const arr = [];
-arr[0] = 100; 
-arr[1] = 200;
-arr[2] = "javascript";
+    arr[0] = 100; 
+    arr[1] = 200;
+    arr[2] = "javascript";
 
 document.write(arr[0]);
 document.write(arr[1]);
@@ -307,14 +306,13 @@ document.write(arr[2]);
                 </p>
                 <div class="script">
 <pre><code class="js-language">const obj = new Object();
-obj[0] = 100;
-obj[1] = 200;
-obj[2] = "javascript";
+    obj[0] = 100;
+    obj[1] = 200;
+    obj[2] = "javascript";
 
 document.write(obj[0]);
 document.write(obj[1]);
-document.write(obj[2]);
-</code></pre>                
+document.write(obj[2]);</code></pre>                
                 </div> 
                     <div class="result">
                         <details>
@@ -331,12 +329,11 @@ document.write(obj[2]);
                     객체는 키와 값으로 구성된 데이터 값을 저장합니다.
                 </p>
                 <div class="script">
-<pre><code class="js-language">
-const obj = new Object();
+<pre><code class="js-language">const obj = new Object();
 
-obj.a = 100;
-obj.b = 200;
-obj.c = "javascript";
+    obj.a = 100;
+    obj.b = 200;
+    obj.c = "javascript";
 
 document.write(obj.a)
 document.write(obj.b)
@@ -359,9 +356,9 @@ document.write(obj.c)
                 </p>
                 <div class="script">
 <pre><code class="js-language">const obj = {} //배열과 비슷함
-obj.a = 100;
-obj.b = 200;
-obj.c = "javascript";
+    obj.a = 100;
+    obj.b = 200;
+    obj.c = "javascript";
 
 document.write(obj.a);
 document.write(obj.b);
@@ -406,8 +403,8 @@ document.write(obj.c);
                 </p>
                 <div class="script">
 <pre><code class="js-language">const obj = [
-{a:100, b:200},
-{c:"javascript"}
+    {a:100, b:200},
+    {c:"javascript"}
 ];   //배열표시 안에 객체
 
 document.write(obj[0].a);
@@ -431,10 +428,10 @@ document.write(obj[0].c);
                 </p>
                 <div class="script">
 <pre><code class="js-language">const obj = {
-a: 100,
-b: [200, 300],
-c: {x: 400, y: 500},
-d: "javascript"
+    a: 100,
+    b: [200, 300],
+    c: {x: 400, y: 500},
+    d: "javascript"
 }
 
 document.write(obj.a);
@@ -487,20 +484,21 @@ document.write(obj.c);
                 </p>
                 <div class="script">
 <pre><code class="js-language">const obj = {
-a : 100,
-b : [200, 300],
-c : {x:400, y:500},
-d : "javascript",
-e : function(){
-    document.write("자바스크립트가 실행되었습니다.")
-},
-f : function(){
-    document.write( obj.d + "가 실행되었습니다.")
-},
-g : function(){
-    document.write( this.d + "가 실행되었습니다.")
-},
-}
+        a : 100,
+        b : [200, 300],
+        c : {x:400, y:500},
+        d : "javascript",
+        
+        e : function(){
+            document.write("자바스크립트가 실행되었습니다.")
+        },
+        f : function(){
+            document.write( obj.d + "가 실행되었습니다.")
+        },
+        g : function(){
+            document.write( this.d + "가 실행되었습니다.")
+        }
+    }
 document.write(obj.a);
 document.write(obj.b[0]);
 document.write(obj.b[1]);
