@@ -1,54 +1,59 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>02flex 방식의 반응형 레이아웃</title>
+
     <style>
         * {
             margin: 0;
         }
-        body {
-            background-color: #FFF3E0;
+        body{
+            background-color: #E8F5E9;
         }
-        #wrap{
+        #wrap {
             width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto;;
             display: flex;
             flex-wrap: wrap;
         }
-        #header{
+        #header {
             width: 100%;
             height: 100px;
-            background-color: #FFE0B2;
+            background-color: #C8E6C9;
         }
-        #nav{
+        #nav {
             width: 100%;
             height: 100px;
-            background-color: #FFCC80;
+            background-color: #A5D6A7;
         }
-        #aside{
+        #aside {
             width: 30%;
             height: 780px;
-            background-color: #FFB74D;
+            background-color: #81C784;
         }
-        #section{
-            width: 70%;
+        #section {
+            width: 50%;
             height: 780px;
-            background-color: #FFA726;
+            background-color: #66BB6A;
         }
-        #footer{
-            width: 100%;
+        #footer {
+            width: 20%;
+            height: 780px;
+            background-color: #4CAF50;
+        }
+        #article {
+            width: 1200px;
             height: 100px;
-            background-color: #FF9800;
+            background-color: #43A047;
         }
         @media(max-width: 1220px){
             #wrap {
                 width: 96%;
                 height: 100%;
             }
-
         }
         @media(max-width: 768px){
             #wrap {
@@ -59,23 +64,36 @@
         @media(max-width: 480px){
             #aside {
                 width: 100%;
-                height: 300px;
+                height: 200px;
             }
             #section {
                 width: 100%;
-                height: 480px;
+                height: 430px;
             }
+            #footer{
+                width: 100%;
+                height: 150px;
+            }
+
         }
 
     </style>
 </head>
 <body>
+
+                    <!-- 02. float방식의 레이아웃
+                    02_01 float방식의 반응형 레이아웃
+                    02_02 flex방식의 레이아웃
+                    02_03 flex 방식의 반응형 레이아웃
+                    02_04 grid 방식의 레이아웃
+                    02_05 grid 방식의 반응형 레이아웃 -->
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
         <div id="aside"></div>
         <div id="section"></div>
         <div id="footer"></div>
+        <div id="article"></div>
     </div>
 </body>
 </html>
