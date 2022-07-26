@@ -71,9 +71,9 @@
         <h3 class="t_tit2">0부터 99까지 출력하기</h3>
         <div class="t_code">
 <pre><code class="js-language"> //0부터 99까지 출력하기
-    for( let i=0; i&lt;100; i++){
-        document.write(i);
-    }
+for ( let i=0; i&lt;100; i++){
+    document.write(i);
+}
 </code></pre>
             </div>
             <div class="t_result">
@@ -94,7 +94,7 @@
         <h3 class="t_tit2">1부터 100까지 출력하기</h3>
         <div class="t_code">
 <pre><code class="js-language">//1부터 100까지 출력하기
-for( let i=0; i&lt;=100; i++){
+for ( let i=0; i&lt;=100; i++){
     document.write(i);
 }
 </code></pre>
@@ -112,7 +112,7 @@ for( let i=0; i&lt;=100; i++){
         <h3 class="t_tit2">1부터 100까지 출력하기(짝수)</h3>
         <div class="t_code">
 <pre><code class="js-language">//2부터 100까지 출력하기(짝수만)
-for( let i=2; i&lt;=100; i+=2){  // i+=2, == i = i + 2
+for ( let i=2; i&lt;=100; i+=2){  // i+=2, == i = i + 2
     document.write(i);
 }
 </code></pre>
@@ -131,10 +131,10 @@ for( let i=2; i&lt;=100; i+=2){  // i+=2, == i = i + 2
 
         <h3 class="t_tit2">1부터 100까지 출력하기(5의 배수)</h3>
         <div class="t_code">
-<pre><code class="js-language"> for(let i = 1; i<101; i++){
-    if(i % 5 == 0) {
-     document.write("&lt;span style='color: blue'&gt;"+i+"&lt;/span&gt;")
-    }
+<pre><code class="js-language">for (let i = 1; i<101; i++){
+if ( i % 5 == 0) {
+    document.write("&lt;span style='color: blue'&gt;"+i+"&lt;/span&gt;")
+}
 </code></pre>
             </div>
             <div class="t_result">
@@ -148,15 +148,15 @@ for( let i=2; i&lt;=100; i+=2){  // i+=2, == i = i + 2
 
     <!-- 5의배수 출력하기 -->
 
-    <h3 class="t_tit2">for문을 이용해서 1~100까지 출력(5의배수, 7의배수)</h3>
+        <h3 class="t_tit2">for문을 이용해서 1~100까지 출력(5의배수, 7의배수)</h3>
         <div class="t_code">
 <pre><code class="js-language">//for문을 이용해서 1~100까지 출력(5의배수, 7의배수)
-    for(let i = 1; i<101; i++){ 
-        if(i % 5 == 0) { 
-            document.write("&lt;span style='color: blue'&gt;"+i+"&lt;/span&gt;") 
-        } if(i % 7 == 0){ 
-            document.write("&lt;span style='color: red'&gt;"+i+"&lt;/span&gt;")
-        }</code></pre>
+for (let i = 1; i<101; i++){ 
+if (i % 5 == 0) { 
+    document.write("&lt;span style='color: blue'&gt;"+i+"&lt;/span&gt;") 
+} if (i % 7 == 0){ 
+    document.write("&lt;span style='color: red'&gt;"+i+"&lt;/span&gt;")
+}</code></pre>
             </div>
             <div class="t_result">
                 <details>
@@ -169,21 +169,21 @@ for( let i=2; i&lt;=100; i+=2){  // i+=2, == i = i + 2
 
     <!-- for문을 이용해서 1~100까지 출력(5의배수, 7의배수) -->
 
-    <h3 class="t_tit2">for문을 이용해서 1~100까지 출력 (짝수는 빨간색, 홀수는 파란색) : 조건부 연산자</h3>
+        <h3 class="t_tit2">for문을 이용해서 1~100까지 출력 (짝수는 빨간색, 홀수는 파란색) : 조건부 연산자</h3>
         <div class="t_code">
 <pre><code class="js-language">for(let i=1; i<101; i++) {
 ( i % 2 == 0) ? document.write("&lt;span style='color : red'&gt;"+i+"&lt;/span&gt;") : document.write("&lt;span style='color : blue'&gt;"+i+"&lt;/span&gt;");
 }</code></pre>
         </div>
-        <div class="t_result">
-            <details>
-                <summary>결과 확인하기</summary>
-                <div class="result02">
-                    1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950<br>
-                    51525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100
-                </div>
-            </details>
-        </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div class="result02">
+                        1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950<br>
+                        51525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100
+                    </div>
+                </details>
+            </div>
 
 
 
@@ -194,8 +194,8 @@ for( let i=2; i&lt;=100; i+=2){  // i+=2, == i = i + 2
     <h3 class="t_tit2">for문을 이용해서 구구단 출력하기</h3>
         <div class="t_code">
  <pre><code class="js-language">for(let i=1; i<101; i++) {
-    ( i % 2 == 0) ? document.write("&lt;span style='color : red'&gt;"+i+"&lt;/span&gt;") : document.write("&lt;span style='color : blue'&gt;"+i+"&lt;/span&gt;");
-    }
+( i % 2 == 0) ? document.write("&lt;span style='color : red'&gt;"+i+"&lt;/span&gt;") : document.write("&lt;span style='color : blue'&gt;"+i+"&lt;/span&gt;");
+}
     
     //for문을 이용해서 구구단
 
@@ -212,12 +212,12 @@ for( let i=2; i&lt;=100; i+=2){  // i+=2, == i = i + 2
     //     2 * 8 = 16
     //     2 * 9 = 18
     
-    for( let i=1; i<=9; i++) {
-        for( let j=1; j<=9; j++){
-            let sum = i * j;
-            document.write(i+ "*"+ j + "=" + sum);
-        }
-    }</code></pre>
+for( let i=1; i<=9; i++) {
+    for( let j=1; j<=9; j++){
+        let sum = i * j;
+        document.write(i+ "*"+ j + "=" + sum);
+    }
+}</code></pre>
             </div>
             <div class="t_result">
                 <details>
@@ -242,16 +242,16 @@ for( let i=2; i&lt;=100; i+=2){  // i+=2, == i = i + 2
         <p class="t_sesc">중첩 for문을 이용해서 테이블을 만들 수 있습니다.</p>
         <div class="t_code">
 <pre><code class="js-language">let table = "&lt;table&gt;";
-    for(let i=0; i&lt;10; i++){
-        table += "&lt;tr&gt;";
+for(let i=0; i&lt;10; i++){
+    table += "&lt;tr&gt;";
 
-    for(let j=0; j&lt;10; j++){
-        table += "&lt;td&gt;1&lt;/td&gt;"
-    }
-        table += "&lt;/tr&gt;";
-    }
-    
-    table += "&lt;/table&gt;"
+for(let j=0; j&lt;10; j++){
+    table += "&lt;td&gt;1&lt;/td&gt;"
+}
+    table += "&lt;/tr&gt;";
+}
+
+table += "&lt;/table&gt;"
 
 document.write(table);
 </code></pre>
