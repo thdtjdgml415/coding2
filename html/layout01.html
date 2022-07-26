@@ -32,97 +32,277 @@
                 <li><a href="seo.html">검색엔진시스템(SEO)</a></li>
             </ul>
             <ul>
-                <li class="active"><a href="layout01.html">레이아웃1</a></li>
+                <li><a href="layout01.html">레이아웃1</a></li>
                 <li><a href="layout02.html">레이아웃2</a></li>
-                <li><a href="layout03.html">레이아웃3</a></li>
+                <li class="active"> <a href="layout03.html">레이아웃3</a></li>
                 <li><a href="layout04.html">레이아웃4</a></li>
                 <li><a href="layout05.html">레이아웃5</a></li>
             </ul>    
         </nav>
         <div class="main_refer">
             <div class="document">
-                <h2 class="t_tit">레이아웃4</h2>
-                <p class="t_desc">
+                <h2 class="t_tit">레이아웃1</h2>
+                <p class="t_desc2">
                     이번 레이아웃은 전체 영역이 들어간 구조입니다.
                     실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
                     가운데 영역을 설정합니다.
                 </p>
-            <div class="t_iframe">
-                <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeWV94w0TLw2jYyVRWHWsMf%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D52%253A7" allowfullscreen>
-                </iframe>
-            </div>
-            <h3 class="t_tit">float을 이용한 레이아웃</h3>
-            <p class="t_desc">
-                이번 레이아웃은 전체 영역이 들어간 구조입니다.
-                실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
-                가운데 영역을 설정합니다.
-            </p>  
-            <div class="t_code">
-<pre><code class="language-css">* {
+                <div class="t_iframe">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeWV94w0TLw2jYyVRWHWsMf%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+                </div>
+                <!-- float -->
+                <h3 class="t_tit">float을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    이번 레이아웃은 전체 영역이 들어간 구조입니다.
+                    실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
+                    가운데 영역을 설정합니다.
+                </p>  
+           <div class="t_code">
+<pre><code class="language-css">*{
     margin: 0;
 }
-body {
-    background-color: #FFFFFF;
+#body {
+    background-color: #FFF3E0;
 }
 #wrap {
     width: 1200px;
-    margin: 0 auto;;
+    margin: 0 auto;
 }
 #header {
-    width: 1200px;
+    width: 100%;
     height: 100px;
-    background-color: #B3E5FC;
+    background-color: #FFE0B2;
 }
 #nav {
-    width: 1200px;
+    width: 100%;
     height: 100px;
-    background-color: #81D4FA;
+    background-color: #FFCC80;
 }
 #aside {
-    width: 300px;
+    width: 30%;
     height: 780px;
-    background-color: #4FC3F7;
+    background-color: #FFB74D;
     float: left;
 }
-#article1 {
-    width: 900px;
-    height: 260px;
-    background-color: #29B6F6;
-    float: left;
-}
-#article2 {
-    width: 900px;
-    height: 260px;
-    background-color: #03A9F4;
-    float: left;
-    
-}
-#article3 {
-    width: 900px;
-    height: 260px;
-    background-color: #039BE5;
+#section {
+    width: 70%;
+    height: 780px;
+    background-color: #FFA726;
     float: left;
 }
 #footer {
-    width: 1200px;
+    width: 100%;
     height: 100px;
-    background-color: #0288D1;
+    background-color: #FF9800;
     clear: both;
+}
+@media(max-width: 1220px){
+    #wrap {
+        width: 96%;
+        height: 100%;
+    }
+}
+@media(max-width: 768px){
+    #wrap {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section {
+        width: 100%;
+        height: 480px;
+    }
 }
 </code></pre>
             </div> 
             <h4 class="t_tit2">결과</h4>
             <div class="t_iframe">
-                <iframe src="https://codepen.io/thdtjdgml415/embed/ZExJNym?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                    See the Pen <a href="https://codepen.io/thdtjdgml415/pen/ZExJNym">
-                    layout04-float</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                <iframe src="https://codepen.io/thdtjdgml415/embed/GRxMpyG?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/thdtjdgml415/pen/GRxMpyG">
+                    Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
                     on <a href="https://codepen.io">CodePen</a>.
-                  </iframe>     
+                </iframe>
             </div>
         </div>
 
+
+
+
+        <!-- flex -->
+        <h3 class="t_tit">flex을 이용한 레이아웃</h3>
+        <p class="t_desc2">
+            이번 레이아웃은 전체 영역이 들어간 구조입니다.
+            실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
+            가운데 영역을 설정합니다.
+        </p>  
+   <div class="t_code">
+<pre><code class="language-css">      * {
+    margin: 0;
+}
+body {
+    background-color: #FFF3E0;
+}
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: #FFE0B2;
+}
+#nav{
+    width: 100%;
+    height: 100px;
+    background-color: #FFCC80;
+}
+#aside{
+    width: 30%;
+    height: 780px;
+    background-color: #FFB74D;
+}
+#section{
+    width: 70%;
+    height: 780px;
+    background-color: #FFA726;
+}
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: #FF9800;
+}
+@media(max-width: 1220px){
+    #wrap {
+        width: 96%;
+        height: 100%;
+    }
+
+}
+@media(max-width: 768px){
+    #wrap {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section {
+        width: 100%;
+        height: 480px;
+    }
+}
+</code></pre>
+    </div> 
+    <h4 class="t_tit2">결과</h4>
+    <div class="t_iframe">
+        <iframe src="https://codepen.io/thdtjdgml415/embed/GRxMpyG?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/thdtjdgml415/pen/GRxMpyG">
+            Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+            on <a href="https://codepen.io">CodePen</a>.
+        </iframe>
+    </div>
+</div>
+
+
+
+
+
+<!-- grid -->
+        <h3 class="t_tit">flex을 이용한 레이아웃</h3>
+        <p class="t_desc2">
+            이번 레이아웃은 전체 영역이 들어간 구조입니다.
+            실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
+            가운데 영역을 설정합니다.
+        </p>  
+   <div class="t_code">
+<pre><code class="language-css">        * {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #FFF3E0;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto; /* 블록구조를 가운데 정렬 */
+}
+#header {
+    height : 100px;
+    background-color: #FFE0B2;
+}
+#nav {
+    height : 100px;
+    background-color: #FFCC80;
+}
+#box {
+    display: grid;
+    grid-template-areas:
+    "aside section"
+    "aside section"
+    ;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 780px 780px;
+}
+#aside {
+    grid-area: aside;
+    background-color: #FFB74D;
+}
+#section {
+    grid-area: section;
+    background-color: #FFA726;
+}
+#footer {
+    height: 100px;
+    background-color: #FF9800;
+}
+@media(max-width: 1220px){
+    #wrap {
+        width: 96%;
+    }
+}
+@media(max-width: 768px){
+    #wrap {
+        width: 100%;
+    }
+}
+@media(max-width: 480px){
+    #wrap {
+        width: 100%;
+    }
+    #box {
+        display: grid;
+        grid-template-areas:
+        "aside"
+        "section"
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: 300px 480px;
+    }
+}
+</code></pre>
+    </div> 
+    <h4 class="t_tit2">결과</h4>
+    <div class="t_iframe">
+            <iframe src="https://codepen.io/thdtjdgml415/embed/GRxMpyG?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/thdtjdgml415/pen/GRxMpyG">
+                Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
         </div>
-    </main>
+    </div>
+
+    </div>
+ </main>
     
             <!-- //main -->
     <footer id="footer">
