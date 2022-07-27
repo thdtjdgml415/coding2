@@ -142,7 +142,13 @@ if ( i % 5 == 0) {
                 <details>
                     <summary>결과 확인하기</summary>
                     <div class="result04">
-                        5101520253035404550556065707580859095100
+                        <script>
+                            for (let i = 1; i<101; i++){
+                                if ( i % 5 == 0) {
+                                    document.write("<span style='color: blue'>"+i+"</span>")
+                                }
+                            }
+                        </script>
                     </div>
                 </details>
             </div>
@@ -163,7 +169,17 @@ if (i % 5 == 0) {
                 <details>
                     <summary>결과 확인하기</summary>
                     <div class="result05">
-                        5710141520212528303535404245495055566063657070757780848590919598100
+                        <script>
+                                {
+                                    for (let i = 1; i<101; i++){ 
+                                        if (i % 5 == 0) { 
+                                            document.write("<span style='color: blue'>"+i+"</span>") 
+                                        } if (i % 7 == 0){ 
+                                            document.write("<span style='color: red'>"+i+"</span>")
+                                        }
+                                    }
+                                }
+                        </script>
                     </div>
                 </details>
             </div>
@@ -180,8 +196,11 @@ if (i % 5 == 0) {
                 <details>
                     <summary>결과 확인하기</summary>
                     <div class="result02">
-                        1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950<br>
-                        51525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100
+                        <script>
+                        for(let i=1; i<101; i++) {
+                            ( i % 2 == 0) ? document.write("<span style='color : red'>"+i+"</span>") : document.write("<span style='color : blue'>"+i+"</span>");
+                        }
+                    </script>
                     </div>
                 </details>
             </div>
@@ -194,11 +213,7 @@ if (i % 5 == 0) {
      
     <h3 class="t_tit2">for문을 이용해서 구구단 출력하기</h3>
         <div class="t_code">
- <pre><code class="js-language">for(let i=1; i<101; i++) {
-( i % 2 == 0) ? document.write("&lt;span style='color : red'&gt;"+i+"&lt;/span&gt;") : document.write("&lt;span style='color : blue'&gt;"+i+"&lt;/span&gt;");
-}
-    
-    //for문을 이용해서 구구단
+ <pre><code class="js-language">//for문을 이용해서 구구단
 
     // (2,3,4,5,6,7,8,9)
     // (1,2,3,4,5,6,7,8,9)
