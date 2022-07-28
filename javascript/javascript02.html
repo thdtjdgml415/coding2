@@ -35,6 +35,7 @@
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터 타입</a></li>
                 <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/var.html">지역변수/전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -458,7 +459,35 @@ for( let i in arr){
             //  document.write(array);
         });100200300400500
     }
-       // map
+       // 
+       //
+        const arr = [1,2,3,4,5,6,7,8,9];
+
+        for(let i = 0; i<9; i++){
+            document.write(arr[i]);
+        }
+            document.write("<br>");
+        //for문을 이용해서 하나씩 출력해주세요!
+
+        arr.forEach(function(array) {
+            document.write(array)
+        });
+            document.write("<br>");
+        //forEach 이용해서 하나씩 출력
+        arr.map(function(el) {
+            document.write(el)
+        })
+            document.write("<br>");
+        //map()을 이용해서 출력
+        for(let i in arr){
+            document.write(arr[i]);
+        }
+        document.write("<br>");
+        //for in 이용해서 하나씩 출력
+        for( let i of arr){
+             document.write(i);
+            } 
+        //for of 이용해서 하나씩 출력
     </script>
 </body>
 </html>
