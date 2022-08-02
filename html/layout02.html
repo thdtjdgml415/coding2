@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,11 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- 구글아이콘 -->
 </head>
+
 <body>
     <header id="header">
         <h1><a href="#"> 라인 중학교 1학년 코딩반</a></h1>
@@ -37,27 +40,28 @@
                 <li><a href="layout03.html">레이아웃3</a></li>
                 <li><a href="layout04.html">레이아웃4</a></li>
                 <li><a href="layout05.html">레이아웃5</a></li>
-            </ul>    
+            </ul>
         </nav>
         <div class="main_refer">
             <div class="document">
                 <h2 class="t_tit">레이아웃2</h2>
                 <p class="t_desc2">
-                    이번 레이아웃은 전체 영역이 들어간 구조입니다.
-                    실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
-                    가운데 영역을 설정합니다.
+                    이번 레이아웃은 한단계 더 높은 수준의 영역으로 한줄에 세가지의 영역을 나열합니다. <br>
+                    이번 영역은 header, nav, (aside, section, footer), article로 영역을 나누었습니다. <br>
+
                 </p>
                 <div class="t_iframe">
-                    <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeWV94w0TLw2jYyVRWHWsMf%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D52%253A5" allowfullscreen></iframe>
+                    <iframe width="800" height="450"
+                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeWV94w0TLw2jYyVRWHWsMf%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D52%253A5"
+                        allowfullscreen></iframe>
                 </div>
                 <!-- float -->
                 <h3 class="t_tit">float을 이용한 레이아웃</h3>
                 <p class="t_desc2">
-                    이번 레이아웃은 전체 영역이 들어간 구조입니다.
-                    실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
-                    가운데 영역을 설정합니다.
-                </p>  
-           <div class="t_code">
+                    aside와 section,footer영역을 한줄로 배치하기 위해서 float속성을 사용해서 작업했습니다.<br>
+                    하지만 오류로 인해서 article부분이 없어지기 때문에 clear:both를 사용해서 버그를 수정했습니다..
+                </p>
+                <div class="t_code">
 <pre><code class="language-css"> * {
     margin: 0;
 }
@@ -125,28 +129,23 @@ body{
     }
 }
 </code></pre>
-            </div> 
-            <h4 class="t_tit2">결과</h4>
-            <div class="t_iframe">
-                <iframe   src="https://codepen.io/thdtjdgml415/embed/GRxMpyG?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                    See the Pen <a href="https://codepen.io/thdtjdgml415/pen/GRxMpyG">
-                    Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
-                    on <a href="https://codepen.io">CodePen</a>.
-                </iframe>
-            </div>
-        </div>
+                </div>
+                <h4 class="t_tit2">결과</h4>
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/thdtjdgml415/embed/yLKvVqX?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/thdtjdgml415/pen/yLKvVqX">
+                        Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
+                </div>
 
-
-
-
-        <!-- flex -->
-        <h3 class="t_tit">flex을 이용한 레이아웃</h3>
-        <p class="t_desc2">
-            이번 레이아웃은 전체 영역이 들어간 구조입니다.
-            실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
-            가운데 영역을 설정합니다.
-        </p>  
-   <div class="t_code">
+                <!-- flex -->
+                <h3 class="t_tit">flex을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                flex는 제가 지정한 모든 태그들의 부모태그인 wrap태그에 display: flex를 지정 후  <br>
+                모든 태그들이 잘 배치 될 수 있도록 flex-wrap:wrap; 을 사용해서 배치합니다.
+                </p>
+                <div class="t_code">
 <pre><code class="language-css">* {
     margin: 0;
 }
@@ -217,29 +216,29 @@ body{
 
 }
 </code></pre>
-    </div> 
-    <h4 class="t_tit2">결과</h4>
-    <div class="t_iframe">
-        <iframe  src="https://codepen.io/thdtjdgml415/embed/GRxMpyG?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href="https://codepen.io/thdtjdgml415/pen/GRxMpyG">
-            Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
-            on <a href="https://codepen.io">CodePen</a>.
-        </iframe>
-    </div>
-</div>
+                </div>
+                <h4 class="t_tit2">결과</h4>
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/thdtjdgml415/embed/NWYybLR?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/thdtjdgml415/pen/NWYybLR">
+                        Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
+                </div>
 
 
 
 
 
-<!-- grid -->
-        <h3 class="t_tit">grid을 이용한 레이아웃</h3>
-        <p class="t_desc2">
-            이번 레이아웃은 전체 영역이 들어간 구조입니다.
-            실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
-            가운데 영역을 설정합니다.
-        </p>  
-   <div class="t_code">
+                <!-- grid -->
+                <h3 class="t_tit">grid을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    grid를 이용한 레이아웃 배치 입니다.    <br>
+                    grid는 부모태그에서 지정한 모든 태그들을 컨트롤하는 것입니다.   <br>
+                    부모태그에서 grid-template-areas를 지정 후 grid-template-columns, grid-template-rows를 사용해서 지정한 영역의 행 높이& 열 넓이를 지정합니다. <br>
+                    또한 grid-template-areas로 지정한 모든 자식태그에서 grid-area로 정의해 주어야합니다. 
+                </p>
+                <div class="t_code">
 <pre><code class="language-css"> * {
     margin: 0;
 }
@@ -317,21 +316,21 @@ body{
     }
 }
 </code></pre>
-    </div> 
-    <h4 class="t_tit2">결과</h4>
-    <div class="t_iframe">
-            <iframe  src="https://codepen.io/thdtjdgml415/embed/GRxMpyG?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                See the Pen <a href="https://codepen.io/thdtjdgml415/pen/GRxMpyG">
-                Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
-                on <a href="https://codepen.io">CodePen</a>.
-            </iframe>
-        </div>
-    </div>
+                </div>
+                <h4 class="t_tit2">결과</h4>
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/thdtjdgml415/embed/ZExrBqa?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/thdtjdgml415/pen/ZExrBqa">
+                        grid02</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
+                </div>
+            </div>
 
-    </div>
- </main>
-    
-            <!-- //main -->
+        </div>
+    </main>
+
+    <!-- //main -->
     <footer id="footer">
         <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
     </footer>
@@ -341,4 +340,5 @@ body{
         hljs.highlightAll();
     </script>
 </body>
+
 </html>
