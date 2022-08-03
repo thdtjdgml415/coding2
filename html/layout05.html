@@ -56,7 +56,8 @@
                         allowfullscreen></iframe></div>
                 <h3 class="t_tit">float을 이용한 레이아웃</h3>
                 <p class="t_desc">
-                    /* <!-- float으로 인한 영역깨짐 방지법 --> 
+                    /*
+                    <!-- float으로 인한 영역깨짐 방지법 -->
                     1. 꺠지는 영역에 clear:both를 설정한다.
                     2. 부모 박스 영역에 overflow: hidden을 설정한다.
                     3. clearfix를 설정한다. (.clearfix::before)
@@ -64,7 +65,7 @@
                     1번 방법은 깨진 영역이 눈에 보여야 적용할 수 있습니다. <br>
                     2번 방법은 육안상 잘 정리 되어있는 것처럼 보이지만 외부의 애니메이션 같은 효과가 제대로 표시되지 않을 수 있습니다. <br>
                     3번 방법이 가장 좋은방법으로 clearfix클래스를 적용해서 가상요소 앞뒤로 설정 해주고 <br>
-                     float를 적용한 요소의 부모박스에 claerfix 클래스를 적용해주면 됩니다. 
+                    float를 적용한 요소의 부모박스에 claerfix 클래스를 적용해주면 됩니다.
                 </p>
                 <div class="t_code">
 <pre><code class="language-css">* {
@@ -231,17 +232,19 @@
 </code></pre>
                 </div>
                 <h4 class="t_tit2">결과</h4>
-                <div class="t_flame">
-                    <iframe src="https://codepen.io/thdtjdgml415/embed/dymdNXb?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/thdtjdgml415/embed/dymdNXb?default-tab=" frameborder="no"
+                        loading="lazy" allowtransparency="true" allowfullscreen="true">
                         See the Pen <a href="https://codepen.io/thdtjdgml415/pen/dymdNXb">
-                        Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                            Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
                         on <a href="https://codepen.io">CodePen</a>.
-                      </iframe>
+                    </iframe>
                 </div>
 
                 <h3 class="t_tit">flex을 이용한 레이아웃</h3>
                 <p class="t_desc">
-                    이번 flex 레이아웃 작업은 float과 다른 html구조를 사용했습니다. 형제요소 4가지의 형태를 float 방식으로 사용했을 때 반응형 작업을 할때 에로사항이 존재했습니다. <br>
+                    이번 flex 레이아웃 작업은 float과 다른 html구조를 사용했습니다. 형제요소 4가지의 형태를 float 방식으로 사용했을 때 반응형 작업을 할때 에로사항이 존재했습니다.
+                    <br>
                     flex를 사용하여 레이아웃 작업을 할때 main태그의 형제요소를 left영역과 right영역으로 나누어 작업하였습니다. <br>
                     부모태그에 display:flex; 요소를 주고 flex-wrap: wrap;을 사용하여 간단하게 배치하였습니다.
                 </p>
@@ -395,18 +398,22 @@ background-color: #594139;
 </code></pre>
                 </div>
                 <h4 class="t_tit2">결과</h4>
-                <iframe src="https://codepen.io/thdtjdgml415/embed/OJvQWrO?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                    See the Pen <a href="https://codepen.io/thdtjdgml415/pen/OJvQWrO">
-                    Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
-                    on <a href="https://codepen.io">CodePen</a>.
-                  </iframe>
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/thdtjdgml415/embed/OJvQWrO?default-tab=" frameborder="no"
+                        loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/thdtjdgml415/pen/OJvQWrO">
+                            Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
 
 
                 <h3 class="t_tit">grid을 이용한 레이아웃</h3>
                 <p class="t_desc">
-                    이번 레이아웃은 전체 영역이 들어간 구조입니다.
-                    실제 사이트에서 이런 구조를 많이 사용하며, 컨테이너를 만들어서
-                    가운데 영역을 설정합니다.
+                    grid를 이용한 레이아웃방법은 2차원 형태의 레이아웃을 배치하기 좋은 방식입니다. <br>
+                    부모요소에서 자식요소의 모든걸 컨트롤 할 수 있습니다. display:grid를 부모요소에 지정하고 <br>
+                    grid-template-areas로 영역을 지정해준 다음 grid-template-columns,rows 를 사용해 넓이와 높이를 지정해줍니다. <br>
+                    그리고 지정해준 영역에 grid-area태그를 사용하여 지정해줍니다.
                 </p>
                 <div class="t_code">
 <pre><code class="language-css"> *{
@@ -464,14 +471,17 @@ background-color: #594139;
 </code></pre>
                 </div>
                 <h4 class="t_tit2">결과</h4>
-                <iframe src="https://codepen.io/thdtjdgml415/embed/OJvQWrO?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                    See the Pen <a href="https://codepen.io/thdtjdgml415/pen/OJvQWrO">
-                    Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
-                    on <a href="https://codepen.io">CodePen</a>.
-                  </iframe>
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/thdtjdgml415/embed/OJvQWrO?default-tab=" frameborder="no"
+                        loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/thdtjdgml415/pen/OJvQWrO">
+                            Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
                 </div>
-
             </div>
+
+        </div>
 
 
         </div>
