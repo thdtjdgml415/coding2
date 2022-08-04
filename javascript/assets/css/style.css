@@ -34,7 +34,7 @@ body {
     padding-bottom: 40px;
 }
 #main{
-    padding: 40px 0;
+    padding: 0px;
     border-bottom: 1px dashed #dcdcdc;
 
 }
@@ -200,6 +200,7 @@ body {
     padding-top: 56%;
     width: 100%;
     height: 0;
+    margin-bottom: 10px;
 }
 .document .t_iframe iframe {
     border: 1px solid rgba(0,0,0,0.1);
@@ -217,6 +218,7 @@ body {
     text-align: center;
     padding: 10px;
     transition: all 0.3s;
+    display: block;
 }
 .document .t_link a:hover {
     background-color: #d6d6d6;
