@@ -29,6 +29,15 @@
                 <li><a href="javascript10.html">요소 객체</a></li>
                 <li><a href="javascript11.html">이벤트 객체</a></li>
             </ul>
+            <ul class="effect">
+                <li><a href="effect/searchEffect01.html">검색 효과</a></li>
+                <li><a href="effect/quizEffect01.html">퀴즈 효과</a></li>
+                <li><a href="effect/textEffect01.html">텍스트 효과</a></li>
+                <li><a href="effect/mouseEffect01.html">마우스 효과</a></li>
+                <li><a href="effect/sliderEffect01.html">슬라이드 효과</a></li>
+                <li><a href="effect/parallaxEffect01.html">패렐랙스 효과</a></li>
+                <li><a href="effect/gameEffect01,html">게임 효과</a></li>
+            </ul>
             <ul class="study">
                 <li><a href="study/basic.html">기본 규칙</a></li>
                 <li><a href="study/basic.html">연산자</a></li>
@@ -85,7 +94,7 @@
                         함수를 만드는 일반적은 방식으로 익명 함수와 다르게 특정한 이름을 갖고 있는 함수이다.
                     </p>
                     <div class="script">
-<pre><code class="language-js">function func(){
+                        <pre><code class="language-js">function func(){
     document.write("함수가 실행되었습니다.1");
 }
 func();
@@ -107,7 +116,7 @@ func();
                         익명 함수는 변수에 함수 데이터를 저장하는 변수를 마치 함수처럼 사용 할 수 있도록 만들어 줍니다.
                     </p>
                     <div class="script">
-<pre><code class="language-js">// function과 () 사이에 특정한 함수 이름이 존재하지 않는다.
+                        <pre><code class="language-js">// function과 () 사이에 특정한 함수 이름이 존재하지 않는다.
 const func = function(){ //변수안에 함수가 들어가서 익명함수라 명명했다.
     document.write("함수가 실행되었습니다.2");
 }
@@ -131,7 +140,7 @@ func();
                         인수(argument)란 함수가 호출될 때 함수로 값을 전달해주는 값을 말합니다.
                     </p>
                     <div class="script">
-<pre><code class="language-js">// 변수 : 지역변수 + 전역변수 + 매개변수
+                        <pre><code class="language-js">// 변수 : 지역변수 + 전역변수 + 매개변수
 // 함수 : 지역함수 + 전역함수
 
 function func(str){      //파리미터 = 인자 = 매개변수
@@ -158,7 +167,7 @@ func("함수가 실행되었습니다.3");
                         return 이란 것은 함수를 호출했을 때, 함수가 값을 반환한다는 의미이다.
                     </p>
                     <div class="script">
-<pre><code class="language-js">function func(){
+                        <pre><code class="language-js">function func(){
 const str = "함수가 실행되었습니다.4";
 //document.write(str);
 return str;  // return은 함수를 통해 처리된 결과를 반화시켜주는 명령어입니다.
@@ -189,7 +198,7 @@ document.write(func());
                         함수를 변수에 할당해 주는 것으로 함수 선언문과 문법만 다르고 동작방식, 실행방식도 동일하다.
                     </p>
                     <div class="script">
-<pre><code class="language-js">// function func(){
+                        <pre><code class="language-js">// function func(){
 //     document.write("함수가 실행되었습니다.5");
 // }
 // func();
@@ -219,7 +228,7 @@ func();                                                  //근데 리턴문이 �
                         화살표함수는 익명 함수를 변수에 지정할 때 많이 사용합니다.
                     </p>
                     <div class="script">
-<pre><code class="language-js">// const func = function() {
+                        <pre><code class="language-js">// const func = function() {
 //     document.write("함수가 실행되었습니다.6<br>");
 // }
 // func();
@@ -249,7 +258,7 @@ func();
                         컴퓨터 프로그래밍에서 아직 알려지지 않거나 어느 정도까지만 알려져 있는 양이나 정보에 대한 상징적인 이름이다.
                     </p>
                     <div class="script">
-<pre><code class="language-js">// function func(str){
+                        <pre><code class="language-js">// function func(str){
 //     document.write(str);
 // }
 // func("함수가 실행되었습니다.7<br>");
@@ -278,7 +287,7 @@ func("함수가 실행되었습니다.7<br>");
                 <div id="sample08" class="sample">
                     <h3>08. 화살표 함수 : 리턴값 함수</h3>
                     <div class="script">
-<pre><code class="language-js">// function func() {
+                        <pre><code class="language-js">// function func() {
 //     const str = "함수가 실행되었습니다.8<br>";
 //     return str;
 // }
@@ -304,7 +313,7 @@ document.write(func());
                 <div id="sample09" class="sample">
                     <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
                     <div class="script">
-<pre><code class="language-js">const func = (str) => {
+                        <pre><code class="language-js">const func = (str) => {
     return str;
 }
 document.write(func("함수가 실행되었습니다.9<br>"));
@@ -323,7 +332,7 @@ document.write(func("함수가 실행되었습니다.9<br>"));
                 <div id="sample10" class="sample">
                     <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
                     <div class="script">
-<pre><code class="language-js">const func = (str) => str; 
+                        <pre><code class="language-js">const func = (str) => str; 
 document.write(func("함수가 실행되었습니다.11"))
 </code></pre>
                     </div>
@@ -340,7 +349,7 @@ document.write(func("함수가 실행되었습니다.11"))
                 <div id="sample11" class="sample">
                     <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                     <div class="script">
-<pre><code class="language-js">const func = (str) => str; 
+                        <pre><code class="language-js">const func = (str) => str; 
 document.write(func("함수가 실행되었습니다.11<br>"))
 </code></pre>
                     </div>
@@ -357,7 +366,7 @@ document.write(func("함수가 실행되었습니다.11<br>"))
                 <div id="sample12" class="sample">
                     <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                     <div class="script">
-<pre><code class="language-js">func = str => str; 
+                        <pre><code class="language-js">func = str => str; 
 document.write(func("함수가 실행되었습니다.12"))
 </code></pre>
                     </div>
@@ -539,21 +548,21 @@ document.write(func("함수가 실행되었습니다.12"))
             }
             func();
         }
-    // //06. 화살표함수 (익명 함수)
+        // //06. 화살표함수 (익명 함수)
         {
-            const func = () =>{
+            const func = () => {
                 document.write("함수가 실행되었습니다.6<br>")
             }
             func();
         }
-    // //07. 화살표함수 (매개변수 함수)
+        // //07. 화살표함수 (매개변수 함수)
         {
             func = (str) => {
                 document.write(str);
             }
             func("함수가 실행되었습니다.7<br>");
         }
-    // //08. 화살표함수 (리턴값 함수)
+        // //08. 화살표함수 (리턴값 함수)
         {
             func = () => {
                 const str = "함수가 실행되었습니다.8<br>"
@@ -561,31 +570,31 @@ document.write(func("함수가 실행되었습니다.12"))
             }
             document.write(func()); //근데 왜 실행문이 또 있지?
         }
-    //09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값
-    {
-        const func = (str) => {
-            return str;
+        //09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값
+        {
+            const func = (str) => {
+                return str;
+            }
+            document.write(func("함수가 실행되었습니다.9<br>"));
         }
-        document.write(func("함수가 실행되었습니다.9<br>"));
-    }
-    //10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략
-    {
-        const func = str => {
-            return str; //결과값
+        //10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략
+        {
+            const func = str => {
+                return str; //결과값
+            }
+            document.write(func("함수가 실행되었습니다.10<br>"))
         }
-        document.write(func("함수가 실행되었습니다.10<br>"))
-    }
         //11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략
-    {
-        const func = (str) => str; 
-        document.write(func("함수가 실행되었습니다.11<br>"))
-    }
-     //12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략
-     {
-        func = str => str; 
+        {
+            const func = (str) => str;
+            document.write(func("함수가 실행되었습니다.11<br>"))
+        }
+        //12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략
+        {
+            func = str => str;
 
-        document.write(func("함수가 실행되었습니다.12<br>"))
-    }
+            document.write(func("함수가 실행되었습니다.12<br>"))
+        }
     </script>
 
 </body>

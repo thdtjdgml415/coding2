@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="effect">
+                <li><a href="searchEffect01.html">검색 효과</a></li>
+                <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                <li><a href="textEffect01.html">텍스트 효과</a></li>
+                <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                <li><a href="gameEffect01,html">게임 효과</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header -->
+
+    <div class="main_refer">
+        <div class="document">
+            <h2 class="t_tit">퀴즈효과</h2>
+            <p class="t_desc2">
+               웹디자인기능사 자격증을 준비하면서 퀴즈가 나오는 웹페이지를 구현하였습니다.
+            </p>
+            <div class="t_iframe">
+                <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeWV94w0TLw2jYyVRWHWsMf%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+            </div>
+            <!-- float -->
+            <h3 class="t_tit">float을 이용한 레이아웃</h3>
+            <p class="t_desc2">
+                aside와 section영역을 한줄로 배치하기 위해서 float속성을 사용해서 작업했습니다.<br>
+                하지만 오류로 인해서 footer부분이 없어지기 때문에 clear:both를 사용해서 버그를 수정했습니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-css">*{
+margin: 0;
+}
+#body {
+background-color: #FFF3E0;
+}
+#wrap {
+width: 1200px;
+margin: 0 auto;
+}
+#header {
+width: 100%;
+height: 100px;
+background-color: #FFE0B2;
+}
+#nav {
+width: 100%;
+height: 100px;
+background-color: #FFCC80;
+}
+#aside {
+width: 30%;
+height: 780px;
+background-color: #FFB74D;
+float: left;
+}
+#section {
+width: 70%;
+height: 780px;
+background-color: #FFA726;
+float: left;
+}
+#footer {
+width: 100%;
+height: 100px;
+background-color: #FF9800;
+clear: both;  
+}
+/* 미디어 쿼리를 사용해서 다양한 화면에서 배치를 변경할 수 있습니다.*/
+@media(max-width: 1220px){     /* 노트북 화면*/
+#wrap {
+    width: 96%;             /*양쪽 여백을 생기게 함*/
+    height: 100%;
+}
+}
+@media(max-width: 768px){       /*태블릿 화면*/
+#wrap {
+    width: 100%;            /*여백 제거*/
+    height: 100%;
+}
+}
+@media(max-width: 480px){      /*모바일 화면*/
+#aside {
+    width: 100%;
+    height: 300px;
+}
+#section {
+    width: 100%;
+    height: 480px;
+}
+}
+</code></pre>
+            </div>
+            <h4 class="t_tit2">결과</h4>
+            <div class="t_iframe">
+                <iframe src="https://codepen.io/thdtjdgml415/embed/GRxMpyG?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/thdtjdgml415/pen/GRxMpyG">
+                    Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </div>
+        </div>
+    </div>
+
+<!-- main -->
+
+<footer id="footer">
+    <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+</footer>
+<!-- //footer -->
+<script src="../assets/js/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
