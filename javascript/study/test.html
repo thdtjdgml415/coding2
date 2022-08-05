@@ -8,13 +8,30 @@
 </head>
 <body>
     <script>
-        var kor = 90;
-function getScore() {
-    kor = 100; //전역변수
-    console.log(kor); //100
-}
-getScore();
-console.log(kor); //100
+        // const obj = [    객체를 이용하면 이렇게도 가능, 이것말고도 형태가 다양하다.
+        //     {
+        //         type: "웹디자인기능사"
+        //         num: "1"
+        //         ask: "무엇인가요?"
+        //         result: "1"
+        //     }
+        // ]
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        //FOR문을 이용해서 출력
+        for (let i=1; i<10; i++){
+            document.write(i)
+        };
+        
+        document.write("<br>")
+
+
+        //forEach  arr.forEach(function(){})형태 (element, index, arr) 사용가능
+        arr.forEach(function(el){
+            document.write(el);
+        });
+
+
 
     </script>
 </body>

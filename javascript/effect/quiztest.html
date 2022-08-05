@@ -93,50 +93,34 @@
         const answerAsk = "기업의 새로운 이념 구축에 필요한 이미지와 커뮤니케이션 시스템을 의도적, 계획적으로 만들어내는 기업이미지통합 전략은 무엇인가요?"
         let answerResult = "CIP"
 
+
         //문제출력
         quizType.innerText = answerType;
-        quizNumber.innerText = answerNum + ". ";
+        quizNumber.innerText = answerNum + ". " ;
         quizAsk.innerText = answerAsk;
-        quizResult.textContent = "정답은 :" +  answerResult + "입니다.";
+        quizResult.innerText = answerResult;
 
-        //정답숨기기
+        //정답 숨기기
         quizResult.style.display = "none";
 
-        //정답 확인
-        quizConfirm.addEventListener("click", () => {      // 정답버튼을 클릭했을 때// 화살표함수를 사용해서 메서드를 만듬 
-            quizInput.style.display = "none";
-            quizResult.style.display = "block";  //none의 반대의미 
-            quizConfirm.style.display = "none";
-            
-            //사용자 정답
-            const userWord = quizInput.value.toLowerCase().trim(); // toLowerCase 소문자를 인식시켜준다./ trim빈칸을 인식해준다.
-            // answerResult = answerResult.toLowerCase().trim();
+        //정답확인
+        quizConfirm.addEventListener("click", function(){
+            quizResult.style.display = "block"
+            quizConfirm.style.display = "none"
+            quizInput.style.display = "none"
 
 
-            // console.log(userWord)
-            // console.log(answerResult)
 
-            //사용자 정답 == 문제정답
-            if (userWord == answerResult) {
-                //정답
+            const userWord = quizInput.value.toLowerCase().trim();   //trim, toLower
+
+            if(userWord==answerResult) {
                 quizView.classList.add("like");
-                
-                alert("정답입니다.")
-                
+                qi
             } else {
-                //오답
                 quizView.classList.add("dislike");
-                alert("오답입니다.")
             }
-
-
-
-        });
-
-
-
-
-
+        })
+        
 
     </script>
 </body>
