@@ -44,57 +44,80 @@
     <main id="main">
         <div class="document">
          <h2 class="t_tit">요소 선택</h2>
-         <p class="t_desc2">
-            데이터 타입(data type)이란 프로그램에서 다룰 수 있는 값의 종류를 의미합니다. <br>
-            자바스크립트에서는 여러 가지 형태의 타입을 미리 정의하여 제공하고 있으며, 이것을 기본 타입이라고 합니다. <br>
-            자바스크립트의 기본 타입은 크게 원시 타입과 객체 타입으로 구분할 수 있습니다.           
-         </p>
-         <hr>
-         <h2 class="t_tit2">데이터 종류</h2>
-         <h3>원시타입</h3>
-         <p class="t_desc2">
-            문자열 <br>
-            불린값 <br>
-            Null <br>
-            Nndefined <br>
-            String <br>
-            Symbol <br>
-        </p>
-        <h3>객체 타입</h3>
-        <p class="t_desc2">객체(Object)</p>
-    
          <p class="t_desc">
             <table class="t_table">               
                     <thead>
                         <tr>
-                            <th>데이터 타입</th>
-                            <th>속성 설명</th>
+                            <th>메서드</th>
+                            <th>설명</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="ce">getElementByld()</td>
-                            <td>document.getElementByld('content)일 경우 HTML</td>
+                            <td>document.getElementByld('content)일 경우 HTML 요소 중 id 속성이 'content'인 요소를 선택합니다.</td>
                         </tr>
                         <tr>
                             <td class="ce">getElementsByClassName()</td>
-                            <td>Boolean 타입은 논리 요소를 나타내며 true와 false 두 가지의 값을 가질 수 있습니다..</td>
+                            <td>document.getElementsByClassName( 'menu' ) 일 경우 HTML 요소 중 class명이 'menu'인 요소들을 선택합니다.</td>
                         </tr>
                         <tr>
                             <td class="ce">getElementsbyTagName()</td>
-                            <td>Null 타입은 null 하나의 값만 가질 수 있습니다.</td>
+                            <td>document.getElementsByName('ul')일 경우 HTML 요소 중 태그명이 'ul'인 요소들을 선택합니다.</td>
                         </tr>
                         <tr>
                             <td class="ce">querySelector()</td>
-                            <td>값을 할당하지 않은 변수는 undefined 값을 가집니다.</td>
+                            <td>요소의 선택 방법이 css 선택 방법과 같습니다. 선택한 요소 중 첫 번째 요소만 선택합니다. <br> document.querySelector('.lnb') <br> document.querySelector(div) <br> document.querySelector('#gnb li')</td>
                         </tr>
                         <tr>
                             <td class="ce">querySelectorAll</td>
-                            <td>몫을 구할 때 사용 합니다</td>
+                            <td>querySelector()는 선택된 요소 중 첫 번째 요소만 선택하는 반면 querySeletorAll()는 모든 요소를 선택합니다.</td>
                         </tr>
                     </tbody>
                 </table>
          </p>
+         <hr>
+         <h2 class="t_tit2">예제</h2>
+         <div class="t_code">
+<pre><code classs="js-language">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;요소를 직접 선택하는 메서드&lt;/title&gt;
+&lt;script&gt;
+    window.onload = function() {
+        var list1 = document.querySelector('#box1 > ul > li');
+        var list2 = document.querySelectorAll('#box2 > ul > li');
+        console.log(list1);
+        console.log(list2);
+        list1.style.background = "#ff6600";
+        list2[0].style.background = "#ccc";
+        list2.item(1).style.background = "#ddd";
+    };
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="box1"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;내용1&lt;/li&gt;
+            &lt;li&gt;내용2&lt;/li&gt;
+            &lt;li&gt;내용3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id="box2"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;내용4&lt;/li&gt;
+            &lt;li&gt;내용5&lt;/li&gt;
+            &lt;li&gt;내용6&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;    
+</code></pre> 
+            </div>
+
+
+
     </div>
 </main>
 

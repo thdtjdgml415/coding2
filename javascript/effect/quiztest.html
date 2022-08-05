@@ -93,34 +93,39 @@
         const answerAsk = "기업의 새로운 이념 구축에 필요한 이미지와 커뮤니케이션 시스템을 의도적, 계획적으로 만들어내는 기업이미지통합 전략은 무엇인가요?"
         let answerResult = "CIP"
 
-
         //문제출력
         quizType.innerText = answerType;
-        quizNumber.innerText = answerNum + ". " ;
+        quizNumber.innerText = answerNum;
         quizAsk.innerText = answerAsk;
         quizResult.innerText = answerResult;
 
         //정답 숨기기
+
         quizResult.style.display = "none";
 
-        //정답확인
-        quizConfirm.addEventListener("click", function(){
-            quizResult.style.display = "block"
-            quizConfirm.style.display = "none"
-            quizInput.style.display = "none"
+        
+        quizConfirm.addEventListener("click", () =>{
 
+            const userWord = quizResult.value;
 
-
-            const userWord = quizInput.value.toLowerCase().trim();   //trim, toLower
-
-            if(userWord==answerResult) {
-                quizView.classList.add("like");
-                qi
-            } else {
-                quizView.classList.add("dislike");
+            if(userWord==quizResult.answerResult){
+                alert("정답")
+                quizView.classList.add("like")
+                quizConfirm.style.display = "none"
+                
+            } else{
+                alert("오답")
+                quizView.classList.add("dislike")
+                quizResult.style.display = "block"
+                quizInput.style.display = "none"
+                quizConfirm.style.display = "none"
             }
         })
-        
+
+
+
+
+
 
     </script>
 </body>
