@@ -222,7 +222,7 @@
         //문제출력
 
 
-
+            //forEach문을 이용한 문제출력
         quizInfo.forEach((el, i) =>{
         quizType[i].textContent = quizInfo[i].answerType;
         quizNumber[i].textContent = quizInfo[i].answerNumber + ". ";
@@ -231,7 +231,7 @@
         });
 
 
-
+            //for문을 이용한 문제출력
         // for(let i = 0; i<quizInfo.length; i++) {
        
         // quizType[i].textContent = quizInfo[i].answerType;
@@ -242,7 +242,7 @@
 
 
 
-
+            //하나하나씩 일일이 출력해줌
         // quizType[0].textContent = quizInfo[0].answerType;
         // quizType[1].textContent = quizInfo[1].answerType;
         // quizType[2].textContent = quizInfo[2].answerType;
@@ -295,10 +295,10 @@
 
 
         quizConfirm.forEach((btn, num)=>{
-            btn.addEventListener("click", () => {
+            btn.addEventListener("click", () => {     //클릭을 눌렀을때 상황을 만들기 위한 코드
            
                 //사용자 정답
-                const userWord = quizInput[num].value.toLowerCase().trim();
+                const userWord = quizInput[num].value;   //.toLowerCase().trim() 소문자와 여백을 인식하는 코드이다. 하지만 오류가 생겨서 확인 필요  
                 // console.log(userWord);
                 // console.log(quizInfo[num] = answerResult.value);
   
