@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .asd tr td {
+            border: 1px solid #000;
+        }
+    </style>
 </head>
+
 <body>
     <script>
         // const obj = [    객체를 이용하면 이렇게도 가능, 이것말고도 형태가 다양하다.
@@ -16,23 +23,64 @@
         //         result: "1"
         //     }
         // ]
-        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-        //FOR문을 이용해서 출력
-        for (let i=1; i<10; i++){
-            document.write(i)
-        };
-        
-        document.write("<br>")
+        // //FOR문을 이용해서 출력
+        // for (let i=1; i<10; i++){
+        //     document.write(i)
+        // };
 
-
-        //forEach  arr.forEach(function(){})형태 (element, index, arr) 사용가능
-        arr.forEach(function(el){
-            document.write(el);
-        });
+        // document.write("<br>")
 
 
+        // //forEach  arr.forEach(function(){})형태 (element, index, arr) 사용가능
+        // arr.forEach(function(el){
+        //     document.write(el);
+        // });
+
+        {
+            let table = "<table class='asd'>";
+
+            for (let i = 0; i < 10; i++) {
+                table += "<tr>";
+                for (let j = 0; j < 10; j++) {
+                    table += "<td>1</td>";
+                }
+                table += "</tr>";
+            }
+            table += "</table>";
+            document.write(table);
+        }
+        {
+            for(let i = 1; i < 10; i++){
+                for(let j = 1; j < 10; j++){
+                    let sum = i*j;
+                    document.write(i + "*" + j + "=" + sum +"<br>");
+                }
+            }
+        }
 
     </script>
+    <!-- <style>
+        .testTable tr td {
+            border: 1px solid #000;
+        }
+    </style>
+    <script>
+        let table = "<table class='testTable'>";
+
+        for (let i = 0; i < 10; i++) {
+            table += "<tr>";
+            for (let j = 0; j < 10; j++) {
+                table += "<td>1</td>"
+            }
+            table += "</tr>";
+        }
+
+        table += "</table>"
+        document.write(table); -->
+    </script>
+
 </body>
+
 </html>
