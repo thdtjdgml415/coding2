@@ -38,25 +38,30 @@
         //     document.write(el);
         // });
 
-        {
-            let table = "<table class='asd'>";
 
-            for (let i = 0; i < 10; i++) {
-                table += "<tr>";
-                for (let j = 0; j < 10; j++) {
-                    table += "<td>1</td>";
-                }
-                table += "</tr>";
+        {
+            const jsk = {
+                a : 2,
+                b : 3,
+                c : 4
+
             }
-            table += "</table>";
-            document.write(table);
+            console.log(jsk["a"]);
+            console.log(jsk.b);
         }
         {
-            for(let i = 1; i < 10; i++){
-                for(let j = 1; j < 10; j++){
-                    let sum = i*j;
-                    document.write(i + "*" + j + "=" + sum +"<br>");
-                }
+            const ks = [
+                k = {g:2, f:2, j:4},
+                s = 132
+            ]
+
+            console.log(k.j)
+        }
+        {
+            let a = [1, 2, 3, 4, 5, 6];
+
+            for(let i in a){
+                console.log(i)
             }
         }
 

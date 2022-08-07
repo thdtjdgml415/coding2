@@ -220,45 +220,44 @@
         ]
 
         //문제출력
-
-        quizInfo.forEach((el, i)=>{
-            quizType[i].innerText = quizInfo[i].answerType
-            quizNumber[i].innerText = quizInfo[i].answerNumber
-            quizAsk[i].innerText = quizInfo[i].answerAsk
-            quizResult[i].innerText = quizInfo[i].answerResult
-        })
+        quizInfo.forEach((el, i) => {
+            quizType[i].textContent = quizInfo[i].answerType;
+            quizNumber[i].textContent = quizInfo[i].answerNumber;
+            quizAsk[i].textContent = quizInfo[i].answerAsk;
+            quizResult[i].textContent = quizInfo[i].answerResult;
+        });
 
         //정답 숨기기
 
-        quizInfo.forEach((el, i)=>{
+        quizInfo.forEach((el, i) => {
             quizResult[i].style.display = "none";
         })
 
-        quizConfirm.forEach((btn, num) =>{
+        //클릭버튼 반응
+        quizConfirm.forEach((btn, num) => {
             btn.addEventListener("click", () => {
+                const userWord = quizInput[num].value;
 
-                const userWord = quizInput[num].values; 
-                
-                if(userWord==quizInfo[num].answerResult) {
-                    quizView[num].classList.add("like")
-                    alert("정답");
-                    quizConfirm[num].style.display = "none"
-                
+                if(userWord == quizInfo[num].answerResult) {
+                    alert("정답")
+                    quizView[num].classList.add("like");
+                    quizConfirm[num].style.display = "none";
 
-                }else{
-                    quizView[num].classList.add("dislike")
-                    alert("오답");
-                    quizConfirm[num].style.display = "none"
-                    quizInput[num].style.display = "none"
-                    quizResult[num].style.display = "block"
-
+                } else {
+                    alert("오답")
+                    quizView[num].classList.add("dislike");
+                    quizConfirm[num].style.display = "none";
+                    quizInput[num].style.display = "none";
+                    quizResult[num].style.display = "block";
                     
 
                 }
             })
-            
         })
         
+
+        
+
     </script>
 
 
