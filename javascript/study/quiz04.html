@@ -73,6 +73,36 @@
                     중첩반복문을 사용해 정답일때 오답일 때 상황을 나누어 전달하였습니다. <br>
                     자세한 내용은 코드와 설명을 보면서 다시이야기 해보겠습니다.
                 </p>
+
+                <h3 class="t_tit2">객관식 보기</h3>
+                <p class="t_desc2">
+                    퀴즈 보기를 설정합니다.
+                    버튼 태그를 radio로 설정하고 각각 선택자를 설정해 사용한다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-html">&lt;div class="quiz__answer">
+    &lt;div class="quiz__selects"&gt;
+        &lt;label for="select1"&gt;
+            &lt;input type="radio" id="select1" class="select" name="select" value="1"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="select2"&gt;
+            &lt;input type="radio" id="select2" class="select" name="select" value="2"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="select3"&gt;
+            &lt;input type="radio" id="select3" class="select" name="select" value="3"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="select4"&gt;
+            &lt;input type="radio" id="select4" class="select" name="select" value="4"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button class="confirm"&gt;정답 확인하기&lt;/button&gt;
+    &lt;div class="result"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
                 <h3 class="t_tit2">선택자 정하기</h3>
                 <p class="t_desc2">
                     선택자를 정합니다 <br>
