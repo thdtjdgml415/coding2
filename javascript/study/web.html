@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="web.html">웹</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    
+    <main id="main">
+        <div class="document">
+         <h2 class="t_tit">웹 표준 정의</h2>
+         <p class="t_desc2">
+            웹 표준이란 브라우저 종류 및 버전에 따른 기능 차이에 대하여 호환이 가능하도록 제시된 표준으로, <br>
+            다른 기종 혹은 플랫폼에 따라 달리 구현되는 기술을 동일하게 구현함과 동시에 어느 한쪽에 최적화되어 치우치지 않도록 공통요소를 사용하여 웹 페이지를 제작하는 기법을 의미한다. <br>
+            표준화 단체인 W3C(World Wide Consortium)가 권고한 표준안에 따라 웹사이트를 작성할 때 이용하는 HTML, CSS, JavaScript 등에 대한 규정을 담고 있으며 <br> 
+            웹 표준의 궁극적인 목적은 웹사이트에 접속한 사용자가 어떠한 운영체제나 브라우저를 사용하더라도 동일한 결과를 보이게 하는 것이다.           
+         </p>
+         <hr>
+         <h2 class="t_tit2">웹 표준 준수 이유</h2>
+         <p class="t_desc2">
+            국내 웹의 현실은 특정 브라우저와 사용자 등의 이용환경과 비표준 페이지 및 과도한 플러그인 사용으로 장애인, 노약자를 포함한 모든 사용자들에게 운영체제 및 웹 브라우저 등의 정보 접근 제약이 있다. <br>
+            따라서 브라우저의 종류나 버전에 상관없이 모든 사용자들이 동일한 웹사이트를 볼 수 있도록 웹 표준기술 작업이 필요하며 웹 표준 준수는 웹 접근성 준수를 위한 핵심이다.
+        </p>
+        <p class="t_tit2"> 웹표준의 장점</p>
+        <p class="t_desc2">
+            국내 웹의 현실은 특정 브라우저와 사용자 등의 이용환경과 비표준 페이지 및 과도한 플러그인 사용으로 장애인, 노약자를 포함한 모든 사용자들에게 운영체제 및 웹 브라우저 등의 정보 접근 제약이 있다. <br>
+            따라서 브라우저의 종류나 버전에 상관없이 모든 사용자들이 동일한 웹사이트를 볼 수 있도록 웹 표준기술 작업이 필요하며 웹 표준 준수는 웹 접근성 준수를 위한 핵심이다.
+        </p>
+
+
+
+
+
+
+
+
+
+    
+         <p class="t_desc">
+            <table class="t_table">               
+                    <thead>
+                        <tr>
+                            <th>데이터 타입</th>
+                            <th>속성 설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce">문자열(String)</td>
+                            <td>문자열(String) : 문자열의 길이에는 상관 없이 string이라는 데이터 타입으로 값이 생성됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">불린값(Boolean)</td>
+                            <td>Boolean 타입은 논리 요소를 나타내며 true와 false 두 가지의 값을 가질 수 있습니다..</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">Null</td>
+                            <td>Null 타입은 null 하나의 값만 가질 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">Undefined</td>
+                            <td>값을 할당하지 않은 변수는 undefined 값을 가집니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">Number타입</td>
+                            <td>몫을 구할 때 사용 합니다</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">String 타입</td>
+                            <td>텍스트 데이터를 나타낼 때 사용합니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">Symbol 타입</td>
+                            <td>Symbol은 고유하고 변경 불가능한 원시 값이며 객체의 속성(아래를 참고하세요) 키로 사용할 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">객체</td>
+                            <td>자바스크립트의 기본 타입은 객체(object)입니다. <br>
+                                객체(object)란 실생활에서 우리가 인식할 수 있는 사물로 이해할 수 있습니다.<br>                        
+                                객체는 여러 프로퍼티(property)나 메소드(method)를 같은 이름으로 묶어놓은 일종의 집합체입니다</td>
+                        </tr>
+                    </tbody>
+                </table>
+         </p>
+    </div>
+</main>
+
+       <!-- //main -->
+       <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
