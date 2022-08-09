@@ -64,13 +64,6 @@
 
         <div class="main_refer">
             <div class="document">
-                <h4 class="t_tit2">결과</h4>
-                <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
-                    <iframe
-                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fprp4zEVazT8gVI8qRG6K9N%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D5%253A14"
-                        allowfullscreen>
-                    </iframe>
-                </div>
                 <h3 class="t_tit">비트맵(bitmap)이란?</h3>
                 <p class="t_desc2">
                     비트맵 방식은 '비트의 지도'(Map of bits)라는 뜻이다. <br>
@@ -91,70 +84,63 @@
                     수학적 함수관계에 의해 이미지를 표현하여 만들어내는 메커니즘을 가지고 있다. <br>
                     이렇게 만들어진 선이 두껫값과 색상 값, 곡률값을 갖거나 면이 색상 값을 가질 수 있다. <br>
                 </p>
-            </div>
-            <!--vector -->
-            <p class="t_desc">
-            <table class="t_table">
-                <thead>
-                    <tr>
-                        <th>데이터 타입</th>
-                        <th>속성 설명</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="ce">문자열(String)</td>
-                        <td>문자열(String) : 문자열의 길이에는 상관 없이 string이라는 데이터 타입으로 값이 생성됩니다.</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">불린값(Boolean)</td>
-                        <td>Boolean 타입은 논리 요소를 나타내며 true와 false 두 가지의 값을 가질 수 있습니다..</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">Null</td>
-                        <td>Null 타입은 null 하나의 값만 가질 수 있습니다.</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">Undefined</td>
-                        <td>값을 할당하지 않은 변수는 undefined 값을 가집니다.</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">Number타입</td>
-                        <td>몫을 구할 때 사용 합니다</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">String 타입</td>
-                        <td>텍스트 데이터를 나타낼 때 사용합니다.</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">Symbol 타입</td>
-                        <td>Symbol은 고유하고 변경 불가능한 원시 값이며 객체의 속성(아래를 참고하세요) 키로 사용할 수 있습니다.</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">객체</td>
-                        <td>자바스크립트의 기본 타입은 객체(object)입니다. <br>
-                            객체(object)란 실생활에서 우리가 인식할 수 있는 사물로 이해할 수 있습니다.<br>
-                            객체는 여러 프로퍼티(property)나 메소드(method)를 같은 이름으로 묶어놓은 일종의 집합체입니다</td>
-                    </tr>
-                </tbody>
-            </table>
-            </p>
 
-            /
-            <h2 class="t_tit">결과</h2>
-            <div class="t_iframe">
-                <iframe src="https://thdtjdgml415.github.io/coding2/site/cardType/cardType01.html" frameborder="no"
-                    loading="lazy" allowtransparency="true" allowfullscreen="true">
-                    See the Pen <a href="https://codepen.io/thdtjdgml415/pen/QWmQGrG">
-                        Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
-                    on <a href="https://codepen.io">CodePen</a>.
-                </iframe>
+                <!--vector -->
+                <p class="t_desc">
+                <table class="t_table">
+                    <thead>
+                        <tr>
+                            <th>비교</th>
+                            <th>비트맵</th>
+                            <th>벡터 설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce">정의</td>
+                            <td>정사각형의 픽셀이 모여 만든 이미지</td>
+                            <td>전과 점이 이루는 선분, 면에 수학적 연산으로 만들어짐</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">확대시</td>
+                            <td>깨짐(계단현상): 픽셀로 되어있어서 변화에 대응하지 못함</td>
+                            <td>깨지지않음: 수학적으로 구성되어 있어서 변화에 대응 가능</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">경계</td>
+                            <td>픽셀색이 다 달라 뚜렷(x)</td>
+                            <td>면으로 이루어져 있어서 뚜렷(o)</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">작업종류</td>
+                            <td>사진보정, 합성, 복잡한 작업 ex)영화 포스터</td>
+                            <td>도형으로 만드는 작업 ex) 로고, 캐릭터, 명함 등</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">장점</td>
+                            <td>사실 표현 가능, 색감 풍부, 특수효과 사용가능</td>
+                            <td>확대시 깨지지않아 대형 인쇄물 사용가능</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">사이즈</td>
+                            <td>사이즈, 해상도 등으로 변화, 사이즈 커짐</td>
+                            <td>크기 제약 없음, 용량 변하지 않음</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">프로그램</td>
+                            <td>포토샵, 페인터 등</td>
+                            <td>일러스트레이터, 코렐, 플래시</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">확장자</td>
+                            <td>jpg, gip, png, bmp...</td>
+                            <td>ai, swf, wmf ...</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </p>
+                <!-- 벡터와 비트맵 차이점-->
             </div>
-            <div class="t_link">
-                <a href="https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/cardType01.html"
-                    target="_blank">깃허브 소스 보기</a>
-            </div>
-
         </div>
     </main>
     <!-- //main -->
