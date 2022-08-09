@@ -20,3 +20,6 @@ https://thdtjdgml415.github.io/coding2/javascript/effect/quizEffect04.html
 #### HTML 메인 페이지
 https://thdtjdgml415.github.io/coding2/html/index.html 
 https://thdtjdgml415.github.io/coding2/html/alphabet.html 
+
+###### cradType웹페이지
+https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/cardType01.html   
