@@ -87,6 +87,10 @@
         .card__body .tit {
             font-size: 24px;
             margin-bottom: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 20px;
         }
 
         .card__body .desc {
@@ -95,6 +99,11 @@
             line-height: 1.4;
             color: #666;
             font-weight: 300;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4; 
+            -webkit-box-orient: vertical;
         }
 
         .card__body .btn {}
@@ -102,18 +111,18 @@
 </head>
 
 <body>
-    <section id="cardType" class="card__wrap nexon section">
+    <section id="cardType01" class="card__wrap nexon section">
         <h2>동물원🐷</h2>
         <p>동물원에 가기전에 동물에 대해 알고가면 더욱 동물원을 즐길 수 있습니다.</p>
         <div class="card__inner container">
             <article class="card">
                 <!-- 시멘틱 태그 다음에는 제목이 와야한다. 룰임; -->
                 <figure class="card__header">
-                    <img src="img/card_bg01.jpg" alt="웹표준에 맞는 동물원 사이트 만들기">
+                    <img src="img/card_bg01_01.jpg" alt="웹표준에 맞는 동물원 사이트 만들기">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">웹표준에 맞는 동물원 사이트 만들기</h3>
-                    <p class="desc"> 동물에 대해 배우고 각 동물의 특성을 알 수 있다면 동물원에 가서 동물들의 행동을 보고 실제로 확인하면서 더욱 즐길 수 있습니다.</p>
+                    <p class="desc"> 동물에 대해 배우고 각 동물의 특성을 알 수 있다면 동물원에 가서 동물들의 행동을 보고 실제로 확인하면서 더욱 즐길 수 있습니다. 여우는 종류에 따라 사는 곳이 다르며</p>
                     <a class="btn" href="/">
                         더 자세히 보기
                         <span aria-hidden="true">
@@ -131,12 +140,12 @@
             </article>
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg02.jpg" alt="웹표준에 맞는 동물원 반응형 사이트 만들기">
+                    <img src="img/card_bg01_02.jpg" alt="웹표준에 맞는 동물원 반응형 사이트 만들기">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">웹표준에 맞는 동물원 반응형 사이트 만들기</h3>
                     <p class="desc"> 동물원을 돌아다니면서 동물의 특징과 식습관을 알아보기 위함이기 때문에 공부를 해서 동물원을 좀 더 재밌고 유익하게 돌아다닐 수 있게 만드는 것이
-                        목표입니다.</p>
+                        목표입니다. 호랑이를</p>
                     <a class="btn" href="/">
                         더 자세히 보기
                         <span aria-hidden="true">
@@ -152,7 +161,7 @@
             </article>
             <article class="card">
                 <figure class="card__header">
-                    <img src="img/card_bg03.jpg" alt="웹표준에 맞는 동물원 패럴랙스 사이트 만들기">
+                    <img src="img/card_bg01_03.jpg" alt="웹표준에 맞는 동물원 패럴랙스 사이트 만들기">
                 </figure>
                 <div class="card__body">
                     <h3 class="tit">웹표준에 맞는 동물원 패럴랙스 사이트 만들기</h3>

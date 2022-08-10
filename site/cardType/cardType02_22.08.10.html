@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드유형02</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .Gmarket {
+            font-family: 'GmarketSans';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common 다른 유형에도 기본적으로 들어감*/
+        .container {
+            width: 1160px;
+            padding: 0 20px 200px;
+            margin: 0 auto;
+            min-width: 1160px;
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 120px 0;
+
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /* cardType */
+        h3 .tit {
+            width: 208px;
+            height: 28px;
+            margin: 20px 43px 10px 0;
+            font-family: GmarketSans;
+            font-size: 28px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: var(--black);
+        }
+
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+            /* 비율에 알맞게 정렬 시켜주는 코드 */
+        }
+
+        .card {
+            width: 275px;
+            height: 200px;
+            margin: 0 20px 20px;
+            border-radius: 10px;
+
+        }
+
+        .card__header {
+            width: 275px;
+            height: 200px;
+            margin: 0px;
+            border-radius: 10px;
+            background-color: #d9d9d9;
+        }
+
+        .card__body {
+            width: 275px;
+            height: 75px;
+            margin: 10px 0 0;
+
+        }
+
+        .card__body .tit {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card__body .desc {
+            width: 275px;
+            height: 75px;
+            margin: 10px 0 0;
+            font-family: GmarketSans;
+            font-size: 18px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-align: left;
+            color: #666;
+        }
+
+        .card__body .btn {}
+
+        .card__body .tit a {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="cardType" class="card__wrap Gmarket section">
+        <h2>요리를 배워봅시다.🐷</h2>
+        <p>
+            요즘 배달비도 올라가고 집에서 만들어 먹는경우가 많아졌습니다. <br>
+            이런 시대에 집에서 요리를 만들어서 먹는 건강하고 절약할 수 있는 습관을 만들어 봅시다.
+        </p>
+        <div class="card__inner container">
+            <article class="card">
+                <!-- 시멘틱 태그 다음에는 제목이 와야한다. 룰임; -->
+                <figure class="card__header">
+                    <img width="275px" height="200px" radius="10px" src="img/Rectangle 2.jpg" alt="웹표준에 맞는 동물원 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">고기
+                        <a class="btn" href="/">
+                            <span aria-hidden="true">
+                                <svg width="25" height="25" viewBox="0 0 35 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 5C0 2.23858 2.23858 0 5 0H30C32.7614 0 35 2.23858 35 5V30C35 32.7614 32.7614 35 30 35H5C2.23858 35 0 32.7614 0 30V5Z"
+                                        fill="#C61515" />
+                                    <path
+                                        d="M10 15C9.17157 15 8.5 15.6716 8.5 16.5C8.5 17.3284 9.17157 18 10 18V15ZM27.0607 17.5607C27.6464 16.9749 27.6464 16.0251 27.0607 15.4393L17.5147 5.8934C16.9289 5.30761 15.9792 5.30761 15.3934 5.8934C14.8076 6.47918 14.8076 7.42893 15.3934 8.01472L23.8787 16.5L15.3934 24.9853C14.8076 25.5711 14.8076 26.5208 15.3934 27.1066C15.9792 27.6924 16.9289 27.6924 17.5147 27.1066L27.0607 17.5607ZM10 18L26 18V15L10 15V18Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">
+                        고기를 굽는 방법은 굉장히 다양합니다. 여러분이 생각한것보다 많은 방법이 있습니다. 하지만 일반인들이 정확히 고기를 굽기가......
+                    </p>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img width="275px" height="200px" Radius="10px" src="img/Rectangle 3.jpg"
+                        alt="웹표준에 맞는 동물원 반응형 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">식기도구
+                        <a class="btn" href="/">
+                            <span aria-hidden="true">
+                                <svg width="25" height="25" viewBox="0 0 35 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 5C0 2.23858 2.23858 0 5 0H30C32.7614 0 35 2.23858 35 5V30C35 32.7614 32.7614 35 30 35H5C2.23858 35 0 32.7614 0 30V5Z"
+                                        fill="#C61515" />
+                                    <path
+                                        d="M10 15C9.17157 15 8.5 15.6716 8.5 16.5C8.5 17.3284 9.17157 18 10 18V15ZM27.0607 17.5607C27.6464 16.9749 27.6464 16.0251 27.0607 15.4393L17.5147 5.8934C16.9289 5.30761 15.9792 5.30761 15.3934 5.8934C14.8076 6.47918 14.8076 7.42893 15.3934 8.01472L23.8787 16.5L15.3934 24.9853C14.8076 25.5711 14.8076 26.5208 15.3934 27.1066C15.9792 27.6924 16.9289 27.6924 17.5147 27.1066L27.0607 17.5607ZM10 18L26 18V15L10 15V18Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">
+                        식기도구는 굉장히 다양합니다. 요리를 할때 알맞은 식기도구를 사용하는 것이 중요하죠. 여러분은 얼마나 정확히 사용하고,,,,
+                    </p>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img width="275px" height="200px" Radius="10px" src="img/Rectangle 4.jpg"
+                        alt="웹표준에 맞는 동물원 패럴랙스 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">스테이크
+                        <a class="btn" href="/">
+                            <span aria-hidden="true">
+                                <svg width="25" height="25" viewBox="0 0 35 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 5C0 2.23858 2.23858 0 5 0H30C32.7614 0 35 2.23858 35 5V30C35 32.7614 32.7614 35 30 35H5C2.23858 35 0 32.7614 0 30V5Z"
+                                        fill="#C61515" />
+                                    <path
+                                        d="M10 15C9.17157 15 8.5 15.6716 8.5 16.5C8.5 17.3284 9.17157 18 10 18V15ZM27.0607 17.5607C27.6464 16.9749 27.6464 16.0251 27.0607 15.4393L17.5147 5.8934C16.9289 5.30761 15.9792 5.30761 15.3934 5.8934C14.8076 6.47918 14.8076 7.42893 15.3934 8.01472L23.8787 16.5L15.3934 24.9853C14.8076 25.5711 14.8076 26.5208 15.3934 27.1066C15.9792 27.6924 16.9289 27.6924 17.5147 27.1066L27.0607 17.5607ZM10 18L26 18V15L10 15V18Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">
+                        스테이크는 굽기 정도가 생명입니다. 온도에 따라 고기 두께에 따라 종류에 따라 굽는 방식이 다양....
+                    </p>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img width="275px" height="200px" Radius="10px" src="img/Rectangle 5.jpg"
+                        alt="웹표준에 맞는 동물원 패럴랙스 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">파스타
+                        <a class="btn" href="/" aria>
+                            <span aria-hidden="true">
+                                <svg width="25" height="25" viewBox="0 0 35 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 5C0 2.23858 2.23858 0 5 0H30C32.7614 0 35 2.23858 35 5V30C35 32.7614 32.7614 35 30 35H5C2.23858 35 0 32.7614 0 30V5Z"
+                                        fill="#C61515" />
+                                    <path
+                                        d="M10 15C9.17157 15 8.5 15.6716 8.5 16.5C8.5 17.3284 9.17157 18 10 18V15ZM27.0607 17.5607C27.6464 16.9749 27.6464 16.0251 27.0607 15.4393L17.5147 5.8934C16.9289 5.30761 15.9792 5.30761 15.3934 5.8934C14.8076 6.47918 14.8076 7.42893 15.3934 8.01472L23.8787 16.5L15.3934 24.9853C14.8076 25.5711 14.8076 26.5208 15.3934 27.1066C15.9792 27.6924 16.9289 27.6924 17.5147 27.1066L27.0607 17.5607ZM10 18L26 18V15L10 15V18Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">
+                        파스타는 많은 사람들이 즐겨먹는 음식 중 하나 입니다. 하지만 파스트의 면을 삶는 방식도 다양하고 종류도 다양.......
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="card__inner container">
+            <article class="card">
+                <figure class="card__header">
+                    <img width="275px" height="200px" Radius="10px" src="img/Rectangle 6.jpg"
+                        alt="웹표준에 맞는 동물원 패럴랙스 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">dessert 
+                        <a class="btn" href="/">
+                            <span aria-hidden="true">
+                                <svg width="25" height="25" viewBox="0 0 35 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 5C0 2.23858 2.23858 0 5 0H30C32.7614 0 35 2.23858 35 5V30C35 32.7614 32.7614 35 30 35H5C2.23858 35 0 32.7614 0 30V5Z"
+                                        fill="#C61515" />
+                                    <path
+                                        d="M10 15C9.17157 15 8.5 15.6716 8.5 16.5C8.5 17.3284 9.17157 18 10 18V15ZM27.0607 17.5607C27.6464 16.9749 27.6464 16.0251 27.0607 15.4393L17.5147 5.8934C16.9289 5.30761 15.9792 5.30761 15.3934 5.8934C14.8076 6.47918 14.8076 7.42893 15.3934 8.01472L23.8787 16.5L15.3934 24.9853C14.8076 25.5711 14.8076 26.5208 15.3934 27.1066C15.9792 27.6924 16.9289 27.6924 17.5147 27.1066L27.0607 17.5607ZM10 18L26 18V15L10 15V18Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">
+                        여러분은 어떤 디저트를 좋아하시나요? 저는 팬케이크나 스콘을 좋아하는데요.. 오늘은 제가 좋아하는 스콘을 만드는.....
+                    </p>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img width="275px" height="200px" Radius="10px" src="img/Rectangle 7.jpg"
+                        alt="웹표준에 맞는 동물원 패럴랙스 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">새우요리
+                        <a class="btn" href="/">
+                            <span aria-hidden="true">
+                                <svg width="25" height="25" viewBox="0 0 35 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 5C0 2.23858 2.23858 0 5 0H30C32.7614 0 35 2.23858 35 5V30C35 32.7614 32.7614 35 30 35H5C2.23858 35 0 32.7614 0 30V5Z"
+                                        fill="#C61515" />
+                                    <path
+                                        d="M10 15C9.17157 15 8.5 15.6716 8.5 16.5C8.5 17.3284 9.17157 18 10 18V15ZM27.0607 17.5607C27.6464 16.9749 27.6464 16.0251 27.0607 15.4393L17.5147 5.8934C16.9289 5.30761 15.9792 5.30761 15.3934 5.8934C14.8076 6.47918 14.8076 7.42893 15.3934 8.01472L23.8787 16.5L15.3934 24.9853C14.8076 25.5711 14.8076 26.5208 15.3934 27.1066C15.9792 27.6924 16.9289 27.6924 17.5147 27.1066L27.0607 17.5607ZM10 18L26 18V15L10 15V18Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">
+                        새우를 이용한 다양한 요리에 대해 배워보려고 합니다. 여러분은 새우를 좋아하시나요? 저는 새우를 너무 좋아....
+                    </p>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img width="275px" height="200px" Radius="10px" src="img/Rectangle 9.jpg"
+                        alt="웹표준에 맞는 동물원 패럴랙스 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">연어
+                        <a class="btn" href="/">
+                            <span aria-hidden="true">
+                                <svg width="25" height="25" viewBox="0 0 35 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 5C0 2.23858 2.23858 0 5 0H30C32.7614 0 35 2.23858 35 5V30C35 32.7614 32.7614 35 30 35H5C2.23858 35 0 32.7614 0 30V5Z"
+                                        fill="#C61515" />
+                                    <path
+                                        d="M10 15C9.17157 15 8.5 15.6716 8.5 16.5C8.5 17.3284 9.17157 18 10 18V15ZM27.0607 17.5607C27.6464 16.9749 27.6464 16.0251 27.0607 15.4393L17.5147 5.8934C16.9289 5.30761 15.9792 5.30761 15.3934 5.8934C14.8076 6.47918 14.8076 7.42893 15.3934 8.01472L23.8787 16.5L15.3934 24.9853C14.8076 25.5711 14.8076 26.5208 15.3934 27.1066C15.9792 27.6924 16.9289 27.6924 17.5147 27.1066L27.0607 17.5607ZM10 18L26 18V15L10 15V18Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">
+                        연어는 호불호가 있는 음식입니다. 하지만 저는 굉장히 좋아합니다. 연어로 만든 요리를 얼마나 알고있으신가요?...
+                    </p>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img width="275px" height="200px" Radius="10px" src="img/Rectangle 10.jpg"
+                        alt="웹표준에 맞는 동물원 패럴랙스 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">
+                        피자
+                        <a class="btn" href="/">
+                            <span aria-hidden="true">
+                                <svg width="25" height="25" viewBox="0 0 35 35" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 5C0 2.23858 2.23858 0 5 0H30C32.7614 0 35 2.23858 35 5V30C35 32.7614 32.7614 35 30 35H5C2.23858 35 0 32.7614 0 30V5Z"
+                                        fill="#C61515" />
+                                    <path
+                                        d="M10 15C9.17157 15 8.5 15.6716 8.5 16.5C8.5 17.3284 9.17157 18 10 18V15ZM27.0607 17.5607C27.6464 16.9749 27.6464 16.0251 27.0607 15.4393L17.5147 5.8934C16.9289 5.30761 15.9792 5.30761 15.3934 5.8934C14.8076 6.47918 14.8076 7.42893 15.3934 8.01472L23.8787 16.5L15.3934 24.9853C14.8076 25.5711 14.8076 26.5208 15.3934 27.1066C15.9792 27.6924 16.9289 27.6924 17.5147 27.1066L27.0607 17.5607ZM10 18L26 18V15L10 15V18Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </a>
+                    </h3>
+                    <p class="desc">
+                        피자는 전세계가 사랑하는 음식이고 그만큼 종류도 다양합니다. 여러분은 집에서 피자를 만들 수 있다는 것을 알고......
+                    </p>
+            </article>
+        </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
