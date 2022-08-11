@@ -166,7 +166,6 @@ body {
     left: 0;
     top: 0;
     border-right: 4px solid var(--brown);
-
 }
 .main_desc .title p{
     font-family: var(--fontSub);
