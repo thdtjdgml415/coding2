@@ -282,6 +282,26 @@ body {
     box-shadow: inset 0px 0px 0px 10px rgb(152, 230, 8);
 }
 
+.quiz__confirm {
+    width: 100%;
+    text-align: center;
+}
+.quiz__confirm .check {
+    font-size: 20px;
+    padding: 13px 20px;
+    border: 6px ridge #cacaca;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "DalseoHealing";
+    cursor: pointer;
+    margin: 40px;
+    transition: background 0.3s;
+
+}
+.quiz__confirm .check:hover {
+    background: #f5524fc4;
+}
+
 @keyframes wobble {
     0%   {transform: translateX(0) rotate(0deg);}
     15%  {transform: translateX(-25%) rotate(-5deg);}

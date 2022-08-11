@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/daegu/DalseoHealing.css" rel="stylesheet">
+    <title>퀴즈 이펙트</title>
+
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1> <a href="../javascript01.html"> Quiz </a><em>객관식 유형(한문제) 유형</em></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li class="active"><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="quiz__wrap">
+
+
+
+        </div>
+    </main>
+    <!-- main -->
+    <footer id="footer">
+        <a href="thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- footer -->
+
+
+    <script>
+        //문제정보
+        const quizInfo = [
+            {
+                answerType: "웹디자인 기능사 2012년 4회",
+                answerNum: "1",
+                answerAsk: "커뮤니케이션 디자인에 대한 설명으로 틀린 것은?",
+                answerChoice: {
+                    1: "라틴어 ‘Communicate'를 어원으로 한다.",
+                    2: "두 개 이상의 개체가 기호를 매개로 무언가를 공유하는 것이다.",
+                    3: "운동과 시선을 중시하는 디자인이다.",
+                    4: "사람과 사람 사이에 기호에 의해서 의미를 전달하는 과정이다."
+
+                },
+                answerResult: "3",
+                answerEx: "커뮤니케이션 디자인에는 운동과 시선을 중시하지 않습니다."
+            },
+            {
+                answerType: "웹디자인 기능사 2012년 4회",
+                answerNum: "2",
+                answerAsk: "색료 혼합의 3원색인 자주(M), 노랑(Y), 청록(C)의 색료 혼합 결과가 틀린 것은?",
+                answerChoice: {
+                    1: "자주(M) + 노랑(Y) = 빨강(R)",
+                    2: "노랑(Y) + 청록(C) = 초록(G)",
+                    3: "자주(M) + 청록(C) = 파랑(B).",
+                    4: "자주(M) + 노랑(Y) + 청록(C) = 흰색(W)"
+
+                },
+                answerResult: "4",
+                answerEx: "커뮤니케이션 디자인에는 운동과 시선을 중시하지 않습니다."
+            },
+            {
+                answerType: "웹디자인 기능사 2012년 4회",
+                answerNum: "3",
+                answerAsk: "명도가 낮아 움츠린 느낌을 주는 색을 무엇이라 하는가?",
+                answerChoice: {
+                    1: "진출색",
+                    2: "후퇴색",
+                    3: "수축색",
+                    4: "팽창색"
+
+                },
+                answerResult: "3",
+                answerEx: "커뮤니케이션 디자인에는 운동과 시선을 중시하지 않습니다."
+            },
+            {
+                answerType: "웹디자인 기능사 2012년 4회",
+                answerNum: "4",
+                answerAsk: "점, 선, 명 등이 연장되거나 발전, 변화되는 밀접한 관계에서 이루어지는 조형디자인 요소는?",
+                answerChoice: {
+                    1: "형태",
+                    2: "색채",
+                    3: "크기",
+                    4: "질감"
+
+                },
+                answerResult: "1",
+                answerEx: "커뮤니케이션 디자인에는 운동과 시선을 중시하지 않습니다."
+            },
+            {
+                answerType: "웹디자인 기능사 2012년 4회",
+                answerNum: "5",
+                answerAsk: "디자인 원리 중 동질의 부분이 조합될 때 이루어지는 것은?",
+                answerChoice: {
+                    1: "유사",
+                    2: "유도",
+                    3: "우연",
+                    4: "관계"
+
+                },
+                answerResult: "1",
+                answerEx: "커뮤니케이션 디자인에는 운동과 시선을 중시하지 않습니다."
+            },
+            {
+                answerType: "웹디자인 기능사 2012년 4회",
+                answerNum: "6",
+                answerAsk: "시각적 질감의 예로 성격이 다른 하나는?",
+                answerChoice: {
+                    1: "사진의 망점	",
+                    2: "인쇄상의 스크린 톤",
+                    3: "나뭇결 무늬",
+                    4: "텔레비전 주사선"
+
+                },
+                answerResult: "3",
+                answerEx: "커뮤니케이션 디자인에는 운동과 시선을 중시하지 않습니다."
+            },
+        ]
+
+        // const num = [100, 200, 300, 400, 500];
+
+        // num.forEach((el) => {
+        //     console.log(el); 
+        //     document.querySelector(" .quiz__wrap").textContent += el;
+        // })
+
+        //선택자
+        const quizWrap = document.querySelector(" .quiz__wrap")
+        function updateQuiz() {
+            const exam = [];
+
+
+            quizInfo.forEach((question, number) => {
+                exam.push(`
+                    <div class="quiz">
+                    <span class="quiz__type">${question.answerType}</span>
+                    <h2 class="quiz__question">
+                        <span class="number">${question.answerNum}.</span>
+                        <div class="ask">${question.answerAsk}
+                        </div>
+                    </h2>
+                    <div class="quiz__view">
+                        <div class="true">정답입니다!</div>
+                        <div class="false">틀렸습니다!</div>
+                        <div class="dog">
+                            <div class="head">
+                                <div class="ears"></div>
+                                <div class="face"></div>
+                                <div class="eyes">
+                                    <div class="teardrop"></div>
+                                </div>
+                                <div class="nose"></div>
+                                <div class="mouth">
+                                    <div class="tongue"></div>
+                                </div>
+                                <div class="chin"></div>
+                            </div>
+                            <div class="body">
+                                <div class="tail"></div>
+                                <div class="legs"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 웹표준 개념 (w3c에서 만듬), 접근성 개념(누구나 볼 수 있도록 접근성이 좋아야함), 호환성 개념 중요(어디서든지 호환되어야 한다.) -->
+                    <div class="quiz__answer">
+                        <div class="quiz__selects">
+                            <label for="select1${number}">
+                                <input type="radio" id="select1${number}" class="select" name="select${number}" value="1">
+                                <span class="choice">${question.answerChoice[1]}</span>
+                            </label>
+                            <label for="select2${number}">
+                                <input type="radio" id="select2${number}" class="select" name="select${number}" value="2">
+                                <span class="choice">${question.answerChoice[2]}</span>
+                            </label>
+                            <label for="select3${number}">
+                                <input type="radio" id="select3${number}" class="select" name="select${number}" value="3">
+                                <span class="choice">${question.answerChoice[3]}</span>
+                            </label>
+                            <label for="select4${number}">
+                                <input type="radio" id="select4${number}" class="select" name="select${number}" value="4">
+                                <span class="choice">${question.answerChoice[4]}</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>                
+                `)
+            });
+
+            exam.push(`
+            <div class="quiz__confirm">
+                <button class="check">정답 확인하기</button>
+                <div class="ex"></div>    
+            </div>
+            `)
+
+            quizWrap.innerHTML = exam.join(''); //태그를 인식하기 위해 texrtcontent를 쓰면 안된다.
+        }
+        updateQuiz()
+
+        //위에서 코드가 다 실행되어야 선택자가 나오기 때문에 여기다 만들어야한다. 
+
+        //정답 확인
+        function answerQuiz() {
+            const quizSelects = document.querySelectorAll(".quiz__selects");    //보기
+            const quizView = document.querySelectorAll(".quiz__view");          //강아지
+            //사용자가 체크한 라디오 박스  == 문제 정답
+            quizInfo.forEach((question, number) => {
+                const quizSelectsWrap = quizSelects[number];                    //전체 보기 박스
+                const userSelector = `input[name=select${number}]:checked`;         //사용자가 클린한 라디오 박스
+                const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value
+                const quizView = document.querySelectorAll(".quiz__view");
+                console.log(quizSelects)
+                if (userAnswer == question.answerResult) {
+                    console.log("정답")
+                    quizView[number].classList.add("like");
+                } else {
+                    console.log("오답")
+                    quizView[number].classList.add("dislike");
+                    const div = document.createElement("div");
+                    quizSelectsWrap.appendChild(div).innerHTML = `<p class="result">${question.answerEx}</p>`;
+                }
+            });
+        }
+        document.querySelector(".quiz__confirm .check").addEventListener("click", answerQuiz);
+    </script>
+
+
+
+</body>
+
+</html>
