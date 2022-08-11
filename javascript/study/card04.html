@@ -67,10 +67,7 @@
             <div class="document">
                 <h4 class="t_tit2">결과</h4>
                 <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
-                    <iframe
-                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fprp4zEVazT8gVI8qRG6K9N%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D30%253A4"
-                        allowfullscreen>
-                    </iframe>
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fprp4zEVazT8gVI8qRG6K9N%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D353%253A103" allowfullscreen></iframe>
                 </div>
                 <h3 class="t_tit">카드유형03</h3>
                 <p class="t_desc2">
@@ -180,7 +177,7 @@
     .card__inner .card:nth-child(2) {
         border-right: 1px solid #eee;
     }
-
+<!-- 각각 카드에 오른쪽에 선을 표현하기 위해 넣었습니다. -->
 
     .card__header {
         position: relative;
@@ -225,7 +222,8 @@
         display: -webkit-box;
         -webkit-line-clamp: 3; 
         -webkit-box-orient: vertical;
-        margin-bottom: 30px;
+        margin-bottom: 30px;        <!-- 세줄효과 (검색해서 찾아보기)-->
+
     }
 
     .card__footer {
@@ -260,13 +258,14 @@
 </code></pre>
                     <h3 class="t_tit2">HTML</h3>
                     <p class="t_desc2">
-                        HTML을 사용했습니다. header,article에서는 이미지를 구성하였고 body,figure 에서는 내용을 구성하였습니다.
-                        &lt;img&gt; 태그를 사용해서 사진을 삽입하였고 svg파일을 삽입해서 화살표박스도 표현하였습니다.
-                        &lt;a&gt; 태그를 사용해 span태그를 묶어서 class 값을 주고 a는 인라인 속성을 가지고 있기 때문에 float속성을 사용하였습니다.
+                    HTML입니다. card__header과 card__contents, card__footer로 구성하였습니다.  <br>
+                    card__header에는 이미지를 넣고 card__contents에는 정보를 card__footer에는 이름과 사진을 넣었습니다. <br>
+                    img 태그를 사용하여 이미지를 삽입하였습니다.  <br>
+                    이미지에 있는 animal 박스는 figcaption태그를 사용하여 배치하였습니다. 
                     </p>
                     <div class="t_code">
-<pre><code class="language-html">  &lt;section id="cardType03" class="card_wrap score section"&gt;
-        &lt;h2 class="blind"&gt;건축의 세계&lt;/h2&gt;
+<pre><code class="language-html">&lt;section id="cardType03" class="card_wrap score section"&gt;
+        &lt;h2 class="blind"&gt;동물의 세계&lt;/h2&gt;
         &lt;div class="card__inner container"&gt;
             &lt;article class="card"&gt;
                 &lt;figure class="card__header"&gt;
@@ -275,8 +274,8 @@
                     &lt;figcaption&gt;animal&lt;/figcaption&gt;
                 &lt;/figure&gt;
                 &lt;div class="card__contents"&gt;
-                    &lt;h3&gt;건축은 건물이나 다른 구조물을 계획하고 설계하고 건설하는 과정과 그 결과..&lt;/h3&gt;
-                    &lt;p&gt;건축적인, 미학적인 고려가 전체적으로 기능성에 종속되어야 한다는 개념이 대중성, 회의론과 만났을 때, 그것은 비트루비우스의 '유용성을...&lt;/p&gt;
+                    &lt;h3&gt;동물원에 동물을 보고 느끼고 만지고 하는 것이 우리 생활에..&lt;/h3&gt;
+                    &lt;p&gt;동물에 대해 배우고 각 동물의 특성을 알 수 있다면 동물원에 가서 동물들의 행동을 보고 실제로 확인하면서 더욱 즐길 수 있습니다. 여우는 종류에 따라 사는 곳이 다르며&lt;/p&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;div class="card__footer"&gt;
                     &lt;h4&gt;동물학자 &lt;em&gt;Hesperioidea&lt;/em&gt;&lt;/h4&gt;
@@ -292,8 +291,8 @@
                     &lt;figcaption&gt;animal&lt;/figcaption&gt;
                 &lt;/figure&gt;
                 &lt;div class="card__contents"&gt;
-                    &lt;h3&gt;건축은 건물이나 다른 구조물을 계획하고 설계하고 건설하는 과정과 그 결과..&lt;/h3&gt;
-                    &lt;p&gt;건축적인, 미학적인 고려가 전체적으로 기능성에 종속되어야 한다는 개념이 대중성, 회의론과 만났을 때, 그것은 비트루비우스의 '유용성을...&lt;/p&gt;
+                    &lt;h3&gt;여러분들이 정서적으로 안정감을 찾으 수 있을 뿐만 아니라...&lt;/h3&gt;
+                    &lt;p&gt;동물원을 돌아다니면서 동물의 특징과 식습관을 알아보기 위함이기 때문에 공부를 해서 동물원을 좀 더 재밌고 유익하게 돌아다닐 수 있게 만드는 것이 호랑이를&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;div class="card__footer"&gt;
                     &lt;h4&gt;동물학자&lt;em&gt;Hesperioidea&lt;/em&gt;&lt;/h4&gt;
@@ -309,8 +308,9 @@
                     &lt;figcaption&gt;animal&lt;/figcaption&gt;
                 &lt;/figure&gt;
                 &lt;div class="card__contents"&gt;
-                    &lt;h3&gt;건축은 건물이나 다른 구조물을 계획하고 설계하고 건설하는 과정과 그 결과..&lt;/h3&gt;
-                    &lt;p&gt;건축적인, 미학적인 고려가 전체적으로 기능성에 종속되어야 한다는 개념이 대중성, 회의론과 만났을 때, 그것은 비트루비우스의 '유용성을...&lt;/p&gt;
+                    &lt;h3&gt;그래도 동물은 위험합니다. 여러분이 동물원에 오셔서 많은 것을 배우..&lt;/h3&gt;
+                    &lt;p&gt; 여러분은 동물에 대해 얼마나 알고 있으신가요? 동물에 대해 배우고 행동 특성 어떤 생김새를 가지고 있는지 알고 있다면 더욱 유익한 시간이 될 수
+                        있습니다.&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;div class="card__footer"&gt;
                     &lt;h4&gt;동물학자 &lt;em&gt;Hesperioidea&lt;/em&gt;&lt;/h4&gt;
