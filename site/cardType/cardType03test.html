@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카드유형 테스트</title>
+    <title>카드유형 03</title>
     <style>
         /* fonts */
         @import url('https://webfontworld.github.io/score/SCoreDream.css');
@@ -67,31 +67,91 @@
             text-align: center;
             margin-bottom: 70px;
         }
-        /* cardType */
+
+        /* blind : 시멘틱 태그 뒤에는 제목이 와야하지만 눈에 보이지 않게 하기윈한 설정 네이버 참조*/
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        /* cardtype03 */
         body {
             background-color: #2254c3;
         }
+        .card__inner {
+            display: flex;
+        }
+        .card__inner .card{
+            width: 33.333%;
+            height: 517px;
+            padding: 26px;
+            background-color: #fff;
+        }
+        .card__inner .card:nth-child(1) {border-right: 1px solid #eee;}
+        .card__inner .card:nth-child(2) {border-right: 1px solid #eee;}
     </style>
 </head>
 
 <body>
-    <section id="cardType03" class="card_wrap score secton">
-        <h2></h2>
+    <section id="cardType03" class="card__wrap score section">
+        <h2 class="blind">동물의 세계</h2>
+        <p></p>
+        <div class="card__inner container">
             <article class="card">
-                <figure class="card_header">
-                    <h3>여우</h3>
-                    <p>동물에 대해 배우고 각 동물의 특성을 알 수 있다면 동물원에 가서</p>
+                <figure class="card__header">
+                    <img src="img/card_bg03_01.jpg" alt="">
+                    <span>Architects</span>
                 </figure>
+                <div class="card__contents">
+                    <h3>건축은 건물이나 다른 구조물을 계획하고 설계하고 건설하는 과정과 그 결과..</h3>
+                    <p>건축적인, 미학적인 고려가 전체적으로 기능성에 종속되어야 한다는 개념이 대중성, 회의론과 만났을 때, 그것은 비트루비우스의 '유용성을...</p>
+                </div>
+                <div class="card__footer">
+                    <h4>건축 박사 <em>Hesperioidea</em></h4>
+                    <span>
+                        <img src="" alt="">
+                    </span>
+                </div>
             </article>
             <article class="card">
-                <h3>여우</h3>
-                <p>동물에 대해 배우고 각 동물의 특성을 알 수 있다면 동물원에 가서</p>
+                <figure class="card__header">
+                    <img src="img/card_bg03_02.jpg" alt="">
+                    <span>Architects</span>
+                </figure>
+                <div class="card__contents">
+                    <h3>건축은 건물이나 다른 구조물을 계획하고 설계하고 건설하는 과정과 그 결과..</h3>
+                    <p>건축적인, 미학적인 고려가 전체적으로 기능성에 종속되어야 한다는 개념이 대중성, 회의론과 만났을 때, 그것은 비트루비우스의 '유용성을...</p>
+                </div>
+                <div class="card__footer">
+                    <h4>건축 박사 <em>Hesperioidea</em></h4>
+                    <span>
+                        <img src="" alt="">
+                    </span>
+                </div>
             </article>
             <article class="card">
-                <h3>여우</h3>
-                <p>동물에 대해 배우고 각 동물의 특성을 알 수 있다면 동물원에 가서</p>
+                <figure class="card__header">
+                    <img src="img/card_bg03_01.jpg" alt="">
+                    <span>Architects</span>
+                </figure>
+                <div class="card__contents">
+                    <h3>건축은 건물이나 다른 구조물을 계획하고 설계하고 건설하는 과정과 그 결과..</h3>
+                    <p>건축적인, 미학적인 고려가 전체적으로 기능성에 종속되어야 한다는 개념이 대중성, 회의론과 만났을 때, 그것은 비트루비우스의 '유용성을...</p>
+                </div>
+                <div class="card__footer">
+                    <h4>건축 박사 <em>Hesperioidea</em></h4>
+                    <span>
+                        <img src="" alt="">
+                    </span>
+                </div>
             </article>
+        </div>
     </section>
+
 </body>
 
 </html>
