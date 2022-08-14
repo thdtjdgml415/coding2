@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카드유형 03</title>
+    <title>카드유형3번 연습</title>
     <style>
-        /* fonts */
-        @import url('https://webfontworld.github.io/score/SCoreDream.css');
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
 
-        .score {
-            font-family: 'SCoreDream';
-            font-weight: 300;
+        /*fonts*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nexon {
+            font-family: 'NexonLv1Gothic';
         }
 
         /* reset */
@@ -42,7 +46,7 @@
         /* common 다른 유형에도 기본적으로 들어감*/
         .container {
             width: 1160px;
-            padding: 0 20px 200px;
+            padding: 0 20px;
             margin: 0 auto;
             min-width: 1160px;
             overflow: hidden;
@@ -78,72 +82,150 @@
             overflow: hidden;
         }
 
-        /* cardtype03 */
+        /*cardType03*/
         body {
-            background-color: #2254c3;
+            background-color: blue;
         }
+
         .card__inner {
+            background-color: #fff;
+            justify-content: space-between;
             display: flex;
         }
-        .card__inner .card{
-            width: 33.333%;
-            height: 517px;
+
+        .card__inner .card {
+            width: 33.33333%;
             padding: 26px;
-            background-color: #fff;
         }
-        .card__inner .card:nth-child(1) {border-right: 1px solid #eee;}
-        .card__inner .card:nth-child(2) {border-right: 1px solid #eee;}
+
+        .card__inner .card__header {
+            position: relative;
+            border-radius: 10px;
+        }
+        .card__header img {
+            border-radius: 10px;
+        }
+        .card__inner .card__header figcaption {
+            border-radius: 50px;
+            background-color: #ccc;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .card__inner .card__contents {
+            margin-top: 19px;
+            line-height: 1.4;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .card__contents h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .card__inner .card__contents p {
+            margin-top: 10px;
+            line-height: 1.7;
+            font-size: 16px;
+            color: #666;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+
+        .card__footer {
+            display: flex;
+            justify-content: end;
+            margin-top: 30px;
+        }
+
+        .card__footer h4 {
+            text-align: right;
+            line-height: 1.17;
+            font-size: 16px;
+            color: #dd2a2a;
+            
+        }
+
+        .card__footer em {
+            font-style: normal;
+            display: block;
+            color: #666;
+        }
+
+        .card__footer span img {
+            width: 40px;
+            height: 40px;
+            margin-left: 13px;
+        }
     </style>
 </head>
 
 <body>
-    <section id="cardType03" class="card__wrap score section">
-        <h2 class="blind">동물의 세계</h2>
-        <p></p>
+    <section id="cardType03" class="nexon gray section">
         <div class="card__inner container">
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card_bg03_01.jpg" alt="">
-                    <span>Architects</span>
-                </figure>
+                <h2 class="blind">건축의 세계</h2>
+                <div class="card__header">
+                    <img src="img/card_bg01_01.jpg" alt=" ">
+                    <figcaption>architects</figcaption>
+                </div>
                 <div class="card__contents">
                     <h3>건축은 건물이나 다른 구조물을 계획하고 설계하고 건설하는 과정과 그 결과..</h3>
                     <p>건축적인, 미학적인 고려가 전체적으로 기능성에 종속되어야 한다는 개념이 대중성, 회의론과 만났을 때, 그것은 비트루비우스의 '유용성을...</p>
                 </div>
                 <div class="card__footer">
-                    <h4>건축 박사 <em>Hesperioidea</em></h4>
+                    <h4>
+                        건축 박사<em>Hesperioidea</em>
+                    </h4>
                     <span>
                         <img src="img/card_bg03_icon01.png" alt="">
                     </span>
                 </div>
             </article>
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card_bg03_02.jpg" alt="">
-                    <span>Architects</span>
-                </figure>
+                <h2 class="blind">건축의 세계</h2>
+                <div class="card__header">
+                    <img src="img/card_bg01_02.jpg" alt=" ">
+                    <figcaption>architects</figcaption>
+                </div>
                 <div class="card__contents">
                     <h3>건축은 건물이나 다른 구조물을 계획하고 설계하고 건설하는 과정과 그 결과..</h3>
                     <p>건축적인, 미학적인 고려가 전체적으로 기능성에 종속되어야 한다는 개념이 대중성, 회의론과 만났을 때, 그것은 비트루비우스의 '유용성을...</p>
                 </div>
                 <div class="card__footer">
-                    <h4>건축 박사 <em>Hesperioidea</em></h4>
+                    <h4>
+                        건축 박사<em>Hesperioidea</em>
+                    </h4>
                     <span>
                         <img src="img/card_bg03_icon02.png" alt="">
                     </span>
                 </div>
             </article>
             <article class="card">
-                <figure class="card__header">
-                    <img src="img/card_bg03_03.jpg" alt="">
-                    <span>Architects</span>
-                </figure>
+                <h2 class="blind">건축의 세계</h2>
+                <div class="card__header">
+                    <img src="img/card_bg01_03.jpg" alt=" ">
+                    <figcaption>architects</figcaption>
+                </div>
                 <div class="card__contents">
                     <h3>건축은 건물이나 다른 구조물을 계획하고 설계하고 건설하는 과정과 그 결과..</h3>
                     <p>건축적인, 미학적인 고려가 전체적으로 기능성에 종속되어야 한다는 개념이 대중성, 회의론과 만났을 때, 그것은 비트루비우스의 '유용성을...</p>
                 </div>
                 <div class="card__footer">
-                    <h4>건축 박사 <em>Hesperioidea</em></h4>
+                    <h4>
+                        건축 박사<em>Hesperioidea</em>
+                    </h4>
                     <span>
                         <img src="img/card_bg03_icon03.png" alt="">
                     </span>
@@ -151,7 +233,6 @@
             </article>
         </div>
     </section>
-
 </body>
 
 </html>
