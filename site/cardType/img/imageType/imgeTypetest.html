@@ -1,123 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이미지 유형01</title>
+    <title>이미지 유형</title>
     <style>
         /* fonts */
-        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
-
-        .gmark {
-            font-family: 'GmarketSans';
-            font-weight: 400px;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: normal;
-        }
+        @import url('https://webfontworld.github.io/score/SCoreDream.css');
         /* reset */
         * {
-            margin: 0;
             padding: 0;
+            margin: 0;
         }
         a {
             text-decoration: none;
             color: #000;
         }
-        /* common */
-        .container {
-            width: 1160px;
-            padding: 0 20px;
-            margin: 0 auto;
+        .score {
+            font-family: 'SCoreDream';
         }
         .section {
-            
-            padding: 120px 0;
+            margin: 120px 0px;
         }
-        .section > h2 {
+        .section>h2 {
             font-size: 50px;
-            margin-bottom: 20px;
-
-        }
-        .section > p {
-            font-size: 22px;
             font-weight: 300;
-            margin-bottom: 70px;
+            color: #000;
             text-align: center;
         }
-
-        /* imageType */
-        #imageType {
+        .section>p {
+            font-size: 22px;
+            text-align: center;
+            font-weight: 300;
+            margin-bottom: 70px;
         }
-
-        .image__wrap {}
-
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+        }
         .image__inner {
             display: flex;
-            justify-content: space-between; 
+            justify-content: space-between;
         }
-        .image {
-            width: 49%;
+        .image__inner .image {
+            width: 48%;
+            background: #666;
+            width: 570px;
             height: 370px;
-            padding: 200px 30px 30px 30px;
+            color: #fff;
             box-sizing: border-box;
-            color: #fff;;
+            padding: 200px 30px 30px 30px;
+           
+
         }
-        .image.img1{
+        .image__inner .img1 {
             background: url(../card_bg01_01.jpg) no-repeat center / cover;
         }
-        .image.img2{
+        .image__inner .img2 {
             background: url(../card_bg01_02.jpg) no-repeat center / cover;
         }
-
-        .image .tit {
+        .image>h3 {
             font-size: 32px;
-            margin-bottom: 10px;
-        }
-        .image .desc {
-            font-size: 16px;
-            margin-bottom: 10px;
             line-height: 1.4;
-            padding-right: 100;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2; 
-            -webkit-box-orient: vertical;
+            text-align: left;
             margin-bottom: 10px;
         }
-        .image .more {
+        .image>p {
             font-size: 16px;
-            font-weight: 300;
-            color: #fff;
-            background: #B45A30;
-            padding: 10px 20px;
-            display: inline-block;
+            line-height: 1.4;
+            text-align: left;
+            margin-bottom: 20px;
         }
+        .image>a {
+            background: #fff;
+            padding: 10px 20px 10px 20px;
+        }
+        
+        
     </style>
 </head>
-
 <body>
-    <section id="imageType" class="image__wrap gmark section">
-        <h2>포트폴리오가 실력이다.</h2>
-        <p>이미지 유형입니다. 마우스 오버시 자세한 정보가 나와있는 구조입니다.</p>
-        <div class="image__inner container">
+    <section id="imageType" class="section score">
+        <h2>동물원</h2>
+        <p>동물원에 가기전에 동물에 대해 알고가면 더욱 동물원을 즐길 수 있습니다.</p>
+        <div class="image__inner container"> 
             <article class="image img1">
-                <h3 class="tit">여우</h3>
-                <p class="desc">동물원을 돌아다니면서 습관을 알아보기 위함이기 때문에 공부를 해서 동물원을 좀 더 재밌고 유익하게 돌아다닐 수 있게 만드는 것이
-                    목표입니다. </p>
-                <a href="/" class="more">자세히보기</a>
-               
+                <h3>동물원🐷</h3>
+                <p>포트폴리오는 취업에 있어 정말 중요합니다. 그동안 배웠던 내용을 복습하고 배워봅시다</p>
+                <a href="#">자세히보기</a>
             </article>
             <article class="image img2">
-                <h3 class="tit">호랑이</h3>
-                <p class="desc">여러분은 동물에 대해 얼마나 알고 ? 동물에 대해 배우고 행동 특성 어떤 생김새를 가지고 있는지 알고 있다면 더욱 유익한 시간이 될 수
-                    있습니다.</p>
-                <a href="/" class="more">자세히보기</a>
+                <h3>동물원🐷</h3>
+                <p>포트폴리오는 취업에 있어 정말 중요합니다. 그동안 배웠던 내용을 복습하고 배워봅시다</p>
+                <a href="#">자세히보기</a>
             </article>
         </div>
     </section>
 </body>
-
 </html>

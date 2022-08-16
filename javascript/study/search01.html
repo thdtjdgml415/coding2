@@ -67,19 +67,19 @@
                 <h2 class="t_tit">서치 프로그램</h2>
                 <p class="t_desc2">
                     서치 프로그램을 만들어보았습니다. <br>
-                    indexOf() 메서드를 사용해서 작업하였습니다. javascript와 html, css를 각각 나누어서 검색할 수 있도록 하였습니다.
+                    CSS, JAVASCRIPT, HTML 페이지를 각각 만들어서 서치할 수 있도록 하였습니다. <br>
                 </p>
-                <h3 class="t_tit">서치 프로그램입니다.</h3>
                 <h3 class="t_tit2">CSS</h3>
                 <p class="t_desc2">
-                    CSS입니다. link로 가져와서 작업하였습니다. <br>
+                    CSS입니다. <br>
+                    header, main, footer로 나누어서 작업하였습니다.
                 </p>
                 <div class="t_result">
                     <details>
                         <summary>css보기</summary>
                         <div class="result02">
                             <div class="t_code">
-<pre><code class="language-css">:root {
+    <pre><code class="language-css">:root {
     --htmlColor : #223547;
     --cssColor : #472222;
     --javascriptColor : #224736;
@@ -234,6 +234,10 @@ li {
                 <h3 class="t_tit2">javascript</h3>
                 <p class="t_desc2">
                     javascript입니다.
+                    indexOf() 메서드를 사용해서 작업하였습니다.
+                    indexOf() 메서드의 특성인 문자열에서 특정 문자열을 찾고 <br>
+                    원하는 문자가 맨처음 나오면 0을 출력하기 때문에 false를 출력하면 class에 hide를 지워서 출력하는 방식을 사용하였습니다. <br>
+                    javascript와 html, css를 각각 나누어서 검색할 수 있도록 하였습니다.
                 </p>
                 <div class="t_result">
                     <details>
@@ -263,15 +267,64 @@ searchBox.addEventListener("keyup", () => {
                 </div>
                 <!-- js -->
 
+                <h3 class="t_tit2">HTML</h3>
+                <p class="t_desc2">
+                    검색되는 요소에 data를 지정하여 각각 값을 지정하였습니다. <br>
+                    마찬가지로 javascript와 css에서도 같은 방식을 사용하였습니다.
+                </p>
+                <div class="t_result">
+                    <details>
+                        <summary>html보기</summary>
+                        <div class="result02">
+                            <div class="t_code">
+<pre><code class="language-html">&lt;main id="main"&gt;
+    &lt;div class="search__wrap"&gt;
+        &lt;span&gt;indexOf()를 이용하여 검색하기&lt;/span&gt;
+        &lt;h1&gt;HTML 태그 검색하기&lt;/h1&gt;
+        
+        &lt;div class="search__box"&gt;
+            &lt;label for="search"&gt;검색하기&lt;/label&gt;
+            &lt;input type="text" id="search" placeholder="HTML 태그를 입력해주세요!"&gt;
+        &lt;/div&gt;
+        &lt;div class="search__list"&gt;
+            &lt;div class="html"&gt;
+                &lt;ul&gt;
+                    &lt;li data-name="a"&gt;&lt;strong&gt;a&lt;/strong&gt; : a 태그는 다른 페이지 이동을 설정합니다.&lt;/li&gt;
+                    &lt;li data-name="abbr"&gt;&lt;strong&gt;abbr&lt;/strong&gt; : abbr 태그는 줄임말이나 머리글자를 표현하는데 사용합니다.&lt;/li&gt;
+                    &lt;li data-name="acronym"&gt;&lt;strong&gt;acronym&lt;/strong&gt; : acronym 태그는 줄임말이나 머리글자를 표현하는데 사용합니다.&lt;/li&gt;
+                    &lt;li data-name="address"&gt;&lt;strong&gt;address&lt;/strong&gt; : address 태그는 웹 페이지의 연락처 정보를 설정합니다&lt;/li&gt;
+                    &lt;li data-name="applet"&gt;&lt;strong&gt;applet&lt;/strong&gt; : applet 태그는 애플랫 요소를 설정합니다. 현재는 사용하지 않습니다.&lt;/li&gt;
+                    &lt;li data-name="area"&gt;&lt;strong&gt;area&lt;/strong&gt; : area 태그는 이미지 맵의 영역을 정의합니다. &lt;/li&gt;
+                    &lt;li data-name="article"&gt;&lt;strong&gt;article&lt;/strong&gt; : article 태그는 사이트의 독립적인 컨텐츠 섹션을 설정합니다.&lt;/li&gt;
+                    &lt;li data-name="aside"&gt;&lt;strong&gt;aside&lt;/strong&gt; : aside 태그는 주요 콘텐츠의 보조적 컨텐츠 섹션을 설정합니다.&lt;/li&gt;
+                    &lt;li data-name="audio"&gt;&lt;strong&gt;audio&lt;/strong&gt; : audio 태그는 오디오 파일을 설정합니다.&lt;/li&gt;
+                    &lt;li data-name="b"&gt;&lt;strong&gt;b&lt;/strong&gt; : b 태그는 다른 텍스트와 구별 할 때 설정합니다.&lt;/li&gt;
+                    &lt;li data-name="base"&gt;&lt;strong&gt;base&lt;/strong&gt; : base 태그는 모든 문서의 기본이 되는 URL을 설정합니다.&lt;/li&gt;
+                    &lt;li data-name="basefont"&gt;&lt;strong&gt;basefont&lt;/strong&gt; : basefont 태그는 문서의 기본 폰트, 사이즈, 종류를 설정합니다.&lt;/li&gt;
+                    &lt;li data-name="bdi"&gt;&lt;strong&gt;bdi&lt;/strong&gt; : bdi 태그는 텍스트의 출력 방향 영역을 설정합니다.&lt;/li&gt;
+                    &lt;li data-name="bdo"&gt;&lt;strong&gt;bdo&lt;/strong&gt; : bdo 태그는 텍스트의 방향을 설정합니다.&lt;/li&gt;
+                    &lt;li data-name="big"&gt;&lt;strong&gt;big&lt;/strong&gt; : big 태그는 텍스트의 크기를 크게 설정합니다.&lt;/li&gt;
+                    &lt;li data-name="blockquote"&gt;&lt;strong&gt;blockquote&lt;/strong&gt; : 태그는 긴 문장의 인용문을 설정합니다.&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+                            </div>
+                    </details>
+                </div>
+                <!-- HTML -->
+
                 <h4 class="t_tit2">결과</h4>
                 <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
-                    <iframe src="https://thdtjdgml415.github.io/coding2/javascript/effect/quizEffect04.html"
+                    <iframe src="https://thdtjdgml415.github.io/coding2/javascript/effect/searchEffect01.html"
                         frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                     </iframe>
                 </div>
 
                 <div class="t_link">
-                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/effect/quizEffect04.html"
+                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/effect/searchEffect01.html"
                         target="_blank">원본 소스 보기</a>
                 </div>
 
