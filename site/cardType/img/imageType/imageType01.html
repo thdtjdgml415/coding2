@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지유형01</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/sebang/SebangGothic.css');
+        @import url('https://webfontworld.github.io/NanumSquare/NanumSquare.css');
+
+
+        .sebang {
+            font-family: 'SebangGothic';
+            font-weight: 400;
+        }
+
+        .squere {
+            font-family: 'NanumSquare';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+            /*이미지 여백 없애기*/
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common 다른 유형에도 기본적으로 들어감*/
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 120px 0;
+
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /* main */
+        .inner__img {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .inner__img img {
+            width: 570px;
+            height: 370px;
+            position: relative;
+        }
+
+        .inner__img .img__card .tit {
+            font-size: 32px;
+            line-height: 1.4;
+            color: #fff;
+            position: absolute;
+            top: 500px;
+            padding-left: 30px;
+
+        }
+
+        .inner__img .img__card .desc {
+            font-size: 16px;
+            line-height: 1.4;
+            color: #fff;
+            text-align: left;
+            position: absolute;
+            width: 343px;
+            height: 44px;
+            top: 560px;
+            padding-left: 30px;
+        }
+
+        .inner__img .more{
+            background-image: url(../Group\ 1.jpg);
+            background-image: url(../Group\ 1.jpg);
+            width: 120px;
+            height: 38px;
+            position: absolute;
+            top: 300px;
+            left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imgetype01" class="container">
+        <section class="section squere">
+            <h2>동물원</h2>
+            <p>동물원에 가기전에 동물에 대해 알고가면 더욱 동물원을 즐길 수 있습니다.</p>
+            <div class="inner__img">
+                <article class="img__card">
+                    <img src="../card_bg01_01.jpg" alt="">
+                    <h3 class="tit">동물원</h3>
+                    <p class="desc">포트폴리오는 취업에 있어 정말 중요합니다. 그동안 배웠던 내용을 복습하고 배워봅시다. 다른 포트폴리오를 본적 있으신가요</p>
+                    <a href="#" class="more"></a>
+                </article>
+                <article class="img__card">
+                    <img src="../card_bg01_02.jpg" alt="">
+                    <h3 class="tit">동물원</h3>
+                    <p class="desc">포트폴리오는 취업에 있어 정말 중요합니다. 그동안 배웠던 내용을 복습하고 배워봅시다. 다른 포트폴리오를 본적 있으신가요</p>
+                    <a href="#" class="more"></a>
+                </article>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
