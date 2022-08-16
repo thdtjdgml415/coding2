@@ -1,40 +1,38 @@
 :root {
     --htmlColor : #223547;
-    --cssColor : #73e764;
-    --javascriptColor : #4455e7;
+    --cssColor : #472222;
+    --javascriptColor : #224736;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'NexonLv1Gothic';
+    color: var(--htmlColor);
 }
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
+*, *:before, *:after {
+    box-sizing:border-box;
 }
-
 a {
-    color: #223547;
+    color: var(--htmlColor);
     text-decoration: none;
 }
 li {
     list-style: none;
 }
+
 /* header */
 #header {
     display: flex;
-}
-#header h1 {
-    margin: 10x;
+    justify-content: space-between;
 }
 #header nav {
     margin: 10px;
 }
 #header nav li {
-    display: inline;
     position: relative;
+    display: inline;
 }
 #header nav li a {
     width: 30px;
@@ -42,9 +40,9 @@ li {
     border: 1px solid var(--htmlColor);
     border-radius: 50%;
     display: inline-block;
-    line-height: 30px;
     text-align: center;
-    font-family: 'NexonMabinogi';
+    line-height: 30px;
+    font-family: 'NexonLv1Gothic';
 }
 #header nav li.active a {
     background-color: var(--htmlColor);
@@ -55,12 +53,11 @@ li {
     left: 0;
     top: 35px;
     width: 400px;
-
 }
 #header nav li .sub li a {
     width: auto;
     background-color: transparent;
-    color: #223547;
+    color: var(--htmlColor);
     border: 0;
     text-align: left;
     line-height: 1.2;
@@ -78,32 +75,31 @@ li {
     margin: 0 auto;
     border: 3px solid var(--htmlColor);
     border-radius: 20px;
-    background-color: #F1F3F6;
+    background-color: #f1f3f6;
     padding: 30px;
     text-align: center;
 }
-
-.search__wrap>span {
+.search__wrap > span {
     font-size: 20px;
     margin-bottom: 20px;
     display: inline-block;
 }
-.search__wrap>h1 {
+.search__wrap > h1 {
     font-family: 'Tmon';
-    color: #223547;
-    font-size: 6vw;   /*최대 크기를 이렇게 표현가능*/
+    color: var(--htmlColor);
+    font-size: 6vw;
     margin-bottom: 10px;
 }
 .search__box {
     margin-bottom: 20px;
 }
-.search__box label{
-        position: absolute;
-        clip: rect(0 0 0 0);
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
+.search__box label {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }
 .search__box input {
     border: 2px solid var(--htmlColor);
@@ -112,42 +108,40 @@ li {
     border-radius: 50px;
     font-size: 20px;
 }
-
 .search__list li {
-    list-style: none;
     text-align: left;
     line-height: 1.7;
 }
 .search__list li.hide {
     display: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 600px){
     .search__wrap {
         padding: 20px;
     }
-    .search__wrap>h1 {
-        font-size: 44px;
-    }
-    .search__wrap>span {
+    .search__wrap > span {
         font-size: 16px;
         margin-bottom: 10px;
+    }
+    .search__wrap > h1 {
+        font-size: 44px;
     }
     .search__box input {
         font-size: 16px;
         padding: 12px 30px;
     }
 }
+
+
 /* footer */
 #footer {
     text-align: center;
 }
-
 #footer a {
     color: #000;
-    font-family: "NexonMabinogi";
+    font-family: 'NexonLv1Gothic';
     padding-bottom: 50px;
 }
-
 #footer a:hover {
     text-decoration: underline;
 }
