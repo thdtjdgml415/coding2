@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <style>
         /* fonts */
         @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
         /* reset */
         * {
             margin: 0;
@@ -21,7 +23,8 @@
 
         img {
             width: 100%;
-            vertical-align: top;  /*이미지 여백 없애기*/
+            vertical-align: top;
+            /*이미지 여백 없애기*/
         }
 
         h1,
@@ -53,6 +56,7 @@
             text-align: center;
             margin-bottom: 20px;
         }
+
         .section>h2.tit {
             width: 1160px;
             padding: 0 20px;
@@ -64,7 +68,8 @@
             border-top: 1px solid #000;
             position: relative;
         }
-        .section>h2.tit span{
+
+        .section>h2.tit span {
             background: #000;
             color: #fff;
             display: inline-block;
@@ -86,18 +91,22 @@
             display: flex;
             justify-content: space-between;
         }
+
         .image {
             width: 32%;
             position: relative;
             overflow: hidden;
         }
+
         .image__box {}
+
         .image__box img {
             vertical-align: top;
             transition: all 0.5s ease-in-out;
 
         }
-        .image__desc  {
+
+        .image__desc {
             position: absolute;
             left: 0;
             bottom: -100px;
@@ -109,37 +118,68 @@
             box-sizing: border-box;
             transition: all 0.3s ease-in-out;
         }
+
         .img1 .image__desc {
             background: rgba(8, 11, 143, 0.3);
         }
+
         .img2 .image__desc {
             background: rgba(8, 11, 143, 0.3);
         }
+
         .img3 .image__desc {
             background: rgba(8, 11, 143, 0.3);
         }
-        .img1 .image__desc h3 { color: rgba(8, 11, 143);}
-        .img2 .image__desc h3 { color: rgba(8, 11, 143);}
-        .img3 .image__desc h3 { color: rgba(8, 11, 143);}
-        
-        .image:hover .image__desc{
+
+        .img1 .image__desc h3 {
+            color: rgba(8, 11, 143);
+        }
+
+        .img2 .image__desc h3 {
+            color: rgba(8, 11, 143);
+        }
+
+        .img3 .image__desc h3 {
+            color: rgba(8, 11, 143);
+        }
+
+        .image:hover .image__desc {
             bottom: 0;
         }
-        .image:hover .image__desc{
+
+        .image:hover .image__desc {
             transform: scale(1.1);
         }
+
         .image__desc h3 {
             font-size: 24px;
             margin-bottom: 5px;
         }
+
         .image__desc .more {
             font-size: 16px;
         }
+
         .image__desc .more:hover {
             text-decoration: underline;
         }
+
+
+                
+        .image__inner .img1 {
+            background: url(https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/img/art01.jpg?raw=true) no-repeat center / cover
+        }
+
+        .image__inner .img2 {
+            background: url(https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/img/art02.jpg?raw=true) no-repeat center / cover
+        }
+
+        .image__inner .img3 {
+            background: url(https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/img/art03.jpg?raw=true) no-repeat center / cover
+        }
     </style>
 </head>
+
 <body>
     <section id="imageType02" class="section gmark section">
         <h2>미술관</h2>
@@ -175,4 +215,5 @@
         </div>
     </section>
 </body>
+
 </html>

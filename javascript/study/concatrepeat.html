@@ -64,7 +64,7 @@
         <div class="document">
             <h2 class="t_tit">문자열을 찾는 메서드</h2>
             <p class="t_desc2">
-                replace(), replaceAll(),  concat(), repeat(), padStart(), padEnd(), include()들을 정리해 보았습니다.
+                concat(), repeat()를 정리해 보았습니다.
             </p>
             <div class="main_sample">
 
@@ -108,30 +108,30 @@
                 </p>
 
 
-            <!--replaceAll() -->
-            <h3 class="t_tit2">replaceAll()</h3>
-            <p class="t_desc2">
-                "문자열".spilt(구분자); <br>
-                "문자열".spilt(정규식 표현); <br>
-                "문자열".spilt(구분자, 갯수);
-            </p>
-            <div class="t_code">
+                <!--replaceAll() -->
+                <h3 class="t_tit2">replaceAll()</h3>
+                <p class="t_desc2">
+                    "문자열".spilt(구분자); <br>
+                    "문자열".spilt(정규식 표현); <br>
+                    "문자열".spilt(구분자, 갯수);
+                </p>
+                <div class="t_code">
 <pre><code classs="js-language">const currentStr18 = str1.substring(4, 1); //ava
     const currentStr19 = str1.substring(1, 4); //ava 값을 알아서 받아서 순서를 잘 출력한다.
 </code></pre>
-            </div>
-            <p class="t_box">
-                substring()은 slice와 비슷하지만 시작위치와 끝나는 위치를 반대로 입력해도 자동으로 앞에서부터 출력합니다.
-            </p>
+                </div>
+                <p class="t_box">
+                    substring()은 slice와 비슷하지만 시작위치와 끝나는 위치를 반대로 입력해도 자동으로 앞에서부터 출력합니다.
+                </p>
 
 
 
-            <!-- concat() -->
-            <h3 class="t_tit2"> concat()</h3>
-            <p class="t_desc2">
-                //"문자열".concat(문자열, 문자열 ...)
-            </p>
-            <div class="t_code">
+                <!-- concat() -->
+                <h3 class="t_tit2"> concat()</h3>
+                <p class="t_desc2">
+                    //"문자열".concat(문자열, 문자열 ...)
+                </p>
+                <div class="t_code">
 <pre><code classs="js-language">  const str1 = "javascript"
     const currenStr1 = str1.concat("reference")   //javascriptreference
     const currenStr2 = str1.concat(" ", "reference")    //javascript reference
@@ -139,37 +139,34 @@
     const currenStr4 = str1.concat(",", "reference", ",", "book")    //javascript,reference,book
     const currenStr5 = str1.concat(" ", ["reference", "book"])    //javascript reference,book
 </code></pre>
-            </div>
-            <p class="t_box">
+                </div>
+                <p class="t_box">
 
-            </p>
+                </p>
 
 
 
-            <!-- repeat -->
-            <h3 class="t_tit2">repeat()</h3>
-            <p class="t_desc2">
-                문자열에서 특정 문자의 위치를 찾고 숫자를 반환합니다.
-            </p>
-            <p class="t_box">
-                "문자열".indexOf(검색값);     
-                "문자열".indexOf(검색값, 위치값); 
-            </p>
-            <div class="t_code">
+                <!-- repeat -->
+                <h3 class="t_tit2">repeat()</h3>
+                <p class="t_desc2">
+                    문자열에서 특정 문자의 위치를 찾고 숫자를 반환합니다.
+                </p>
+                <p class="t_box">
+                    "문자열".indexOf(검색값);
+                    "문자열".indexOf(검색값, 위치값);
+                </p>
+                <div class="t_code">
 <pre><code classs="js-language">const str1 = "javascript";
 
     const cirrentStr1 = str1.repeat(0)   // ''
     const cirrentStr2 = str1.repeat(1)   // javascript
     const cirrentStr3 = str1.repeat(2)   //  javascriptjavascript
 </code></pre>
+                </div>
+                <p class="t_box">
+
+                </p>
             </div>
-            <p class="t_box">
-                indexOf는 특정문자의 위치를 찾고 숫자를 반환합니다. <br>
-                특정 문자열을 변수에 집어 넣고 indexOf()메서드를 사용해 보았습니다. <br>
-                형식은 "문자열".indexOf(검색값), "문자열".indexOf(검색값, 위차값)입니다. <br>
-                위 문항에서 대입해 보았고 주의할 점은 데이터 값이 없으면 -1을 반환합니다.
-            </p>
-        </div>
         </div>
     </main>
     <!-- //main -->
