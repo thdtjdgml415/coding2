@@ -40,9 +40,6 @@
             <div class="search__info">
                 <div class="type">플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로 검색해보세요!</div>
                 <div>전체 속성 갯수 : <span class="num"></span></div>
-                <div>플렉스 속성 갯수 : <span class="numFlex"></span></div>
-                <div>애니메이션 속성 갯수 : <span class="numAni"></span></div>
-                <div>기타 속성 갯수 : <span class="numOther"></span></div>
             </div>
             <div class="search__list">
                 <div class="css">
@@ -108,9 +105,6 @@
         const searchList = document.querySelectorAll(".search__list ul li");    //목록 리스트
         const ListNumber = document.querySelector(".search__info span");        //리스트 갯수
         const searchInfo = document.querySelector(".search__info .num")         //전체 갯수
-        const searchFlex = document.querySelector(".search__info .numFlex")         //플렉스 갯수
-        const searchAni = document.querySelector(".search__info .numAni")         //애니메이션 갯수
-        const searchOther = document.querySelector(".search__info .numOther")         //기타 갯수
 
         //전체 갯수 구하기
         searchInfo.textContent = searchList.length;
@@ -121,9 +115,10 @@
 
             searchList.forEach(el => {
                 const cssName = el.dataset.name; //CSS속성 모든 값
+                const cssType = el.dataset.type //CSS유형의 모든 값
                 // console.log(cssName)
 
-                if (cssName.includes(searchWord)) {
+                if (cssName.includes(searchWord) || cssType.includes(searchWord)) {
                     el.classList.remove("hide");
                 } else {
                     el.classList.add("hide");    //indexOf()값이 0(false)이되는 값만 hide를 지워줍니다.
