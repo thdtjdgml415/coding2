@@ -267,8 +267,7 @@ document.querySelector(".sample01_P3").innerHTML = "currentStr2";
                 <div id="sample03" class="sample">
                     <h3>03.문자열 메서드 : 변경 : trim(),trimStart(),trimEnd() :문자열 앞뒤 공백 제거 : 반환 문자열</h3>
                     <p>
-                        템플릿 문자열은 간단하게 말해서 내장된 표현식을 허용하는 문자열 리터럴이다. 중괄호를 리터럴이라고 하고 ${}
-                        리터럴 안에 변수를 넣는다.
+                        메서드는 문자열 양 끝의 공백을 제거합니다. 공백이란 모든 공백문자(space, tab, NBSP 등)와 모든 개행문자(LF, CR 등)를 의미합니다.
                     </p>
                     <div class="table">
                         <table>
@@ -464,7 +463,7 @@ const currentStr18 = str4.split('').reverce().join('/');
                         "문자열".replace(정규식, 변경할 문자열)
                     </div>
                     <div class="script">
-                        <pre><code class="js-language"> const str1 = "javascript reference";
+<pre><code class="js-language"> const str1 = "javascript reference";
     const cirrentStr1 = str1.replace("javascript", "자바스크립트");  //자바스크립트 reference
     const cirrentStr2 = str1.replace("j", "J");  //  Javascript reference
     const cirrentStr3 = str1.replace("e", "E");  //  javascript rEference
@@ -503,7 +502,7 @@ const currentStr18 = str4.split('').reverce().join('/');
                         "문자열".indexOf(검색값, 위치값); <br>
                     </div>
                     <div class="script">
-                        <pre><code class="js-language"> const str1 = "javascript reference";
+<pre><code class="js-language"> const str1 = "javascript reference";
     const cirrentStr1 = str1.replace("javascript", "자바스크립트");  //자바스크립트 reference
     const cirrentStr2 = str1.replace("j", "J");  //  Javascript reference
     const cirrentStr3 = str1.replace("e", "E");  //  javascript rEference
@@ -567,7 +566,8 @@ const currentStr18 = str4.split('').reverce().join('/');
                         "문자열".padStart(길이, 문자열)
                     </div>
                     <div class="script">
-                        <pre><code class="js-language">const currenStr1 = str1.padStart(1, "0");        //456  
+                        <pre><code class="js-language">const str1 = "456";
+    const currenStr1 = str1.padStart(1, "0");        //456  
     const currenStr2 = str1.padStart(2, "0");        //456
     const currenStr3 = str1.padStart(3, "0");        //456
     const currenStr4 = str1.padStart(4, "0");        //0456
@@ -613,37 +613,20 @@ const currentStr18 = str4.split('').reverce().join('/');
                         "문자열".lastIndexOf(검색값, 위치값);
                     </div>
                     <div class="script">
-                        <pre><code class="js-language">const str1 = "javascript reference";
-
-const currentStr1 = str1.split(''); //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't', ' ', 'r', 'e', 'f', 'e', 'r', 'e', 'n', 'c', 'e']
-const currentStr2 = str1.split(' '); //['javascript', 'reference']
-const currentStr3 = str1.split('', 1); //['j']
-const currentStr4 = str1.split('', 2); //['j', 'a']
-const currentStr5 = str1.split(' ', 1); //['javascript']
-const currentStr6 = str1.split(' ', 2); //['javascript', 'reference']
-const currentStr7 = str1.split('j'); // ['', 'avascript reference']
-const currentStr8 = str1.split('a'); // ['j', 'v', 'script reference']
-const currentStr9 = str1.split('e'); // ['javascript r', 'f', 'r', 'nc', '']
-const currentStr10 = str1.split('').join('/'); //  j/a/v/a/s/c/r/i/p/t/ /r/e/f/e/r/e/n/c/e 두개를 합쳐서 사용 가능
-
-const str2 = "java/script/refer/ence"
-
-const currentStr11 = str2.split('/');  //['java', 'script', 'refer', 'ence']
-
-
-const str3 = "java&script&refer!ence"
-
-const currentStr12 = str3.split('!');     // ['java&script&refer', 'ence']
-const currentStr13 = str3.split('&');     // ['java', 'script', 'refer!ence']
-const currentStr14 = str3.split(/&|\!/);  // ['java', 'script', 'refer', 'ence'] 정규식 표현
-
-
-const str4 = "java&script&refer!ence"
-
-const currentStr15 = str4.split('').join();
-const currentStr16 = str4.split('').join('*');
-const currentStr17 = str4.split('').reverce().join();
-const currentStr18 = str4.split('').reverce().join('/');       
+<pre><code class="js-language">const str1 = "javascript reference"
+    const currentStr1 = str1.indexOf("javascript");     //0
+    const currentStr2 = str1.indexOf("reference");      //11
+    const currentStr3 = str1.indexOf("j");              //0
+    const currentStr4 = str1.indexOf("a");              //1
+    const currentStr5 = str1.indexOf("v");              //2
+    const currentStr6 = str1.indexOf("jquery");         //-1
+    const currentStr7 = str1.indexOf("b");              //-1 데이터값이 없으면 -1
+    const currentStr8 = str1.indexOf("javascript", 0);  //  0
+    const currentStr9 = str1.indexOf("javascript", 1);  // -1
+    const currentStr10 = str1.indexOf("reference", 0);  // 11
+    const currentStr11 = str1.indexOf("reference", 1);  // 11
+    const currentStr12 = str1.indexOf("reference", 11); // 11
+    const currentStr13 = str1.indexOf("reference", 12); // -1      
 
 
 //lastIndexOf()
@@ -759,7 +742,6 @@ const currentStr26 = str1.lastIndexOf("reference", 12);  // 11
         {
             const str1 = "javascript";
             const currentStr1 = str1.toUpperCase()
-
 
 
             document.querySelector(".sample02_N1").innerHTML = "1";

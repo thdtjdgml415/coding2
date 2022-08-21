@@ -1,111 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이미지유형2</title>
+    <title>이미지 유형2</title>
     <style>
-        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
-
+        /*font*/
+         @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
         .gmark {
             font-family: 'GmarketSans';
         }
-
-        /* fonts */
-        * {
-            padding: 0;
+         /*reset*/
+         * {
             margin: 0;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: normal;
+            padding: 0;
         }
         a {
             text-decoration: none;
             color: #000;
         }
-
-        /* reset */
-        .container {
-            width: 1200px;
-            background: #ccc;
-            margin: 0 auto;
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
         }
 
+        /*common*/
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            background: #ccc;
+            padding: 0 20px;
+        }
         .section {
             padding: 120px 0;
         }
-
-        .section>h2 {
+        .section > h2 {
             font-size: 50px;
             text-align: center;
-            font-weight: 300;
-            margin-bottom: 19px;
+            line-height: 1.4;
+            padding-bottom: 30px;
+
+        }
+        .section > p {
+            font-size: 22px;
+            text-align: center;
+            padding-bottom: 70px;
             line-height: 1.4;
         }
-
-        .section>p {
-            font-size: 22px;
-            margin-bottom: 70px;
-            font-weight: 300;
-            color: #666;
-            text-align: center;
-        }
-
         .image__inner {
             display: flex;
             justify-content: space-between;
+            
         }
-        .image__inner .image {
-            width: 32%;
-            overflow: hidden;
-            position: relative;
-            vertical-align: top;
-        }
-        .image__box img {
-            vertical-align: top;
+        .image__card .imag{
             transition: all 0.5s ease-in-out;
-
+            vertical-align: center;
         }
+        .image__inner .image__card { 
+            width: 32%;
+            position: relative;
+            overflow: hidden;
+        }
+
         
-        .image__inner .image__desc {
-           position: absolute;
-           left: 0;
-           bottom: -100px;
-           text-align: center;
-           width: 100%;
-           height: 100px;
-           backdrop-filter: blur(10px);
-           padding: 23px 20px;
-           box-sizing: border-box;
-           transition: all 0.3s ease-in-out;  
+        .image__desc {
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease-in-out;
+            padding: 23px 20px;
         }
-        .img1 .image__desc {
-            background: rgba(8, 11, 143, 0.3);
+        .image__desc > h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
         }
-        .img2 .image__desc {
-            background: rgba(8, 11, 143, 0.3);
-        }
-        .img3 .image__desc {
-            background: rgba(8, 11, 143, 0.3);
-        }
-        .img1 .image__desc h3 {
-            color: rgba(8, 11, 143);
-        }
-
-        .img2 .image__desc h3 {
-            color: rgba(8, 11, 143);
-        }
-
-        .img3 .image__desc h3 {
-            color: rgba(8, 11, 143);
+        .image__desc .more{
+            font-size: 16px;
+            color: #000;
         }
         .image:hover .image__desc {
             bottom: 0;
@@ -113,57 +89,42 @@
         .image:hover .image__desc {
             transform: scale(1.1);
         }
-        .image__desc h3 {
-            margin-bottom: 5px;
-            font-size: 24px;
-        }
-        .image__desc .more {
-            font-size: 16px;
-            color: #ccc;
-        }
-        .image__desc .more:hover {
-            text-decoration: underline;
-        }
-        /* common */
-
-        /* imageType02 */
     </style>
 </head>
-
 <body>
     <section id="imageType02" class="section gmark">
         <h2>미술관</h2>
-        <p>동물원을 가기전에 동물에 대해 알고가면 더욱 동물원을 즐길 수 있습니다.</p>
-        <div class="image__inner container ">
-            <article class="image img1">
-                <figure class="image_box">
+        <p>동물원에 가기전에 동물에 대해 정확히 알고가면 더욱 재밌게 즐길 수 있습니다.</p>
+        <div class="image__inner container">
+            <article class=image__card>
+                <figure class="image">
                     <img src="../art01.jpg" alt="">
                 </figure>
                 <div class="image__desc">
-                    <h3 class="tit">현대 예술</h3>
-                    <a href="/" class="more">자세히 보기</a>
+                    <h3>현대미술</h3>
+                    <a href="#" class="more">자세히 보기</a>
                 </div>
             </article>
-            <article class="image img2">
-                <figure class="image_box">
+            <article class=image__card>
+                <figure class="image">
                     <img src="../art02.jpg" alt="">
                 </figure>
                 <div class="image__desc">
-                    <h3 class="tit">중세 예술</h3>
-                    <a href="/" class="more">자세히 보기</a>
+                    <h3>현대미술</h3>
+                    <a href="#" class="more">자세히 보기</a>
                 </div>
             </article>
-            <article class="image img3">
-                <figure class="image_box">
+            <article class=image__card>
+                <figure class="image">
                     <img src="../art03.jpg" alt="">
                 </figure>
                 <div class="image__desc">
-                    <h3 class="tit">고대 예술</h3>
-                    <a href="/" class="more">자세히 보기</a>
+                    <h3>현대미술</h3>
+                    <a href="#" class="more">자세히 보기</a>
                 </div>
             </article>
+
         </div>
     </section>
 </body>
-
 </html>
