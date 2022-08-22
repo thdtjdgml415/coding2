@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +12,14 @@
     <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
 </head>
+
 <body>
     <header id="header">
         <nav>
             <ul>
-                <li class="active"><a href="searchEffect01.html">1</a></li>
+                <li><a href="searchEffect01.html">1</a></li>
                 <li><a href="searchEffect02.html">2</a></li>
-                <li><a href="searchEffect03.html">3</a></li>
+                <li class="active"><a href="searchEffect03.html">3</a></li>
                 <li><a href="searchEffect04.html">4</a></li>
                 <li><a href="searchEffect05.html">5</a></li>
                 <li><a href="searchEffect06.html">6</a></li>
@@ -28,19 +30,40 @@
 
     <main id="main">
         <div class="search__wrap">
-            <span>indexOf() / search()를 이용하여 검색하기</span>
+            <span>char()를 이용하여 검색하기</span>
             <h1>CSS 속성 검색하기</h1>
-            
-            <div class="search__box">
-                <label for="search">검색하기</label>
-                <input type="text" id="search" placeholder="CSS 속성및 유형을 입력해주세요!">
-                <div class="search__info">
-                    <div class="type">플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로 검색해보세요!</div>
-                    <div>전체 속성 갯수 : <span class="num"></span></div>
-                    <div>플렉스 속성 갯수 : <span class="numFlex"></span></div>
-                    <div>애니메이션 속성 갯수 : <span class="numAni"></span></div>
-                    <div>기타 속성 갯수 : <span class="numOther"></span></div>
+
+            <div class="search__info">
+                <div class="keyword">
+                    <span>a</span>
+                    <span>b</span>
+                    <span>c</span>
+                    <span>d</span>
+                    <span>e</span>
+                    <span>f</span>
+                    <span>g</span>
+                    <span>h</span>
+                    <span>i</span>
+                    <span>j</span>
+                    <span>k</span>
+                    <span>l</span>
+                    <span>m</span>
+                    <span>n</span>
+                    <span>o</span>
+                    <span>p</span>
+                    <span>q</span>
+                    <span>r</span>
+                    <span>s</span>
+                    <span>t</span>
+                    <span>u</span>
+                    <span>v</span>
+                    <span>w</span>
+                    <span>x</span>
+                    <span>y</span>
+                    <span>z</span>
                 </div>
+                <div>전체 속성 갯수 : <span class="num"></span></div>
+                <div>목록 속성 갯수 : <span class="subnum"></span></div>
             </div>
             <div class="search__list">
                 <div class="css">
@@ -442,27 +465,40 @@
 
     <script>
         //선택자
-        const searchBox = document.querySelector(".search__box input");         //검색 영역
+        const searchKeyword = document.querySelectorAll(".search__info .keyword span");         //알파벳
         const searchList = document.querySelectorAll(".search__list ul li");    //목록 리스트
-        const searchInfo = document.querySelector(".search__info .num")
+        const searchInfo = document.querySelector(".search__info .num")         //전체 갯수
+        const searchNum = document.querySelector(".search__info .subnum")       //검색 목록 갯수
+        let count = 0;
 
-        //전체 갯수 구하기
+        //전체 갯수
         searchInfo.textContent = searchList.length;
+        searchNum.textContent = searchList.length;
+        searchKeyword.forEach(el => {
+            el.addEventListener("click", () => {
+                const searchWord = el.innerText; //사용자가 클릭한 알파벳
+                searchWord.textContent = searchNum.length;
 
-        //검색 영역
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;     //사용자가 입력한 키워드
+                searchList.forEach(el => {
+                    const cssName = el.querySelector("strong").innerText;
+                    // console.log(cssName)
 
-            searchList.forEach(el => {
-                const cssName = el.dataset.name;
-                
-                if(cssName.indexOf(searchWord)){
-                    el.classList.add("hide");
-                } else {
-                    el.classList.remove("hide");    //indexOf()값이 0(false)이되는 값만 hide를 지워줍니다.
-                }
-            });
-        });
+
+                    //알파벳 첫글자 == CSS속성의 첫글자
+                    if (searchWord.charAt(0) === cssName.charAt(0)) {
+                        el.classList.remove("hide");
+                        count++      
+                    } else {
+                        el.classList.add("hide")
+                    }
+                    searchNum.textContent = count;
+                })
+                count = 0;
+            })
+
+        })
     </script>
+
 </body>
+
 </html>

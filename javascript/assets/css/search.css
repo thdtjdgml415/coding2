@@ -129,6 +129,23 @@ li {
     text-align: center;
     margin-bottom: 10px;
 }
+/* keyword box */
+.search__info .keyword {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.search__info .keyword span {
+    border: 2px solid var(--htmlColor);
+    border-radius: 50px;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.search__info .keyword span:hover {
+    background-color: var(--htmlColor);
+    cursor: pointer;
+    color: #fff;
+} 
 
 @media (max-width: 600px){
     .search__wrap {
