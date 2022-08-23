@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">색상 표현 단위</h2>
+            <p class="t_desc2">
+                색상을 지정하기 위해 키워드(red, blue…)를 사용할 수 있습니다.
+                그냥 색의 이름을 쓰면 되기때문에 사용이 간편하다는 장점이 있으나 표현할 수 있는 색상의 수는 제한된다.
+            </p>
+            <hr>
+
+
+            <p class="t_desc">
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>단위</th>
+                        <th>예시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">HEX 코드 단위 (Hexadecimal Colors)</td>
+                        <td>viewport 너비의 1/100</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">RGB (Red, Green, Blue)</td>
+                        <td>viewport 높이의 1/100</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">RGBA (Red, Green, Blue, Alpha/투명도)</td>
+                        <td>rgba(255, 255, 0, 1)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">HSL (Hue/색상, Saturation/채도, Lightness/명도)</td>
+                        <td>hsl(0, 100%, 25%)</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">HSLA (Hue, Saturation, Lightness, Alpha))</td>
+                        <td>hsla(60, 100%, 50%, 1)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="t_code">
+<pre><code class="language-CSS">#hex {background-color:#e1ff00;}
+    #hex {background-color:#00ff00;}
+
+    #rgb {background-color:rgb(255,0,0);}
+    #rgb{background-color:rgb(0,255,0);}
+
+    #rgba {background-color:rgba(255,0,0,0.3);}
+    #rgba {background-color:rgba(0,255,0,0.3);}
+
+    #hsl {background-color:hsl(120,100%,50%);}
+    #hsl {background-color:hsl(120,100%,75%);}
+
+    #hsla {background-color:hsla(120,100%,50%,0.3);}
+    #hsla {background-color:hsla(120,100%,75%,0.3);}
+</code></pre>
+                <div class="t_code">
+<pre><code class="language-html">#hex {background-color:#e1ff00;}
+    &lt;h1&gt;HEX colors:&lt;/h1&gt;
+    &lt;p id="hex"&gt;Red&lt;/p&gt;
+    &lt;p id="hex"&gt;Green&lt;/p&gt;
+
+    &lt;h1&gt;RGB colors:&lt;/h1&gt;
+    &lt;p id="rgb"&gt;Red&lt;/p&gt;
+    &lt;p id="rgb"&gt;Green&lt;/p&gt;
+
+    &lt;h1&gt;RGB colors with opacity:&lt;/h1&gt;
+    &lt;p id="rgba"&gt;Red&lt;/p&gt;
+    &lt;p id="rgba"&gt;Green&lt;/p&gt;
+
+    &lt;h1&gt;HSL colors:&lt;/h1&gt;
+    &lt;p id="hsl"&gt;Green&lt;/p&gt;
+    &lt;p id="hsl"&gt;Light green&lt;/p&gt;
+
+    &lt;h1&gt;HSL colors with opacity:&lt;/h1&gt;
+    &lt;p id="hsla"&gt;Green&lt;/p&gt;
+    &lt;p id="hsla"&gt;Light green&lt;/p&gt;
+</code></pre>
+                </div>
+                <h2 class="t_tit">예시</h2>
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/thdtjdgml415/embed/WNzWbgY?default-tab=" frameborder="no"
+                        loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/thdtjdgml415/pen/WNzWbgY">
+                            Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
+                </p>
+            </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>

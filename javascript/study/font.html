@@ -81,53 +81,50 @@
             예를 들어 1em은 요소에 지정된 사이즈와 같고 2em은 요소에 지정된 사이즈의 2배이다. <br>
             폰트 사이즈 설정이나 콘텐츠를 포함하는 컨테이너의 크기 설정에 사용하면 상대적인 설정이 가능하여 편리하다.
         </p>
+        <h2 class="t_tit2">Viewport 단위(vh, vw, vmin, vmax)</h2>
+        <p class="t_desc2">
+            em은 배수(倍數) 단위로 상대 단위이다. 요소에 지정된 사이즈(상속된 사이즈나 디폴트 사이즈)에 상대적인 사이즈를 설정한다. <br>
+            예를 들어 1em은 요소에 지정된 사이즈와 같고 2em은 요소에 지정된 사이즈의 2배이다. <br>
+            폰트 사이즈 설정이나 콘텐츠를 포함하는 컨테이너의 크기 설정에 사용하면 상대적인 설정이 가능하여 편리하다. <br>
+            IE 8 이하는 지원하지 않으며 IE 9 ~ 11, Edge는 지원이 완전하지 않으므로 주의가 필요하다.
+        </p>
     
     
          <p class="t_desc">
             <table class="t_table">               
                     <thead>
                         <tr>
-                            <th>데이터 타입</th>
-                            <th>속성 설명</th>
+                            <th>단위</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="ce">문자열(String)</td>
-                            <td>문자열(String) : 문자열의 길이에는 상관 없이 string이라는 데이터 타입으로 값이 생성됩니다.</td>
+                            <td class="ce">vw</td>
+                            <td>viewport 너비의 1/100</td>
                         </tr>
                         <tr>
-                            <td class="ce">불린값(Boolean)</td>
-                            <td>Boolean 타입은 논리 요소를 나타내며 true와 false 두 가지의 값을 가질 수 있습니다..</td>
+                            <td class="ce">vh</td>
+                            <td>viewport 높이의 1/100</td>
                         </tr>
                         <tr>
-                            <td class="ce">Null</td>
-                            <td>Null 타입은 null 하나의 값만 가질 수 있습니다.</td>
+                            <td class="ce">vmin</td>
+                            <td>viewport 너비 또는 높이 중 작은 쪽의 1/100.</td>
                         </tr>
                         <tr>
-                            <td class="ce">Undefined</td>
-                            <td>값을 할당하지 않은 변수는 undefined 값을 가집니다.</td>
-                        </tr>
-                        <tr>
-                            <td class="ce">Number타입</td>
-                            <td>몫을 구할 때 사용 합니다</td>
-                        </tr>
-                        <tr>
-                            <td class="ce">String 타입</td>
-                            <td>텍스트 데이터를 나타낼 때 사용합니다.</td>
-                        </tr>
-                        <tr>
-                            <td class="ce">Symbol 타입</td>
-                            <td>Symbol은 고유하고 변경 불가능한 원시 값이며 객체의 속성(아래를 참고하세요) 키로 사용할 수 있습니다.</td>
-                        </tr>
-                        <tr>
-                            <td class="ce">객체</td>
-                            <td>자바스크립트의 기본 타입은 객체(object)입니다. <br>
-                                객체(object)란 실생활에서 우리가 인식할 수 있는 사물로 이해할 수 있습니다.<br>                        
-                                객체는 여러 프로퍼티(property)나 메소드(method)를 같은 이름으로 묶어놓은 일종의 집합체입니다</td>
+                            <td class="ce">vmax</td>
+                            <td>viewport 너비 또는 높이 중 큰 쪽의 1/100.</td>
                         </tr>
                     </tbody>
                 </table>
+                <p class="t_box">
+                    예를 들어 viewport 너비가 1000px, 높이가 600px인 경우,
+
+                    1vw : viewport 너비 1000px의 1%인 10px
+                    1vh : viewport 높이 600px의 1%인 6px
+                    vmin : viewport 높이 600px의 1%인 6px
+                    vmax : viewport 너비 1000px의 1%인 10px
+                </p>
          </p>
     </div>
 </main>
