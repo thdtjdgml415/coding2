@@ -912,7 +912,7 @@
                 <h2 class="quiz__question">
                     <span class="number"${question.answerNum}></span>
                     <div class="ask">
-                        ${question.answerAsk}>
+                        ${question.answerAsk}
                     </div>
                 </h2>
                 <div class="quiz__view">
@@ -959,8 +959,6 @@
                  </div>
                 </div>
                 `);
-
-
             })
             exam.push(`
                     <div class="quiz__confirm">
@@ -971,7 +969,7 @@
             quizWrap.innerHTML = exam.join('');
         }
         updateQuiz();
-        const ex = document.querySelector(".ex");
+ 
 
         //정답확인
         const answerQuiz = () => {
@@ -995,7 +993,13 @@
                     const divBox = document.createElement("div");
                     quizSelectsWrap.appendChild(divBox).innerHTML = `<p class="result">${question.answerResult}</p>`
                 }
+
             });
+            if(quizScore >= 36){
+                    document.querySelector(".quiz__confirm .ex").innerHTML = quizScore + "/" + examNum + "합격";
+                } else {
+                    document.querySelector(".quiz__confirm .ex").innerHTML = quizScore + "/" + examNum + "불합격";
+                }
 
             //전체 문제수
             
