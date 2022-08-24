@@ -46,7 +46,7 @@
 
         <div class="main_refer">
             <div class="document">
-                <h2 class="t_tit">퀴즈 이펙트 - 객관식 (여러문제) 결과 확인하기</h2>
+                <h2 class="t_tit">퀴즈 이펙트 - 객관식 (여러문제 슬라이드) 결과 확인하기</h2>
                 <p class="t_desc2">
                     자바스크립트를 이용해 다중문제가 나오도록 설정하였고 for문, forEach문을 사용해 <br>
                     코드를 효과적으로 사용하였습니다 <br>
@@ -281,7 +281,7 @@ const choiceSelected = (answer) =&gt; {   //클릭한 텍스트가 들어와있�
     if(userAnswer == currentAnswer) {
         console.log("정답");
         quizView.classList.add("like")
-        quizScore++
+        quizScore++   //맞은문제 카운트
     } else {
         console.log("오답");
         quizView.classList.add("dislike")
@@ -290,10 +290,10 @@ const choiceSelected = (answer) =&gt; {   //클릭한 텍스트가 들어와있�
     quizConfirm.style.display = "block"; 
 }
 const answerQuiz = () => {
-    if(quizInfo.length -1 == quizCount) {
+    if(quizInfo.length -1 == quizCount) {   // 퀴즈 정보 길이는 배열이여서 0부터 시작한다. 따라서 1부터 시작하는 숫자에 -1을 해주어야함
         quizConfirm.textContent = `총 ${quizInfo.length} 문제 중에 ${quizScore} 문제를 맞추었습니다.`
     };
-    quizCount++;
+    quizCount++; //총 문제 갯수를 나타냄
     updateQuiz(quizCount);
     quizView.classList.remove("like", "dislike");
 }

@@ -241,6 +241,7 @@ body {
     animation: wobble 0.6s;
 }
 
+
 /* 객관식 박스 */
 .quiz__selects {
     margin: 0px 5px;
@@ -311,6 +312,9 @@ body {
     75%  {transform: translateX(-5%)  rotate(-1deg)}
     100% {transform: translateX(0) rotate(0deg)}
 }
+
+
+
 
 /* dog */
 .dog .tail,

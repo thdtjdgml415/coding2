@@ -54,12 +54,12 @@
                 </p>
                 <h3 class="t_tit">문제 출력하기</h3>
                 <p class="t_desc2">
-
+                    강아지의 구성요소 입니다. 문제와 함께 같이 출력되는 강아지를 구성하였습니다.
                 </p>
                 <div class="t_result">
                     <details>
                         <summary>문제출력코드</summary>
-                        <div class="result02">
+                        <div class="t_result">
                             <div class="t_code">
 <pre><code class="language-js">&lt;main id="main"&gt;
     &lt;div class="quiz__wrap"&gt;
@@ -107,12 +107,12 @@
 
                 <h3 class="t_tit2">출력하기</h3>
                 <p class="t_desc2">
-                   문제정보를 각각 변수명을 지정해 객체 속에 저장하였습니다.
+                   문제정보를 각각 변수명을 지정해 객체 속에 저장하였습니다. 60문제로 구성되었습니다.
                 </p>
                 <div class="t_result">
                     <details>
                         <summary>문제정보</summary>
-                        <div class="result02">
+                        <div class="t_result">
                             <div class="t_code">
 <pre><code class="language-js">// 문제정보
 const quizInfo = [
@@ -964,6 +964,13 @@ const quizInfo = [
                             </div>
                     </details>
                 </div>
+                
+                <h3 class="t_tit2">정답 확인하기</h3>
+                <p class="t_desc2">
+                    정답을 판단하기 위해 자바스크립트의 조건문을 이용하였습니다.  <br>
+                    또한 템플릿 문자열을 사용하여 ${}형태를 사용하여 작업하였습니다. <br>
+                    quizInfo의 길이를 총 문제 갯수로 불러오고 정답을 맞출때 마다 quizScore을 카운트 해주어서 문제를 다풀고나서 결과를 출력할 수 있도록 하였습니다.
+                 </p>
                 <div class="t_result">
                     <details>
                         <summary>정답 판단하기</summary>
