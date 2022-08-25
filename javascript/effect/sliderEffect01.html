@@ -22,12 +22,13 @@
             position: relative;
             width: 800px;
             height: 600px;
+            z-index: -1;
 
         }
         .slider{
             position: absolute;
             left: 0;
-            top: 0;
+            top: 0; 
         }
         .slider::before{
             content: '';
@@ -84,7 +85,6 @@
             <div class="modal__btn">소스 보기</div>
             <div class="modal__cont">
                 <div class="modal__box">
-
                     <div class="title">
                         <span class="dot" aria-label="true"></span>
                         <div class="tabs">
@@ -112,7 +112,7 @@
                                     </svg>
                                 </span>
                             </div>
-                            <div>
+                            <div class="active">
                                 <span class="favicon" aria-label="true">
                                     <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
                                         focusable="false">
@@ -136,7 +136,7 @@
                                     </svg>
                                 </span>
                             </div>
-                            <div>
+                            <div class="active">
                                 <span class="favicon" aria-label="true">
                                     <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"
                                         focusable="false">
@@ -173,7 +173,7 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-                            <pre><code class="language-js">// 탭메뉴
+<pre><code class="language-js">// 탭메뉴
     const tabBtn = document.querySelectorAll(".modal__box .tabs > div");
     const tabCont = document.querySelectorAll(".modal__box .cont > div");
 
@@ -201,7 +201,7 @@
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-css">* {
+<pre><code class="language-css">* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -411,7 +411,7 @@ a {
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-html">&lt;span class="dot" aria-label="true">&lt;/span&gt;
+    <pre><code class="language-html">&lt;span class="dot" aria-label="true">&lt;/span&gt;
     &lt;div class="tabs"&gt;
         &lt;div class="active"&gt;
             &lt;span class="favicon" aria-label="true"&gt;
@@ -504,6 +504,9 @@ a {
     <!-- //footer -->
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/common.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
     <script>
         const sliderWrap = document.querySelector(".slider__wrap");
         const sliderImg = sliderWrap.querySelector(".slider__img");
