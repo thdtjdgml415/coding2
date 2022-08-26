@@ -158,17 +158,6 @@ a {
     background-color: #fff;
     color: #3B3D63;
 }
-
-.modal__btn {
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    display: inline-block;
-    padding: 10px 20px;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-}
 .modal__box {
     width: 70%;
     height: 70vh;
@@ -230,7 +219,7 @@ a {
 }
 .modal__box .title .tabs > div {
     color: #7A7D9D;
-    background-color: #f2f2f2;
+    background-color: #1f224a;
     padding: 0.35rem 0.8rem 0.25rem 0.8rem;
     margin-right: 0.5rem;
     display: flex;
@@ -240,7 +229,7 @@ a {
     cursor: grab;
 }
 .modal__box .title .tabs > div.active {
-    background-color: #1f224a;
+    background-color: #fff;
 }
 .modal__box .title .tabs > div em {
     font-style: normal;
