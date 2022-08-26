@@ -1,5 +1,6 @@
 /* 웹폰트 */
 @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
 /* 여백 초기화 */
 * {
@@ -13,7 +14,7 @@
 /* 링크 초기화 */
 a {
     text-decoration: none;
-    color: #222;
+    color: #0243f1;
 }
 
 /* 목록 초기화 */
@@ -32,6 +33,7 @@ body {
 #header{
     border-bottom: 1px dashed #dcdcdc;
     padding-bottom: 40px;
+    text-align: center;
 }
 #main{
     padding: 0px;
@@ -45,11 +47,17 @@ body {
 #footer a:hover {
     text-decoration: underline;
 }
-
+/* container */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 /* 헤더 영역 */
 #header h1 a {
-    font-size: 60px;
+    font-size: 80px;
     font-weight: 700;
+    color: #0243f1;
 }
 
 .header_nav ul li {
@@ -57,18 +65,23 @@ body {
 }
 
 .header_nav ul li.active a{
-    background-color: #000;
+    background-color: #f8f8;
     color: #fff;
 }
 .header_nav ul li a {
-    border: 1px solid #222;
+    border: 1px dashed #0243f1;
     padding: 10px 20px;
     display: inline-block;
     margin-bottom: 7px;
+    font-family: 'GmarketSans';
+    font-weight: 400;
+    transition: all 0.5s;
+    text-align: center;
 }
 .header_nav ul li a:hover{
-    background-color: #000;
+    background-color: #f8f8;
     color: #fff;
+    
 }
 .header_nav .study {
     margin-top: 10px;
@@ -102,7 +115,50 @@ body {
 }
 .main_sample .result {
     margin-bottom: 80px;
+    margin-top: 10px;
+    background: rgba(255, 136, 255, 0.263);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;    
+}
+/* intro_menu*/
+.intro_menu {
+    position: absolute;
+    width: 30vw;
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.4);
+    padding: 2.5vw;
+    backdrop-filter: blur(10px);
+    border-radius: 1vw;
+    text-align: center;
+    font-size: 1vw;
+    color: #a52ae3;
 
+}
+.intro_menu li {
+    margin-bottom: 10px;
+}
+.intro_menu li a {
+    font-size: 16px;
+    color: #ca44df;
+}
+.intro_menu li a:hover {
+    color: #0243f1;
+    transition: all 0.5s ease;
+}
+@media (max-width: 600px){
+    .intro_menu {
+        width: 90px;
+        font-size: 14px;
+    }
+    .intro_menu li {
+        font-size: 16px;
+    }
+    .intro_menu li a {
+        font-size: 16px;
+    }
 }
 /* sample */
 .sample {

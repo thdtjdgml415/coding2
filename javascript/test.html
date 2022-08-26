@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {
+            (function () {
+                document.write("함수가 실행되었습니다.");
+            })()
+
+        }
+        {
+            function func1(a, b) {
+                document.write(arguments[a]);
+                document.write(arguments[b]);
+            }
+            func1("함수a", "함수b")
+        }
+        {
+            const func = (str) => str;
+            document.write(func("함수가 실행되었습니다.11"))
+        }
+        {
+            let sum = 0;
+            for(var i=1; i<=100; i++) {
+
+            };
+            document.write(sum)
+        }
+        {
+            function funC(){
+                setTimeout(() => {
+                    document.write("funC가실행되었스비낟.");
+                }, 1000);
+            }
+            function funD(){
+                ("funD가 실행되었스빈다.")
+            };
+            funC();
+            funD();
+        }
+    </script>
+</body>
+
+</html>

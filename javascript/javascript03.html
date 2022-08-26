@@ -32,7 +32,7 @@
             <ul class="effect">
                 <li><a href="effect/searchEffect01.html">검색 효과</a></li>
                 <li><a href="effect/quizEffect01.html">퀴즈 효과</a></li>
-                <li><a href="effect/textEffect01.html">텍스트 효과</a></li>
+                <li><a href="effect/dataEffect01.html">데이터 효과</a></li>
                 <li><a href="effect/mouseEffect01.html">마우스 효과</a></li>
                 <li><a href="effect/sliderEffect01.html">슬라이드 효과</a></li>
                 <li><a href="effect/parallaxEffect01.html">패렐랙스 효과</a></li>
@@ -43,7 +43,7 @@
     <!-- //header -->
 
     <main id="main">
-        <div class="document">
+        <div class="container">
             <div class="main_menu">
                 <ul>
                     <li><a href="#sample01">01. 선언적 함수</a></li>
@@ -68,7 +68,7 @@
                         함수를 만드는 일반적은 방식으로 익명 함수와 다르게 특정한 이름을 갖고 있는 함수이다.
                     </p>
                     <div class="script">
-                        <pre><code class="language-js">function func(){
+<pre><code class="language-js">function func(){
     document.write("함수가 실행되었습니다.1");
 }
 func();
@@ -202,7 +202,7 @@ func();                                                  //근데 리턴문이 �
                         화살표함수는 익명 함수를 변수에 지정할 때 많이 사용합니다.
                     </p>
                     <div class="script">
-                        <pre><code class="language-js">// const func = function() {
+<pre><code class="language-js">// const func = function() {
 //     document.write("함수가 실행되었습니다.6<br>");
 // }
 // func();
@@ -232,7 +232,7 @@ func();
                         컴퓨터 프로그래밍에서 아직 알려지지 않거나 어느 정도까지만 알려져 있는 양이나 정보에 대한 상징적인 이름이다.
                     </p>
                     <div class="script">
-                        <pre><code class="language-js">// function func(str){
+<pre><code class="language-js">// function func(str){
 //     document.write(str);
 // }
 // func("함수가 실행되었습니다.7<br>");
@@ -261,7 +261,7 @@ func("함수가 실행되었습니다.7<br>");
                 <div id="sample08" class="sample">
                     <h3>08. 화살표 함수 : 리턴값 함수</h3>
                     <div class="script">
-                        <pre><code class="language-js">// function func() {
+<pre><code class="language-js">// function func() {
 //     const str = "함수가 실행되었습니다.8<br>";
 //     return str;
 // }
@@ -287,7 +287,7 @@ document.write(func());
                 <div id="sample09" class="sample">
                     <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
                     <div class="script">
-                        <pre><code class="language-js">const func = (str) => {
+<pre><code class="language-js">const func = (str) => {
     return str;
 }
 document.write(func("함수가 실행되었습니다.9<br>"));
@@ -306,7 +306,7 @@ document.write(func("함수가 실행되었습니다.9<br>"));
                 <div id="sample10" class="sample">
                     <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
                     <div class="script">
-                        <pre><code class="language-js">const func = (str) => str; 
+<pre><code class="language-js">const func = (str) => str; 
 document.write(func("함수가 실행되었습니다.11"))
 </code></pre>
                     </div>
@@ -323,7 +323,7 @@ document.write(func("함수가 실행되었습니다.11"))
                 <div id="sample11" class="sample">
                     <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                     <div class="script">
-                        <pre><code class="language-js">const func = (str) => str; 
+<pre><code class="language-js">const func = (str) => str; 
 document.write(func("함수가 실행되었습니다.11<br>"))
 </code></pre>
                     </div>
@@ -340,7 +340,7 @@ document.write(func("함수가 실행되었습니다.11<br>"))
                 <div id="sample12" class="sample">
                     <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                     <div class="script">
-                        <pre><code class="language-js">func = str => str; 
+<pre><code class="language-js">func = str => str; 
 document.write(func("함수가 실행되었습니다.12"))
 </code></pre>
                     </div>
@@ -357,7 +357,7 @@ document.write(func("함수가 실행되었습니다.12"))
                 <div id="sample13" class="sample">
                     <h3>13. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                     <div class="script">
-                        <pre><code class="language-js"> function func(num, str1, str2){   //재활용하기가 용의하다. 
+<pre><code class="language-js"> function func(num, str1, str2){   //재활용하기가 용의하다. 
     document.write(num + str1 + "가" + str2 + "되었습니다.15<br>")
 }
 const info = [
@@ -393,7 +393,7 @@ func(info[2].num, info[2].name, info[2].com);
                 <!-- 14 -->
                 <div id="sample14" class="sample">
                     <h3>14. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
-                    <div class="script">
+<div class="script">
 <pre><code class="language-js"> function func(num, str1, str2){
     document.write(num + str1 + "가" + str2 + "되었습니다.15<br>")
 }
@@ -530,6 +530,56 @@ info.result3();
                         </details>
                     </div>
                 </div>
+                <!-- 20 -->
+                <div id="sample20" class="sample">
+                    <h3>20. 즉시 실행 함수</h3>
+                    <div class="script">
+<pre><code class="language-js">(function func(){
+    document.write("함수가 실행되었습니다.20");
+}())
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            <div class="sample20_result">
+                                "함수가 실행되었습니다.20"
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                                <!-- 21 -->
+                <div id="sample21" class="sample">
+                    <h3>21. 즉시 실행 함수</h3>
+                    <div class="script">
+<pre><code class="language-js">function func() {
+    document.write(str);
+}
+func("함수가 실행되었습니다.21");
+
+//
+function func(str = "함수가 실행되었습니다.21") {
+    document.write(str);
+}
+func()
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            <div class="sample21_result">
+                                "함수가 실행되었습니다.21"
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
             </div>
     </main>
 
@@ -753,9 +803,40 @@ info.result3();
             info2.result2();
             info3.result3();
         }
-        // 20. 클래스 : 함수의 집합체 --> 함수형 / 클래스형  요즘에는 함수형을 더 많이 쓴다.(구분 잘할것 자바, 자바스크립트 || 클래스 클래스)
-        // 클래스 형 --> 리액트 훅으로 넘어감  
-    </script>
+        // 20. 즉시 실행 함수  
+        {   
+            (function func(){
+                document.write("함수가 실행되었습니다.20");
+            }())
+        }
+        {
+            // 화살표함수로 바꿈
+            (() => {
+                document.write("함수가 실행되었습니다.21");
+            })();
+
+        }
+        //21 파라미터함수
+        {
+            function func() {
+                document.write(str);
+            }
+            func("함수가 실행되었습니다.21");
+
+            function func(str = "함수가 실행되었습니다.21") {
+                document.write(str);
+            }
+            func()
+        }
+        //22.아규먼트함수
+        {
+            function func(a,b){
+                document.write(argument[0])
+                document.write(argument[1])
+            }
+            func("함수가 실행되었습니다.22", "함수가 실행되었습니다.22")
+        }
+    </script> 
 
 </body>
 
