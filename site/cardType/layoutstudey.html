@@ -271,3 +271,74 @@
 </body>
 
 </html>
+
+
+
+.image__desc {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    backdrop-filter: blur(20px);
+    padding: 23px 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.img1 .image__desc {
+       background: rgb(251, 194, 044);
+}
+
+.img2 .image__desc {
+  background: rgba(240, 020, 134);
+}
+
+.img3 .image__desc {
+      background: rgba(070, 163, 210);
+}
+
+.img1 .image__desc h3 {
+    color: rgba(8, 11, 143);
+}
+
+.img2 .image__desc h3 {
+    color: rgba(8, 11, 143);
+}
+
+.img3 .image__desc h3 {
+    color: rgba(8, 11, 143);
+}
+
+.card:hover .image__desc {
+    opacity: 100;
+}
+
+.card:hover .image__desc {
+    transform: scale(1.1);
+}
+
+.image__desc h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.image__desc .more {
+    font-size: 16px;
+    color: #000;
+}
+
+.image__desc .more:hover {
+    text-decoration: underline;
+}
+.image__name {
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px;
+    left: 90px;
+    font-weight: 700;
+    text-allgn: center;
+    color: rgba(8, 11, 143);
+}
