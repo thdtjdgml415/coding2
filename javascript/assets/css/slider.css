@@ -81,6 +81,18 @@ a {
     background-color: #0f1891a7;
 
 }
+/* layout */
+#header{
+    z-index: 2000;
+}
+#main{
+    z-index: 1000;
+    position: relative;
+}
+#footer{
+    z-index: 3000;
+    position: relative
+}
 /* header */
 #header {
     color: #fff;
