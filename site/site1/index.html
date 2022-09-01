@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>눈물의 사이트 만들기1</title>
+    <!-- SEO -->
+    <meta name="author" content="song">
+    <meta name="description" content="눈물의 사이트 만들기 튜토리얼입니다.">
+    <meta name="keyword" content="눈물, 사이트, 만들기, 튜토리얼, 기초">
+    <meta name="robot" content="all">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <!-- 폰트는 항상 가장 위에서 연결되어야함 -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+
+    <!-- CSS(섹션별) -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/img.css">
+    <link rel="stylesheet" href="assets/css/text.css">
+    <link rel="stylesheet" href="assets/css/imagetext.css">`
+
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#">헤더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">이미지/텍스트 영역 바로가기</a>
+        <a href="#">카드 영역 바로가기</a>
+        <a href="#">배너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+        <a href="#">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+    <header id="headerType01" class="header__wrap nexon">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#">web <em>site</em></a>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">헤더 영역</a></li>
+                    <li><a href="#">슬라이드 영역</a></li>
+                    <li><a href="#">배너 영역</a></li>
+                    <li><a href="#">컨텐츠 영역</a></li>
+                    <li><a href="#">푸터 영역</a></li>
+                </ul>
+            </nav>
+            <div class="header__member">
+                <a href="#">로그인</a>
+            </div>
+        </div>  
+    </header>
+    <!-- //headerType -->
+    <main id="mainType">
+        <section id="sliderType" class="slider__wrap">
+            <h2>슬라이드 영역</h2>
+        </section>
+        <!--sliderType-->
+        <section id="imageType" class="image__wrap">
+            <h2>이미지 영역</h2>
+            <section id="imageType" class="image__wrap score section">
+                <h2>포트폴리오가 실력이다.</h2>
+                <p>이미지 유형입니다. 마우스 오버시 자세한 정보가 나와있는 구조입니다.</p>
+                <div class="image__inner container">
+                    <article class="image img1">
+                        <h3>동물원</h3>
+                        <p>포트폴리오는 취업에 있어 정말 중요합니다. 그동안 배웠던 내용을 복습하고 배워봅시다</p>
+                        <a href="#">자세히보기</a>
+                    </article>
+                    <article class="image img2">
+                        <h3>동물원</h3>
+                        <p>포트폴리오는 취업에 있어 정말 중요합니다. 그동안 배웠던 내용을 복습하고 배워봅시다</p>
+                        <a href="#">자세히보기</a>
+                    </article>
+                </div>
+            </section>
+        </section>
+        <!--imageType-->
+        <section id="imgtextType" class="imgText__wrap nexon section gray">
+            <h2 class="blind">유용한 사이트 살펴보기</h2>
+            <div class="imgText__inner container">
+                <div class="imgText__txt">
+                    <span>이미지 텍스트 유형01</span>
+                    <h3>유용한 사이트 살펴보기</h3>
+                    <p>웹디자이너, 웹 퍼블리셔, 프론트앤드 개발자를 위한 유용한 사이트입니다.</p>
+                    <ul>
+                        <li><a href="/">튜토리얼 사이트</a></li>
+                        <li><a href="/">레퍼런스 사이트</a></li>
+                        <li><a href="/">웹폰트 사이트</a></li>
+                        <li><a href="/">CSS 사이트</a></li>
+                        <li><a href="/">WebGL 사이트</a></li>
+                        <li><a href="/">Youtube사이트</a></li>
+                    </ul>
+    
+                </div>
+                <div class="imgText__img img1">
+                    <a href="/">레퍼런스 사이트</a>
+                </div>
+                <div class="imgText__img img2">
+                    <a href="/" class="blue">튜토리얼 사이트</a>
+                </div>
+            </div>
+        </section>
+        <!--imgTextType-->
+        <section id="cardType" class="card__wrap">
+            <h2>카드 영역</h2>
+            <section id="cardType" class="card__wrap nexon section">
+                <h2>동물원🐷</h2>
+                <p>동물원에 가기전에 동물에 대해 알고가면 더욱 동물원을 즐길 수 있습니다.</p>
+                <div class="card__inner container">
+                    <article class="card">
+                        <!-- 시멘틱 태그 다음에는 제목이 와야한다. 룰임; -->
+                        <figure class="card__header">
+                            <img src="assets/img/card_bg01_01.jpg" alt="웹표준에 맞는 동물원 사이트 만들기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="tit">웹표준에 맞는 동물원 사이트 만들기</h3>
+                            <p class="desc"> 동물에 대해 배우고 각 동물의 특성을 알 수 있다면 동물원에 가서 동물들의 행동을 보고 실제로 확인하면서 더욱 즐길 수 있습니다.
+                                여우는 종류에 따라 사는 곳이 다르며</p>
+                            <a class="btn" href="/">
+                                더 자세히 보기
+                                <span aria-hidden="true">
+                                    <svg width="58" height="8" viewBox="0 0 58 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M57.3536 4.35355C57.5488 4.15829 57.5488 3.84171 57.3536 3.64645L54.1716 0.464466C53.9763 0.269204 53.6597 0.269204 53.4645 0.464466C53.2692 0.659728 53.2692 0.976311 53.4645 1.17157L56.2929 4L53.4645 6.82843C53.2692 7.02369 53.2692 7.34027 53.4645 7.53553C53.6597 7.7308 53.9763 7.7308 54.1716 7.53553L57.3536 4.35355ZM0 4.5H57V3.5H0V4.5Z"
+                                            fill="black" />
+                                    </svg>
+                                </span>
+
+
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/card_bg01_02.jpg" alt="웹표준에 맞는 동물원 사이트 만들기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="tit">웹표준에 맞는 동물원 반응형 사이트 만들기</h3>
+                            <p class="desc"> 동물원을 돌아다니면서 동물의 특징과 식습관을 알아보기 위함이기 때문에 공부를 해서 동물원을 좀 더 재밌고 유익하게 돌아다닐 수 있게
+                                만드는 것이
+                                목표입니다. 호랑이를</p>
+                            <a class="btn" href="/">
+                                더 자세히 보기
+                                <span aria-hidden="true">
+                                    <svg width="58" height="8" viewBox="0 0 58 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M57.3536 4.35355C57.5488 4.15829 57.5488 3.84171 57.3536 3.64645L54.1716 0.464466C53.9763 0.269204 53.6597 0.269204 53.4645 0.464466C53.2692 0.659728 53.2692 0.976311 53.4645 1.17157L56.2929 4L53.4645 6.82843C53.2692 7.02369 53.2692 7.34027 53.4645 7.53553C53.6597 7.7308 53.9763 7.7308 54.1716 7.53553L57.3536 4.35355ZM0 4.5H57V3.5H0V4.5Z"
+                                            fill="black" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/card_bg01_03.jpg" alt="웹표준에 맞는 동물원 사이트 만들기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="tit">웹표준에 맞는 동물원 패럴랙스 사이트 만들기</h3>
+                            <p class="desc"> 여러분은 동물에 대해 얼마나 알고 있으신가요? 동물에 대해 배우고 행동 특성 어떤 생김새를 가지고 있는지 알고 있다면 더욱 유익한
+                                시간이 될 수
+                                있습니다.</p>
+                            <a class="btn" href="/">
+                                더 자세히 보기
+                                <span aria-hidden="true">
+                                    <!-- 웹표준을 준수하기위해 보이스가 읽지 않도록 해줌 -->
+                                    <svg width="58" height="8" viewBox="0 0 58 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M57.3536 4.35355C57.5488 4.15829 57.5488 3.84171 57.3536 3.64645L54.1716 0.464466C53.9763 0.269204 53.6597 0.269204 53.4645 0.464466C53.2692 0.659728 53.2692 0.976311 53.4645 1.17157L56.2929 4L53.4645 6.82843C53.2692 7.02369 53.2692 7.34027 53.4645 7.53553C53.6597 7.7308 53.9763 7.7308 54.1716 7.53553L57.3536 4.35355ZM0 4.5H57V3.5H0V4.5Z"
+                                            fill="black" />
+                                    </svg>
+                                </span>
+
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+            </section>
+        </section>
+        <!--cardType-->
+        <section id="bannerType" class="banner__wrap">
+            <h2>배너 영역</h2>
+        </section>
+        <!--bannerType-->
+        <section id="textType" class="text__wrap">
+            <h2>텍스트 영역</h2>
+            <section id="textType" class="text__wrap nexon section">
+                <span>텍스트 유형01</span>
+                <h2>이펙트는 정말 화려하고 아름답고 이쁩니다.</h2>
+                <div class="text__inner container">
+                    <div class="text t1">
+                        <h3 class="text__title">검색 이펙트</h3>
+                        <p class="text__desc">검색했을 떄 다양한 효과를 넣어줄 수 있습니다. 어떤 속성을 넣어주고 싶으신가요?</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                    <div class="text t2">
+                        <h3 class="text__title">이미지 이펙트</h3>
+                        <p class="text__desc">이미지를 오버했을 때 다양한 효과를 넣어줄 수 있습니다. 어떤 속성을 넣어주고 싶으신가요?</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                    <div class="text t3">
+                        <h3 class="text__title">검색 이펙트</h3>
+                        <p class="text__desc">검색했을 떄 다양한 효과를 넣어줄 수 있습니다. 어떤 속성을 넣어주고 싶으신가요?</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                    <div class="text t4">
+                        <h3 class="text__title">게임 이펙트</h3>
+                        <p class="text__desc">게임했을 때 다양한 효과를 넣어줄 수 있습니다. 어떤 속성을 넣어주고 싶으신가요?</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                    <div class="text t5">
+                        <h3 class="text__title">텍스트 이펙트</h3>
+                        <p class="text__desc">텍스트를 눌렀을때 다양한 효과를 넣어줄 수 있습니다. 어떤 속성을 넣어주고 싶으신가요?</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                    <div class="text t6">
+                        <h3 class="text__title">카드 이펙트</h3>
+                        <p class="text__desc">카드 유형을 만들어 다양한 효과를 넣어줄 수 있습니다. 어떤 속성을 넣어주고 싶으신가요?</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--textType-->
+    </main>
+    <!-- //mainType -->
+    <footer id="footerType">
+        <h2>푸터 영역</h2>
+    </footer>
+    <!-- //footerType -->
+</body>
+
+</html>
