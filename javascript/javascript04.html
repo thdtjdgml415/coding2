@@ -460,45 +460,45 @@ for( let i =0; i&lt;num.length; i++) {
             //false, 0, undefined, null, ""
             //true, 1, "0", "1", 0<10, [], {}
             if (0) {
-                document.write("실행되었습니다.(true)");
+                // document.write("실행되었습니다.(true)");
             } else {
-                document.write("실행되었습니다.(false)");
+                // document.write("실행되었습니다.(false)");
             }
         }
         //02. if문 생략
         {
             const num = 100;
-            if (num) document.write("실행되었습니다.(true)");
-            else document.write("실행되었습니다.(farse)");
+            // if (num) document.write("실행되었습니다.(true)");
+            // else document.write("실행되었습니다.(farse)");
         }
         //03. 다중 if문
         {
             const num = 100;
             if (num == 90) {
-                document.write("실행되었습니다.(num==90");
+                // document.write("실행되었습니다.(num==90");
             } else if (num == 100) {
-                document.write("실행되었습니다.(num==100");
+                // document.write("실행되었습니다.(num==100");
             } else if (num == 110) {
-                document.write("실행되었습니다.(num==110");
+                // document.write("실행되었습니다.(num==110");
             } else if (num == 120) {
-                document.write("실행되었습니다.(num==120");
+                // document.write("실행되었습니다.(num==120");
             } else {
-                document.write("실행되었습니다.(num==값이없음");
+                // document.write("실행되었습니다.(num==값이없음");
             }
         }
         //04. 중첩 if문
         {
             const num = 100;
             if (num == 100) {
-                document.write("실행되었습니다.(1)");
+                // document.write("실행되었습니다.(1)");
                 if (num == 100) {
-                    document.write("실행되었습니다.(2)");
+                    // document.write("실행되었습니다.(2)");
                     if (num == 100) {
-                        document.write("실행되었습니다.(3)");
+                        // document.write("실행되었습니다.(3)");
                     }
                 }
             } else {
-                document.write("실행되었습니다.(4)");
+                // document.write("실행되었습니다.(4)");
             }
         }
         //05. 조건부 연산자(삼항 연산자)
@@ -506,38 +506,38 @@ for( let i =0; i&lt;num.length; i++) {
             const num = 100;
             //num값이 100이면 true출력하고 아니면 false출력하세요
             if (num == 100) {
-                document.write("true");
+                // document.write("true");
             } else {
-                document.write("false");
+                // document.write("false");
             }
             //조건부 연산자는 소스가 크게 되면 효율적이다
-            (num == 100) ? document.write("true") : document.write("false");
+            // (num == 100) ? document.write("true") : document.write("false");
         }
         //06. switch문 if문과 다르게 값을 막 정할 수 없다.
         {
             const num = 100;
             switch (num) {
                 case 100:
-                    document.write("실행되었습니다.(num==100)");
+                    // document.write("실행되었습니다.(num==100)");
                     break;
                 case 110:
-                    document.write("실행되었습니다.(num==110)");
+                    // document.write("실행되었습니다.(num==110)");
                     break;
                 case 120:
-                    document.write("실행되었습니다.(num==120)");
+                    // document.write("실행되었습니다.(num==120)");
                     break;
                 case 130:
-                    document.write("실행되었습니다.(num==130)");
+                    // document.write("실행되었습니다.(num==130)");
                     break;
                 default:
-                    document.write("실행되었습니다.(num==값이없음)");
+                    // document.write("실행되었습니다.(num==값이없음)");
             }
         }
         //07. while문(반복문)
         {
             let num = 1;
             while (num <= 5) {
-                document.write("실행되었습니다.");
+                // document.write("실행되었습니다.");
                 num++;
             }
         }
@@ -546,26 +546,26 @@ for( let i =0; i&lt;num.length; i++) {
             let num = 1;
             //무조건 한번은 실행한다.
             do {
-                document.write("실행되었습니다2.");
+                // document.write("실행되었습니다2.");
                 num++;
             } while (num <= 5);
         }
         //09. for문
         {
             for (let i = 1; i < 100; i++) {
-                document.write(i + ". 실행되었습니다.");
+                // document.write(i + ". 실행되었습니다.");
             }
             let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             for (let i = 0; i < num.length; i++) {
-                document.write(i + ". 실행되었습니다.");
+                // document.write(i + ". 실행되었습니다.");
             }
         }
         //10. 중첩 for문
         {
             for (let i = 1; i <= 2; i++) {
-                document.write(i + "실행");
+                // document.write(i + "실행");
                 for (let j = 1; j <= 5; j++) {
-                    document.write(j + "실행");
+                    // document.write(j + "실행");
                 }
             }
         }
@@ -574,7 +574,7 @@ for( let i =0; i&lt;num.length; i++) {
         //for문을 이용해서 1~20까지 출력
         {
             for (let i = 1; i <= 20; i++) {
-                document.write(i);
+                // document.write(i);
                 if (i == 10) {
                     break;  //10에서 끝난다.
 
@@ -589,7 +589,7 @@ for( let i =0; i&lt;num.length; i++) {
                 if (i == 10) {
                     continue; //10만 건너뛰고 진행한다
                 }
-                document.write(i);
+                // document.write(i);
             }
         }
     </script>

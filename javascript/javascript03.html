@@ -596,247 +596,247 @@ func()
 
     <script>
         //01 선언적 함수
-        {
-            function func() {
-                document.write()
-            }
-            func();
-        }
+        // {
+        //     function func() {
+        //         document.write()
+        //     }
+        //     func();
+        // }
 
-        //02 익명 함수
-        {
-            const func = function () {
-                document.write()
-            }
-        }
-        //03 매개변수 함수
-        {
-            function func(str) {
-                document.write();
-            }
-            func();
-        }
-        //04 리턴값 함수
-        {
-            function func(str) {
-                const a = "함수가 실행되었습니다."
-                return str;
-            }
-            func(document.write());
-        }
-        //05 화살표 함수(선언적 함수)
-        {
-            func = () => {
-                document.write();
-            }
-        }
-        //06 화살표 함수(익명 함수)
-        {
-            const func = () => document.write();
-        }
-        //07 화살표 함수(매개변수 함수)
-        {
-            func = (str) => {
-                document.write();
-            }
-        }
-        //08 화살표 함수(리턴값 함수)
-        {
-            func = str => str;
-        }
-        // 09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
-        //10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
-        //11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-        //12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
+        // //02 익명 함수
+        // {
+        //     const func = function () {
+        //         document.write()
+        //     }
+        // }
+        // //03 매개변수 함수
+        // {
+        //     function func(str) {
+        //         document.write();
+        //     }
+        //     func();
+        // }
+        // //04 리턴값 함수
+        // {
+        //     function func(str) {
+        //         const a = "함수가 실행되었습니다."
+        //         return str;
+        //     }
+        //     func(document.write());
+        // }
+        // //05 화살표 함수(선언적 함수)
+        // {
+        //     func = () => {
+        //         document.write();
+        //     }
+        // }
+        // //06 화살표 함수(익명 함수)
+        // {
+        //     const func = () => document.write();
+        // }
+        // //07 화살표 함수(매개변수 함수)
+        // {
+        //     func = (str) => {
+        //         document.write();
+        //     }
+        // }
+        // //08 화살표 함수(리턴값 함수)
+        // {
+        //     func = str => str;
+        // }
+        // // 09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
+        // //10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
+        // //11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
+        // //12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
 
 
-        //13. 함수 유형 : 함수와 매개변수를 이용한 형태
-        // 함수: 실행문 집합체, 재활용 (매개변수를 만들기 쉽다.)
-        {
-            function func(num, str1, str2) {   //재활용하기가 용의하다. 
-                document.write(num + str1 + "가" + str2 + "되었습니다.13<br>")
-            }
-            func("1.", "함수", "실행");//매개변수 만듬 
-            func("2.", "자바스크립트", "실행"); //매개변수 만듬
-        }
-        //14. 함수 유형 : 함수와 변수를 이용한 형태
-        {
-            function func(num, str1, str2) {
-                document.write(num + str1 + "가" + str2 + "되었습니다.15<br>")
-            }
-            const youNum1 = 1;
-            const youNum2 = 2;
-            const youNum3 = 3;
-            const youStr1 = "함수";
-            const youStr2 = "자바스크립트";
-            const youStr3 = "제이쿼리";
-            const youCom1 = "실행";
+        // //13. 함수 유형 : 함수와 매개변수를 이용한 형태
+        // // 함수: 실행문 집합체, 재활용 (매개변수를 만들기 쉽다.)
+        // {
+        //     function func(num, str1, str2) {   //재활용하기가 용의하다. 
+        //         document.write(num + str1 + "가" + str2 + "되었습니다.13<br>")
+        //     }
+        //     func("1.", "함수", "실행");//매개변수 만듬 
+        //     func("2.", "자바스크립트", "실행"); //매개변수 만듬
+        // }
+        // //14. 함수 유형 : 함수와 변수를 이용한 형태
+        // {
+        //     function func(num, str1, str2) {
+        //         document.write(num + str1 + "가" + str2 + "되었습니다.15<br>")
+        //     }
+        //     const youNum1 = 1;
+        //     const youNum2 = 2;
+        //     const youNum3 = 3;
+        //     const youStr1 = "함수";
+        //     const youStr2 = "자바스크립트";
+        //     const youStr3 = "제이쿼리";
+        //     const youCom1 = "실행";
 
-            func(youNum1, youStr1, youCom1);
-            func(youNum2, youStr2, youCom1);
-            func(youNum3, youStr3, youCom1);
+        //     func(youNum1, youStr1, youCom1);
+        //     func(youNum2, youStr2, youCom1);
+        //     func(youNum3, youStr3, youCom1);
 
-        }
-        //15. 함수 유형 : 함수와 배열 또는 객체를 이용한 형태
-        {
-            function func(num, str1, str2) {   //재활용하기가 용의하다. 
-                document.write(num + str1 + "가" + str2 + "되었습니다.15<br>")
-            }
-            const info = [
-                {
-                    num: "1.",
-                    name: "함수",
-                    com: "실행"
-                },
-                {
-                    num: "2.",
-                    name: "자바스크립트",
-                    com: "실행"
-                },
-                {
-                    num: "3.",
-                    name: "제이쿼리",
-                    com: "실행"
-                }
-            ]
-            func(info[0].num, info[0].name, info[0].com);
-            func(info[1].num, info[1].name, info[1].com);
-            func(info[2].num, info[2].name, info[2].com);
-        }
-        //16. 함수 유형 : 객체 안에 변수와 함수를 이용한 형태
-        {
-            const info = {
-                num1: "1.",
-                name: "함수",
-                word1: "실행",
-                num2: "2.",
-                name2: "자바스크립트",
-                word2: "실행",
-                num3: "3.",
-                name3: "제이쿼리",
-                word3: "실행",
+        // }
+        // //15. 함수 유형 : 함수와 배열 또는 객체를 이용한 형태
+        // {
+        //     function func(num, str1, str2) {   //재활용하기가 용의하다. 
+        //         document.write(num + str1 + "가" + str2 + "되었습니다.15<br>")
+        //     }
+        //     const info = [
+        //         {
+        //             num: "1.",
+        //             name: "함수",
+        //             com: "실행"
+        //         },
+        //         {
+        //             num: "2.",
+        //             name: "자바스크립트",
+        //             com: "실행"
+        //         },
+        //         {
+        //             num: "3.",
+        //             name: "제이쿼리",
+        //             com: "실행"
+        //         }
+        //     ]
+        //     func(info[0].num, info[0].name, info[0].com);
+        //     func(info[1].num, info[1].name, info[1].com);
+        //     func(info[2].num, info[2].name, info[2].com);
+        // }
+        // //16. 함수 유형 : 객체 안에 변수와 함수를 이용한 형태
+        // {
+        //     const info = {
+        //         num1: "1.",
+        //         name: "함수",
+        //         word1: "실행",
+        //         num2: "2.",
+        //         name2: "자바스크립트",
+        //         word2: "실행",
+        //         num3: "3.",
+        //         name3: "제이쿼리",
+        //         word3: "실행",
 
-                result1: function () {
-                    document.write(info.num1 + info.name + "가" + info.word1 + "되었습니다16.<br>");
-                },
-                result2: function () {
-                    document.write(info.num2 + info.name2 + "가" + info.word2 + "되었습니다16.<br>");
-                },
-                result3: function () {
-                    document.write(info.num3 + info.name3 + "가" + info.word3 + "되었습니다16.<br>");
-                }
-            }
-            info.result1();
-            info.result2();
-            info.result3();
-        }
-        //17. 함수 유형 : 객체 생성자 함수
-        {
-            function func(num, name, word) {
-                this.num = num;
-                this.name = name;
-                this.word = word;
+        //         result1: function () {
+        //             document.write(info.num1 + info.name + "가" + info.word1 + "되었습니다16.<br>");
+        //         },
+        //         result2: function () {
+        //             document.write(info.num2 + info.name2 + "가" + info.word2 + "되었습니다16.<br>");
+        //         },
+        //         result3: function () {
+        //             document.write(info.num3 + info.name3 + "가" + info.word3 + "되었습니다16.<br>");
+        //         }
+        //     }
+        //     info.result1();
+        //     info.result2();
+        //     info.result3();
+        // }
+        // //17. 함수 유형 : 객체 생성자 함수
+        // {
+        //     function func(num, name, word) {
+        //         this.num = num;
+        //         this.name = name;
+        //         this.word = word;
 
-                this.result = function () {
-                    document.write(this.num + this.name + "가" + this.word + "되었습니다17.<br>");
-                }
-            }
+        //         this.result = function () {
+        //             document.write(this.num + this.name + "가" + this.word + "되었습니다17.<br>");
+        //         }
+        //     }
 
-            //인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
-            const info1 = new func("1", "함수", "실행");
-            const info2 = new func("2", "자바스크립트", "실행");
-            const info3 = new func("3", "제이쿼리", "실행");
+        //     //인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+        //     const info1 = new func("1", "함수", "실행");
+        //     const info2 = new func("2", "자바스크립트", "실행");
+        //     const info3 = new func("3", "제이쿼리", "실행");
 
-            //실행
-            info1.result();
-            info2.result();
-            info3.result();
-        }
-        //18. 함수 유형 : 프로트타입 (쓸데없는 다른 페이지에서도 인스턴트가 실행되는걸 막기위해 만듬 함수이름을 따로 정해서 원하는 함수만 실행)
-        {
-            function func(num, name, word) {
-                this.num = num;
-                this.name = name;
-                this.word = word;
-            }
+        //     //실행
+        //     info1.result();
+        //     info2.result();
+        //     info3.result();
+        // }
+        // //18. 함수 유형 : 프로트타입 (쓸데없는 다른 페이지에서도 인스턴트가 실행되는걸 막기위해 만듬 함수이름을 따로 정해서 원하는 함수만 실행)
+        // {
+        //     function func(num, name, word) {
+        //         this.num = num;
+        //         this.name = name;
+        //         this.word = word;
+        //     }
 
-            func.prototype.result = function () {
-                document.write(this.num + this.name + "가" + this.word + "되었습니다18.<br>");
-            }
+        //     func.prototype.result = function () {
+        //         document.write(this.num + this.name + "가" + this.word + "되었습니다18.<br>");
+        //     }
 
-            //인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
-            const info1 = new func("1", "함수", "실행");
-            const info2 = new func("2", "자바스크립트", "실행");
-            const info3 = new func("3", "제이쿼리", "실행");
+        //     //인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+        //     const info1 = new func("1", "함수", "실행");
+        //     const info2 = new func("2", "자바스크립트", "실행");
+        //     const info3 = new func("3", "제이쿼리", "실행");
 
-            //실행
-            info1.result();
-            info2.result();
-            info3.result();
-        }
-        // 19. 함수 유형 : 객체 리터럴 함수 (함수를 객체안에 모아준다.)
-        {
-            function func(num, name, word) {
-                this.num = num;
-                this.name = name;
-                this.word = word;
-            }
+        //     //실행
+        //     info1.result();
+        //     info2.result();
+        //     info3.result();
+        // }
+        // // 19. 함수 유형 : 객체 리터럴 함수 (함수를 객체안에 모아준다.)
+        // {
+        //     function func(num, name, word) {
+        //         this.num = num;
+        //         this.name = name;
+        //         this.word = word;
+        //     }
 
-            func.prototype = {
-                result1: function () {
-                    document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
-                },
-                result2: function () {
-                    document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
-                },
-                result3: function () {
-                    document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
-                }
-            }
+        //     func.prototype = {
+        //         result1: function () {
+        //             document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+        //         },
+        //         result2: function () {
+        //             document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+        //         },
+        //         result3: function () {
+        //             document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+        //         }
+        //     }
 
-            //인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
-            const info1 = new func("1", "함수", "실행");
-            const info2 = new func("2", "자바스크립트", "실행");
-            const info3 = new func("3", "제이쿼리", "실행");
+        //     //인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+        //     const info1 = new func("1", "함수", "실행");
+        //     const info2 = new func("2", "자바스크립트", "실행");
+        //     const info3 = new func("3", "제이쿼리", "실행");
 
-            //실행
-            info1.result1();
-            info2.result2();
-            info3.result3();
-        }
-        // 20. 즉시 실행 함수  
-        {   
-            (function func(){
-                document.write("함수가 실행되었습니다.20");
-            }())
-        }
-        {
-            // 화살표함수로 바꿈
-            (() => {
-                document.write("함수가 실행되었습니다.21");
-            })();
+        //     //실행
+        //     info1.result1();
+        //     info2.result2();
+        //     info3.result3();
+        // }
+        // // 20. 즉시 실행 함수  
+        // {   
+        //     (function func(){
+        //         document.write("함수가 실행되었습니다.20");
+        //     }())
+        // }
+        // {
+        //     // 화살표함수로 바꿈
+        //     (() => {
+        //         document.write("함수가 실행되었습니다.21");
+        //     })();
 
-        }
-        //21 파라미터함수
-        {
-            function func() {
-                document.write(str);
-            }
-            func("함수가 실행되었습니다.21");
+        // }
+        // //21 파라미터함수
+        // {
+        //     function func() {
+        //         document.write(str);
+        //     }
+        //     func("함수가 실행되었습니다.21");
 
-            function func(str = "함수가 실행되었습니다.21") {
-                document.write(str);
-            }
-            func()
-        }
-        //22.아규먼트함수
-        {
-            function func(a,b){
-                document.write(argument[0])
-                document.write(argument[1])
-            }
-            func("함수가 실행되었습니다.22", "함수가 실행되었습니다.22")
-        }
+        //     function func(str = "함수가 실행되었습니다.21") {
+        //         document.write(str);
+        //     }
+        //     func()
+        // }
+        // //22.아규먼트함수
+        // {
+        //     function func(a,b){
+        //         document.write(argument[0])
+        //         document.write(argument[1])
+        //     }
+        //     func("함수가 실행되었습니다.22", "함수가 실행되었습니다.22")
+        // }
     </script> 
 
 </body>
