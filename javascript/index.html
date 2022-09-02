@@ -478,10 +478,46 @@
                 display: none;
             }
         }
+        .link {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            z-index: 10000;
+            
+        }
+        .link li {
+            list-style: none;
+            display: inline;
+        }
+        .link li a {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            border: 1px dashed #f5f5;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 30px;
+            background: #f5f5;
+            font-family: "GmarketSans";
+            font-size: 14px;
+            transition: all 0.5s;
+        }
+        .link li a:hover {
+            background: #fff;
+            color: #f5f5;
+        }
     </style>
 </head>
 
 <body>
+    <div class="link">
+        <ul>
+            <li><a href="https://heesongs.tistory.com/">T</a></li>
+            <li><a href="https://github.com/thdtjdgml415/coding2">G</a></li>
+            <li><a href="https://github1s.com/thdtjdgml415/coding2">V</a></li>
+        </ul>
+    </div>
     <main>
         <div class="dog">
             <div class="wrap">
