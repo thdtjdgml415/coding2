@@ -35,11 +35,7 @@
                 <label for="search">검색하기</label>
                 <input type="text" id="search" placeholder="CSS 속성및 유형을 입력해주세요!">
                 <div class="search__info">
-                    <div class="type">플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로 검색해보세요!</div>
-                    <div>전체 속성 갯수 : <span class="num"></span></div>
-                    <div>플렉스 속성 갯수 : <span class="numFlex"></span></div>
-                    <div>애니메이션 속성 갯수 : <span class="numAni"></span></div>
-                    <div>기타 속성 갯수 : <span class="numOther"></span></div>
+                        <div>CSS 속성 갯수 : <span class="num">0</span></div>
                 </div>
             </div>
             <div class="search__list">
@@ -441,27 +437,31 @@
 
 
     <script>
-        //선택자
-        const searchBox = document.querySelector(".search__box input");         //검색 영역
-        const searchList = document.querySelectorAll(".search__list ul li");    //목록 리스트
-        const searchInfo = document.querySelector(".search__info .num")
+            // 선택자
+        const searchBox = document.querySelector('.search__box input'); // 검색 영역
+        const searchList = document.querySelectorAll('.search__list ul li') // 목록 리스트
+        const searchInfo = document.querySelector('.search__info .num');
 
-        //전체 갯수 구하기
+        // 전체 갯수 구하기
         searchInfo.textContent = searchList.length;
 
-        //검색 영역
+        // 검색 영역
         searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;     //사용자가 입력한 키워드
+            const searchWord = searchBox.value; // 사용자가 입력한 키워드
+            let cnt = 0;
 
             searchList.forEach(el => {
-                const cssName = el.dataset.name;
-                
-                if(cssName.indexOf(searchWord)){
-                    el.classList.add("hide");
-                } else {
-                    el.classList.remove("hide");    //indexOf()값이 0(false)이되는 값만 hide를 지워줍니다.
+                const cssName = el.querySelector('strong').innerText;
+
+                if (cssName.search(searchWord)) {
+                    el.classList.add('hide');
+                }
+                else {
+                    el.classList.remove('hide');
+                    cnt++; 
                 }
             });
+            searchInfo.innerText = cnt;
         });
     </script>
 </body>

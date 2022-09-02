@@ -52,6 +52,7 @@ body {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+    padding-top: 40px;
 }
 /* 헤더 영역 */
 #header h1 a {
