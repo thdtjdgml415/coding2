@@ -253,6 +253,13 @@ a {
 .modal__box .title .tabs > div .close {
     margin-left: 4rem;
 }
+.title .plus {
+    border: 1px solid #000;
+    padding: 0.4rem;
+    border-radius: 10px;
+    background-color: #1f224a;
+    color: #fff;
+}
 .modal__box .cont {
     background-color: #282936;
     height: 100%;
@@ -338,6 +345,7 @@ a {
     100% {transform: scale(1);}
     0% {transform: scale(0);}
 }
+
 @media (max-width: 1100px){
     #header {
         width: 100%;

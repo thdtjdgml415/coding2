@@ -361,6 +361,8 @@ body {
     bottom: 50px;
     right: 10px;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
 }
 .modal__wrap .modal__btn:hover {
     background-color: rgb(72, 208, 190);
@@ -370,12 +372,15 @@ body {
     height: 100vh;
     background-color: #f5f5;
     position: fixed;
-    top: 0;
+    top: -40px;
     left: 0;
     display: flex;
     align-items: center;
+    overflow-x: hidden; 
+    transform: scale(0);
 }
 .modal__cont .modal__box {
+    padding-inline: 1rem;
     width: 70%;
     height: 70vh;
     margin: 0 auto;
@@ -481,7 +486,7 @@ body {
     border: 1px solid #000;
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 100px;
     padding: 10px 20px;
     border-radius: 50px;
     background-color: #f5f5;
@@ -490,10 +495,71 @@ body {
 .modal__cont .modal__close:hover {
     background-color: #fff;
 }
+.modal__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #1f224a;
+    padding: 1rem 1rem 0.8rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px -5px hsl(180deg 2% 10%);
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0;
+}
+.modal__close:hover{
+    background-color: #13142d7d;
+}
+.modal__close svg{
+    color: #fff;
+}
+/* 모달 애니메이션 */
+.modal__cont.show { /*전체 배경*/
+    animation: foldOut 1s ease forwards;
+}
 
+.modal__cont.show .modal__box {   /*스크립트 배경*/
+    animation: zoomOut 0.5s 1s ease forwards; /*초를 두개써서딜레이를 줄 수 있다*/
+}
 
+.modal__cont.show .modal__close {    /* 닫기버튼*/
+    animation: closeOut 0.6s 1.5s ease forwards;
+}
 
+.modal__cont.show.hide {  
+    animation: foldIn 0.3s 0.3s ease backwards; 
+}
+.modal__cont.show.hide .modal__box{   
+    animation: zoomIn 0.5s 1s ease backwards;
+}
+.modal__cont.show.hide .modal__close {    /* 닫기버튼*/
+    animation: closeIn 0.3s 0.6s ease backwards;
+    opacity: 0;
+}
 
+@keyframes foldOut {
+    0% {transform: scaleX(0) scaleY(0.001);}
+    50% {transform: scaleX(1) scaleY(0.001);}
+    100% {transform: scaleX(1) scaleY(1);}
+}
+@keyframes closeOut {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes foldIn {
+    0% {transform: scaleX(1) scaleY(1);}
+    50% {transform: scaleX(1) scaleY(0.001);}
+    100% {transform: scaleX(0) scaleY(0.001);}
+}
+@keyframes zoomOut {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+@keyframes zoomIn {
+    100% {transform: scale(1);}
+    0% {transform: scale(0);}
+}
 
 
 /* dog */

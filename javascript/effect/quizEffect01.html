@@ -112,7 +112,7 @@
                                             fill="yellow"></path>
                                     </svg>
                                 </span>
-                                <em>HTML</em>
+                                <em>CSS</em>
                                 <span class="close">
                                     <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
                                         focusable="false">
@@ -136,7 +136,7 @@
                                             fill="yellow"></path>
                                     </svg>
                                 </span>
-                                <em>CSS</em>
+                                <em>HTML</em>
                                 <span class="close">
                                     <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"
                                         focusable="false">
@@ -160,34 +160,38 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-<pre><code class="language-js"> const sliderWrap = document.querySelector(".slider__wrap");
-const sliderImg = sliderWrap.querySelector(".slider__img");
-const slider = sliderWrap.querySelectorAll(".slider");
+                            <pre><code class="language-js">        //선택자
+const quizType = document.querySelector(".quiz__type"); //퀴즈종류
+const quizNumber = document.querySelector(".quiz__question .number"); //퀴즈번호
+const quizAsk = document.querySelector(".quiz__question .ask"); //퀴즈 질문
+const quizConfirm = document.querySelector(".quiz__answer .confirm") //정답확인버튼
+const quizResult = document.querySelector(".quiz__answer .result") // 정답 결과
+const quizDog = document.querySelector(" .quiz__view .dog")  //강아지
 
-let currentIndex = 0; //현재 보이는 이미지
-let sliderCount = slider.length; //이미지 갯수
+//문제 정보
+const answerType = "웹디자인기능사";
+const answerNum = "1";
+const answerAsk = "인접하는 두 색의 경계 부분에 색상, 명도, 채도의 대비가 더욱 강하게 일어나는 현상을 무엇이라고 하는가?"
+const answerResult = "연변대비"
 
-setInterval(() => {  
-    let nextIndex = (currentIndex + 1) % 5; //다음 이미지
-    
-    slider[currentIndex].style.opacity = "0";   //첫번째 이미지를 안보이게
-    slider[nextIndex].style.opacity = "1";   //두번째 이미지를 보이게
+//문제 출력
+quizType.innerText = answerType;
+// quizType.innerHtml 태그인식함
+quizNumber.innerText = answerNum + ". ";
+quizAsk.innerText = answerAsk;
+quizResult.textContent = answerResult;  //textContent와 innerText는 같지만 익스플로러 때문에 생긴 문제이다.
 
-    currentIndex++;
-    
-    currentIndex = nextIndex;
-    // slider[currentIndex].style.opacity = "0";   //두번째 이미지를 안보이게
-    // slider[2].style.opacity = "1";   //세번째 이미지를 보이게
+//정답 숨기기
+quizResult.style.display = "none";
 
-    // slider[currentIndex].style.opacity = "0";   //세번째 이미지를 안보이게
-    // slider[3].style.opacity = "1";   //네번째 이미지를 보이게
-
-    // slider[currentIndex].style.opacity = "0";   //네번째 이미지를 안보이게
-    // slider[4].style.opacity = "1";   //다섯번째 이미지를 보이게
-
-    // slider[4].style.opacity = "0";   //다섯째 이미지를 안보이게
-    // slider[0].style.opacity = "1";   //첫째 이미지를 보이게
-},3000);
+//정답 확인
+//정답 버튼을 클릭하면 확인버튼 안보이게.. 숨겨진 정답은 보이게..
+//정답을 확인하면 강아지가 웃고 있어야한다.  클래스 like 추가
+quizConfirm.addEventListener("click", function () {
+    quizConfirm.style.display = "none";    //버튼을 누르면 정답버튼을 없애기
+    quizResult.style.display = "block";
+    quizDog.classList.add("like");    //class를 추가해준다.
+});
 </code></pre>
                         </div>
                         <div>
@@ -233,16 +237,42 @@ setInterval(() => {
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-html">&lt;div class="slider__wrap"&gt;
-    &lt;div class="slider__img"&gt;
-        &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_02-min.jpg" alt="이미지1"&gt;&lt;/div&gt;
-        &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_03-min.jpg" alt="이미지2"&gt;&lt;/div&gt;
-        &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_04-min.jpg" alt="이미지3"&gt;&lt;/div&gt;
-        &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_05-min.jpg" alt="이미지4"&gt;&lt;/div&gt;
-        &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_07-min.jpg" alt="이미지5"&gt;&lt;/div&gt;
-        
+<pre><code class="language-html">&lt;main id="main"&gt;
+    &lt;div class="quiz__wrap"&gt;
+        &lt;div class="quiz"&gt;
+            &lt;span class="quiz__type"&gt;&lt;/span&gt;
+            &lt;h2 class="quiz__question"&gt;
+                &lt;span class="number"&gt;&lt;/span&gt;
+                &lt;div class="ask"&gt;
+                &lt;/div&gt;
+            &lt;/h2&gt;
+            &lt;div class="quiz__view"&gt;
+                &lt;div class="dog"&gt;
+                    &lt;div class="head"&gt;
+                        &lt;div class="ears"&gt;&lt;/div&gt;
+                        &lt;div class="face"&gt;&lt;/div&gt;
+                        &lt;div class="eyes"&gt;
+                            &lt;div class="teardrop"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="nose"&gt;&lt;/div&gt;
+                        &lt;div class="mouth"&gt;
+                            &lt;div class="tongue"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="chin"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="body"&gt;
+                        &lt;div class="tail"&gt;&lt;/div&gt;
+                        &lt;div class="legs"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="quiz__answer"&gt;
+                &lt;button class="confirm"&gt;정답 확인하기&lt;/button&gt;
+                &lt;div class="result"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                     </div>
@@ -298,10 +328,7 @@ setInterval(() => {
             quizConfirm.style.display = "none";    //버튼을 누르면 정답버튼을 없애기
             quizResult.style.display = "block";
             quizDog.classList.add("like");    //class를 추가해준다.
-        })
-
-
-
+        });
     </script>
 </body>
 
