@@ -53,22 +53,25 @@
               
                         </tr>
                         <tr>
-                            <td class="ce">생성, 변경</td>
+                            <td class="ce" rowspan="2">생성, 변경</td>
                             <td>$("a").attr("href", "http://icoxpublish.com").attr("target", "_blank");</td>
+              
+                        </tr>
+                        <tr>
                             <td>$("a").attr({"href": "http://icoxpublish.com", target:"_blank"});</td>
               
                         </tr>
                         <tr>
                             <td class="ce">콜백 함수</td>
                             <td>
-                                    $("a").attr("href", function(index, h){
-                                    //index는 각 a 요소의 index 0, 1, 2
-                                    //h는 각 a 요소 href 속성
-                                    return attribute(속성) // 각 a 요소의 속성을 생성 및 변경합니다.
-                                });
-                                ...
-                                <a href="http://www.daum.net" target="_blank" title="새창">다음</a>
-                                <a href="http://www.daum.net" target="_blank" title="새창">네이버</a>
+                                    $("a").attr("href", function(index, h){  <br>
+                                    //index는 각 a 요소의 index 0, 1, 2  <br>
+                                    //h는 각 a 요소 href 속성1         <br>
+                                    return attribute(속성) // 각 a 요소의 속성을 생성 및 변경합니다.  <br>
+                                });   <br>
+                                ...  <br>
+                                <a href="http://www.daum.net" target="_blank" title="새창">다음</a>  <br>
+                                <a href="http://www.daum.net" target="_blank" title="새창">네이버</a>  <br>
                                 <a href="http://www.daum.net" target="_blank" title="새창">네이트</a>
                             </td>
                         </tr>
