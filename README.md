@@ -1,7 +1,13 @@
 # coding2
 
-### 메인페이지
+
+### 메인페이지1
+https://songweb.netlify.app/   
+
+
+### 메인페이지2
 https://thdtjdgml415.github.io/coding2/index.html   
+
 
 ### 자기소개 페이지
 https://thdtjdgml415.github.io/coding2/class/index.html   
