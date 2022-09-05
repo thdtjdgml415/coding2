@@ -1,40 +1,40 @@
-    /* imageType */
+/* imageType */
 
-    .image__inner {
-        display: flex;
-        justify-content: space-between;
-    }
+.image__inner {
+  display: flex;
+  justify-content: space-between;
+}
 
-    .image__inner .image {
-        width: 48%;
-        background: #ccc;
-        width: 570px;
-        height: 370px;
-        color: #fff;
-        box-sizing: border-box;
-        padding: 180px 30px 30px 30px;
-    }
-    .image__inner .img1 {
-        background : url(https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/img/card_bg01_01.jpg?raw=true) no-repeat center / cover
-    }
-    .image__inner .img2 {
-        background : url(https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/img/card_bg01_02.jpg?raw=true) no-repeat center / cover
-    }
-    .image h3 {
-        font-size: 32px;
-        line-height: 1.4;
-        text-align: left;
-    }
-    .image p {
-        font-size: 16px;
-        line-height: 1.4;
-        margin: 10px 0;
-        text-align: left;
-    }
-    .image a {
-        background-color: #B45A30;
-        padding: 10px 20px;
-        margin-top: 10px;
-        display: inline-block;
-        color: #fff;
-    }
+.image__inner .image {
+  width: 48%;
+  background: #ccc;
+  width: 570px;
+  height: 370px;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 180px 30px 30px 30px;
+}
+.image__inner .img1 {
+  background: url(../img/imageType01.jpg) no-repeat center / cover;
+}
+.image__inner .img2 {
+  background: url(../img/imageType02.jpg) no-repeat center / cover;
+}
+.image h3 {
+  font-size: 32px;
+  line-height: 1.4;
+  text-align: left;
+}
+.image p {
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 10px 0;
+  text-align: left;
+}
+.image a {
+  background-color: #b45a30;
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: inline-block;
+  color: #fff;
+}
