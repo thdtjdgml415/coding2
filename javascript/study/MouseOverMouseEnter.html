@@ -46,6 +46,21 @@
                 ✔직접 이벤트를 걸지 않은 자식요소에 마우스 포인터가 와도 발생합니다.
             </p>
 
+            <p class="t_box">
+                주로 아래와 같이 짝을 이루어 사용한다. <br>
+                mouseOver &lt;-&gt; mouseOut   <br>
+                mouseEnter &lt;-&gt; mouseLeave
+            </p>
+            <h3 class="t_tit2">MouseOver와 MouseEnter 차이</h3>
+            <p>
+                두 이벤트를 유사하지만 이벤트 전파(event propagation)와 취소 가능성(cancelable)에 큰 차이가 있다. <br>
+                <br>
+                mouseOver/mouseOut는 이벤트가 발생할 때 버블링이 일어나며 상위 요소로 전파된다. 그리고 preventDefault 메서드를 호출하여 이벤트의 기본 동작을 취소할 수 있다. <br>
+                <br>
+                한편 mouseEnter/mouseLeave는 이벤트가 발생할 때 버블링이 일어나지 않아 자기 자신만이 이벤트를 받을 수 있게 된다. 즉 target과 currentTarget이 항상 일치한다. 또한 preventDefault 메서드를 호출하여 이벤트의 기본 동작을 취소할 수 없다. <br>
+            </p>
+
+
             <h4 class="t_tit2">결과</h4>
             <div class="t_iframe">
                 <iframe title="mouseenter vs mouseover"

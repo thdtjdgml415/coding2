@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">수학 객체</a></li>
+                    <li><a href="../javascript08.html">숫자 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="searchEffect01.html">검색 효과</a></li>
+                    <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                    <li><a href="textEffect01.html">텍스트 효과</a></li>
+                    <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                    <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                    <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                    <li><a href="gameEffect01,html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+        <main>
+            <div class="main_refer">
+                <div class="document">
+                    <h3 class="t_tit">배너타입</h3>
+                    <p class="t_box">
+                        홈페이지에 큰 띠를 만들어 광고를 넣을 수 있는 영역입니다.
+                    </p>
+
+                    <h3 class="t_desc2">CSS</h3>
+                    <div class="t_code">
+<pre><code class="language-css">/* 여백 초기화 */
+body,
+div,
+dl,
+dd,
+dt,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+fieldset,
+form,
+legend,
+p,
+blockquote,
+th,
+td,
+input,
+button,
+figure,
+figcaption{
+    margin: 0;
+    padding: 0;
+}  
+
+/* 시멘틱 태그 초기화 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+/* font 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    color: #000;
+    font-family: 'NexonLv1Gothic', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', dotum, 돋움;
+
+}
+/* 링크 초기화 */
+a {
+    text-decoration: none;
+    color: #000;
+}
+/* 목록 초기화 */
+li,
+ol,
+ul{
+    list-style: none;
+}
+/* 제목 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+/* 폰트 스타일 초기화 */
+em, address {
+    font-style: normal;
+}
+/* 이미지 초기화 */
+img {
+    width: 100%;
+    vertical-align: top;
+}
+/* 보더 초기화 */
+img, fieldset, button {
+    border: 0;
+}
+/* 클리어 픽스 */
+.clearfix {
+    zoom: 1;
+}
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+    line-height: 0;
+}
+.clearfix::after {
+    clear: both;
+}
+/* 블라인드 효과 */
+.blind{
+    position:absolute;
+    clip:rect(0 0 0 0);
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden
+}
+/* 이미지 대체(ir)효과 */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;    
+}
+.banner__inner {
+    background-image: url(../img/banner_bg01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 120px 0;
+    color: #fff;
+    }
+    .banner__inner .title {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 70px;
+    }
+    .banner__inner .desc {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 70px;
+    }
+    .banner__inner .desc a {
+    color: #fff;
+    display: block;
+    }
+    .banner__inner .small {
+    text-decoration: underline;
+    font-size: underline;
+    }      
+</code></pre>
+                        <h3 class="t_desc2">HTML</h3>
+                        <div class="t_code">
+                            <pre><code class="language-html">&lt;section id="bannerType" class="banner__wrap nexon"&gt;
+    &lt;h2 class="blind"&gt;배너 영역&lt;/h2&gt;
+    &lt;div class="banner__inner"&gt;
+        &lt;h3 class="title"&gt;우주&lt;/h3&gt;
+        &lt;p class="desc"&gt;
+            미지의 탐사를 원하시는 분은
+            &lt;a href="/" title="페이지 이동"&gt; 많은 질문 부탁드리고 이곳을 클릭해주세요.&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;span class="small"&gt;배너유형01&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+                        </div>
+                        <!-- HTML -->
+                        <h2 class="t_tit">결과</h2>
+                        <div class="t_iframe">
+                            <iframe src="https://codepen.io/thdtjdgml415/embed/eYrmLLB?default-tab=html%2Cresult"
+                                frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                See the Pen <a href="https://codepen.io/thdtjdgml415/pen/eYrmLLB">
+                                    배너유형</a> by thdtjdgml415 (<a
+                                    href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                                on <a href="https://codepen.io">CodePen</a>.
+                            </iframe>
+                        </div>
+                        <div class="t_link">
+                            <a href="https://github.com/thdtjdgml415/coding2/blob/main/site/headerType/headerType01.html"
+                                target="_blank">깃허브 소스 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+        </footer>
+        <!-- //footer -->
+        <script src="../assets/js/highlight.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+</body>
+
+</html>
