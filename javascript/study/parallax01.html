@@ -162,10 +162,11 @@ document.querySelectorAll(".content__item").forEach((element, index) => {
                             </div>
                     </details>
                 </div>
-                <!-- HTML -->
+                <!-- menu -->
+
                 <h3 class="t_tit2">info</h3>
                 <p class="t_desc2">
-
+                    for문을 이용해서 section별로 확인해서 offset값을 출력해 주었습니다.
                 </p>
                 <div class="t_result">
                     <details>
@@ -181,20 +182,47 @@ for (let i = 1; i &lt;= 9; i++) {
                             </div>
                     </details>
                 </div>
-                <!--  -->
+                <!-- info -->
+                <h3 class="t_tit2">info</h3>
+                <p class="t_desc2">
+                    getAttribute 메서드를 이용해서 section에 속성값을 가져와서 적용시켜줍니다. <br>
+                    scrollIntoView를 사용하여 메뉴바를 부드럽게 이동시켜줍니다.
+                </p>
+                <div class="t_result">
+                    <details>
+                        <summary>메뉴바 이동을 부드럽게 해주기</summary>
+                        <div class="result">
+                            <div class="t_code">
+                                <pre><code class="language-js">//스크롤이동
+    document.querySelectorAll("#parallax__nav li a").forEach(li => {
+        li.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector(li.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });    
+}  
+</code></pre>
+                            </div>
+                    </details>
+                </div>
+                <!-- info -->
                 <h4 class="t_tit2">결과</h4>
                 <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
                     <iframe
                         src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FdmrXhO1ckj8W6ImWXGa20z%2FUntitled%3Fnode-id%3D0%253A1"
                         allowfullscreen></iframe>
                 </div>
-
-                <div class="t_link">
-                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/effect/sliderEffect01.html"
-                        target="_blank">원본 소스 보기</a>
+                <div class="t_iframe" style="min-width: 600px; min-height: 900px; padding-top: 0;">
+                    <iframe src="https://thdtjdgml415.github.io/coding2/javascript/effect/parallaxEffect01.html"
+                        allowfullscreen></iframe>
                 </div>
 
-
+                <div class="t_link">
+                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/effect/parallaxEffect01.html"
+                        target="_blank">원본 소스 보기</a>
+                </div>
             </div>
     </main>
     <!-- //main -->
