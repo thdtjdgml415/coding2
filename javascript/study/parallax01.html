@@ -60,7 +60,7 @@
                         <summary>scrollTop보기</summary>
                         <div class="result">
                             <div class="t_code">
-                                <pre><code class="language-html"> window.addEventListener("scroll", () => {
+                                <pre><code class="language-js"> window.addEventListener("scroll", () => {
 
 // let scrollTop = window.pageYOffset;
 // let scrollTop = window.scrollY;
@@ -149,7 +149,7 @@ let scrollTop = window.pageYOffset || window.scrollY || document.documentElement
 //     }
 // }
 
-// forEach
+// forEach문
 document.querySelectorAll(".content__item").forEach((element, index) => {
     if (scrollTop >= document.getElementById(`section${index + 1}`).offsetTop) {
         document.querySelectorAll("#parallax__nav li").forEach(li => {
@@ -224,6 +224,7 @@ for (let i = 1; i &lt;= 9; i++) {
                         target="_blank">원본 소스 보기</a>
                 </div>
             </div>
+        </div>
     </main>
     <!-- //main -->
     <footer id="footer">
