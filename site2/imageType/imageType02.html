@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형2</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+            /*이미지 여백 없애기*/
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common 다른 유형에도 기본적으로 들어감*/
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+            overflow: hidden;
+        }
+
+        .section {
+            padding: 120px 0;
+
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>h2.tit {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+            overflow: hidden;
+            text-align: left;
+            margin-bottom: 30px;
+            border-top: 1px solid #000;
+            position: relative;
+        }
+
+        .section>h2.tit span {
+            background: #000;
+            color: #fff;
+            display: inline-block;
+            font-size: 12px;
+            font-family: 'SebangGothic';
+            padding: 5px 15px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /* imageType02 */
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image {
+            width: 32%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image__box {}
+
+        .image__box img {
+            vertical-align: top;
+            transition: all 0.5s ease-in-out;
+
+        }
+
+        .image__desc {
+            position: absolute;
+            left: 0;
+            bottom: -100px;
+            width: 100%;
+            text-align: center;
+            height: 100px;
+            backdrop-filter: blur(10px);
+            padding: 23px 20px;
+            box-sizing: border-box;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .img1 .image__desc {
+            background: rgba(8, 11, 143, 0.3);
+        }
+
+        .img2 .image__desc {
+            background: rgba(8, 11, 143, 0.3);
+        }
+
+        .img3 .image__desc {
+            background: rgba(8, 11, 143, 0.3);
+        }
+
+        .img1 .image__desc h3 {
+            color: rgba(8, 11, 143);
+        }
+
+        .img2 .image__desc h3 {
+            color: rgba(8, 11, 143);
+        }
+
+        .img3 .image__desc h3 {
+            color: rgba(8, 11, 143);
+        }
+
+        .image:hover .image__desc {
+            bottom: 0;
+        }
+
+        .image:hover .image__desc {
+            transform: scale(1.1);
+        }
+
+        .image__desc h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .image__desc .more {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .image__desc .more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="imageType02" class="section gmark">
+        <h2>미술관</h2>
+        <p>마우스를 이미지에 올리면 효과가 생기는 사이트는 만들어 보도록 하겠습니다.</p>
+        <div class="image__inner container">
+            <article class="image img1">
+                <figure class="image__box">
+                    <img src="../imageType/img/art01.jpg" alt="">
+                </figure>
+                <div class="image__desc">
+                    <h3>현대미술</h3>
+                    <a href="" class="more" title="자세히 보기">자세히 보기</a>
+                </div>
+            </article>
+            <article class="image img2">
+                <figure class="image__box">
+                    <img src="../imageType/img/art02.jpg" alt="">
+                </figure>
+                <div class="image__desc">
+                    <h3>고대미술</h3>
+                    <a href="" class="more" title="자세히 보기">자세히 보기</a>
+                </div>
+            </article>
+            <article class="image img3">
+                <figure class="image__box">
+                    <img src="../imageType/img/art03.jpg" alt="">
+                </figure>
+                <div class="image__desc">
+                    <h3>르네상스</h3>
+                    <a href="" class="more" title="자세히 보기">자세히 보기</a>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+
+</html>

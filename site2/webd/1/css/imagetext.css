@@ -1,0 +1,51 @@
+.imageText__wrap {
+    width: 100%;
+}
+.imageText__header {
+    margin: 30px 0;
+}
+.imageText__wrap .imageText__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.imageText__wrap .imageText__inner .Text__award{
+    border: 1px solid rgba(33, 33, 33);
+    background-color: rgba(33, 33, 33);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    line-height: 50px;
+    text-align: center;
+}
+.imageText__wrap .imageText__inner .Text__award .a {
+    line-height: 1;
+    text-align: left;
+}
+.imageText__wrap .imageText__inner .Text__award p{
+    color: #fff;
+}
+.imageText__wrap .imageText__inner .imageText__desc {
+    width: 30%;
+    position: relative;
+
+}
+.imageText__wrap .imageText__inner .imageText__desc .title {
+    margin: 20px 0;
+}
+.imageText__wrap .imageText__inner .imageText__desc .price {
+    font-weight: 600;
+}
+.imageText__wrap .imageText__inner .imageText__desc .price span {
+    font-weight: normal;
+    font-size: 15px;
+    color: #666;
+}
+.imageText__wrap .imageText__inner .imageText__desc .market {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}

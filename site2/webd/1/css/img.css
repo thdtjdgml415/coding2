@@ -1,0 +1,43 @@
+/* imageType01 */
+.image__wrap {
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.image__wrap .image__inner {
+    display: flex;
+    background-color: rgba(242, 242, 242);
+    align-items: center;
+    width: 48%;
+    justify-content: space-between;
+}
+.image__wrap .image__inner .figure {
+    width: 100px;
+    height: 100px;
+}
+.image__wrap .image__inner .image__header {
+    line-height: 1.4;
+    margin-bottom: 10px;
+    margin-left: 20px;
+
+}
+.image__inner .image__title{
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.image__inner .image__desc {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.4;
+
+}
+.image__inner .image__header a {
+    font-weight: 600px;
+}
+.image__inner .image__header a span {
+    margin-left: 10px;
+    font-size: 10px;
+    color: #666;
+}

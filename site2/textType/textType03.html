@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textType03</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common */
+        .container {
+            width: 1200px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        /* textType 03 */
+        body {
+            background-color: #F6F8FD;
+        }
+
+        .text__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .text {
+            width: 29%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .top {
+            height: 195px;
+            border-bottom: 1px solid #f5f5f5d7;
+            margin-bottom: 20px;
+        }
+
+        .top .desc {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .middle {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .middle .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+            background: url('./icons.svg') no-repeat;
+            
+        }
+
+        .text:nth-child(1) .middle .icon {
+            background-color: #EDEEFC;
+        }
+
+        .text:nth-child(2) .middle .icon {
+            background-color: #F7E2E1;
+            background-position: -100px 1px;
+        }
+
+        .text:nth-child(3) .middle .icon {
+            background-color: #E4FEC9;
+            background-position: -200px 1px;
+        }
+
+        .middle .name {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .middle .name p {
+            font-size: 24px;
+        }
+
+        .middle .name p span {
+            font-size: 18px;
+        }
+
+        .middle .star {
+            width: 100%;
+            height: 25px;
+            background: url(./5star.svg) no-repeat;
+        }
+
+        .text:nth-child(2) .middle .star {
+            background: url(./4star.svg) no-repeat;
+        }
+
+        .more {
+            border-top: 1px solid #f5f5f5d7;
+        }
+
+        .more a {
+            display: block;
+            margin: 0 auto;
+            width: 130px;
+            height: 30px;
+            border-radius: 50px;
+            color: #fff;
+            background-color: #4B57E3;
+            text-align: center;
+            line-height: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="textType03" class="text__wrap nexon section">
+        <h2>스터디 후기</h2>
+        <p>웹디자이너, 웹퍼블리셔, 프론트앤드 개발자 멤버를 소개합니다.</p>
+        <div class="text__inner container">
+            <!-- 01 -->
+            <div class="text">
+                <div class="top">
+                    <p class="desc">
+                        웹이란 무엇인가 생각해 보신적 있으신가요? 정의라도 알고 있으신가요? 모르신다면 반성하시고 기본적인 부분을 채워나가는 것이 중요한거 같습니다.
+                    </p>
+                </div>
+
+                <div class="middle">
+                    <div class="icon"><span class="ir">this is image</span></div>
+                    <div class="name">
+                        <p>송 웹스 <span>24기</span></p>
+                        <div class="star"></div>
+                    </div>
+                </div>
+
+                <div class="more">
+                    <a href="#">자세히 보기</a>
+                </div>
+            </div>
+
+            <!-- 02 -->
+            <div class="text">
+                <div class="top">
+                    <p class="desc">
+                       진짜 아무것도 모르겠습니다... 이거 이렇게 만드는거 맞나요? 시간도 없고 예비군은 진짜 가지마세요 가지마 특히 상록수,..,. 너무 졸린데 어떡하지 진짜..
+                    </p>
+                </div>
+
+                <div class="middle">
+                    <div class="icon"><span class="ir">this is image</span></div>
+                    <div class="name">
+                        <p>성 웹스 <span>24기</span></p>
+                        <div class="star"></div>
+                    </div>
+                </div>
+
+                <div class="more">
+                    <a href="#">자세히 보기</a>
+                </div>
+            </div>
+
+            <!-- 03 -->
+            <div class="text">
+                <div class="top">
+                    <p class="desc">
+                       드디어 마지막인데 블로그에 언제 정리하죠? 진짜 답도 안나오는거 같습니다.. 그래도 해야겠죠? 할껀 해야죠  3신데.... 
+                    </p>
+                </div>
+
+                <div class="middle">
+                    <div class="icon"><span class="ir">this is image</span></div>
+                    <div class="name">
+                        <p>희 웹스 <span>24기</span></p>
+                        <div class="star"></div>
+                    </div>
+                </div>
+
+                <div class="more">
+                    <a href="#">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
