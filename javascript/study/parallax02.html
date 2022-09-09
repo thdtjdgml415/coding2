@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 기본 규칙</title>
+    <title>패럴랙스 사이드메뉴</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
 </head>
@@ -48,11 +48,31 @@
                 <p class="t_desc2">
                     페럴랙스 효과는 스크롤을 내리면서 알맞은 스크롤의 위치에서 효과가 생기는 것을 말합니다.
                 </p>
+                <!-- info -->
+                <h3 class="t_tit2">info</h3>
+                <p class="t_desc2">
+                  사이드에 있는 스크롤 바에 버튼을 클릭했을 때 이동하도록 a의 인자값을 불러왔습니다. <br>
+                  하지만 저희는 부드럽게 이동시키기 위해서 a의 역할을 해지시키도록 preventDefault 메서드를 사용하여 억제하였고 <br>
+                  href 속성에 부드럽게 이동하는 behavior 속성을 사용하여 보내주었습니다. 
+                </p> 
+                        <summary>메뉴바 이동을 부드럽게 해주기</summary>
+                            <div class="t_code">
+<pre><code class="language-js">//스크롤이동
+document.querySelectorAll("#parallax__dot a").forEach(el => {
+    el.addEventListener("click", e => {
+        e.preventDefault();
+        console.log(e)
+        document.querySelector(el.getAttribute("href")).scrollIntoView({behavior: "smooth"});
+    })
+});
+</code></pre>
+                            </div>
+                <!-- info -->
                 <!-- scrollTop -->
                 <h3 class="t_tit2">위치에 따라 메뉴바 옮기기</h3>
                 <p class="t_desc2">
                     여러 브라우저 환경에서 scrollTop의 값을 구하기 위해 이 || 연산자를 사용하였습니다. <br>
-                    innerText를 사용하여 html에 출력을 하도록 하고  Math를 사용하여 소수점을 제거하였습니다. <br>
+                    innerText를 사용하여 html에 출력을 하도록 하고  Math 메서드를 사용하여 소수점을 제거하였습니다. <br>
                     offset위치를 구했으니 반복문(forEach문)을 사용하여 계속 scrollTop의 값과 offsetTop을 사용하여 요소의 위치 값과 비교합니다. <br>
                     비교했을 때 위치를 확인하고 사이드 메뉴에 표시합니다.  <br>
                     사이드 메뉴는 배열이기 때문에 0부터 시작해서 i값에 1을 더해서 시작해 주도록 합니다.
@@ -76,41 +96,6 @@
 </code></pre>
                             </div>
                 <!-- menu -->
-                <h3 class="t_tit2">info</h3>
-                <p class="t_desc2">
-                    for문을 이용해서 section별로 확인해서 offset값을 출력해 주었습니다.
-                </p>
-                        <summary>메뉴바 이동</summary>
-                            <div class="t_code">
-<pre><code class="language-js">document.querySelector(".scroll span").innerText = Math.round(scrollTop);
-//하단에 각 section별로 offset위치 표시합니다.
-for (let i = 1; i &lt;= 9; i++) {
-    document.querySelector(".offset" + i).innerText = document.getElementById("section" + i).offsetTop;
-}  
-</code></pre>
-                            </div>
-                <!-- info -->
-                <h3 class="t_tit2">info</h3>
-                <p class="t_desc2">
-                  사이드에 있는 스크롤 바에 버튼을 클릭했을 때 이동하도록 a의 인자값을 불러왔습니다. <br>
-                  하지만 저희는 부드럽게 이동시키기 위해서 a의 역할을 해지시키도록 preventDefault 메서드를 사용하여 억제하였고 <br>
-                  href 속성에 부드럽게 이동하는 behavior 속성을 사용하여 보내주었습니다. 
-                </p> 
-                        <summary>메뉴바 이동을 부드럽게 해주기</summary>
-                            <div class="t_code">
-<pre><code class="language-js">//스크롤이동
-    document.querySelectorAll("#parallax__nav li a").forEach(li => {
-        li.addEventListener("click", (e) => {
-            e.preventDefault();
-            document.querySelector(li.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-    });    
-}  
-</code></pre>
-                            </div>
-                <!-- info -->
                 <h4 class="t_tit2">결과</h4>
                 <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
                     <iframe src="https://codepen.io/thdtjdgml415/embed/yLjebPY?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
@@ -119,6 +104,7 @@ for (let i = 1; i &lt;= 9; i++) {
                         on <a href="https://codepen.io">CodePen</a>.
                       </iframe>
                 </div>
+                <p class="t_desc">사이트 결과</p>
                 <div class="t_iframe" style="min-width: 600px; min-height: 900px; padding-top: 0;">
                     <iframe src="https://thdtjdgml415.github.io/coding2/javascript/effect/parallaxEffect02.html"
                         allowfullscreen></iframe>

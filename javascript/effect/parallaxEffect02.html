@@ -879,7 +879,6 @@
             document.querySelector(el.getAttribute("href")).scrollIntoView({behavior: "smooth"});
         })
     });
-
     window.addEventListener("scroll", () =>{
         let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop; //한번에 처리
         document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
@@ -892,16 +891,7 @@
                 document.querySelector(`#parallax__dot li:nth-child(${i + 1})`).classList.add("active")
             }
         })
-    })
-    document.querySelectorAll("#parallax__nav li a").forEach(li => {
-        li.addEventListener("click", (e) => {
-            e.preventDefault();
-            document.querySelector(li.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-    });    
- 
+    }) 
     </script>
 </body>
 </html>
