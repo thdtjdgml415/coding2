@@ -23,8 +23,9 @@
             border-radius: 50px;
             transition: top .4s ease;
         }
+
         #parallax__nav.show {
-          top: 20px;
+            top: 20px;
         }
 
         #parallax__nav li {
@@ -216,32 +217,36 @@
                 left: 10px;
                 bottom: 10px;
             }
-            .content__item  {
+
+            .content__item {
                 height: 100vh;
             }
         }
+
         #parallax__top {
-          position: fixed;
-          left: 50%;
-          bottom: -220px;
-          z-index: 10000;
-          transform: translateX(-50%);
-          width: 40px;
-          height: 40px;
-          background: rgba(0,0,0,0.4);
-          text-align: center;
-          line-height: 40px;
-          color: #fff;
-          border-radius: 50%;
-          cursor: pointer;
-          transition: all .5s ease;
+            position: fixed;
+            left: 50%;
+            bottom: -220px;
+            z-index: 10000;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all .5s ease;
         }
+
         #parallax__top.show {
-          bottom: 20px;
+            bottom: 20px;
         }
+
         #parallax__top:hover {
-          background: #fff;
-          color: #000;
+            background: #fff;
+            color: #000;
         }
     </style>
 </head>
@@ -251,9 +256,9 @@
         <h1>parallaxEffect03</h1>
         <p>패럴랙스 이펙트 - 숨김 메뉴</p>
         <ul>
-            <li class="active"><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect01.html">1</a></li>
             <li><a href="parallaxEffect02.html">2</a></li>
-            <li><a href="parallaxEffect03.html">3</a></li>
+            <li class="active"><a href="parallaxEffect03.html">3</a></li>
             <li><a href="parallaxEffect04.html">4</a></li>
             <li><a href="parallaxEffect05.html">5</a></li>
             <li><a href="parallaxEffect06.html">6</a></li>
@@ -467,7 +472,7 @@
 </code></pre>
                         </div>
                         <div>
-    <pre><code class="language-html">
+                            <pre><code class="language-html">
 </code></pre>
                         </div>
                         <div>
@@ -491,57 +496,57 @@
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/common.js"></script>
     <script>
-     window.addEventListener("scroll", () => {
-      let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
 
-      if(scrollTop > 0){
-        document.querySelector("#parallax__nav").classList.add("show");
-      } else {
-        document.querySelector("#parallax__nav").classList.remove("show");
-      }
-        
-      document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
-      
-        if(scrollTop > (document.documentElement.scrollHeight - window.innerHeight) - 200) {
-          document.querySelector("#parallax__top").classList.add("show")
-        }else {
-          document.querySelector("#parallax__top").classList.remove("show")
+            if (scrollTop > 0) {
+                document.querySelector("#parallax__nav").classList.add("show");
+            } else {
+                document.querySelector("#parallax__nav").classList.remove("show");
+            }
+
+            document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
+
+            if (scrollTop > (document.documentElement.scrollHeight - window.innerHeight) - 200) {
+                document.querySelector("#parallax__top").classList.add("show")
+            } else {
+                document.querySelector("#parallax__top").classList.remove("show")
+            }
+        })
+
+
+        let nowScroll = true;
+        let lastScroll = 0;
+
+        function scrollProgress() {
+            nowScroll = true;
+            //스크롤 움직일때마다 실행 0.3초 마다
+            setInterval(() => {
+                if (nowScroll) {
+                    nowScroll = false;
+                    hasScroll();
+                }
+            }, 300)
         }
-     })
 
+        //이전 스크롤과 현재 스크롤 높이를 비교하여 메뉴바가 나타나도록 도와준다.
+        function hasScroll() {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
-      let nowScroll = true;
-      let lastScroll = 0;
-
-      function scrollProgress(){
-        nowScroll = true;
-        //스크롤 움직일때마다 실행 0.3초 마다
-        setInterval(() => {
-          if(nowScroll) {
-            nowScroll=false;
-            hasScroll();
-          }
-        }, 300)
-      }
-
-      //이전 스크롤과 현재 스크롤 높이를 비교하여 메뉴바가 나타나도록 도와준다.
-      function hasScroll(){
-        let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
-        if(scrollTop < lastScroll){
-          document.querySelector("#parallax__nav").classList.add("show")
-        } else {
-          document.querySelector("#parallax__nav").classList.remove("show")
+            if (scrollTop < lastScroll) {
+                document.querySelector("#parallax__nav").classList.add("show")
+            } else {
+                document.querySelector("#parallax__nav").classList.remove("show")
+            }
+            lastScroll = scrollTop;
         }
-        lastScroll = scrollTop;
-      }
 
-      window.addEventListener("scroll", scrollProgress);
+        window.addEventListener("scroll", scrollProgress);
 
-     document.querySelector("#parallax__top").addEventListener("click", ()=>{
-        window.scrollTo({left: 0, top: 0, behavior:"smooth"});
-     })
+        document.querySelector("#parallax__top").addEventListener("click", () => {
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        })
     </script>
 </body>
 
