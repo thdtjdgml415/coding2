@@ -58,18 +58,23 @@ li {
     left: 0;
     top: 70px;
     display: none;
-}
+}#header .nav li ul.submenu li
 #header .nav li ul.submenu li {}
 #header .nav li ul.submenu li a {
     padding: 10px;
     background: #888;
  }
-
-
-
-
-
+/* banner */
 #banner {}
+#banner img {
+    width: 100%;
+}
+
+
+
+
+
+
 #content1 {}
 #content2 {}
 #footer {}
