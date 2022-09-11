@@ -26,28 +26,49 @@ h1, h2, h3, h4, h5, h6 {
 
 /* header */
 #header {
-    background-color: #ccc;
-    height: 100px;
+    background: #ccc;
 }
 #header h2 {
     float: left;
-    padding: 15px 0 10px;
+    padding: 20px 0 10px;
 }
 #header h2 img {
     width: 100px;
 }
-#header .nav {
+#header nav {
     float: right;
 }
-#header .nav ul li {
+#header nav li {
+    position: relative;
     float: left;
-    width: 160px;
-    text-align: center;
-}
-#header .nav ul li a {
-    display: block;
     font-size: 20px;
-    padding: 10px;
     font-weight: bold;
+    width: 160px;
+ 
+}
+#header nav li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
     padding: 24px 20px 20px 20px;
+    background: #666;
+}
+#header nav li a:hover {
+    background: #777;
+}
+
+#header .nav li ul.submenu  {
+    width: 160px;
+}
+#header .nav li ul.submenu li {
+    background-color: #ccc;
+}
+#header .nav li ul.submenu li a {
+    text-align: center;
+    background: #666;
+    display: none;
+
+}
+#header .nav li ul.submenu li a:hover {
+    background: #000;
 }
