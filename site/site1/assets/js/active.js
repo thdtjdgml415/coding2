@@ -6,5 +6,4 @@ btn.addEventListener("click", (a) => {
     a.preventDefault();
     sideMenu.classList.toggle("hide");
     
-
 });
