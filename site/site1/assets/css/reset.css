@@ -55,6 +55,9 @@ textarea {
     font-family: 'NexonLv1Gothic', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', dotum, 돋움;
 
 }
+* {
+    font-family: 'NexonLv1Gothic';
+}
 /* 링크 초기화 */
 a {
     text-decoration: none;
@@ -62,7 +65,7 @@ a {
 }
 /* 전체 배경 */
 body {
-    background: #ccc;
+    background: #202020;
 }
 /* 목록 초기화 */
 li,

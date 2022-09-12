@@ -2,6 +2,7 @@
 .imgText__inner {
     display: flex;
     justify-content: space-between;
+    background-color: #202020;
 }
 
 .imgText__inner>div {
@@ -19,10 +20,12 @@
 }
 .imgText__txt h3 {
     font-size: 50px;
-    font-weight: 300;
+    font-weight: 500;
     word-break: keep-all;
     line-height: 1.3;
     margin-bottom: 20px;
+    color: #fff;
+
 }
 .imgText__txt p{
     font-size:18px;
