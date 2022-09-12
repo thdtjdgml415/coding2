@@ -60,6 +60,10 @@ a {
     text-decoration: none;
     color: #000;
 }
+/* 전체 배경 */
+body {
+    background: #ccc;
+}
 /* 목록 초기화 */
 li,
 ol,
