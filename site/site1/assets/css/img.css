@@ -1,5 +1,10 @@
 /* imageType */
-
+.image__wrap > h2 {
+  color: #fff;
+}
+.image__wrap > p {
+  color: #A6B8C4;
+}
 .image__inner {
   display: flex;
   justify-content: space-between;

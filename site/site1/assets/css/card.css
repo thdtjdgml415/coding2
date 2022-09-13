@@ -1,10 +1,16 @@
 /* cardType */
+#cardType > h2 {
+    color: #fff;
+}
+#cardType > p {
+    color: #A4b8c4;
+}
+
 .card__inner {
 display: flex;
 justify-content: space-between;
 /* 비율에 알맞게 정렬 시켜주는 코드 */
 }
-
 .card {
     width: 32%;
     background: #f5f5f5;
@@ -12,6 +18,9 @@ justify-content: space-between;
 
 .card__body {
     padding: 24px;
+}
+.card__body:hover {
+    background: #A4C4B8;
 }
 
 .card__body .tit {
