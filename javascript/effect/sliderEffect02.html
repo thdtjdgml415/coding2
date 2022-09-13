@@ -129,11 +129,12 @@
             <div class="slider__wrap">
                 <div class="slider__img">
                     <div class="slider__inner">
-                        <div class="slider"><img src="../assets/img2/effect_bg_11-min.jpg" alt="이미지1"></div>
-                        <div class="slider"><img src="../assets/img2/effect_bg_12-min.jpg" alt="이미지2"></div>
-                        <div class="slider"><img src="../assets/img2/effect_bg_13-min.jpg" alt="이미지3"></div>
-                        <div class="slider"><img src="../assets/img2/effect_bg_14-min.jpg" alt="이미지4"></div>
-                        <div class="slider"><img src="../assets/img2/effect_bg_15-min.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="../assets/img/effect_bg_14@2x.jpg" alt="이미지1"></div>
+                        <div class="slider"><img src="../assets/img/effect_bg_15@2x.jpg" alt="이미지2"></div>
+                        <div class="slider"><img src="../assets/img/effect_bg_16@2x.jpg" alt="이미지3"></div>
+                        <div class="slider"><img src="../assets/img/effect_bg_17@2x.jpg" alt="이미지4"></div>
+                        <div class="slider"><img src="../assets/img/effect_bg_18@2x.jpg" alt="이미지5"></div>
+                        
                     </div>
                 </div>
             </div>
@@ -333,7 +334,7 @@ setInterval(() =&gt; {
 
 
     <!-- javascript -->
-    <script>
+    <!-- <script>
         const sliderInner = document.querySelector(".slider__inner");   //움직이는 영역
         const slider = document.querySelectorAll(".slider");               //이미지
         let currentIndex = 0;             //현재 이미지
@@ -345,10 +346,10 @@ setInterval(() =&gt; {
 
             sliderInner.style.transform = "translateX(" + -800 * currentIndex + "px)";   //이미지 움직임 
         }, 2000);
-    </script>
+    </script> -->
 
     <!-- gsap -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script>
         const slider = document.querySelectorAll(".slider");               //이미지
 
@@ -360,7 +361,7 @@ setInterval(() =&gt; {
                 x : -800 * currentIndex
             });
         },2000);
-    </script> -->
+    </script>
 
     <!-- jquery -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
