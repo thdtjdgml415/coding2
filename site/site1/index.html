@@ -44,14 +44,14 @@
         <a href="#">텍스트 영역 바로가기</a>
     </div>
     <!-- //skip -->
-    <header id="headerType" class="header__wrap nexon">
+    <header id="headerType" class="header__wrap nexon section01">
         <div class="header__inner">
             <div class="header__logo">
                 <a href="#">web <em>site</em></a>
             </div>
             <nav class="header__menu">
                 <ul>
-                    <li><a href="#headerType">헤더 영역</a></li>
+                    <li class="active"><a href="#headerType">헤더 영역</a></li>
                     <li><a href="#imageType">이미지 영역</a></li>
                     <li><a href="#imgtextType">이미지/텍스트 영역</a></li>
                     <li><a href="#cardType">카드 영역</a></li>
@@ -79,7 +79,7 @@
     <!-- //headerType -->
     <main id="mainType">
         <section id="sliderType" class="slider__wrap">
-            <h2>슬라이드 영역</h2>
+            <h2 class="blind">슬라이드 영역</h2>
             <div class="slider__inner">
                 <div class="slider">
                     <div class="slider__img">
@@ -359,7 +359,19 @@
     <script src="../site1/assets/js/active.js"></script>
 
     <script>
-        
+        const scroll = document.querySelector(".header__menu li");
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+            document.querySelector(".blind").forEach((el, i) => {
+                if(scrollTop >= document.getElementById(`section${i+1}`).offsetTop) {
+                  document.querySelectorAll(`.header__menu li`).forEach(li => {
+                    li.classList.remove("active")
+                  });
+                  document.querySelector(`.header__menu li:nth-child(${i + 1})`).classList.add("active")
+                }
+            })
+        })
     </script>
 </body>
 

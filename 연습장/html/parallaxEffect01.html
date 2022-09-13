@@ -111,39 +111,39 @@
         }
 
         .content__item:nth-child(1) .content__item__img {
-            background-image: url(../assets/img/effect_bg_15@2x.jpg);
+            background-image: url(../img/effect_bg_15@2x.jpg);
         }
 
         .content__item:nth-child(2) .content__item__img {
-            background-image: url(../assets/img/effect_bg_16@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_11@2x.jpg);
         }
 
         .content__item:nth-child(3) .content__item__img {
-            background-image: url(../assets/img/effect_bg_17@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_12@2x.jpg);
         }
 
         .content__item:nth-child(4) .content__item__img {
-            background-image: url(../assets/img/effect_bg_18@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_13@2x.jpg);
         }
 
         .content__item:nth-child(5) .content__item__img {
-            background-image: url(../assets/img/effect_bg_19@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_14@2x.jpg);
         }
 
         .content__item:nth-child(6) .content__item__img {
-            background-image: url(../assets/img/effect_bg_11@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_15@2x.jpg);
         }
 
         .content__item:nth-child(7) .content__item__img {
-            background-image: url(../assets/img/effect_bg_13@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_16@2x.jpg);
         }
 
         .content__item:nth-child(8) .content__item__img {
-            background-image: url(../assets/img/effect_bg_12@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_17@2x.jpg);
         }
 
         .content__item:nth-child(9) .content__item__img {
-            background-image: url(../assets/img/effect_bg_14@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_18@2x.jpg);
         }
 
         .content__item__desc {
@@ -469,27 +469,24 @@
         </div>
     </footer>
     <!-- //footer -->
-    <script src="../assets/js/highlight.min.js"></script>
-    <script src="../assets/js/common.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/highlight.min.js"></script>
     <script>
-        const scroll = document.querySelector("#parallax__info .scroll span")
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.pageXOffset || window.scrollY || document.documentElement.scrollTop;
+        const scroll = document.querySelector(`#parallax__info scroll span`)
+        window.addEventListener("scroll",() => {
+            let scrollTop = window.pageYoffset || window.scrollY || document.documentElement.scrollTop //다양한 브라우저에서 한번에 처리
 
-            document.querySelectorAll(".content__item").forEach((el, i) => {
-                if (scroll >= document.getElementById(`section${i + 1}`).offsetTop) {
-                    document.querySelectorAll(`#paralllax__nav li`).forEach(li => {
-                        li.classList.remove(`active`)
+            document.querySelectorAll(`.content__item`).forEach((el, i) => {
+                if(scrollTop >= document.getElementById(`section${i + 1}`).offsetTop) {
+                    document.querySelectorAll(`#parallax__nav li`).forEach(li => {
+                        li.classList.remove("active")
                     });
-                    document.querySelector(`#parallax__nav li:nth-child(${index + 1})`).classList.add(`active`)
+                    document.querySelector(`#parallax__nav li:nth-child(${i + 1})`).classList.add("active")
                 }
-            });
+              
+            })
+        })
 
-            document.querySelector(".scroll span").textContent = Math.ceil(scrollTop);
-            for(let i = 1; i <= 9; i++) {
-                document.querySelector(".offset" + i).innerText = document.getElementById("section"+ i).offsetTop;
-            }
-        });
     </script>
 </body>
 

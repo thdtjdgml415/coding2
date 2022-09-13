@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>패럴랙스 이펙트02</title>
-    <link rel="stylesheet" href="../assets/css/parallax.css" />
-    <link rel="stylesheet" href="../assets/css/dracula.css" />
+    <link rel="stylesheet" href="../css/parallax.css" />
+    <link rel="stylesheet" href="../css/dracula.css" />
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
@@ -111,39 +111,39 @@
         }
 
         .content__item:nth-child(1) .content__item__img {
-            background-image: url(../assets/img/effect_bg_15@2x.jpg);
+            background-image: url(../img/effect_bg_15@2x.jpg);
         }
 
         .content__item:nth-child(2) .content__item__img {
-            background-image: url(../assets/img/effect_bg_16@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_11@2x.jpg);
         }
 
         .content__item:nth-child(3) .content__item__img {
-            background-image: url(../assets/img/effect_bg_17@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_12@2x.jpg);
         }
 
         .content__item:nth-child(4) .content__item__img {
-            background-image: url(../assets/img/effect_bg_18@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_13@2x.jpg);
         }
 
         .content__item:nth-child(5) .content__item__img {
-            background-image: url(../assets/img/effect_bg_19@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_14@2x.jpg);
         }
 
         .content__item:nth-child(6) .content__item__img {
-            background-image: url(../assets/img/effect_bg_11@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_15@2x.jpg);
         }
 
         .content__item:nth-child(7) .content__item__img {
-            background-image: url(../assets/img/effect_bg_13@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_16@2x.jpg);
         }
 
         .content__item:nth-child(8) .content__item__img {
-            background-image: url(../assets/img/effect_bg_12@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_17@2x.jpg);
         }
 
         .content__item:nth-child(9) .content__item__img {
-            background-image: url(../assets/img/effect_bg_14@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_18@2x.jpg);
         }
 
         .content__item__desc {
@@ -212,10 +212,12 @@
                 left: 10px;
                 bottom: 10px;
             }
-            .content__item  {
+
+            .content__item {
                 height: 100vh;
             }
         }
+
         #parallax__dot {
             position: fixed;
             right: 20px;
@@ -224,11 +226,13 @@
             z-index: 10000;
             padding: 20px 10px;
             border-radius: 30px;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0, 0, 0, 0.4);
         }
+
         #parallax__dot span {
             display: none;
         }
+
         #parallax__dot li {
             position: relative;
             width: 20px;
@@ -237,9 +241,10 @@
             margin: 12px 8px;
             box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
             transition: box-shadow .1s ease;
-            
+
 
         }
+
         #parallax__dot li a {
             background: #fff;
             width: 100%;
@@ -250,9 +255,11 @@
             border-radius: 50%;
             transition: transform .1s ease;
         }
+
         #parallax__dot li.active {
             box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
         }
+
         #parallax__dot li.active a {
             transform: scale(0.4);
         }
@@ -483,7 +490,7 @@
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-css">/* reset */
+                            <pre><code class="language-css">/* reset */
     * {
       margin: 0;
       padding: 0;
@@ -869,31 +876,32 @@
         </div>
     </footer>
     <!-- //footer -->
-    <script src="../assets/js/highlight.min.js"></script>
-    <script src="../assets/js/common.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/highlight.min.js"></script>
     <script>
-     document.querySelectorAll("#parallax__dot a").forEach(el => {
-        el.addEventListener("click", e => {
-          e.preventDefault();
-            console.log(e)
-            document.querySelector(el.getAttribute("href")).scrollIntoView({behavior: "smooth"});
+        document.querySelectorAll("#parallax__dot a").forEach(el => {
+            el.addEventListener("click", e => {
+                e.preventDefault();
+                console.log(e)
+                document.querySelector(el.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+            });
         });
-    });
-    window.addEventListener("scroll", () =>{
-        let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop; //한번에 처리
-        document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop; //한번에 처리
+            document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
 
-        document.querySelectorAll(".content__item").forEach((e, i) => {
-            if(scrollTop >= e.offsetTop - window.innerHeight/2){
-                document.querySelectorAll(`#parallax__dot li`).forEach(li => {
-                    li.classList.remove(`active`);
-                })
-                document.querySelector(`#parallax__dot li:nth-child(${i + 1})`).classList.add("active")
-            }
-        })
-    }) 
+            document.querySelectorAll(".content__item").forEach((e, i) => {
+                if (scrollTop >= e.offsetTop - window.innerHeight / 2) {
+                    document.querySelectorAll(`#parallax__dot li`).forEach(li => {
+                        li.classList.remove(`active`);
+                    })
+                    document.querySelector(`#parallax__dot li:nth-child(${i + 1})`).classList.add("active")
+                }
+            })
+        }) 
     </script>
 </body>
+
 </html>
 <!-- // window.scroll(0, 1000);
 // window.scroll({left: 0, top: 2000});

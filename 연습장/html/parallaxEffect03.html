@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>패럴랙스 이펙트02</title>
-    <link rel="stylesheet" href="../assets/css/parallax.css" />
-    <link rel="stylesheet" href="../assets/css/dracula.css" />
+    <title>패럴랙스 이펙트03</title>
+    <link rel="stylesheet" href="../css/parallax.css" />
+    <link rel="stylesheet" href="../css/dracula.css" />
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
@@ -16,11 +16,16 @@
         #parallax__nav {
             position: fixed;
             right: 20px;
-            top: 20px;
+            top: -200px;
             z-index: 2000;
             background-color: rgba(0, 0, 0, 0.4);
             padding: 20px 30px;
             border-radius: 50px;
+            transition: top .4s ease;
+        }
+
+        #parallax__nav.show {
+            top: 20px;
         }
 
         #parallax__nav li {
@@ -110,42 +115,42 @@
             transition: all 1s;
         }
 
+
         .content__item:nth-child(1) .content__item__img {
-            background-image: url(../assets/img/effect_bg_15@2x.jpg);
+            background-image: url(../img/effect_bg_15@2x.jpg);
         }
 
         .content__item:nth-child(2) .content__item__img {
-            background-image: url(../assets/img/effect_bg_16@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_11@2x.jpg);
         }
 
         .content__item:nth-child(3) .content__item__img {
-            background-image: url(../assets/img/effect_bg_17@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_12@2x.jpg);
         }
 
         .content__item:nth-child(4) .content__item__img {
-            background-image: url(../assets/img/effect_bg_18@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_13@2x.jpg);
         }
 
         .content__item:nth-child(5) .content__item__img {
-            background-image: url(../assets/img/effect_bg_19@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_14@2x.jpg);
         }
 
         .content__item:nth-child(6) .content__item__img {
-            background-image: url(../assets/img/effect_bg_11@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_15@2x.jpg);
         }
 
         .content__item:nth-child(7) .content__item__img {
-            background-image: url(../assets/img/effect_bg_13@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_16@2x.jpg);
         }
 
         .content__item:nth-child(8) .content__item__img {
-            background-image: url(../assets/img/effect_bg_12@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_17@2x.jpg);
         }
 
         .content__item:nth-child(9) .content__item__img {
-            background-image: url(../assets/img/effect_bg_14@2x.jpg);
+            background-image: url(../img/Effectimg/effect_bg_18@2x.jpg);
         }
-
         .content__item__desc {
             font-size: 3vw;
             line-height: 1.4;
@@ -212,61 +217,48 @@
                 left: 10px;
                 bottom: 10px;
             }
-            .content__item  {
+
+            .content__item {
                 height: 100vh;
             }
         }
-        #parallax__dot {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10000;
-            padding: 20px 10px;
-            border-radius: 30px;
-            background: rgba(0,0,0,0.4);
-        }
-        #parallax__dot span {
-            display: none;
-        }
-        #parallax__dot li {
-            position: relative;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            margin: 12px 8px;
-            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
-            transition: box-shadow .1s ease;
-            
 
-        }
-        #parallax__dot li a {
-            background: #fff;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+        #parallax__top {
+            position: fixed;
+            left: 50%;
+            bottom: -220px;
+            z-index: 10000;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
             border-radius: 50%;
-            transition: transform .1s ease;
+            cursor: pointer;
+            transition: all .5s ease;
         }
-        #parallax__dot li.active {
-            box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+
+        #parallax__top.show {
+            bottom: 20px;
         }
-        #parallax__dot li.active a {
-            transform: scale(0.4);
+
+        #parallax__top:hover {
+            background: #fff;
+            color: #000;
         }
     </style>
 </head>
 
 <body>
     <header id="header">
-        <h1>parallaxEffect02</h1>
-        <p>패럴랙스 이펙트 - 사이트 메뉴</p>
+        <h1>parallaxEffect03</h1>
+        <p>패럴랙스 이펙트 - 숨김 메뉴</p>
         <ul>
             <li><a href="parallaxEffect01.html">1</a></li>
-            <li class="active"><a href="parallaxEffect02.html">2</a></li>
-            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li class="active"><a href="parallaxEffect03.html">3</a></li>
             <li><a href="parallaxEffect04.html">4</a></li>
             <li><a href="parallaxEffect05.html">5</a></li>
             <li><a href="parallaxEffect06.html">6</a></li>
@@ -275,20 +267,22 @@
     </header>
     <!-- //header -->
 
-    <nav id="parallax__dot">
+    <nav id="parallax__nav">
         <ul>
-            <li class="active"><a href="#section1"><span>메뉴1</span></a></li>
-            <li><a href="#section2"><span>메뉴2</span></a></li>
-            <li><a href="#section3"><span>메뉴3</span></a></li>
-            <li><a href="#section4"><span>메뉴4</span></a></li>
-            <li><a href="#section5"><span>메뉴5</span></a></li>
-            <li><a href="#section6"><span>메뉴6</span></a></li>
-            <li><a href="#section7"><span>메뉴7</span></a></li>
-            <li><a href="#section8"><span>메뉴8</span></a></li>
-            <li><a href="#section9"><span>메뉴9</span></a></li>
+            <li class="active"><a href="#section1">메뉴1</a></li>
+            <li><a href="#section2">메뉴2</a></li>
+            <li><a href="#section3">메뉴3</a></li>
+            <li><a href="#section4">메뉴4</a></li>
+            <li><a href="#section5">메뉴5</a></li>
+            <li><a href="#section6">메뉴6</a></li>
+            <li><a href="#section7">메뉴7</a></li>
+            <li><a href="#section8">메뉴8</a></li>
+            <li><a href="#section9">메뉴9</a></li>
         </ul>
     </nav>
     <!--//parallax nav -->
+    <div id="parallax__top">Top</div>
+    <!-- parallax__top -->
     <main id="parallax__cont">
         <div id="contents">
             <section id="section1" class="content__item">
@@ -378,7 +372,6 @@
 
     <aside id="parallax__info">
         <div class="scroll">scrollTop:<span>0</span>px</div>
-
     </aside>
     <!-- parallax__info -->
 
@@ -483,376 +476,7 @@
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-css">/* reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "NexonLv1Gothic";
-    }
-    body {
-      background-color: #222;
-      color: #fff;
-      font-family: "NexonLv1Gothic";
-      font-weight: 300;
-    }
-    img {
-      width: 100%;
-      vertical-align: top;
-    }
-    a {
-      color: #fff;
-      text-decoration: none;
-    }
-    li {
-      list-style: none;
-    }
-    
-    /* layout */
-    #header {
-      z-index: 2000;
-    }
-    #main {
-      z-index: 1000;
-      position: relative;
-      width: 100%;
-      height: 100vh;
-    }
-    #footer {
-      z-index: 3000;
-      position: relative;
-    }
-    /* header */
-    #header {
-      color: #fff;
-      padding: 20px;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-    #header h1 {
-      display: inline-block;
-      font-weight: 300;
-      margin-bottom: 10px;
-      border-bottom: 1px dashed #fff;
-    }
-    #header p {
-      margin-bottom: 10px;
-    }
-    #header li {
-      display: inline-block;
-    }
-    #header li a {
-      border: 1px dashed #fff;
-      border-radius: 30%;
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      text-align: center;
-      line-height: 30px;
-      font-size: 14px;
-    }
-    #header li.active a {
-      background-color: #fff;
-      color: #1f224a;
-    }
-    /* footer */
-    
-    #footer .source {
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
-      border: 1px solid #fff;
-      border-radius: 40px;
-      padding: 10px 30px;
-      font-size: 14px;
-    }
-    /* modal__wrap */
-    .modal__wrap {
-    }
-    .modal__cont {
-      width: 100%;
-      height: 100vh;
-      background-color: rgba(255, 255, 255, 0.3);
-      position: fixed;
-      left: 0;
-      top: 0;
-      overflow-x: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transform: scale(0);
-    }
-    .modal__btn {
-      color: #fff;
-      border: 1px solid #fff;
-      border-radius: 50px;
-      display: inline-block;
-      padding: 10px 20px;
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .modal__btn:hover {
-      background-color: #fff;
-      color: #3b3d63;
-    }
-    .modal__box {
-      width: 70%;
-      height: 70vh;
-      margin: 0 auto;
-      background-color: #fff;
-      background-color: #fff;
-      border-radius: 0.5rem;
-      box-shadow: 0 10px 20px -5px hsl(180deg 2% 10%);
-      transform: scale(0);
-    }
-    .modal__box .title {
-      padding-inline: 1rem;
-      background-color: #000007;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      height: 50px;
-      border-top-left-radius: 0.5rem;
-      border-top-right-radius: 0.5rem;
-    }
-    .modal__box .title .dot {
-      width: 15px;
-      height: 15px;
-      background-color: #fbff00;
-      display: inline-block;
-      border-radius: 50%;
-      position: relative;
-      margin-left: 2rem;
-    }
-    .modal__box .title .dot::before {
-      content: "";
-      position: absolute;
-      left: 25px;
-      top: 0;
-      width: 15px;
-      height: 15px;
-      background-color: #22ff00;
-      border-radius: 50%;
-    }
-    .modal__box .title .dot::after {
-      content: "";
-      position: absolute;
-      right: 25px;
-      top: 0;
-      width: 15px;
-      height: 15px;
-      background-color: rgb(255, 0, 0);
-      border-radius: 50%;
-    }
-    .modal__box .title .plus {
-      background: #282936;
-      padding: 0.5rem 0.5rem 0.3rem 0.5rem;
-      border-radius: 0.5rem;
-      color: #7a7d9d;
-    }
-    .modal__box .title .tabs {
-      display: flex;
-      margin-left: 50px;
-    }
-    .modal__box .title .tabs > div {
-      color: #7a7d9d;
-      background-color: #1f224a;
-      padding: 0.35rem 0.8rem 0.25rem 0.8rem;
-      margin-right: 0.5rem;
-      display: flex;
-      align-items: center;
-      border-radius: 0.4rem;
-      text-transform: uppercase;
-      cursor: grab;
-    }
-    .modal__box .title .tabs > div.active {
-      background-color: #fff;
-    }
-    .modal__box .title .tabs > div em {
-      font-style: normal;
-    }
-    .modal__box .title .tabs > div .favicon {
-      margin-right: 0.4rem;
-      margin-top: 0.2rem;
-    }
-    .modal__box .title .tabs > div .close {
-      margin-left: 4rem;
-    }
-    .title .plus {
-      border: 1px solid #000;
-      padding: 0.4rem;
-      border-radius: 10px;
-      background-color: #1f224a;
-      color: #fff;
-    }
-    .modal__box .cont {
-      background-color: #282936;
-      height: 100%;
-      box-sizing: border-box;
-      border-bottom-left-radius: 0.5rem;
-      border-bottom-right-radius: 0.5rem;
-      overflow-y: auto;
-    }
-    .modal__box .cont > div {
-      display: none;
-    }
-    
-    .modal__box .cont > div.active {
-      display: block;
-      height: 100%;
-    }
-    /* scroll */
-    .modal__box ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-      background-color: #f5f5f5;
-    }
-    
-    .modal__box ::-webkit-scrollbar {
-      width: 10px;
-      background-color: #f5f5f5;
-      height: 10px;
-    }
-    
-    .modal__box ::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
-      background-color: #282936;
-    }
-    .modal__box ::-webkit-scrollbar-thumb:hover {
-      background-color: #0f1891a7;
-    }
-    .modal__close {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      background-color: #1f224a;
-      padding: 1rem 1rem 0.8rem 1rem;
-      border-radius: 5px;
-      box-shadow: 0 3px 5px -5px hsl(180deg 2% 10%);
-      cursor: pointer;
-      transition: all 0.3s;
-      opacity: 0;
-    }
-    .modal__close:hover {
-      background-color: #13142d7d;
-    }
-    .modal__close svg {
-      color: #fff;
-    }
-    
-    /* 모달 애니메이션 */
-    .modal__cont.show {
-      /*전체 배경*/
-      animation: foldOut 1s ease forwards;
-    }
-    
-    .modal__cont.show .modal__box {
-      /*스크립트 배경*/
-      animation: zoomOut 0.5s 1s ease forwards; /*초를 두개써서딜레이를 줄 수 있다*/
-    }
-    
-    .modal__cont.show .modal__close {
-      /* 닫기버튼*/
-      animation: closeOut 0.6s 1.5s ease forwards;
-    }
-    
-    .modal__cont.show.hide {
-      animation: foldIn 0.3s 0.3s ease backwards;
-    }
-    .modal__cont.show.hide .modal__box {
-      animation: zoomIn 0.5s 1s ease backwards;
-    }
-    .modal__cont.show.hide .modal__close {
-      /* 닫기버튼*/
-      animation: closeIn 0.3s 0.6s ease backwards;
-      opacity: 1;
-    }
-    
-    @keyframes foldOut {
-      0% {
-        transform: scaleX(0) scaleY(0.001);
-      }
-      50% {
-        transform: scaleX(1) scaleY(0.001);
-      }
-      100% {
-        transform: scaleX(1) scaleY(1);
-      }
-    }
-    @keyframes closeOut {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    
-    @keyframes foldIn {
-      0% {
-        transform: scaleX(1) scaleY(1);
-      }
-      50% {
-        transform: scaleX(1) scaleY(0.001);
-      }
-      100% {
-        transform: scaleX(0) scaleY(0.001);
-      }
-    }
-    @keyframes zoomOut {
-      0% {
-        transform: scale(0);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-    @keyframes zoomIn {
-      100% {
-        transform: scale(1);
-      }
-      0% {
-        transform: scale(0);
-      }
-    }
-    
-    @media (max-width: 1100px) {
-      #header {
-        width: 100%;
-      }
-      .modal__box {
-        width: 96%;
-      }
-      .modal__box .title {
-        overflow: hidden;
-      }
-      .modal__box .title .dot {
-        display: none;
-      }
-      .modal__box .title .tabs {
-        margin-left: 0;
-      }
-      .modal__box .title .tabs > div .close {
-        display: none;
-      }
-    }
-    @media (max-width: 600px) {
-      #header {
-        text-align: center;
-      }
-      #header h1 {
-        line-height: 1.4;
-      }
-      .modal__box {
-        width: 96%;
-      }
-    }
-    
+                            <pre><code class="language-css">
 </code></pre>
                         </div>
                     </div>
@@ -872,38 +496,58 @@
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/common.js"></script>
     <script>
-     document.querySelectorAll("#parallax__dot a").forEach(el => {
-        el.addEventListener("click", e => {
-          e.preventDefault();
-            console.log(e)
-            document.querySelector(el.getAttribute("href")).scrollIntoView({behavior: "smooth"});
-        });
-    });
-    window.addEventListener("scroll", () =>{
-        let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop; //한번에 처리
-        document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
-        document.querySelectorAll(".content__item").forEach((e, i) => {
-            if(scrollTop >= e.offsetTop - window.innerHeight/2){
-                document.querySelectorAll(`#parallax__dot li`).forEach(li => {
-                    li.classList.remove(`active`);
-                })
-                document.querySelector(`#parallax__dot li:nth-child(${i + 1})`).classList.add("active")
+
+            if (scrollTop > 0) {
+                document.querySelector("#parallax__nav").classList.add("show");
+            } else {
+                document.querySelector("#parallax__nav").classList.remove("show");
+            }
+
+            document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
+
+            if (scrollTop > (document.documentElement.scrollHeight - window.innerHeight) - 200) {
+                document.querySelector("#parallax__top").classList.add("show")
+            } else {
+                document.querySelector("#parallax__top").classList.remove("show")
             }
         })
-    }) 
+
+
+        let nowScroll = true;
+        let lastScroll = 0;
+
+        function scrollProgress() {
+            nowScroll = true;
+            //스크롤 움직일때마다 실행 0.3초 마다
+            setInterval(() => {
+                if (nowScroll) {
+                    nowScroll = false;
+                    hasScroll();
+                }
+            }, 300)
+        }
+
+        //이전 스크롤과 현재 스크롤 높이를 비교하여 메뉴바가 나타나도록 도와준다.
+        function hasScroll() {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+            if (scrollTop < lastScroll) {
+                document.querySelector("#parallax__nav").classList.add("show")
+            } else {
+                document.querySelector("#parallax__nav").classList.remove("show")
+            }
+            lastScroll = scrollTop;
+        }
+
+        window.addEventListener("scroll", scrollProgress);
+
+        document.querySelector("#parallax__top").addEventListener("click", () => {
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        })
     </script>
 </body>
+
 </html>
-<!-- // window.scroll(0, 1000);
-// window.scroll({left: 0, top: 2000});
-// window.scroll({left: 0, top: 2000, behavior: "smooth"});
-
-// window.scrollTo(0, 1000);
-// window.scrollTo({left: 0, top: 2000});
-// window.scrollTo({left: 0, top: 2000, behavior: "smooth"});  절대기준
-
-
-// window.scrollBy(0, 1000);
-// window.scrollBy({left: 0, top: 2000});
-// window.scrollBy({left: 0, top: 2000, behavior: "smooth"});  상대기준 -->
