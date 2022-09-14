@@ -28,6 +28,7 @@ figure,
 figcaption{
     margin: 0;
     padding: 0;
+    /* -webkit-text-size-adjust: 100%; 가로 모드일때 폰트 안변하게 해줌 (애플)*/
 }  
 
 /* 시멘틱 태그 초기화 */

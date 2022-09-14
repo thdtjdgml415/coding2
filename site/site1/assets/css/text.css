@@ -26,6 +26,7 @@
     text-overflow: ellipsis;
     position: relative;
     padding-top: 75px;
+    margin-bottom: 10px;
 }
 .text__title::before {
     content: '';
@@ -70,4 +71,24 @@
     line-height: 1;
     text-decoration: underline;
     text-underline-position: under;
+}
+@media (max-width:960px) {
+    .text {
+        width: 49%;
+    }
+}
+@media (max-width:600px) {   
+    .text__title {
+        font-size: 20px;
+    }
+    .text__desc {
+        font-size: 16px;
+    }
+
+}
+@media (max-width:480px) {
+    .text {
+        width: 100%;
+    }
+   
 }
