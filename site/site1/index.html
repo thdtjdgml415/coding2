@@ -78,7 +78,7 @@
     </header>
     <!-- //headerType -->
     <main id="mainType">
-        <section id="sliderType" class="slider__wrap">
+        <section id="sliderType" class="slider__wrap section02">
             <h2 class="blind">슬라이드 영역</h2>
             <div class="slider__inner">
                 <div class="slider">
@@ -112,7 +112,7 @@
         </section>
         <!--sliderType-->
             <h2 class="blind">이미지 영역</h2>
-            <section id="imageType" class="image__wrap score section">
+            <section id="imageType" class="image__wrap score section03">
                 <h2>우주🚀</h2>
                 <p>우주는 더이상 갈 수 없는 영역이 아닙니다. 저희가 도와드리겠습니다.</p>
                 <div class="image__inner container">
@@ -130,7 +130,7 @@
             </section>
         </section>
         <!--imageType-->
-        <section id="imgtextType" class="imgText__wrap nexon section">
+        <section id="imgtextType" class="imgText__wrap nexon section04">
             <h2 class="blind">유용한 사이트 살펴보기</h2>
             <div class="imgText__inner container">
                 <div class="imgText__txt">
@@ -157,7 +157,7 @@
         <!--imgTextType-->
         <section id="cardType" class="card__wrap">
             <h2 class="blind">카드 영역</h2>
-            <section id="cardType" class="card__wrap nexon section">
+            <section id="cardType" class="card__wrap nexon section05">
                 <h2>SPACE SHIP🐷</h2>
                 <p>동물원에 가기전에 동물에 대해 알고가면 더욱 동물원을 즐길 수 있습니다.</p>
                 <div class="card__inner container">
@@ -239,7 +239,7 @@
             </section>
         </section>
         <!--cardType-->
-        <section id="bannerType" class="banner__wrap nexon">
+        <section id="bannerType" class="banner__wrap nexon section06">
             <h2 class="blind">배너 영역</h2>
             <div class="banner__inner">
                 <h3 class="title">우주</h3>
@@ -253,7 +253,7 @@
         <!--bannerType-->
         <section id="textType" class="text__wrap">
             <h2 class="blind">텍스트 영역</h2>
-            <section id="textType" class="text__wrap nexon section">
+            <section id="textType" class="text__wrap nexon section07">
                 <span class="blind">텍스트 유형01</span>
                 <h2>도움을 주신 모든 분들</h2>
                 <div class="text__inner container">
@@ -293,7 +293,7 @@
         <!--textType-->
     </main>
     <!-- //mainType -->
-    <footer id="footerType" class="footer__wrap nexon section gray">
+    <footer id="footerType" class="footer__wrap nexon section08 gray">
         <h2 class="blind">푸터 영역</h2>
         <div class="footer__inner container">
             <div class="footer__menu">
@@ -362,8 +362,8 @@
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
-            document.querySelector(".blind").forEach((el, i) => {
-                if(scrollTop >= document.getElementById(`section${i+1}`).offsetTop) {
+            document.querySelectorAll(".section").forEach((el, i) => {
+                if(scrollTop >= document.document.getElementByClassName(`section${i+1}`).offsetTop) {
                   document.querySelectorAll(`.header__menu li`).forEach(li => {
                     li.classList.remove("active")
                   });
