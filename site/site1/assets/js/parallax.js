@@ -8,7 +8,3 @@ document.querySelectorAll(".header__menu a").forEach(li => {
         });
     });
 });
-
-//스크롤 탑 
-
-document.querySelector
