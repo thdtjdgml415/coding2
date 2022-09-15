@@ -449,7 +449,7 @@
             bgColor.forEach((el, i) => {
                 if(scrollTop >= el.offsetTop-1000) {
                     document.querySelectorAll(".header__menu li").forEach((li) => {
-                        li.classList.remove("active");
+                        li.classList.remove("active")
                     }) 
                     document.querySelector(`.header__menu li:nth-child(${i+1})`).classList.add("active");
                 }  
