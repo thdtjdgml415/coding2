@@ -47,7 +47,7 @@
         <div class="main_refer">
             <div class="document">
                 <h3 class="t_tit">사이트 메인페이지01</h3>
-                <p class="t_desc2">
+                <p class="t_desc2" style="margin-bottom: 10px;">
                     사이트 메인 페이지를 만들어 보았습니다. <br>
                     반응형 작업까지 같이 해주었습니다. 화면크기를 줄여서 확인도 같이 해보시겠습니다.
                 </p>
@@ -59,7 +59,7 @@
                 <p class="t_desc2">headerType입니다.</p>
                 <div class="t_result">
                     <details>
-                        <summary>headerType</summary>
+                            <summary>headerType</summary>
                             <div class="t_code">
 <pre><code class="language-css">/* headerType */
 .header__inner {
@@ -247,14 +247,16 @@
 }
 </code></pre>
                             </div>
+                        </div>
                     </details>
                 </div>
+                <hr>
                 <p class="t_desc2">sliderType 입니다</p>
                 <div class="t_result">
                     <details>
                         <summary>sliderType</summary>
-                            <div class="t_code">
-                                <pre><code class="language-css">/*slierType*/
+                        <div class="t_code">
+<pre><code class="language-css">/*slierType*/
 .slider {
     position: relative;
   }
@@ -437,14 +439,14 @@
   }
   
 </code></pre>
-                            </div>
+                        </div>
                     </details>
                 </div>
                 <p class="t_desc2">imageType 입니다</p>
                 <div class="t_result">
                     <details>
                         <summary>imageType</summary>
-                            <div class="t_code">
+                        <div class="t_code">
 <pre><code class="language-css">/* imageType */
 .image__wrap > h2 {
     color: #fff;
@@ -509,14 +511,14 @@
     }
 }    
 </code></pre>
-                            </div>
+                        </div>
                     </details>
                 </div>
                 <p class="t_desc2">cardType 입니다</p>
                 <div class="t_result">
                     <details>
                         <summary>cardType</summary>
-                            <div class="t_code">
+                        <div class="t_code">
 <pre><code class="language-css">/* cardType */
 #cardType > h2 {
     color: #fff;
@@ -595,14 +597,14 @@
     }
 }
 </code></pre>
-                            </div>
+                        </div>
                     </details>
                 </div>
                 <p class="t_desc2">textType 입니다</p>
                 <div class="t_result">
                     <details>
                         <summary>textType</summary>
-                            <div class="t_code">
+                        <div class="t_code">
 <pre><code class="language-css">/*textType*/
 #textType > h2 {
     color: #A6B8C4;
@@ -697,15 +699,15 @@
     }
 }
 </code></pre>
-                            </div>
+                        </div>
                     </details>
                 </div>
                 <p class="t_desc2">footerType 입니다</p>
                 <div class="t_result">
                     <details>
                         <summary>footerType</summary>
-                            <div class="t_code">
-<pre><code class="language-css">/* footerType */
+                        <div class="t_code">
+                            <pre><code class="language-css">/* footerType */
 .footer__menu {
     display: flex;
     margin-bottom: 70px;
@@ -744,27 +746,28 @@
 
 }
 </code></pre>
-                            </div>
+                        </div>
                     </details>
                 </div>
                 <!-- CSS -->
                 <hr>
                 <p class="t_desc2">javascript 입니다</p>
                 <p class="t_box">
-                    스크롤 이동은javascript를 사용하여 스크롤 이동에 따른 위치를 확인하여 메뉴바의 변화를 만들었습니다.  <br>
-                    header__menu의 a 태그를 선택하여 forEach문을 사용하여 요소를 가져와 클릭했을 떄  <br>
+                    스크롤 이동은javascript를 사용하여 스크롤 이동에 따른 위치를 확인하여 메뉴바의 변화를 만들었습니다. <br>
+                    header__menu의 a 태그를 선택하여 forEach문을 사용하여 요소를 가져와 클릭했을 떄 <br>
                     getAttribute 메서드를 사용하여 href의 속성을 가져와서 smooth를 사용해 부드럽게 화면이 전환되도록 하였습니다. <br>
                     그리고 scrollTop값의 기준을 class: position을 부여하여 기준을 만들어주고 scroll 했을때 생기는 이벤트를 만들어 <br>
-                    scrollTop값을 구했습니다. 위에서 선택자 bgColor을 생성하여 요소를 forEach문으로 탐색하여 scrollTop의 값과 el의 offsetTop 값을 비교하였습니다. <br>
-                    offsetTop값에 오차가 생겨서 -1000을 해주었고 scrollTop값이 더 크다면 class 값에 active를 제거해주고  아니라면 active를 추가해 주었습니다.
+                    scrollTop값을 구했습니다. 위에서 선택자 bgColor을 생성하여 요소를 forEach문으로 탐색하여 scrollTop의 값과 el의 offsetTop 값을 비교하였습니다.
+                    <br>
+                    offsetTop값에 오차가 생겨서 -1000을 해주었고 scrollTop값이 더 크다면 class 값에 active를 제거해주고 아니라면 active를 추가해 주었습니다.
 
-                    
+
                 </p>
                 <div class="t_result">
                     <details>
                         <summary>javascript</summary>
-                            <div class="t_code">
-<pre><code class="language-js">//스크롤이동
+                        <div class="t_code">
+                            <pre><code class="language-js">//스크롤이동
 document.querySelectorAll(".header__menu a").forEach(li => {
     li.addEventListener("click", (e) => {
         e.preventDefault();
@@ -789,7 +792,7 @@ window.addEventListener("scroll",() => {
     });
 });
 </code></pre>
-                            </div>
+                        </div>
                     </details>
                 </div>
                 <hr>
@@ -798,14 +801,14 @@ window.addEventListener("scroll",() => {
                 <p class="t_box">
                     swiper을 사용하여 sliderType을 구현했습니다. <br>
                     demo를 불러와서 사용하였기 때문에 어렵지 않았습니다. <br>
-                    화살표를 마우스 클릭으로 넘기고 드래그해서 넘길 수 있도록 하였습니다.  
+                    화살표를 마우스 클릭으로 넘기고 드래그해서 넘길 수 있도록 하였습니다.
                 </p>
                 <div class="t_result">
                     <details>
                         <summary>swiper</summary>
                         <div class="t_result">
                             <div class="t_code">
-<pre><code class="language-html">&lt;div class="swiper mySwiper"&gt;
+                                <pre><code class="language-html">&lt;div class="swiper mySwiper"&gt;
     &lt;div class="swiper-wrapper"&gt;
         &lt;div class="swiper-slide"&gt;
             &lt;div class="desc"&gt;
@@ -870,7 +873,6 @@ window.addEventListener("scroll",() => {
                 </div>
 
             </div>
-        </div>
     </main>
     <!-- //main -->
     <footer id="footer">

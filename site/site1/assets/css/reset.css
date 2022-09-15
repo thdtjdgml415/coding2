@@ -59,6 +59,11 @@ textarea {
 * {
     font-family: 'NexonLv1Gothic';
 }
+/* 가로모드 초기화 */
+html{
+    -ms-text-size-abjust: 100%;
+    -webkit-text-size-abjust: 100%;
+}
 /* 링크 초기화 */
 a {
     text-decoration: none;
@@ -67,6 +72,11 @@ a {
 /* 전체 배경 */
 body {
     background: #202020;
+    overflow: overlay;
+}
+body.fixed {
+    height: 100vh;
+    overflow: hidden;
 }
 /* 목록 초기화 */
 li,

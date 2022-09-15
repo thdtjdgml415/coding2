@@ -2,6 +2,7 @@
 .footer__menu {
   display: flex;
   margin-bottom: 70px;
+  padding-top: 70px;
 }
 .footer__menu > div {
   width: 16%;
