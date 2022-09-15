@@ -101,6 +101,7 @@
   .header__member {
     margin-right: 50px;
   }
+  /* 햄버거 메뉴 */
   .header__ham {
     display: block;
   }
