@@ -440,6 +440,7 @@
         });
     </script>
     <script>
+        // 스크롤 이동
           const bgColor = document.querySelectorAll(".position");
             window.addEventListener("scroll",() => {
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
@@ -454,43 +455,44 @@
             });
         });
 
-        const btnstop = document.querySelector(".swiper-button-stop");
-        const btnstart = document.querySelector(".swiper-button-play");
-        const btnHam = document.querySelector(".header__ham");
-        const btnMenu = document.querySelector(".header__menu");
-        const btnMenuList = btnMenu.querySelectorAll("ul li a");
+        const btnstop = document.querySelector(".swiper-button-stop");   //슬라이더 정지
+        const btnstart = document.querySelector(".swiper-button-play");     //슬라이더 시작 
+        const btnHam = document.querySelector(".header__ham");              //헤더에 햄버거 메뉴를
+        const btnMenu = document.querySelector(".header__menu");            //헤더 메뉴
+        const btnMenuList = btnMenu.querySelectorAll("ul li a");             //사이드 메뉴 버그 고치기
 
         btnstart.style.display = "none";
 
-        document.querySelector(".swiper-button-stop").addEventListener("click", () => {
+        document.querySelector(".swiper-button-stop").addEventListener("click", () => { //슬라이더 스탑버튼 클릭시 재생버튼이 나옴
             swiper.autoplay.stop();
             btnstart.style.display = "block";
             btnstop.style.display = "none";
         });
-        document.querySelector(".swiper-button-play").addEventListener("click", () => {
+        document.querySelector(".swiper-button-play").addEventListener("click", () => { //슬라이더 재생버튼 클릭시 정지버튼이 나타난다
             swiper.autoplay.start();
             btnstart.style.display = "none";
             btnstop.style.display = "block";
         });
-        btnHam.addEventListener("click", () => {
-            btnHam.classList.toggle("active");
-            btnMenu.classList.toggle("active");
-            document.body.classList.toggle("fixed")
+        btnHam.addEventListener("click", () => {  //햄버거 메뉴 클릭시 active 클래스의 유무를 조절  
+            btnHam.classList.toggle("active");     //햄버거 메뉴 클릭시 active 클래스를 추가해서 움직이도록 한다.
+            btnMenu.classList.toggle("active");    //햄버거 아이콘 클릭시 메뉴바를 조절한다. 
+            document.body.classList.toggle("fixed") //화면을 스크롤할때를 조절한다.ㄴ
         });
 
-        btnMenuList.forEach((list)=>{
+        btnMenuList.forEach((list)=>{                  //사이드 메뉴 리스트 클릭시 
             list.addEventListener("click", () => {
-                document.body.classList.remove("fixed");
-                btnMenu.classList.remove("active");
-                btnHam.classList.remove("active");
+                document.body.classList.remove("fixed"); //화면을 스크롤 할 수 있도록 fixed제거 
+                btnMenu.classList.remove("active"); // 사이드 메뉴를 집어 넣어준다.
+                btnHam.classList.remove("active");  //햄버거 메뉴를 비활성화 시켜준다.
+                console.log(btnMenu)
             })
         })
         window.addEventListener("resize", () => {
             let width = window.innerWidth;
-            if(width > 1300) {
-                document.body.classList.remove("fixed");
-                btnMenu.classList.remove("active");
-                btnHam.classList.remove("active");
+            if(width > 1300) {  //화면의 크기가 1300px 보다 크면 
+                document.body.classList.remove("fixed");    //스크롤도 활성화 시켜준다.
+                btnMenu.classList.remove("active"); // 튀어나온 메뉴바를 집어 넣어준다,
+                btnHam.classList.remove("active"); //active를 제거해 주어서 햄버거 메뉴를 비활성화 시키고
             }
         });
         

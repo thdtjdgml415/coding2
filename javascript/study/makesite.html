@@ -47,7 +47,7 @@
         <div class="main_refer">
             <div class="document">
                 <h3 class="t_tit">사이트 메인페이지01</h3>
-                <p class="t_desc2" style="margin-bottom: 10px;">
+                <p class="t_desc2">
                     사이트 메인 페이지를 만들어 보았습니다. <br>
                     반응형 작업까지 같이 해주었습니다. 화면크기를 줄여서 확인도 같이 해보시겠습니다.
                 </p>
@@ -56,11 +56,14 @@
                 <p class="t_desc2">
                     CSS는 링크로 연동해서 headerType, sliderType, imageType, cardType, textType, footerType 으로 각각 나누어서 작업하였습니다.
                 </p>
-                <p class="t_desc2">headerType입니다.</p>
+                <p class="t_desc3">
+                    headerType입니다. <br>
+                    헤더에 메뉴를 추가했습니다. 자바스크립트와 연동해서 만들었습니다.
+                </p>
                 <div class="t_result">
                     <details>
-                            <summary>headerType</summary>
-                            <div class="t_code">
+                        <summary>headerType</summary>
+                        <div class="t_code">
 <pre><code class="language-css">/* headerType */
 .header__inner {
     width: 100%;
@@ -70,213 +73,175 @@
     justify-content: space-between;
     padding: 0 20px;
     box-sizing: border-box;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ccc;
     position: fixed;
-    left: 0;
     top: 0;
-    z-index: 10000;
-    background: rgba(255, 255, 255, 0.993);
+    left: 0;
+    background: #fff;
     backdrop-filter: blur(10px);
-    word-break: keep-all;
-    background: #000;
+    z-index: 10000;
 }
 .header__logo {
-    width: 15%;
+    width: 20%;
     font-size: 30px;
     font-weight: 700;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
-.header__logo a {
-    color: #fff;
-}
-
 .header__logo em {
     font-size: 18px;
     font-weight: 400;
-    font-style: normal;
-    color: #ccc;
-}
-.header__burger {
-    margin-left: 20px;
-}
-.header__burger .header__side {
-    position: absolute;
-    right: 0px;
-    top: 70px;
-
-}
-.header__burger .header__side li a {
-    display: block;
-    padding: 20px 10px;
-    background: #fff;
-}
-.header__burger .header__side li:hover a {
-    background: #fff;
-}
-.header__side .hide {
-    display: none;
 }
 .header__menu {
-    width: 60%;
+    width: 85%;
     text-align: center;
+    
 }
-
 .header__menu li {
-    display: inline-block;
+    display: inline;
 }
-
-
+.header__menu li.active a{
+    background: #A6C4B8;
+    border-radius: 5px;
+}
 .header__menu li a {
-    padding: 13px 30px;
+    padding: 13px 28px;
     margin: 0 5px;
+    font-size: 20px;
+    font-family: "NexonLv2Gothic";
+    font-weight: 500;
     transition: background-color 0.3s;
-    background: #fff;
-    border: 1px solid #000;
-    border-radius: 20px;
-    transition: all 0.5s ease;
 }
-.header__menu li.active a {
-    background: rgb(255, 0, 255);
-}
-
-
 .header__menu li a:hover {
     background-color: #f1f1f1;
     border-radius: 5px;
 }
-
 .header__member {
     width: 20%;
     text-align: right;
 }
-
 .header__member a {
     font-size: 16px;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     padding: 10px 30px;
     border-radius: 50px;
-    transition: all 0.3s;
-    background: #fff;
+    transition: background-color 0.3s;
 }
-
 .header__member a:hover {
     background-color: #000;
     color: #fff;
 }
-/* side */
-.side__btn {
-    background: url(../img/Burger.svg);
-    width: 24px;
-    height: 24px;
-    margin-left: 20px;
-}
-.side__menu {
+.header__ham {    
     position: absolute;
-    right: 0;
-    top: 70px;
-}
-.side__menu.hide {
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
     display: none;
+    cursor: pointer;
 }
-.side__menu li {
-    padding: 10px 20px;
-    text-align: center;
-    border: 1px solid #000;
-    background: #fff;
-    transition: all 0.5s;
-    
-}
-.side__menu li:hover {
-    background: #202020;
-    
-}
-
-/* side */
-@media(max-width: 1100px) {
+@media (max-width: 1300px) {  /*반응형 작업*/
     .header__menu {
-        display: none;
+        position: fixed;
+        right: -100%;
+        top: 69px;
+        background: #fff;
+        width: 60%;
+        height: 100vh;
+        padding: 20px;
+        text-align: right;
+        transition: right 0.4s ease-in;
+    }
+    .header__menu ul li {
+        display: block;
+        margin: 20px;
+    }
+    .header__menu ul li a {
+        padding: 10px;
+        white-space: nowrap;
+    }
+    .header__menu.active {
+        right: 0;
+    }
+
+    .header__member {
+        margin-right: 50px;
+    }
+    .header__ham {
+        display: block;
+    }
+    .header__ham span {
+        display: block;
+        background: #000;
+        width: 30px;
+        height: 2px;
+        border-radius: 3px;
+        margin-left: 10px;
+        margin-top: 5px;
+        transition: 0.25s margin 0.25s, transform 0.25s;
+    }
+    .header__ham span:nth-child(1) {
+        margin-top: 17px;
+    }
+    .header__ham.active span {
+        transition: 0.25s margin, 0.25s transform 0.25s;
+    }
+    .header__ham.active span:nth-child(1) {
+        margin-top: 25px;
+        margin-bottom: -7px;
+    transform: rotate(45deg);
+    }
+    .header__ham.active span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+    .header__ham.active span:nth-child(3) {
+        margin-top: -2px;
+        transform: rotate(135deg);
+    }
+    .header__logo {
+        width: 50%;
     }
     .header__member {
-        display: none;
+        width: 50%;
     }
 }
-@media(max-width: 480px) {
-
-    .header__member{
-        display: none;
-    }
-
-    /* header */
-    .header__menu {
-        display: none;
-    }
-    
-    .header__logo {
-        width: 100%;
-    }
-
-    /* imageType */
-    .image__inner {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-    .image__inner .image{
-        margin-top: 10px;
-    }
-    .imgText__inner {
-        display: flex;
-        flex-direction: column
-    }
-    .imgText__inner>div {
-        width: 32%;
-        height: 450px;
-        margin-top: 20px;
-    }
-    /* cardType */
-    .card__inner {
-        display: flex;
-        flex-direction: column
-    }
-
-    /* textType */
-    .text__inner{
-        display: flex;
-        flex-direction: column;
-    }
+@media (max-width: 600px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 480px) {
 }
 </code></pre>
-                            </div>
                         </div>
-                    </details>
                 </div>
-                <hr>
-                <p class="t_desc2">sliderType 입니다</p>
+                </details>
+
+                <p class="t_desc3" style="margin-bottom: 20px">sliderType 입니다</p>
                 <div class="t_result">
                     <details>
                         <summary>sliderType</summary>
                         <div class="t_code">
-<pre><code class="language-css">/*slierType*/
+<pre><code class="language-css">/* sliderType */
 .slider {
     position: relative;
-  }
-  .slider__img {
+}
+.slider__img {
     background: url(../img/SLIDER_TYPE01.png) no-repeat center / cover;
-  }
-  .slider__img .desc {
+}
+.slider__img .desc {
     width: 1160px;
     margin: 0 auto;
     padding: 100px 20px;
-  }
-  .slider__img .desc span {
+}
+.slider__img .desc span {
     font-size: 16px;
     background-color: #fff;
     padding: 1px 14px 0 14px;
     margin-bottom: 10px;
     text-transform: uppercase;
     display: inline-block;
-  }
-  .slider__img .desc h3 {
+}
+.slider__img .desc h3 {
     font-size: 110px;
     font-weight: 300;
     line-height: 1;
@@ -284,72 +249,72 @@
     text-transform: uppercase;
     margin-bottom: 16px;
     margin-left: -8px;
-  }
-  .slider__img .desc p {
+}
+.slider__img .desc p {
     font-size: 20px;
     font-weight: 300;
     color: 300;
     color: #fff;
     margin-bottom: 130px;
-  }
-  
-  .slider__img .desc .btn a {
+}
+
+.slider__img .desc .btn a {
     font-size: 16px;
     background-color: #fff;
     padding: 11px 50px;
     display: inline-block;
-  }
-  .slider__img .desc .btn a.black {
+}
+.slider__img .desc .btn a.black {
     background: #000;
     color: #fff;
-  }
-  .slider__arrow a {
+}
+.slider__arrow a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 30px;
     height: 56px;
     background-image: url(../img/slider_icon.svg);
-  }
-  .slider__arrow a.left {
+}
+.slider__arrow a.left {
     left: 20px;
-  }
-  .slider__arrow a.right {
+}
+.slider__arrow a.right {
     right: 20px;
     background-position: -50px 0;
-  }
-  .slider__dot {
+}
+.slider__dot {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 25px;
-  }
-  .slider__dot a {
+}
+.slider__dot a {
     display: inline-block;
     width: 16px;
     height: 16px;
     background-image: url(../img/slider_icon.svg);
     background-position: -20px -70px;
-  }
-  .slider__dot a.active {
+}
+.slider__dot a.active {
     background-position: 0 -70px;
-  }
-  .slider__dot a.play {
+}
+.slider__dot a.play {
     background-position: -40px -70px;
-  }
-  .slider__dot a.stop {
+}
+.slider__dot a.stop {
     background-position: -60px -70px;
-  }
-  /* swiper */
-  .swiper-slide {
+}
+/* swiper */
+.swiper-slide {
     background: url(../img/SLIDER_TYPE01.png) no-repeat center / cover;
-  }
-  .swiper-slide .desc {
-    width: 100%;
+}
+.swiper-slide .desc {
+    width: 1160px;
     margin: 0 auto;
     padding: 100px 20px;
-  }
-  .swiper-slide .desc span {
+}
+.swiper-slide .desc span {
     font-size: 16px;
     background-color: #fff;
     padding: 1px 14px 0 14px;
@@ -357,8 +322,8 @@
     text-transform: uppercase;
     display: inline-block;
     border-radius: 50px;
-  }
-  .swiper-slide .desc h3 {
+}
+.swiper-slide .desc h3 {
     font-size: 110px;
     font-weight: 300;
     line-height: 1;
@@ -366,83 +331,102 @@
     text-transform: uppercase;
     margin-bottom: 16px;
     margin-left: -8px;
-  }
-  .swiper-slide .desc p {
+}
+.swiper-slide .desc p {
     font-size: 20px;
     font-weight: 300;
     color: 300;
     color: #fff;
     margin-bottom: 130px;
-  }
-  
-  .swiper-slide .desc .btn a {
+}
+
+.swiper-slide .desc .btn a {
     font-size: 16px;
     background-color: #fff;
     padding: 11px 50px;
     display: inline-block;
-  }
-  .swiper-slide .desc .btn a.black {
+}
+.swiper-slide .desc .btn a.black {
     background: #000;
     color: #fff;
-  }
-  /* 화살표 */
-  .swiper-button-next,
-  .swiper-button-prev {
+}
+/* 화살표 */
+.swiper-button-next,
+.swiper-button-prev {
     width: 30px !important;
     height: 57px !important;
     background-image: url(../img/slider_icon.svg);
-  }
-  .swiper-button-next {
+}
+.swiper-button-next {
     background-position: -50px 0;
-  }
-  .swiper-button-next:after,
-  .swiper-button-prev:after {
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
     opacity: 0;
-  }
-  
-  
-  .swiper-pagination-bullet {
+}
+.swiper-pagination-bullet {
     width: 16px !important;
     height: 16px !important;
     background-image: url(../img/slider_icon.svg);
     background-position: -20px -70px;
     background-color: transparent;
     opacity: 1;
-  }
-  .swiper-pagination-bullet-active {
+}
+.swiper-pagination-bullet-active {
     background-position: 0 -70px !important;
-  } 
-  
-  /* media */
-  @media (max-width: 960px) {
+} 
+.swiper-button {
+    position: absolute;
+    margin-left: 40px;
+    left: 50%;
+    bottom: 24px;
+    z-index: 1000;
+    display: flex;
+}
+.swiper-button-stop {
+    background-image: url(../img/slider_icon.svg);
+    background-position: -60px -70px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.swiper-button-play {
+    background-image: url(../img/slider_icon.svg);
+    background-position: -40px -70px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+/* media */
+@media (max-width: 960px) {
     .swiper-slide .desc {
-      text-align: center;
+    text-align: center;
+    width: 100%;
     }
     .swiper-slide .desc h3 {
-      font-size: 80px;
+    font-size: 80px;
     }
-  }
-  @media (max-width: 600px) {
+}
+@media (max-width: 600px) {
     .swiper-slide .desc {
-      padding: 80px 0;
+    padding: 80px 0;
     }
     .swiper-slide .desc h3 {
-      font-size: 30px;
+    font-size: 30px;
     }
     .swiper-slide .desc p {
-      font-size: 16px;
-      margin-bottom: 50px;
+    font-size: 16px;
+    margin-bottom: 50px;
     }
     .swiper-slide .desc .btn a {
-      padding: 10px 25px;
+    padding: 10px 25px;
     }
-  }
-  
+}    
 </code></pre>
                         </div>
                     </details>
                 </div>
-                <p class="t_desc2">imageType 입니다</p>
+                <p class="t_desc3">imageType 입니다</p>
                 <div class="t_result">
                     <details>
                         <summary>imageType</summary>
@@ -514,7 +498,7 @@
                         </div>
                     </details>
                 </div>
-                <p class="t_desc2">cardType 입니다</p>
+                <p class="t_desc3">cardType 입니다</p>
                 <div class="t_result">
                     <details>
                         <summary>cardType</summary>
@@ -600,7 +584,7 @@
                         </div>
                     </details>
                 </div>
-                <p class="t_desc2">textType 입니다</p>
+                <p class="t_desc3">textType 입니다</p>
                 <div class="t_result">
                     <details>
                         <summary>textType</summary>
@@ -702,12 +686,12 @@
                         </div>
                     </details>
                 </div>
-                <p class="t_desc2">footerType 입니다</p>
+                <p class="t_desc3">footerType 입니다</p>
                 <div class="t_result">
                     <details>
                         <summary>footerType</summary>
                         <div class="t_code">
-                            <pre><code class="language-css">/* footerType */
+<pre><code class="language-css">/* footerType */
 .footer__menu {
     display: flex;
     margin-bottom: 70px;
@@ -751,7 +735,7 @@
                 </div>
                 <!-- CSS -->
                 <hr>
-                <p class="t_desc2">javascript 입니다</p>
+                <p class="t_desc3">javascript 입니다</p>
                 <p class="t_box">
                     스크롤 이동은javascript를 사용하여 스크롤 이동에 따른 위치를 확인하여 메뉴바의 변화를 만들었습니다. <br>
                     header__menu의 a 태그를 선택하여 forEach문을 사용하여 요소를 가져와 클릭했을 떄 <br>
@@ -767,29 +751,59 @@
                     <details>
                         <summary>javascript</summary>
                         <div class="t_code">
-                            <pre><code class="language-js">//스크롤이동
-document.querySelectorAll(".header__menu a").forEach(li => {
-    li.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.querySelector(li.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
-//active 메뉴 
-const bgColor = document.querySelectorAll(".position");
-
-window.addEventListener("scroll",() => {
-    let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop; //모든 브라우저에서 사용할 수 있음
+<pre><code class="language-js">const bgColor = document.querySelectorAll(".position");
+    window.addEventListener("scroll",() => {
+    let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
     
     bgColor.forEach((el, i) => {
         if(scrollTop >= el.offsetTop-1000) {
             document.querySelectorAll(".header__menu li").forEach((li) => {
-                li.classList.remove("active");
+                li.classList.remove("active")
             }) 
             document.querySelector(`.header__menu li:nth-child(${i+1})`).classList.add("active");
         }  
     });
+});
+
+const btnstop = document.querySelector(".swiper-button-stop");   //슬라이더 정지
+const btnstart = document.querySelector(".swiper-button-play");     //슬라이더 시작 
+const btnHam = document.querySelector(".header__ham");              //헤더에 햄버거 메뉴를
+const btnMenu = document.querySelector(".header__menu");            //헤더 메뉴
+const btnMenuList = btnMenu.querySelectorAll("ul li a");             //사이드 메뉴 버그 고치기
+
+btnstart.style.display = "none";
+
+document.querySelector(".swiper-button-stop").addEventListener("click", () => { //슬라이더 스탑버튼 클릭시 재생버튼이 나옴
+    swiper.autoplay.stop();
+    btnstart.style.display = "block";
+    btnstop.style.display = "none";
+});
+document.querySelector(".swiper-button-play").addEventListener("click", () => { //슬라이더 재생버튼 클릭시 정지버튼이 나타난다
+    swiper.autoplay.start();
+    btnstart.style.display = "none";
+    btnstop.style.display = "block";
+});
+btnHam.addEventListener("click", () => {  //햄버거 메뉴 클릭시 active 클래스의 유무를 조절  
+    btnHam.classList.toggle("active");     //햄버거 메뉴 클릭시 active 클래스를 추가해서 움직이도록 한다.
+    btnMenu.classList.toggle("active");    //햄버거 아이콘 클릭시 메뉴바를 조절한다. 
+    document.body.classList.toggle("fixed") //화면을 스크롤할때를 조절한다.ㄴ
+});
+
+btnMenuList.forEach((list)=>{                  //사이드 메뉴 리스트 클릭시 
+    list.addEventListener("click", () => {
+        document.body.classList.remove("fixed"); //화면을 스크롤 할 수 있도록 fixed제거 
+        btnMenu.classList.remove("active"); // 사이드 메뉴를 집어 넣어준다.
+        btnHam.classList.remove("active");  //햄버거 메뉴를 비활성화 시켜준다.
+        console.log(btnMenu)
+    })
+})
+window.addEventListener("resize", () => {
+    let width = window.innerWidth;
+    if(width > 1300) {  //화면의 크기가 1300px 보다 크면 
+        document.body.classList.remove("fixed");    //스크롤도 활성화 시켜준다.
+        btnMenu.classList.remove("active"); // 튀어나온 메뉴바를 집어 넣어준다,
+        btnHam.classList.remove("active"); //active를 제거해 주어서 햄버거 메뉴를 비활성화 시키고
+    }
 });
 </code></pre>
                         </div>
@@ -797,7 +811,7 @@ window.addEventListener("scroll",() => {
                 </div>
                 <hr>
                 <!-- javascript -->
-                <p class="t_desc2">swiper 입니다</p>
+                <p class="t_desc3">swiper 입니다</p>
                 <p class="t_box">
                     swiper을 사용하여 sliderType을 구현했습니다. <br>
                     demo를 불러와서 사용하였기 때문에 어렵지 않았습니다. <br>
@@ -871,8 +885,8 @@ window.addEventListener("scroll",() => {
                     <a href="https://github.com/thdtjdgml415/coding2/blob/main/site/site1/index.html"
                         target="_blank">깃허브 소스 보기</a>
                 </div>
-
             </div>
+        </div>
     </main>
     <!-- //main -->
     <footer id="footer">

@@ -64,7 +64,7 @@
   background-color: #000;
   color: #fff;
 }
-.header__ham {
+.header__ham {  /*햄버거 메뉴를 추가*/
   position: absolute;
   right: 10px;
   top: 10px;
@@ -104,7 +104,7 @@
   .header__ham {
     display: block;
   }
-  .header__ham span {
+  .header__ham span {  /*햄버거 메뉴 아이콘 추가*/
     display: block;
     background: #000;
     width: 30px;
@@ -112,13 +112,13 @@
     border-radius: 3px;
     margin-left: 10px;
     margin-top: 5px;
-    transition: 0.25s margin 0.25s, transform 0.25s;
+    transition: 0.25s margin 0.25s, transform 0.25s; /*메뉴를 눌렀을때 효과를 추가하였습니다.*/
   }
   .header__ham span:nth-child(1) {
     margin-top: 17px;
   }
   .header__ham.active span {
-    transition: 0.25s margin, 0.25s transform 0.25s;
+    transition: 0.25s margin, 0.25s transform 0.25s; /*0.25초를 하나더 추가하며 두가지 효과가 딜레이가 생기도록 였습니다*/
   }
   .header__ham.active span:nth-child(1) {
     margin-top: 25px;

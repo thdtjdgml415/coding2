@@ -1,8 +1,15 @@
+/* sliderType */
 .slider {
   position: relative;
 }
 .slider__img {
   background: url(../img/SLIDER_TYPE01.png) no-repeat center / cover;
+}
+.slider__img {
+  background: url(../img/SLIDER_TYPE02.png) no-repeat center / cover;
+}
+.slider__img {
+  background: url(../img/SLIDER_TYPE03.png) no-repeat center / cover;
 }
 .slider__img .desc {
   width: 1160px;
@@ -82,8 +89,14 @@
   background-position: -60px -70px;
 }
 /* swiper */
-.swiper-slide {
+.swiper-slide:nth-child(1) {
   background: url(../img/SLIDER_TYPE01.png) no-repeat center / cover;
+}
+.swiper-slide:nth-child(2){
+  background: url(../img/SLIDER_TYPE02.png) no-repeat center / cover;
+}
+.swiper-slide:nth-child(3){
+  background: url(../img/SLIDER_TYPE03.png) no-repeat center / cover;
 }
 .swiper-slide .desc {
   width: 1160px;
@@ -128,7 +141,7 @@
 }
 /* 화살표 */
 .swiper-button-next,
-.swiper-button-prev {
+.swiper-button-prev { 
   width: 30px !important;
   height: 57px !important;
   background-image: url(../img/slider_icon.svg);
