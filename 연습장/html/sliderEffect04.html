@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>슬라이드 이펙트04</title>
-    <link rel="stylesheet" href="../assets/css/slider.css">
-    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <link rel="stylesheet" href="../css/slider.css">
+    <link rel="stylesheet" href="../css/dracula.css">
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <!-- slider -->
     <style>
@@ -32,7 +32,8 @@
             /*이미지를 감싸고 있는 부모 : 움직이는 부분*/
             display: flex;
             flex-wrap: wrap;
-            width: 4800px;  /* 총 이미지 넓이에 따라 넓이를 변경해주어야함 */
+            width: 4800px;
+            /* 총 이미지 넓이에 따라 넓이를 변경해주어야함 */
             height: 600px;
         }
 
@@ -72,7 +73,7 @@
         .slider:nth-child(5) {
             content: '이미지5';
         }
-        
+
         .slider:nth-child(6) {
             content: '이미지1';
         }
@@ -96,39 +97,45 @@
         .slider:nth-child(5)::before {
             content: "image 05";
         }
+
         .slider:nth-child(6)::before {
             content: "image 06";
         }
+
         @media (max-width: 800px) {
             .slider__img {
                 width: 400px;
                 height: 300px;
             }
         }
+
         .slider__btn {}
+
         .slider__btn a {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             width: 50px;
             height: 50px;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0, 0, 0, 0.4);
             text-align: center;
             line-height: 50px;
             transition: all 0.2s;
             display: block;
             color: #fff;
         }
+
         .slider__btn a:hover {
             background: #A4B8c6;
         }
+
         .slider__btn a.prev {
             left: 0;
         }
+
         .slider__btn a.next {
             right: 0;
         }
-
     </style>
     <!-- slider -->
 
@@ -154,11 +161,11 @@
             <div class="slider__wrap">
                 <div class="slider__img">
                     <div class="slider__inner">
-                        <div class="slider"><img src="../assets/img/effect_bg_02@2x.jpg" alt="이미지1"></div>
-                        <div class="slider"><img src="../assets/img/effect_bg_03@2x.jpg" alt="이미지2"></div>
-                        <div class="slider"><img src="../assets/img/effect_bg_04@2x.jpg" alt="이미지3"></div>
-                        <div class="slider"><img src="../assets/img/effect_bg_05@2x.jpg" alt="이미지4"></div>
-                        <div class="slider"><img src="../assets/img/effect_bg_06@2x.jpg" alt="이미지5"></div>
+                        <div class="slider"><img src="../img/Effectimg/effect_bg_02@2x.jpg" alt="이미지1"></div>
+                        <div class="slider"><img src="../img/Effectimg/effect_bg_03@2x.jpg" alt="이미지2"></div>
+                        <div class="slider"><img src="../img/Effectimg/effect_bg_04@2x.jpg" alt="이미지3"></div>
+                        <div class="slider"><img src="../img/Effectimg/effect_bg_05@2x.jpg" alt="이미지4"></div>
+                        <div class="slider"><img src="../img/Effectimg/effect_bg_06@2x.jpg" alt="이미지5"></div>
                     </div>
                 </div>
             </div>
@@ -263,7 +270,7 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-<pre><code class="language-js">const sliderWrap = document.querySelector(".slider__wrap");
+                            <pre><code class="language-js">const sliderWrap = document.querySelector(".slider__wrap");
 const sliderImg = document.querySelector(".slider__img");      //보여지는 영역
 const sliderInner = document.querySelector(".slider__inner");  //움직이는 영역
 const slider = document.querySelectorAll(".slider");           //각각 이미지
@@ -299,7 +306,7 @@ setInterval(sliderEffect, 2000);
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-css">.slider__wrap {
+                            <pre><code class="language-css">.slider__wrap {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -396,7 +403,7 @@ setInterval(sliderEffect, 2000);
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-html">&lt;div class="slider__inner"&gt;
+                            <pre><code class="language-html">&lt;div class="slider__inner"&gt;
     &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_16-min.jpg" alt="이미지1"&gt;&lt;/div&gt;
     &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_17-min.jpg" alt="이미지2"&gt;&lt;/div&gt;
     &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_18-min.jpg" alt="이미지3"&gt;&lt;/div&gt;
@@ -419,51 +426,46 @@ setInterval(sliderEffect, 2000);
         </div>
     </footer>
     <!-- //footer -->
-    <script src="../assets/js/highlight.min.js"></script>
-    <script src="../assets/js/common.js"></script>
+    <script src="../js/highlight.min.js"></script>
+    <script src="../js/common.js"></script>
     <script>
         hljs.highlightAll();
     </script>
     <script>
-        const sliderWrap = document.querySelector(".slider__wrap");
-        const sliderImg = document.querySelector(".slider__img");      //보여지는 영역
-        const sliderInner = document.querySelector(".slider__inner");  //움직이는 영역
-        const slider = document.querySelectorAll(".slider");           //각각 이미지
-        const sliderBtn = document.querySelector(".slider__btn");      //이미지 버튼
-        const sliderBtnPrev = document.querySelector(".prev");          //왼쪽 버튼
-        const sliderBtnNext = document.querySelector(".next");          //오른쪽 버튼
+        const sliderWrap = document.querySelector(".slider__wrap"); //이미지 들어가는 칸
+        const sliderImg = document.querySelector(".slider__img"); // 이미지 보이는 영역  
+        const sliderInner = document.querySelector(".slider__inner"); //이미지 감싸고 있는 영역
+        const slider = document.querySelectorAll(".slider");
+        const sliderBtn = document.querySelector(".slider__btn"); //버튼 영역
+        const sliderPrev = document.querySelector(".slider__btn .prev"); //이전 버튼
+        const sliderNext = document.querySelector(".slider__btn .next"); //다음버튼
 
         let currentIndex = 0; //현재 이미지
-        let sliderCount = slider.length; //이미지 갯수
-        let sliderWidth = sliderImg.offsetWidth; //이미지 가로값
-        //이미지 움직이는 영역
+        let sliderCount = slider.length;  //이미지 갯수
+        let sliderWidth = sliderImg.offsetWidth;
+
         function gotoSlider(num) {
-            sliderInner.style.transition = "all 400ms";
-            sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
-            currentIndex = num;
-            
-            console.log(currentIndex)
+            sliderInner.style.transition = "all 400ms"; //이미지 움직이는 시간
+            sliderInner.style.transform = "translateX(" + -sliderWidth * currentIndex + "px)"; //이미지 넓이만큼 움직이기
+            currentIndex = num; 
         }
-        // 버튼을 클릭했을때
-        //왼쪽 버튼 클릭 버튼 클릭시 prev에 먼저 들어가고 그다음 currentIndex가 정해진다.
-        sliderBtnPrev.addEventListener("click", () => {
+
+        //버튼 클릭했을 때 
+
+        sliderPrev.addEventListener("click", () => {
             let prevIndex = (currentIndex + 4) % sliderCount;
-            console.log("prev"+prevIndex)
             gotoSlider(prevIndex);
 
-          
+        })
 
-        });
-        //오른쪽 버튼 클릭
-        sliderBtnNext.addEventListener("click", () => {
-            let nextIndex = (currentIndex + 1) % sliderCount;
-            gotoSlider(nextIndex);
-            
-            //0 1 2 3 4
-        });
+        sliderNext.addEventListener("click", () => {
+            let NextIndex = (currentIndex + 1) % sliderCount;
+            gotoSlider(NextIndex);
+        })
 
 
-        
+
+
     </script>
 
 </body>
