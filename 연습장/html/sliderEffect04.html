@@ -446,9 +446,10 @@ setInterval(sliderEffect, 2000);
 
         function gotoSlider(num) {
             sliderInner.style.transition = "all 400ms"; //이미지 움직이는 시간
-            sliderInner.style.transform = "translateX(" + -sliderWidth * currentIndex + "px)"; //이미지 넓이만큼 움직이기
+            sliderInner.style.transform = "translateX(" + -sliderWidth * num + "px)"; //이미지 넓이만큼 움직이기
+            console.log(-sliderWidth*num)
             currentIndex = num; 
-        }
+        }   
 
         //버튼 클릭했을 때 
 
