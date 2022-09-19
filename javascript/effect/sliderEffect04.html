@@ -442,16 +442,13 @@ setInterval(sliderEffect, 2000);
             sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
             currentIndex = num;
             
-            console.log(currentIndex)
         }
         // 버튼을 클릭했을때
         //왼쪽 버튼 클릭 버튼 클릭시 prev에 먼저 들어가고 그다음 currentIndex가 정해진다.
         sliderBtnPrev.addEventListener("click", () => {
             let prevIndex = (currentIndex + 4) % sliderCount;
-            console.log("prev"+prevIndex)
+            console.log(currentIndex, sliderCount, prevIndex)
             gotoSlider(prevIndex);
-
-          
 
         });
         //오른쪽 버튼 클릭
