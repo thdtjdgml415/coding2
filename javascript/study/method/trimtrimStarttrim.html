@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 함수의 종류</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">문자열을 변경하는 메서드</h2>
+            <p class="t_desc2">
+                trim(),trimStart(),trimEnd()을 정리해 보았습니다.
+            </p>
+            <div class="main_sample">
+
+                <!-- trim -->
+                <h3 class="t_tit2">문자열 좌우에서 공백을 제거, trim(),trimStart(),trimEnd()</h3>
+                <p class="t_desc2">
+                    trim() 메서드는 문자열 좌우에서 공백을 제거. <br>
+                    trimStart() 메서드는 문자열 시작 부분에서 공백 문자를 제거하는 데 사용되는 문자열 메서드입니다 <br>
+                    trimEnd() 메서드는 문자열 끝부분의 공백을 제거합니다. 또 해당 메서드는 trimRight() 라는 별칭으로 호출이 가능합니다.
+                </p>
+                <div class="t_code">
+<pre><code classs="js-language">  const str = "    javascript          ";
+    const currentStr = str.trim();
+
+
+    document.querySelector(".sample03_N1").innerHTML = "1";
+    document.querySelector(".sample03_Q1").innerHTML = "javascript";
+    document.querySelector(".sample03_M1").innerHTML = "trim()";
+    document.querySelector(".sample03_P1").innerHTML = currentStr;
+
+    const str2 = "    javascript          ";
+    const currentStr2 = str2.trimStart();
+
+    document.querySelector(".sample03_N2").innerHTML = "2";
+    document.querySelector(".sample03_Q2").innerHTML = str2;
+    document.querySelector(".sample03_M2").innerHTML = "trimStart()";
+    document.querySelector(".sample03_P2").innerHTML = currentStr2;
+
+
+    const str3 = "    javascript          ";
+    const currentStr3 = str3.trimEnd();
+
+    document.querySelector(".sample03_N3").innerHTML = "3";
+    document.querySelector(".sample03_Q3").innerHTML = str3;
+    document.querySelector(".sample03_M3").innerHTML = "trimEnd()";
+    document.querySelector(".sample03_P3").innerHTML = currentStr3;
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample02_result">
+                            <div class="t_table">
+                                <table>
+                                    <colgroup>
+
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>번호</th>
+                                            <th>기본값</th>
+                                            <th>메서드</th>
+                                            <th>리턴값</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="sample03_N1"></td>
+                                            <td class="sample03_Q1"></td>
+                                            <td class="sample03_M1"></td>
+                                            <td class="sample03_P1"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sample03_N2"></td>
+                                            <td class="sample03_Q2"></td>
+                                            <td class="sample03_M2"></td>
+                                            <td class="sample03_P2"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="sample03_N3"></td>
+                                            <td class="sample03_Q3"></td>
+                                            <td class="sample03_M3"></td>
+                                            <td class="sample03_P3"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <script>
+                                const str = "    javascript          ";
+                                const currentStr = str.trim();
+
+
+                                document.querySelector(".sample03_N1").innerHTML = "1";
+                                document.querySelector(".sample03_Q1").innerHTML = "javascript";
+                                document.querySelector(".sample03_M1").innerHTML = "trim()";
+                                document.querySelector(".sample03_P1").innerHTML = currentStr;
+
+                                const str2 = "    javascript          ";
+                                const currentStr2 = str2.trimStart();
+
+                                document.querySelector(".sample03_N2").innerHTML = "2";
+                                document.querySelector(".sample03_Q2").innerHTML = str2;
+                                document.querySelector(".sample03_M2").innerHTML = "trimStart()";
+                                document.querySelector(".sample03_P2").innerHTML = currentStr2;
+
+
+                                const str3 = "    javascript          ";
+                                const currentStr3 = str3.trimEnd();
+
+                                document.querySelector(".sample03_N3").innerHTML = "3";
+                                document.querySelector(".sample03_Q3").innerHTML = str3;
+                                document.querySelector(".sample03_M3").innerHTML = "trimEnd()";
+                                document.querySelector(".sample03_P3").innerHTML = currentStr3;
+                            </script>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>

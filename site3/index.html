@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트제작03</title>
+    
+    
+    
+    
+    <!-- swiper -->
+    <link rel="stylesheet" href="/site3/css/swiper.css" />
+
+
+    <link rel="stylesheet" href="/site3/css/reset.css">
+    <link rel="stylesheet" href="/site3/css/common.css">
+    <link rel="stylesheet" href="/site3/css/header.css">
+    <link rel="stylesheet" href="/site3/css/slider.css">
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#headerType">헤더영역</a>
+        <a href="#sliderType">슬라이더 영역</a>
+        <a href="#textType">텍스트 영역</a>
+        <a href="#imageType">이미지 영역</a>
+        <a href="#imgCardType">이미지/텍스트 영역</a>
+        <a href="#bannerType">배너 영역</a>
+        <a href="#cardType">카드 영역</a>
+        <a href="#footerType">푸터 영역</a>
+    </div>
+    <header id="headerType" class="header__wrap container">
+        <div class="header__inner">
+            <div class="header__logo">Deep Layer</div>
+            <nav class="header__menu">
+                <ul>
+                    <li class="active"><a href="#">헤더 영역</a></li>
+                    <li><a href="#">슬라이드 영역</a></li>
+                    <li><a href="#">이미지 영역</a></li>
+                    <li><a href="#">컨텐츠 영역</a></li>
+                    <li><a href="#">푸터 영역</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- header -->
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="desc">
+                    <span>DEVELOPER</span>
+                    <h3>Deep layer</h3>
+                    <p>
+                        심해(深海, 영어: deep sea 또는 deep layer)는 해양학에서 대략 수심 2km(또는 1,800m) 이상의 깊은 바다입니다. 
+                    </p>
+                    <div class="btn">
+                        <a href="#">자세히 보기</a>
+                        <a href="#" class="black">사이트 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="desc">
+                    <span>DEVELOPER</span>
+                    <h3>Deep layer</h3>
+                    <p>
+                        수압이 매우 높아 보통의 방법으로는 측량이 불가하며, 레이다 등의 특수 장비로 측정해야 한다.
+                    </p>
+                    <div class="btn">
+                        <a href="#">자세히 보기</a>
+                        <a href="#" class="black">사이트 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="desc">
+                    <span>DEVELOPER</span>
+                    <h3>Deep layer</h3>
+                    <p>
+                        사람이 수압 때문에 견딜 수 없는 공간을 뜻한다.
+                    </p>
+                    <div class="btn">
+                        <a href="#">자세히 보기</a>
+                        <a href="#" class="black">사이트 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="desc">
+                    <span>DEVELOPER</span>
+                    <h3>Deep layer</h3>
+                    <p>
+                        사람이 수압 때문에 견딜 수 없는 공간을 뜻한다.
+                    </p>
+                    <div class="btn">
+                        <a href="#">자세히 보기</a>
+                        <a href="#" class="black">사이트 보기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="desc">
+                    <span>DEVELOPER</span>
+                    <h3>Deep layer</h3>
+                    <p>
+                        사람이 수압 때문에 견딜 수 없는 공간을 뜻한다.
+                    </p>
+                    <div class="btn">
+                        <a href="#">자세히 보기</a>
+                        <a href="#" class="black">사이트 보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button">
+            <div class="swiper-button-play"><span class="ir">play</span></div>
+            <div class="swiper-button-stop"><span class="ir">stop</span></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+<!--sliderType-->
+        <section id="textType"></section>
+        <section id="imageType"></section>
+        <section id="imgcardType"></section>
+        <section id="bannerType"></section>
+        <section id="cardType2"></section>
+    </main>
+    <footer id="footerType"></footer>
+    <script src="../site3/js/swiper.min.js"></script>
+    
+    <script>
+         var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction:false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+        });
+        
+        const btnstop = document.querySelector(".swiper-button-stop");   //슬라이더 정지
+        const btnstart = document.querySelector(".swiper-button-play");     //슬라이더 시작 
+
+        btnstart.style.display = "none";
+
+        document.querySelector(".swiper-button-stop").addEventListener("click", () => { //슬라이더 스탑버튼 클릭시 재생버튼이 나옴
+            swiper.autoplay.stop();
+            btnstart.style.display = "block";
+            btnstop.style.display = "none";
+        });
+        document.querySelector(".swiper-button-play").addEventListener("click", () => { //슬라이더 재생버튼 클릭시 정지버튼이 나타난다
+            swiper.autoplay.start();
+            btnstart.style.display = "none";
+            btnstop.style.display = "block";
+        });
+    </script>
+</body>
+
+</html>
