@@ -56,7 +56,14 @@
             <h3 class="t_tit2">MYSQL 실행</h3>
             <p class="t_desc2">
                 윈도우 : cd MAMP/bin/mysql/bin <br>
-                로그인 : mysql -uroot -p
+                로그인 : mysql -uroot -p <br> 
+                비밀번호 : root
+            </p>
+            <h3 class="t_tit2">MYPHPadmin</h3>
+            <p class="t_desc3"> 내pc 속성 > 고급시스템 설정 > 환경변수 > path 찾아서 변수 입력</p>
+            <p class="t_desc2">
+                온라인으로 나의 php를 확인해 볼 수 있다. <br>
+                http://localhost/phpMyAdmin/index.php
             </p>
             <div class="t_code">
 <pre><code classs="js-language">mysql: [Warning] Using a password on the command line interface can be insecure.
@@ -145,13 +152,14 @@ Query OK, 0 rows affected (0.00 sec)
             </p>
             <div class="t_code">
 <pre><code classs="js-language">create table member (
-    myMemberID int(10) unsigned auto_increment,
-    youEmail varchar(40) NOT NULL,
-    youName varchar(20) NOT NULL,
-    youPass varchar(20) NOT NULL,
-    youBirth int(20) NOT NULL,
-    regTime int(20) NOT NULL,
-    PRIMARY KEY (myMemberID)
+  myMemberID int(10) unsigned auto_increment,
+  youEmail varchar(40) NOT NULL,
+  youName varchar(20) NOT NULL,
+  youPass varchar(20) NOT NULL,
+  youBirth int(20) NOT NULL,
+  youAge int(5) NOT NULL,
+  regTime int(20) NOT NULL,
+  PRIMARY KEY (myMemberID)
 ) charset=utf8;
 </code></pre>
             </div>
