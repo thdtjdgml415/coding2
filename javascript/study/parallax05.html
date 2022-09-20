@@ -46,34 +46,50 @@
 
         <div class="main_refer">
             <div class="document">
-                <h2 class="t_tit">패럴랙스 - 나타나기</h2>
+                <h2 class="t_tit">패럴랙스 - 이질감효과</h2>
                 <p class="t_desc2">
                     페럴랙스 효과는 스크롤을 내리면서 알맞은 스크롤의 위치에서 효과가 생기는 것을 말합니다.
                 </p>
                 <!-- scrollTop -->
                 <h3 class="t_tit2">javascript</h3>
                 <p class="t_desc2">
-                  
-
+                    1. 자바스크립트를 사용하여 브라우저의 scrollTop의 값을 구했습니다. <br>
+                    2. content__item span의 scrollTop값을 section의 각 요소의 offsetTop값을 비교해서 offset변수에 대입합니다. <br>
+                    3. 대입했으면 gsap를 사용하여 x축과 y축으로 offset의 값 만큼 변화를 주도록합니다.  <br>
+                    밑에 피그마를 보면서 다시 이해해 보도록하겠습니다.
                 </p>
                 <div class="t_result">
                     <details>
                         <summary>javascript</summary>
-                        <div class="result">
+                    
                             <div class="t_code">
-<pre><code class="language-js"> // 재귀함수 : 자기자신을 계속해서 실행해준다.
-function scroll () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY;
+<pre><code class="language-js">function scroll() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
+
     document.querySelectorAll(".content__item").forEach(item => {
-        if(scrollTop > item.offsetTop - window.innerHeight/2) { //scrollTop값은 브라우저나 화면의 크기 등 위치의 오차가 있을 수 있기 떄문에 조절해주어야 합니다.
-            item.classList.add("show")
-        }
+        const target1 = item.querySelector(".content__item__img");
+        const target2 = item.querySelector(".content__item__desc");
+        const target3 = item.querySelector(".content__item__num");
+
+        let offset1 = (scrollTop - item.offsetTop)*0.1;
+        let offset2 = (scrollTop - item.offsetTop)*0.01; //더빨리 움직임
+        let offset3 = (scrollTop - item.offsetTop)*0.5; //더빨리 움직임
+
+        // target1.style.transform = `translateY(${offset}px)`
+        // target2.style.transform = `translateX(${offset2}px)`
+
+        gsap.to(target1, {duration: .3, y: offset1, ease: "power4.out"})
+        gsap.to(target2, {duration: .3, rotate: offset2})
+        gsap.to(target3, {duration: .3, y: offset3, ease: "expo4.out"})
     });
-    requestAnimationFrame(scroll) //1분에 60번씩만 실행해주는 메서드 메모리를 아낄 수 있다.
+    requestAnimationFrame(scroll);
 }
 scroll();
 </code></pre>
                             </div>
+      
                     </details>
                 </div>
                 <!--javascript-->
@@ -179,57 +195,21 @@ scroll();
                     </details>
                 </div>
                 <!-- HTML -->
-                <!-- animation -->
-                <h3 class="t_tit2">animation</h3>
-                <p class="t_desc2">
-                    각 요소에 투명도와 회전 움직임을 주어서 애니메이션 효과를 만들었습니다. <br>
-                    javascript에서 scrollTop값을 구해서 해당위치를 구해서 class를 추가해 주었다면 CSS에서 class가 추가 되었을때 <br>
-                    회전 투명도 애니메이션 효과를 지정하여 해당위치에 있지않으면 opacity를 0으로하고 위치에 도달하면 1로 바꾸어 보이도록 합니다. <br>
-                    각 요소에 딜레이를 만들어 역동적인 효과를 만들어줍니다.
-                </p>
-                <div class="t_result">
-                    <details>
-                        <summary>animation</summary>
-                        <div class="result">
-                            <div class="t_code">
-<pre><code class="language-css">function scroll() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    document.querySelector("#parallax__info span").innerText = Math.round(scrollTop);
-
-    document.querySelectorAll(".content__item").forEach(item => {
-        const target1 = item.querySelector(".content__item__img");
-        const target2 = item.querySelector(".content__item__desc");
-        const target3 = item.querySelector(".content__item__num");
-
-        let offset1 = (scrollTop - item.offsetTop)*0.1;
-        let offset2 = (scrollTop - item.offsetTop)*0.01; //더빨리 움직임
-        let offset3 = (scrollTop - item.offsetTop)*0.5; //더빨리 움직임
-
-        // target1.style.transform = `translateY(${offset}px)`
-        // target2.style.transform = `translateX(${offset2}px)`
-
-        gsap.to(target1, {duration: .3, y: offset1, ease: "power4.out"})
-        gsap.to(target2, {duration: .3, rotate: offset2})
-        gsap.to(target3, {duration: .3, y: offset3, ease: "expo4.out"})
-    });
-    requestAnimationFrame(scroll);
-}
-scroll();
-</code></pre>
-<!-- animation -->
-                            </div>
-                    </details>
-                </div>
                 <!-- menu -->
+                <p class="t_desc3">설명</p>
+                <div class="t_iframe">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FdmrXhO1ckj8W6ImWXGa20z%2FUntitled%3Fnode-id%3D384%253A37" allowfullscreen>
+                    </iframe>
+                </div>
                 <h4 class="t_tit2">결과</h4>
                 <div class="t_iframe" style="min-width: 600px; min-height: 900px; padding-top: 0;">
-                    <iframe src="https://thdtjdgml415.github.io/coding2/javascript/effect/parallaxEffect04.html"
+                    <iframe src="https://thdtjdgml415.github.io/coding2/javascript/study/effect/parallaxEffect05.html"
                         allowfullscreen></iframe>
                 </div>
+              
 
                 <div class="t_link">
-                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/effect/parallaxEffect05.html"
+                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/study/effect/parallaxEffect05.html"
                         target="_blank">원본 소스 보기</a>
                 </div>
             </div>
