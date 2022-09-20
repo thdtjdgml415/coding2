@@ -536,8 +536,8 @@
         </div>
     </main>
     <!-- //main -->
-
     <footer id="footer">
+        <div class="scriptTop">TOP</div>
         <a href="mailto:thrdjtdmgl415@naver.com">thdtjdgml415@naver.com</a>
     </footer>
     <!-- //footer -->
@@ -546,7 +546,20 @@
     <script>
         hljs.highlightAll();
     </script>
+    <script>
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
+            if (scrollTop > (document.documentElement.scrollHeight - window.innerHeight)-100) {
+                document.querySelector(".scriptTop").classList.add("show")
+            } else {
+                document.querySelector(".scriptTop").classList.remove("show")
+            }
+        })
+        document.querySelector("#footer .scriptTop").addEventListener("click", () => {
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        })
+    </script>
     <script>
         // 01번
         {
@@ -817,7 +830,7 @@
             // obj.g()
         }
 
-        document.querySelector(".sample17_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.b + "<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" + obj.c + "<br>" + obj.d + "<br>" + obj.e() + "<br>" + obj.f() + "<br>" + obj.g() 
+        // document.querySelector(".sample17_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.b + "<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" + obj.c + "<br>" + obj.d + "<br>" + obj.e() + "<br>" + obj.f() + "<br>" + obj.g() 
     </script>
 </body>
 

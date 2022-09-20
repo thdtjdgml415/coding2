@@ -43,6 +43,8 @@ body {
 #footer {
     padding: 40px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 #footer a:hover {
     text-decoration: underline;
@@ -105,6 +107,9 @@ body {
     margin-top: 40px;
     border-top: 1px dashed #dcdcdc;
     padding-top: 40px;
+    position: relative;
+
+   
 }
 .main_sample h3 {
     font-size: 16px;
@@ -273,6 +278,29 @@ body {
     display: inline-block;
     padding: 10px 20px;
 }
+/* Top */
+.scriptTop {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 30%;
+    bottom: -130px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.scriptTop.show {
+    opacity: 1;
+    bottom: 30px;
+
+}
+
 /* 화면이 작아지면 표에 스크롤이 생기게 해준다. */
 @media(max-width: 800px){   
     .sample .table {
@@ -411,3 +439,6 @@ body {
         padding: 20px;
     }
 }
+
+
+

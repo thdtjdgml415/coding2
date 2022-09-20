@@ -375,7 +375,7 @@ document.write(func("함수가 실행되었습니다.12"))
                 <div id="sample13" class="sample">
                     <h3>13. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                     <div class="script">
-                        <pre><code class="language-js"> function func(num, str1, str2){   //재활용하기가 용의하다. 
+<pre><code class="language-js"> function func(num, str1, str2){   //재활용하기가 용의하다. 
     document.write(num + str1 + "가" + str2 + "되었습니다.15&lt;br&gt;")
 }
 const info = [
@@ -403,7 +403,7 @@ func(info[2].num, info[2].name, info[2].com);
                         <details>
                             <summary>결과보기</summary>
                             <div class="sample13_result">
-                                "함수가 실행되었습니다.12"
+                                "함수가 실행되었습니다.13"
                             </div>
                         </details>
                     </div>
@@ -439,9 +439,9 @@ func(youNum3, youStr3, youCom1);
                 </div>
                 <!-- 15 -->
                 <div id="sample15" class="sample">
-                    <h3>15. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                    <h3>15. 함수 유형 : 함수와 배열,객체를 이용한 형태</h3>
                     <div class="script">
-                        <pre><code class="language-js"> function func(num, str1, str2) {   //재활용하기가 용의하다. 
+<pre><code class="language-js"> function func(num, str1, str2) {   //재활용하기가 용의하다. 
     document.write(num + str1 + "가" + str2 + "되었습니다.15&lt;br&gt;")
 }
 const info = [
@@ -479,7 +479,7 @@ func(info[2].num, info[2].name, info[2].com);
                 <div id="sample16" class="sample">
                     <h3>16. 함수 유형 : 객체 안에 변수와 함수를 이용한 형태</h3>
                     <div class="script">
-                        <pre><code class="language-js">const info = {
+<pre><code class="language-js">const info = {
     num1: "1.",
     name: "함수",
     word1: "실행",
@@ -509,7 +509,9 @@ info.result3();
                         <details>
                             <summary>결과보기</summary>
                             <div class="sample16_result">
-                                "함수가 실행되었습니다.16"
+                                1 함수가 실행되었습니다.16 <br>
+                                2 자바스트립트가 실행되었습니다.16<br>
+                                3 제이쿼리가 실행되었습니다.16
                             </div>
                         </details>
                     </div>
@@ -518,7 +520,7 @@ info.result3();
                 <div id="sample17" class="sample">
                     <h3>17. 함수 유형 : 객체 생성자 함수</h3>
                     <div class="script">
-                        <pre><code class="language-js">function func(num, name, word) {
+<pre><code class="language-js">function func(num, name, word) {
         this.num = num;
         this.name = name;
         this.word = word;
@@ -559,7 +561,7 @@ info.result3();
                         <details>
                             <summary>결과보기</summary>
                             <div class="sample18_result">
-                                1함수가실행되었습니다18.<br>2자바스크립트가실행되었습니다18.<br>3제이쿼리가실행되었습니다18.<br>함수가 실행되었습니다.22함수가 실행되었습니다.22
+                             
                             </div>
                         </details>
                     </div>
@@ -610,7 +612,7 @@ info3.result3();
                 <div id="sample20" class="sample">
                     <h3>20. 즉시 실행 함수</h3>
                     <div class="script">
-                        <pre><code class="language-js">(function func(){
+<pre><code class="language-js">(function func(){
     document.write("함수가 실행되었습니다.20");
 }())
 </code></pre>
@@ -626,9 +628,9 @@ info3.result3();
                 </div>
                 <!-- 21 -->
                 <div id="sample21" class="sample">
-                    <h3>21. 즉시 실행 함수</h3>
+                    <h3>21. 파라미터 함수</h3>
                     <div class="script">
-                        <pre><code class="language-js">function func() {
+<pre><code class="language-js">function func() {
     document.write(str);
 }
 func("함수가 실행되었습니다.21");
@@ -728,7 +730,7 @@ callback(func);
                 <div id="sample25" class="sample">
                     <h3>25.콜백함수 : 반복문</h3>
                     <div class="script">
-<pre><code class="language-js">       function func(index) {
+<pre><code class="language-js">function func(index) {
     document.write("함수가 실행되었습니다.", + index + "&lt;br&gt;")
 }
 function callback(num) {
@@ -798,7 +800,7 @@ callback(func);
     //     funcB();
     // })
     // 결과값 a
-    // 결과값b
+    // 결과값 b
 
 
     function funcA(callback) {
@@ -838,9 +840,9 @@ callback(func);
                             <summary>결과보기</summary>
                             <div class="sample26_result">
                                 funcA가 실행되었습니다.<br>
-                                javascript03.html:1327 funcB가 실행되었습니다. <br>
-                                javascript03.html:1333 funcC가 실행되었습니다. <br>
-                                javascript03.html:1339 funcD가 실행되었습니다. <br>
+                                funcB가 실행되었습니다. <br>
+                                funcC가 실행되었습니다. <br>
+                                funcD가 실행되었습니다. <br>
                             </div>
                         </details>
                     </div>
