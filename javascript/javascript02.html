@@ -37,7 +37,7 @@
                 <li><a href="effect/dataEffect01.html">데이터 효과</a></li>
                 <li><a href="effect/mouseEffect01.html">마우스 효과</a></li>
                 <li><a href="effect/sliderEffect01.html">슬라이드 효과</a></li>
-                <li><a href="effect/parallaxEffect01.html">패렐랙스 효과</a></li>
+                <li><a href="../javascript/study/effect/parallaxEffect.html">패렐랙스 효과</a></li>
                 <li><a href="effect/gameEffect01,html">게임 효과</a></li>
             </ul>
         </nav>
@@ -598,13 +598,152 @@ document.write("d" in obj);
                     </div>
                 </div>
                 <!-- sample18 -->
+                <div id="sample19" class="sample">
+                    <h3>19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</h3>
+                    <p>
+                        
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: 200,
+    c: "javasccript"
+}
+const spread = { ...obj } //복사의 기능
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            <div class="sample19_result">
+                                    100 <br> 200 <br> javascript
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- sample19 -->
+                <div id="sample20" class="sample">
+                    <h3>19. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</h3>
+                    <p>
+                        
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: 200,
+    c: "javasccript"
+}
+const spread = { ...obj, d: "jquery" } //추가의 기능
+console.log("spread",spread.a);
+console.log("spread",spread.b);
+console.log("spread",spread.c);
+console.log("spread",spread.d);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            <div class="sample20_result">
+                                    100 <br> 200 <br> javascript <br> jquery
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- sample21 -->
+                <div id="sample21" class="sample">
+                    <h3>21. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</h3>
+                    <p>
+                        
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">const objA = {
+    a: 100,
+    b: 200
+}
+const objB = {
+    c: "javascript",
+    d: "jquery"
+}
+const spread = { ...objA, ...objB }
+console.log("spread",spread.a);
+console.log("spread",spread.b);
+console.log("spread",spread.c);
+console.log("spread",spread.d);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            <div class="sample21_result">
+                                    100 <br> 200 <br> javascript <br> jquery
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- sample21 -->
+                <div id="sample22" class="sample">
+                    <h3>22. 객체 : 데이터 불러오기 : 비구조화 할당</h3>
+                    <p>
+                        
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+const { a,b,c } = obj;
+
+document.write(a);
+document.write(b);
+document.write(c);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            <div class="sample22_result">
+                                    100 <br> 200 <br> javascript <br> jquery
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- sample23 -->
+                <div id="sample23" class="sample">
+                    <h3>23. 객체 : 데이터 불러오기 : 객체구조분해할당</h3>
+                    <p>
+                        
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+const { a:name1 ,b:name2 , c:name3 } = obj;
+
+document.write(name1);
+document.write(name2);
+document.write(name3);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과보기</summary>
+                            <div class="sample23_result">
+                                
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- sample23 -->
 
             </div>
         </div>
     </main>
     <!-- //main -->
     <footer id="footer">
-        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+        <a href="thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
     </footer>
     <!-- //footer -->
     <script src="assets/js/highlight.min.js"></script>
@@ -832,7 +971,73 @@ document.write("d" in obj);
             // document.write("c" in obj);
             // document.write("d" in obj);
         }
+        //19. 펼침연산자
+        //복사
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javasccript"
+            }
+            const spread = { ...obj } //복사의 기능
+            console.log("19", obj.b)
+            console.log("spread",spread.a)
+        }
+        //20. 추가 
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javasccript"
+            }
+            const spread = { ...obj, d: "jquery" } //추가의 기능
+            console.log("spread",spread.a);
+            console.log("spread",spread.b);
+            console.log("spread",spread.c);
+            console.log("spread",spread.d);
+        }
+        //21
+        {
+            const objA = {
+                a: 100,
+                b: 200
+            }
+            const objB = {
+                c: "javascript",
+                d: "jquery"
+            }
+            const spread = { ...objA, ...objB }
+            console.log("spread",spread.a);
+            console.log("spread",spread.b);
+            console.log("spread",spread.c);
+            console.log("spread",spread.d);
+        }
+        //22
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            const { a,b,c } = obj;
 
+            document.write(a);
+            document.write(b);
+            document.write(c);
+        }
+        //23
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            const { a:name1 ,b:name2 , c:name3 } = obj;
+
+            document.write(name1);
+            document.write(name2);
+            document.write(name3);
+        }
     </script>
 </body>
 
