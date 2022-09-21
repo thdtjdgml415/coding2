@@ -743,10 +743,12 @@ document.write(name3);
     </main>
     <!-- //main -->
     <footer id="footer">
+        <div class="scriptTop">TOP</div>
         <a href="thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
     </footer>
     <!-- //footer -->
     <script src="assets/js/highlight.min.js"></script>
+    <script src="../javascript/assets/js/Topbtn.js"></script>
     <script>
         hljs.highlightAll();
     </script>
@@ -796,7 +798,7 @@ document.write(name3);
             }
         }
 
-        document.write("<br>")
+        // document.write("<br>")
 
         //09. 배열에 데이터 불러오기 : for in 인덱스 값을 출력한다.
         {
@@ -807,7 +809,7 @@ document.write(name3);
                 // document.write(arr[i]); 
             }
         }
-        document.write("<br>")
+        // document.write("<br>")
 
         //10. 배열 데이터 불러오기 : map()
         {
@@ -838,29 +840,29 @@ document.write(name3);
         for (let i = 0; i < 9; i++) {
             // document.write(arr[i]);
         }
-        document.write("<br>");
+        // document.write("<br>");
         //for문을 이용해서 하나씩 출력해주세요!
 
         arr.forEach(function (array) {
             // document.write(array)
         });
-        document.write("<br>");
+        // document.write("<br>");
         //forEach 이용해서 하나씩 출력
         arr.map(function (el) {
             // document.write(el)
         })
-        document.write("<br>");
+        // document.write("<br>");
         //map()을 이용해서 출력
         for (let i in arr) {
             // document.write(arr[i]);
         }
-        document.write("<br>");
+        // document.write("<br>");
         //for in 이용해서 하나씩 출력
         for (let i of arr) {
             // document.write(i);
         }
         //for of 이용해서 하나씩 출력
-        document.write("<br>");
+        // document.write("<br>");
 
 
         //11. 11. 배열 : 데이터 불러오기 : 펼침연산자 (Spread Operator) 리액트가서 많이쓴다.
@@ -872,7 +874,7 @@ document.write(name3);
             // document.write(num[0], num[1], num[2], num[3], num[4], "<br>");
             // document.write(...num); // 데이터만 나오도록 해준다. 컴마제거
         }
-        document.write("<br>");
+        // document.write("<br>");
 
         //12. 배열구조할당(Destructruing assignment) 리액트가서 많이 쓰인다.
         {
@@ -883,7 +885,7 @@ document.write(name3);
             // document.write(b);
             // document.write(c);
         }
-        document.write("<br>");
+        // document.write("<br>");
         //13. 객체 : 데이터 불러오기 : 기본
         {
             const obj = {
@@ -895,7 +897,7 @@ document.write(name3);
             // document.write(obj.b);
             // document.write(obj.c);
         }
-        document.write("<br>");
+        // document.write("<br>");
         //14. 객체 : 자주 쓰이진 않는다.(죽은 문법)
         //14. 객체 : 데이터 불러오기 : Object
         {
@@ -908,7 +910,7 @@ document.write(name3);
             // document.write(Object.values(obj)); // 값을 불러옴
             // document.write(Object.entries(obj)); //둘다 불러옴
         }
-        document.write("<br>");
+        // document.write("<br>");
         //15. 객체 : 데이터 불러오기 : 변수  ,변수안에 값을 저장해서 불러오는 것
         {
             const obj = {
@@ -925,7 +927,7 @@ document.write(name3);
             // document.write(name2);
             // document.write(name3);
         }
-        document.write("<br>");
+        // document.write("<br>");
         //16. 객체 : 데이터 불러오기 : for in
 
         {
@@ -940,7 +942,7 @@ document.write(name3);
             }
         }
 
-        document.write("<br>");
+        // document.write("<br>");
         //17. 객체 : 데이터 불러오기 : map()  /가장 많이 쓰임
         {
             const obj = [
@@ -954,7 +956,7 @@ document.write(name3);
             });
         }
 
-        document.write("<br>");
+        // document.write("<br>");
         //18. 객체 : 데이터 불러오기 :  hasOwnProperty , 데이터안에 값이 있는지 없는지 확인
         {
             const obj = {
@@ -974,69 +976,69 @@ document.write(name3);
         //19. 펼침연산자
         //복사
         {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "javasccript"
-            }
-            const spread = { ...obj } //복사의 기능
-            console.log("19", obj.b)
-            console.log("spread",spread.a)
+            // const obj = {
+            //     a: 100,
+            //     b: 200,
+            //     c: "javasccript"
+            // }
+            // const spread = { ...obj } //복사의 기능
+            // console.log("19", obj.b)
+            // console.log("spread",spread.a)
         }
         //20. 추가 
         {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "javasccript"
-            }
-            const spread = { ...obj, d: "jquery" } //추가의 기능
-            console.log("spread",spread.a);
-            console.log("spread",spread.b);
-            console.log("spread",spread.c);
-            console.log("spread",spread.d);
+            // const obj = {
+            //     a: 100,
+            //     b: 200,
+            //     c: "javasccript"
+            // }
+            // const spread = { ...obj, d: "jquery" } //추가의 기능
+            // console.log("spread",spread.a);
+            // console.log("spread",spread.b);
+            // console.log("spread",spread.c);
+            // console.log("spread",spread.d);
         }
         //21
         {
-            const objA = {
-                a: 100,
-                b: 200
-            }
-            const objB = {
-                c: "javascript",
-                d: "jquery"
-            }
-            const spread = { ...objA, ...objB }
-            console.log("spread",spread.a);
-            console.log("spread",spread.b);
-            console.log("spread",spread.c);
-            console.log("spread",spread.d);
+            // const objA = {
+            //     a: 100,
+            //     b: 200
+            // }
+            // const objB = {
+            //     c: "javascript",
+            //     d: "jquery"
+            // }
+            // const spread = { ...objA, ...objB }
+            // console.log("spread",spread.a);
+            // console.log("spread",spread.b);
+            // console.log("spread",spread.c);
+            // console.log("spread",spread.d);
         }
         //22
         {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "javascript"
-            }
-            const { a,b,c } = obj;
+            // const obj = {
+            //     a: 100,
+            //     b: 200,
+            //     c: "javascript"
+            // }
+            // const { a,b,c } = obj;
 
-            document.write(a);
-            document.write(b);
-            document.write(c);
+            // document.write(a);
+            // document.write(b);
+            // document.write(c);
         }
         //23
         {
-            const obj = {
-                a: 100,
-                b: 200,
-                c: "javascript"
-            }
-            const { a:name1 ,b:name2 , c:name3 } = obj;
+            // const obj = {
+            //     a: 100,
+            //     b: 200,
+            //     c: "javascript"
+            // }
+            // const { a:name1 ,b:name2 , c:name3 } = obj;
 
-            document.write(name1);
-            document.write(name2);
-            document.write(name3);
+            // document.write(name1);
+            // document.write(name2);
+            // document.write(name3);
         }
     </script>
 </body>
