@@ -1,0 +1,17 @@
+body {
+    margin-bottom: 200px;
+}
+#ad {
+    h2 {
+        @include blind;
+    }
+}
+.ad__inner {
+    @include border-bottom;
+    margin-top: 40px;
+    .ad {
+        margin-bottom: 40px;
+        height: 120px;
+        background-color: #ccc;
+    }
+}
