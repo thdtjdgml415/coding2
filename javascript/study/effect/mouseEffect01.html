@@ -69,11 +69,10 @@
             /* 커서 영역 이벤트 발생 x */
             user-select: none;
             pointer-events: none;
-            transition:
-                background-color 0.3s, border-color 0.3s, transform 0.6s, border-radius 0.5s;
+            transition: background-color 0.3s, border-color 0.3s, transform 0.6s, border-radius 0.5s;
 
         }
-
+        /* 스타일에 따라 마우스 이펙트가 변하도록 */
         .mouse__cursor.style1 {
             background-color: rgba(55, 0, 255, 0.479);
             border-color: rgb(55, 0, 255);
@@ -111,8 +110,6 @@
             border-radius: 0;
 
         }
-
-
         .mouse__info {
             position: absolute;
             left: 20px;
@@ -256,15 +253,15 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-                            <pre><code class="language-js">
+<pre><code class="language-js">
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-html">
+<pre><code class="language-html">
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-css">
+<pre><code class="language-css">
 </code></pre>
                         </div>
                     </div>
@@ -284,7 +281,7 @@
     <script src="../../assets/js/highlight.min.js"></script>
     <script src="../../assets/js/common.js"></script>
     <script>
-        // 마우스 따라다니는 효과
+        //마우스의 위치를 다양한 방법으로 구함
         window.addEventListener("mousemove", (event) => {
             document.querySelector(".clientX").innerText = event.clientX;
             document.querySelector(".clientY").innerText = event.clientY;
@@ -295,17 +292,18 @@
             document.querySelector(".screenX").innerText = event.screenX;
             document.querySelector(".screenY").innerText = event.screenY;
         });
-
+        // 마우스 따라다니는 효과
         const cursor = document.querySelector(".mouse__cursor");
         const color = document.querySelectorAll(".mouse__wrap span");
 
-
+        //마우스 위치를 계산하여 구함
         window.addEventListener("mousemove", (e) => {
 
-
+            //25를 빼서 마우스커서가 정중앙에 올 수 있도록 배치
             cursor.style.left = e.clientX - 25 + "px";
             cursor.style.top = e.clientY - 25 + "px";
         });
+        
         // for문
         // for (let i = 1; i < 7; i++) {
 
@@ -319,7 +317,6 @@
         //     });
         // }
 
-
         // forEach문 
         //     document.querySelectorAll(".mouse__wrap span").forEach((span, num) => {
         //         span.addEventListener("mouseover", () => {
@@ -330,7 +327,6 @@
         //         });
 
         //     });
-
 
         // getAttribute
         document.querySelectorAll(".mouse__wrap span").forEach((span, num) => {
@@ -344,7 +340,6 @@
             });
 
         });
-
 
         // document.querySelector(".style2").addEventListener("mouseover", () => {
         //     cursor.classList.add("style2");
