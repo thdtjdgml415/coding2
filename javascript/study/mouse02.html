@@ -48,9 +48,9 @@
             <div class="document">
                 <h3 class="t_tit">마우스 유형02</h3>
                 <p class="t_desc2">
-                   이번 유형은 1번 유형과 동일하지만 Gsap를 사용하여 작업하였습니다. 
-                   gsap는 자바스크립트 라이브러리로 복잡한 애니메이션을 만들때 주로 사용한다. <br>
-                   자바스크립트로 만들었을때 보다 부드러워지는 경향도 있어서 작업해 보았습니다.
+                    이번 유형은 1번 유형과 동일하지만 Gsap를 사용하여 작업하였습니다.
+                    gsap는 자바스크립트 라이브러리로 복잡한 애니메이션을 만들때 주로 사용한다. <br>
+                    자바스크립트로 만들었을때 보다 부드러워지는 경향도 있어서 작업해 보았습니다.
                 </p>
 
                 <h3 class="t_tit2">CSS</h3>
@@ -59,7 +59,7 @@
                     두가지 커서에 딜레이를 주어서 이중으로 움직이도록 하였습니다.
                 </p>
                 <div class="t_code">
-<pre><code class="language-css">/* mouseType */
+                    <pre><code class="language-css">/* mouseType */
 .mouse__wrap {
     width: 100%;
     height: 100vh;
@@ -147,13 +147,14 @@
     background: rgba(11, 241, 49, 0.5);
 }
 </code></pre>
-                    <h3 class="t_tit2">HTML</h3>
-                    <p class="t_desc2">
-                       이번에는 자바스크립트에서 span을 선택자로 지정하여 같은 애니메이션만 나올 수 있도록 하였습니다.
-                    </p>
+                </div>
+                <h3 class="t_tit2">HTML</h3>
+                <p class="t_desc2">
+                    이번에는 자바스크립트에서 span을 선택자로 지정하여 같은 애니메이션만 나올 수 있도록 하였습니다.
+                </p>
 
-                    <div class="t_code">
-<pre><code class="language-html">&lt;main id="main"&gt;
+                <div class="t_code">
+                    <pre><code class="language-html">&lt;main id="main"&gt;
     &lt;section id="mouseType"&gt;
         &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
         &lt;div class="mouse__cursor2"&gt;&lt;/div&gt;
@@ -168,17 +169,17 @@
     &lt;/section&gt;
 &lt;/main&gt;
 </code></pre>
-                    </div>
-                    <!-- HTML -->
-                    <h3 class="t_tit2">Javascript</h3>
-                    <p class="t_desc2">
-                       gsap파일을 다운 받습니다. <br>
-                       마우스커서가 2가지이기 때문에 선택자를 각각 지정하고 상단메뉴와 명언에 각 지정한 글자에서 애니메이션 효과를 주었습니다.
+                </div>
+                <!-- HTML -->
+                <h3 class="t_tit2">Javascript</h3>
+                <p class="t_desc2">
+                    gsap파일을 다운 받습니다. <br>
+                    마우스커서가 2가지이기 때문에 선택자를 각각 지정하고 상단메뉴와 명언에 각 지정한 글자에서 애니메이션 효과를 주었습니다.
 
-                    </p>
+                </p>
 
-                    <div class="t_code">
-<pre><code class="language-js">const cursor = document.querySelector(".mouse__cursor"); //마우스 커서
+                <div class="t_code">
+                    <pre><code class="language-js">const cursor = document.querySelector(".mouse__cursor"); //마우스 커서
 const cursor2 = document.querySelector(".mouse__cursor2");  //마우스 커서2
 const span = document.querySelectorAll(".mouse__wrap span"); //오버효과
 const header = document.querySelectorAll("#header ul li");  //상단의 메뉴
@@ -219,19 +220,19 @@ window.addEventListener("mousemove", e => {  //마우스의 위치 값을 구하
     });
 });
 </code></pre>
-                    </div>
-                    <!-- javascript -->
-                    <h2 class="t_tit">결과</h2>
-                    <div class="t_iframe" style="min-width: 600px; min-height: 900px; padding-top: 0;">
-                        <iframe src="https://thdtjdgml415.github.io/coding2/javascript/study/effect/mouseEffect02.html"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="t_link">
-                        <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/study/effect/mouseEffect02.html"
-                            target="_blank">깃허브 소스 보기</a>
-                    </div>
-
                 </div>
+                <!-- javascript -->
+                <h2 class="t_tit">결과</h2>
+                <div class="t_iframe" style="min-width: 600px; min-height: 900px; padding-top: 0;">
+                    <iframe src="https://thdtjdgml415.github.io/coding2/javascript/study/effect/mouseEffect02.html"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="t_link">
+                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/study/effect/mouseEffect02.html"
+                        target="_blank">깃허브 소스 보기</a>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- //main -->
     <footer id="footer">

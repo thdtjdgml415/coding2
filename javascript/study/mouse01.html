@@ -46,17 +46,17 @@
 
         <div class="main_refer">
             <div class="document">
-                <h3 class="t_tit">마우스 유형01</h3>
+                <h3 class="t_tit">마우스 유형01-</h3>
                 <p class="t_desc2">
                     마우스 이펙트는 마우스 커서 해당위치에 커서대신 다양한 효과를 주거나 요소에 위치에서 다양한 변화를 주는 효과입니다.
                 </p>
 
                 <h3 class="t_tit2">CSS</h3>
                 <p class="t_desc2">
-                    css로 커서의 모양과 해당 요소 위에서 애니메이션을 주었습니다. 
+                    css로 커서의 모양과 해당 요소 위에서 애니메이션을 주었습니다.
                 </p>
                 <div class="t_code">
-<pre><code class="language-css">
+                    <pre><code class="language-css">
     /* mouseType */
     .mouse__wrap {
         width: 100%;
@@ -166,13 +166,14 @@
         color: #fff;
     }
 </code></pre>
+</div>
                     <h3 class="t_tit2">HTML</h3>
                     <p class="t_desc2">
-                       html은 명언에 글자마다 다른 스타일의 클래스를 부여하여 다른 애니메이션을 줄 수 있도록 만들었습니다.
+                        html은 명언에 글자마다 다른 스타일의 클래스를 부여하여 다른 애니메이션을 줄 수 있도록 만들었습니다.
                     </p>
 
                     <div class="t_code">
-<pre><code class="language-html">&lt;section id="mouseType"&gt;
+                        <pre><code class="language-html">&lt;section id="mouseType"&gt;
     &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
     &lt;div class="mouse__wrap"&gt;
         &lt;p&gt;The &lt;span class="style1"&gt;less&lt;/span&gt; their &lt;span class="style2"&gt;ability&lt;/span&gt;, the more their &lt;span
@@ -186,13 +187,13 @@
                     <!-- HTML -->
                     <h3 class="t_tit2">Javascript</h3>
                     <p class="t_desc2">
-                       마우스 커서의 위치를 mousemove를 사용하여 구하도록 합니다. <br>
-                       명언에 각 글자 부분에 style을 설정하여 각각 transition을 설정하여 다른 애니메이션이 생기도록 합니다. <br>
-                       getAttribute 메서드를 사용하여 span 요소의 클래스에 마우스가 나갈때와 들어갈때 class를 설정합니다.
+                        마우스 커서의 위치를 mousemove를 사용하여 구하도록 합니다. <br>
+                        명언에 각 글자 부분에 style을 설정하여 각각 transition을 설정하여 다른 애니메이션이 생기도록 합니다. <br>
+                        getAttribute 메서드를 사용하여 span 요소의 클래스에 마우스가 나갈때와 들어갈때 class를 설정합니다.
                     </p>
 
                     <div class="t_code">
-<pre><code class="language-js">// 마우스 따라다니는 효과
+                        <pre><code class="language-js">// 마우스 따라다니는 효과
 window.addEventListener("mousemove", (event) => {
     document.querySelector(".clientX").innerText = event.clientX;
     document.querySelector(".clientY").innerText = event.clientY;
@@ -215,7 +216,7 @@ window.addEventListener("mousemove", (e) => { //마우스가 움직일 때 따�
     cursor.style.top = e.clientY - 25 + "px"; // 마우스 커서가 정중앙에 오도록 25를 빼준다.
 });
 // for문
-// for (let i = 1; i < 7; i++) {
+// for (let i = 1; i &lt; 7; i++) {
 
 //     const cursor = document.querySelector(".mouse__cursor");
 
@@ -296,8 +297,9 @@ document.querySelectorAll(".mouse__wrap span").forEach((span, num) => { //class�
                         <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/study/effect/mouseEffect01.html"
                             target="_blank">깃허브 소스 보기</a>
                     </div>
-
                 </div>
+            </div>
+
     </main>
     <!-- //main -->
     <footer id="footer">

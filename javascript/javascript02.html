@@ -108,7 +108,7 @@ document.write(z);
                         상수는 변하지 않는 변수를 뜻한다.
                     </p>
                     <div class="script">
-                        <pre><code class="language-js">const x = 100;
+<pre><code class="language-js">const x = 100;
          y = 200;
          z = "javascript"
 
@@ -136,7 +136,7 @@ document.write(z);
                         배열은 번호(인덱스)와 번호에 대응하는 데이터들로 이루어진 자료 구조를 나타낸다.
                     </p>
                     <div class="script">
-                        <pre><code class="language-js">const arr = [100, 200, "javascript"]
+<pre><code class="language-js">const arr = [100, 200, "javascript"]
 
 document.write(arr[0]);
 document.write(arr[1]);       
@@ -162,7 +162,7 @@ document.write(arr[2]);
                         2차원 배열은 첨자 두 개를 사용하는 배열로, 같은 데이터형 변수가 행과 열을 나타내는데, 이러한 2차원적 행렬을 가리켜서 2차원 행렬이라고 한다.
                     </p>
                     <div class="script">
-                        <pre><code class="language-js">const arr = [100, 200, ["javascript", "jquery"]]
+<pre><code class="language-js">const arr = [100, 200, ["javascript", "jquery"]]
 
 document.write(arr[0]);
 document.write(arr[1]);
@@ -191,7 +191,7 @@ document.write(arr[2][1]);
                         length를 붙여서 배열 속 갯수를 구할 수 있다.
                     </p>
                     <div class="script">
-                        <pre><code class="language-js">const arr = [100, 200, "javascript"];
+<pre><code class="language-js">const arr = [100, 200, "javascript"];
 document.write(arr.length);</code></pre>
                     </div>
                     <div class="result">
@@ -249,7 +249,7 @@ for (let i = 0; i < arr.length; i++){
                     <h3>07. 배열 : 데이터 불러오기 : forEach()</h3>
                     <p></p>
                     <div class="script">
-                        <pre><code class="language-js">const num = [100, 200, 300, 400, 500];
+<pre><code class="language-js">const num = [100, 200, 300, 400, 500];
 
 //for문을 이용해서 출력
 for(let i = 0; i&lt;num.length; i++){
@@ -299,7 +299,7 @@ num.forEach(function(element, index, array){
                     <h3>08. 배열 : 데이터 불러오기 : for of</h3>
                     <p>for of문은 배열 안에 요소의 값을 출력한다.</p>
                     <div class="script">
-                        <pre><code class="language-js">const arr = [100, 200, 300, 400, 500];
+<pre><code class="language-js">const arr = [100, 200, 300, 400, 500];
 for( let i of arr){
     document.write(i);
 }   
@@ -320,7 +320,7 @@ for( let i of arr){
                     <h3>09. 배열에 데이터 불러오기</h3>
                     <p>for in문은 인덱스 값을 출력한다.</p>
                     <div class="script">
-                        <pre><code class="language-js">const arr = [100, 200, 300, 400, 500];
+<pre><code class="language-js">const arr = [100, 200, 300, 400, 500];
 for( let i in arr){
         document.write(i); 
 }</code></pre>
@@ -532,7 +532,7 @@ for (let key in obj) {
 
 
                 <div id="sample17" class="sample">
-                    <h3>17. 객체 : 데이터 불러오기 : map()</h3>
+                    <h3>17. 객체 : 데이터 불러오기</h3>
                     <p>
                         가장 많이 쓰인다.
                     </p>
@@ -601,7 +601,9 @@ document.write("d" in obj);
                 <div id="sample19" class="sample">
                     <h3>19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</h3>
                     <p>
-                        
+                        배열에 포함된 항목을 목록으로 바꿔주는 연산자이다. <br>
+                        펼침 연산자는 단독으로 쓰일 수 없음에 주의해야 한다. <br>
+                        배열에 포함된 항목을 목록으로 바꿨다면 이를 배열이나 객체 등에 담아줘야 한다. 변수에 담게 되면 에러가 발생한다.
                     </p>
                     <div class="script">
 <pre><code class="language-js">const obj = {
@@ -625,7 +627,7 @@ const spread = { ...obj } //복사의 기능
                 <div id="sample20" class="sample">
                     <h3>19. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</h3>
                     <p>
-                        
+                        배열이나 객체에 데이터를 추가할 수 있습니다.
                     </p>
                     <div class="script">
 <pre><code class="language-js">const obj = {
@@ -653,7 +655,7 @@ console.log("spread",spread.d);
                 <div id="sample21" class="sample">
                     <h3>21. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</h3>
                     <p>
-                        
+                        펼침연산자는 객체를 결합시킬 수 있습니다.
                     </p>
                     <div class="script">
 <pre><code class="language-js">const objA = {
@@ -684,7 +686,7 @@ console.log("spread",spread.d);
                 <div id="sample22" class="sample">
                     <h3>22. 객체 : 데이터 불러오기 : 비구조화 할당</h3>
                     <p>
-                        
+                        비구조화 할당 문법을 사용하면 다음과 같이 객체 안에 있는 값을 추출해서 변수 혹은 상수로 바로 선언할 수 있습니다.
                     </p>
                     <div class="script">
 <pre><code class="language-js">const obj = {
@@ -703,7 +705,7 @@ document.write(c);
                         <details>
                             <summary>결과보기</summary>
                             <div class="sample22_result">
-                                    100 <br> 200 <br> javascript <br> jquery
+                                    100 <br> 200 <br> javascript
                             </div>
                         </details>
                     </div>
@@ -712,7 +714,7 @@ document.write(c);
                 <div id="sample23" class="sample">
                     <h3>23. 객체 : 데이터 불러오기 : 객체구조분해할당</h3>
                     <p>
-                        
+                        배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 JavaScript 표현식입니다.
                     </p>
                     <div class="script">
 <pre><code class="language-js">const obj = {

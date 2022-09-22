@@ -220,7 +220,7 @@ func();                                                  //근데 리턴문이 �
                         화살표함수는 익명 함수를 변수에 지정할 때 많이 사용합니다.
                     </p>
                     <div class="script">
-                        <pre><code class="language-js">// const func = function() {
+<pre><code class="language-js">// const func = function() {
 //     document.write("함수가 실행되었습니다.6&lt;br&gt;");
 // }
 // func();
@@ -279,7 +279,7 @@ func("함수가 실행되었습니다.7&lt;br&gt;");
                 <div id="sample08" class="sample">
                     <h3>08. 화살표 함수 : 리턴값 함수</h3>
                     <div class="script">
-                        <pre><code class="language-js">// function func() {
+<pre><code class="language-js">// function func() {
 //     const str = "함수가 실행되었습니다.8&lt;br&gt;";
 //     return str;
 // }
@@ -305,7 +305,7 @@ document.write(func());
                 <div id="sample09" class="sample">
                     <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
                     <div class="script">
-                        <pre><code class="language-js">const func = (str) => {
+<pre><code class="language-js">const func = (str) => {
     return str;
 }
 document.write(func("함수가 실행되었습니다.9&lt;br&gt;"));
@@ -324,7 +324,7 @@ document.write(func("함수가 실행되었습니다.9&lt;br&gt;"));
                 <div id="sample10" class="sample">
                     <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
                     <div class="script">
-                        <pre><code class="language-js">const func = (str) => str; 
+<pre><code class="language-js">const func = (str) => str; 
 document.write(func("함수가 실행되었습니다.11"))
 </code></pre>
                     </div>
@@ -341,7 +341,7 @@ document.write(func("함수가 실행되었습니다.11"))
                 <div id="sample11" class="sample">
                     <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                     <div class="script">
-                        <pre><code class="language-js">const func = (str) => str; 
+<pre><code class="language-js">const func = (str) => str; 
 document.write(func("함수가 실행되었습니다.11&lt;br&gt;"))
 </code></pre>
                     </div>
@@ -611,6 +611,11 @@ info3.result3();
                 <!-- 20 -->
                 <div id="sample20" class="sample">
                     <h3>20. 즉시 실행 함수</h3>
+                    <p class="t_desc3">
+                        함수를 생성하면 그 함수는 전역 변수로써 남아있게 되고, 많은 변수의 생성은 전역 스코프를 오염시킬 수 있다. <br>
+                        즉시실행함수를 선언하면 내부 변수가 전역으로 저장되지 않기 때문에 전역 스코프의 오염을 줄일 수 있다. <br>
+                        즉시실행함수는 한 번의 실행 이후 없어지기 때문에 단 한번의 사용한 필요한 함수에 사용된다. 대표적인 예시로는 변수를 초기화 하는 함수가 있다.
+                    </p>
                     <div class="script">
 <pre><code class="language-js">(function func(){
     document.write("함수가 실행되었습니다.20");

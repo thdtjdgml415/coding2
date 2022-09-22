@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마우스 유형03</title>
+    <title>마우스 유형04</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
 </head>
@@ -46,17 +46,17 @@
 
         <div class="main_refer">
             <div class="document">
-                <h3 class="t_tit">마우스 유형01</h3>
+                <h3 class="t_tit"> 마우스 이펙트04 : 이미지 효과</h3>
                 <p class="t_desc2">
                     마우스 이펙트는 마우스 커서 해당위치에 커서대신 다양한 효과를 주거나 요소에 위치에서 다양한 변화를 주는 효과입니다.
                 </p>
 
                 <h3 class="t_tit2">CSS</h3>
                 <p class="t_desc2">
-                    css로 커서의 모양과 해당 요소 위에서 애니메이션을 주었습니다. 
+                    css로 커서의 모양과 해당 요소 위에서 애니메이션을 주었습니다.
                 </p>
                 <div class="t_code">
-<pre><code class="language-css"> body::after {
+                    <pre><code class="language-css"> body::after {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -125,13 +125,14 @@
     color: #fff;
 }
 </code></pre>
-                    <h3 class="t_tit2">HTML</h3>
-                    <p class="t_desc2">
-                       html은 명언에 글자마다 다른 스타일의 클래스를 부여하여 다른 애니메이션을 줄 수 있도록 만들었습니다.
-                    </p>
+                </div>
+                <h3 class="t_tit2">HTML</h3>
+                <p class="t_desc2">
+                    html은 명언에 글자마다 다른 스타일의 클래스를 부여하여 다른 애니메이션을 줄 수 있도록 만들었습니다.
+                </p>
 
-                    <div class="t_code">
-<pre><code class="language-html">&lt;main id="main"&gt;
+                <div class="t_code">
+                    <pre><code class="language-html">&lt;main id="main"&gt;
     &lt;section id="mouseType"&gt;
         &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
         &lt;div class="mouse__wrap"&gt;
@@ -154,16 +155,16 @@
     &lt;/div&gt;
 &lt;/main&gt;
 </code></pre>
-                    </div>
-                    <!-- HTML -->
-                    <h3 class="t_tit2">Javascript</h3>
-                    <p class="t_desc2">
-                       가운데 이미지가 마우스의위치에 따라 반대로 움직이도록 만들었습니다. 
-                       아래의 설명을 보며 같이 이해해보는것 좋을 거 같습니다.
-                    </p>
+                </div>
+                <!-- HTML -->
+                <h3 class="t_tit2">Javascript</h3>
+                <p class="t_desc2">
+                    가운데 이미지가 마우스의위치에 따라 반대로 움직이도록 만들었습니다. <br>
+                    아래의 설명을 보며 같이 이해해보는것 좋을 거 같습니다. <br>
+                </p>
 
-                    <div class="t_code">
-<pre><code class="language-js">const cursor = document.querySelector(".mouse__cursor")
+                <div class="t_code">
+                    <pre><code class="language-js">const cursor = document.querySelector(".mouse__cursor")
 const cursorRect = cursor.getBoundingClientRect();
 
 document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) => {
@@ -210,24 +211,26 @@ document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) 
 
 });
 </code></pre>
-                    </div>
-                    <!-- javascript -->
-                    <h2 class="t_tit">설명</h2>
-                    <div class="t_iframe">
-                        <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXlt1Fl2i1GtY9tiqxeO5uY%2FUntitled%3Fnode-id%3D12%253A54" allowfullscreen>
-                        </iframe>
-                    </div>
-                    <h2 class="t_tit">결과</h2>
-                    <div class="t_iframe" style="min-width: 600px; min-height: 900px; padding-top: 0;">
-                        <iframe src="https://thdtjdgml415.github.io/coding2/javascript/study/effect/mouseEffect04.html"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="t_link">
-                        <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/study/effect/mouseEffect04.html"
-                            target="_blank">깃허브 소스 보기</a>
-                    </div>
-
                 </div>
+                <!-- javascript -->
+                <h2 class="t_tit">설명</h2>
+                <div class="t_iframe">
+                    <iframe
+                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXlt1Fl2i1GtY9tiqxeO5uY%2FUntitled%3Fnode-id%3D12%253A54"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <h2 class="t_tit">결과</h2>
+                <div class="t_iframe" style="min-width: 600px; min-height: 900px; padding-top: 0;">
+                    <iframe src="https://thdtjdgml415.github.io/coding2/javascript/study/effect/mouseEffect04.html"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="t_link">
+                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/study/effect/mouseEffect04.html"
+                        target="_blank">깃허브 소스 보기</a>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- //main -->
     <footer id="footer">
