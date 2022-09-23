@@ -16,6 +16,16 @@ li {
     display:block;
     clear:both
 }
+
+/* layout */
 #wrap {
-    
+    width: 1000px;
+    margin: 0 auto;
+    height: 1000px;
+    background: #333;
 }
+#aside{
+    w100
+}
+#contents{}
+#footer{}
