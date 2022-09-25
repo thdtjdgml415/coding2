@@ -163,7 +163,7 @@
     }
     .imgText__inner {
         display: flex;
-        flex-direction: column
+        flex-direction: column;
     }
     .imgText__inner>div {
         width: 32%;
