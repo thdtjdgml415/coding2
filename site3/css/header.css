@@ -1,20 +1,114 @@
 #headerType {}
+
 .header__wrap {}
+
 .header__inner {
     text-align: center;
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    top: 0;
 }
+
 .header__inner .header__logo {
     font-size: 30px;
     font-weight: 900;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
+
 .header__inner .header__menu {
     width: 100%;
 }
+
 .header__inner .header__menu li {
     display: inline-block;
     padding: 10px 40px;
+    transition: all 0.5s ease;
 }
+
 .header__inner .header__menu li.active a {
-    border-bottom: 1px solid #000;
+    border-bottom: 3px solid #000;
+}
+.header__inner .header__menu li:hover {
+    background: #f2f2;
+    border-radius: 50px;
+}
+.header__ham {
+    /*햄버거 메뉴를 추가*/
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width: 1300px) {
+    .header__inner .header__menu {
+        position: fixed;
+        right: -200%;
+        top: 50px;
+        background: #fff;
+        width: 21%;
+        height: 100vh;
+        padding: 20px;
+        text-align: right;
+        transition: right 0.4s ease-in;
+    }
+    .header__menu ul li {
+        display: block;
+        margin: 20px;
+    }
+    .header__menu ul li a {
+        padding: 10px;
+       
+    }
+    .header__menu.active {
+        right: 0;
+    }
+    /* 햄버거 메뉴 */
+    .header__ham {
+        display: block;
+    }
+
+    .header__ham span {
+        /*햄버거 메뉴 아이콘 추가*/
+        display: block;
+        background: #000;
+        width: 30px;
+        height: 2px;
+        border-radius: 3px;
+        margin-left: 10px;
+        margin-top: 5px;
+        transition: 0.25s margin 0.25s, transform 0.25s;
+        /*메뉴를 눌렀을때 효과를 추가하였습니다.*/
+    }
+
+    .header__ham span:nth-child(1) {
+        margin-top: 17px;
+    }
+
+    .header__ham.active span {
+        transition: 0.25s margin, 0.25s transform 0.25s;
+        /*0.25초를 하나더 추가하며 두가지 효과가 딜레이가 생기도록 였습니다*/
+    }
+
+    .header__ham.active span:nth-child(1) {
+        margin-top: 25px;
+        margin-bottom: -7px;
+        transform: rotate(45deg);
+    }
+
+    .header__ham.active span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .header__ham.active span:nth-child(3) {
+        margin-top: -2px;
+        transform: rotate(135deg);
+    }
 }
