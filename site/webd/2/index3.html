@@ -12,18 +12,58 @@
         <aside id="aside">
             <h1><a href="#"><img src="../2/img/logo1.jpg" alt="정부24"></a></h1>
             <nav class="nav">
-                <li class="active"><a href="#">서비스</a></li>
-                <li><a href="#">정책정보</a></li>
-                <li><a href="#">기관정보</a></li>
-                <li><a href="#">고객센터</a></li>
+                <ul>
+                    <li class="active"><a href="#">서비스</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">정책정보</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                        </ul></li>
+                    <li><a href="#">기관정보</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                        </ul></li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                            <li><a href="#">submenu1</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
             </nav>
         </aside>
         <section id="contents">
-            <div class="slider__wrap">
-                <div class="slider__inner">
-                    <div class="slider"><img src="../2/img/slider1.jpg" alt=""></div>
+            <article id="banner">
+                <div class="slide__list">
+                    <div class="slide__img">
+                        <h2>페이드 효과 이미지1</h2>
+                        <div class="slider"><img src="../2/img/slider1.jpg" alt=""></div>
+                    </div>
+                    <div class="slide__img">
+                        <h2>페이드 효과 이미지2</h2>
+                        <div class="slider"><img src="../2/img/slider1.jpg" alt=""></div>
+                    </div>
+                    <div class="slide__img">
+                        <h2>페이드 효과 이미지3</h2>
+                        <div class="slider"><img src="../2/img/slider1.jpg" alt=""></div>
+                    </div>
                 </div>
-            </div>
+            </article>
             <!-- slider -->
             <article class="tabs">
                 <ul>
@@ -47,16 +87,56 @@
             </article>
             <!-- tabs -->
             <article class="layer clearfix">
-              <h2>공지사항</h2>
-              <img src="../2/img/aside1.jpg" alt="공지사항">
-              <ul>
-                <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
-                <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
-                <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
-              </ul>
+                <div>
+                    <h2>공지사항</h2>
+                    <img src="../2/img/aside1.jpg" alt="공지사항">
+                    <ul>
+                      <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
+                      <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
+                      <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
+                    </ul>
+                    <a href="#" class="more">+</a>
+                </div>
+                <div>
+                    <h2>자료실</h2>
+                    <img src="../2/img/aside2.jpg" alt="자료실">
+                    <ul>
+                      <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
+                      <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
+                      <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
+                    </ul>
+                    <a href="#" class="more">+</a>
+                </div>
+                <div>
+                    <h2>FAQ</h2>
+                    <img src="../2/img/aside3.jpg" alt="FAQ">
+                    <ul>
+                      <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
+                      <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
+                      <li>dsadasdsafdsfdfadsfdafdaffdfas</li>
+                    </ul>
+                    <a href="#" class="more">+</a>
+                </div>
             </article>
         </section>
-        <footer id="footer"></footer>
+        <footer id="footer" class="clearfix">
+            <h2><img src="../2/img/logo2.jpg" alt="정부24"></h2>
+            <address>
+                03171 서울특별시 세동대로 209 (세종로) 행정안전부 <br>
+                정부24 콜센터 1588-2188 정부민원안내콜센터 국번없이 110 <br>
+                Copyright &copy; Ministry of th Interior and Safety. All Rights reserved.
+            </address>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="../2/img/snsN.gif" alt="네이버"></a></li>
+                    <li><a href="#"><img src="../2/img/snsT.gif" alt="트위터"></a></li>
+                    <li><a href="#"><img src="../2/img/snsF.gif" alt="페이스북"></a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
+
+    <script src="../2/js/jquery.min.js"></script>
+    <script src="../2/js/index3.js"></script>
 </body>
 </html>

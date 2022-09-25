@@ -21,24 +21,25 @@ li {
 #wrap {
     width: 1000px;
     margin: 0 auto;
+    padding-top: 50px;
 
 }
 #aside {
     float: left;
-    width: 200px;
+    width: 270px;
 
 
 }
 #contents {
-    float: left;
-    width: 800px;
+    float: right;
+    width: 700px;
 
     
 }
 #footer {
     float: left;
     width: 1000px;
-    height: 100px;
+    background: #edf2f8 ;
 }
 
 /* aside */
@@ -50,19 +51,59 @@ li {
 }
 #aside .nav {}
 #aside .nav li {
-    margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 23px;
     font-weight: bold;
+    padding: 10px;
+}
+#aside .nav li a:hover {
+    text-decoration: underline;
 }
 #aside .nav li.active a {
     color: aqua;
 }
-
+#aside .nav li ul.submenu {
+    display: none;
+}
+#aside .nav li ul.submenu li {}
+#aside .nav li ul.submenu li a {
+    display: block;
+    font-style: 20px;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+#aside .nav li ul.submenu li a:hover {
+    text-decoration: none;
+}
 
 /* banner */
-
-.slider__wrap .slider__inner .slider img {
+#banner {
+    height: 384px;
+    overflow: hidden;
+}
+#banner img {
     width: 100%;
+    display: block;
+}
+#banner .slide__list {
+    width: 700px;
+    position: relative;
+}
+#banner .slide__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#banner .slide__img h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.5);
+    padding: 10px 30px;
+    border-radius: 25px;
+    color: #fff;
+
 }
 
 
@@ -111,5 +152,77 @@ li {
 }
 
 /* layer */
+.layer {
+    background: #f7f7f7;
+    padding: 15px;
+}
+.layer > div {
+    float: left;
+    width: 32%;
+    padding: 2%;
+    background: #fff;
+    text-align: center;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    margin-right: 2%;
+    position: relative;
+}
+.layer > div:first-child {
+    height: 290.9px;
+}
+.layer > div:last-child{
+    margin-right: 0;
+}
+.layer > div h2{
+    margin-bottom: 20px;
+}
+.layer > div img{
+    width: 100px;
+    padding-bottom: 20px;
+}
+.layer > div ul li{
+    margin-bottom: 5px;
+}
+.layer > div .more {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    line-height: 15px;
+
+}
+/* footer */
+#footer {
+    padding: 10px;
+    box-sizing: border-box;
+}
+#footer h2 {
+    float: left;
+}
+#footer h2 img {
+    width: 80px;
+}
+#footer address {
+    float: left;
+    font-style: normal;
+    padding: 20px 0 0 20px;
+}
+#footer .sns {
+    float: right;
+    margin-top: 20px;
+}
+#footer .sns ul {
+    overflow: hidden;
+}
+#footer .sns li {
+    float: left;
+}
+#footer .sns li img {
+    width: 60px;
+    height: 40px;
+}
 
 
