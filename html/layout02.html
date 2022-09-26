@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- 구글아이콘 -->
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#"> 라인 중학교 1학년 코딩반</a></h1>
+        <span>이름 : 송성희</span>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <header class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+        </header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li><a href="basic.html">기초 문법</a></li>
+                <li><a href="block.html">블록구조/인라인구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="sementic.html">시멘틱 태그</a></li>
+                <li><a href="seo.html">검색엔진시스템(SEO)</a></li>
+            </ul>
+            <ul>
+                <li><a href="layout01.html">레이아웃1</a></li>
+                <li class="active"><a href="layout02.html">레이아웃2</a></li>
+                <li><a href="layout03.html">레이아웃3</a></li>
+                <li><a href="layout04.html">레이아웃4</a></li>
+                <li><a href="layout05.html">레이아웃5</a></li>
+            </ul>
+        </nav>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">레이아웃2</h2>
+                <p class="t_desc2">
+                    이번 레이아웃은 한단계 더 높은 수준의 영역으로 한줄에 세가지의 영역을 나열합니다. <br>
+                    이번 영역은 header, nav, (aside, section, footer), article로 영역을 나누었습니다. <br>
+
+                </p>
+                <div class="t_iframe">
+                    <iframe width="800" height="450"
+                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeWV94w0TLw2jYyVRWHWsMf%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D52%253A5"
+                        allowfullscreen></iframe>
+                </div>
+                <!-- float -->
+                <h3 class="t_tit">float을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    aside와 section,footer영역을 한줄로 배치하기 위해서 float속성을 사용해서 작업했습니다.<br>
+                    하지만 오류로 인해서 article부분이 없어지기 때문에 clear:both를 사용해서 버그를 수정했습니다..
+                </p>
+                <div class="t_code">
+<pre><code class="language-css"> * {
+    margin: 0;
+}
+body{
+    background-color: #E8F5E9;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;;
+}
+#header {
+    width: 1200px;
+    height: 100px;
+    background-color: #C8E6C9;
+}
+#nav {
+    width: 1200px;
+    height: 100px;
+    background-color: #A5D6A7;
+}
+#aside {
+    width: 300px;
+    height: 780px;
+    background-color: #81C784;
+    float: left;
+}
+#section {
+    width: 600px;
+    height: 780px;
+    background-color: #66BB6A;
+    float: left;
+}
+#footer {
+    width: 300px;
+    height: 780px;
+    background-color: #4CAF50;
+    float: left;
+}
+#article {
+    width: 1200px;
+    height: 100px;
+    background-color: #43A047;
+    clear: both;
+}
+@media(max-width: 1220px){
+    #wrap {
+        width: 96%;
+        height: 100%;
+    }
+}
+@media(max-width: 768px){
+    #wrap {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section {
+        width: 100%;
+        height: 480px;
+    }
+}
+</code></pre>
+                </div>
+                <h4 class="t_tit2">결과</h4>
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/thdtjdgml415/embed/yLKvVqX?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/thdtjdgml415/pen/yLKvVqX">
+                        Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
+                </div>
+
+                <!-- flex -->
+                <h3 class="t_tit">flex을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                flex는 제가 지정한 모든 태그들의 부모태그인 wrap태그에 display: flex를 지정 후  <br>
+                모든 태그들이 잘 배치 될 수 있도록 flex-wrap:wrap; 을 사용해서 배치합니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">* {
+    margin: 0;
+}
+body{
+    background-color: #E8F5E9;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;;
+    display: flex;
+    flex-wrap: wrap;
+}
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: #C8E6C9;
+}
+#nav {
+    width: 100%;
+    height: 100px;
+    background-color: #A5D6A7;
+}
+#aside {
+    width: 30%;
+    height: 780px;
+    background-color: #81C784;
+}
+#section {
+    width: 50%;
+    height: 780px;
+    background-color: #66BB6A;
+}
+#footer {
+    width: 20%;
+    height: 780px;
+    background-color: #4CAF50;
+}
+#article {
+    width: 1200px;
+    height: 100px;
+    background-color: #43A047;
+}
+@media(max-width: 1220px){
+    #wrap {
+        width: 96%;
+        height: 100%;
+    }
+}
+@media(max-width: 768px){
+    #wrap {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 200px;
+    }
+    #section {
+        width: 100%;
+        height: 430px;
+    }
+    #footer{
+        width: 100%;
+        height: 150px;
+    }
+
+}
+</code></pre>
+                </div>
+                <h4 class="t_tit2">결과</h4>
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/thdtjdgml415/embed/NWYybLR?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/thdtjdgml415/pen/NWYybLR">
+                        Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
+                </div>
+
+
+
+
+
+                <!-- grid -->
+                <h3 class="t_tit">grid을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    grid를 이용한 레이아웃 배치 입니다.    <br>
+                    grid는 부모태그에서 지정한 모든 태그들을 컨트롤하는 것입니다.   <br>
+                    부모태그에서 grid-template-areas를 지정 후 grid-template-columns, grid-template-rows를 사용해서 지정한 영역의 행 높이& 열 넓이를 지정합니다. <br>
+                    또한 grid-template-areas로 지정한 모든 자식태그에서 grid-area로 정의해 주어야합니다. 
+                </p>
+                <div class="t_code">
+<pre><code class="language-css"> * {
+    margin: 0;
+}
+body{
+    background-color: #E8F5E9;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto; /* 블록구조를 가운데 정렬 */
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "aside section footer"
+        "article article article"
+    ;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 100px 100px 780px 100px;
+}
+#header {
+    grid-area: header;
+    background-color: #C8E6C9;
+}
+#nav {
+    grid-area: nav;
+    background-color: #A5D6A7;
+}
+#aside {
+    grid-area: aside;
+    background-color: #81C784;
+}
+#section {
+    grid-area: section;
+    background-color: #66BB6A;
+}
+#footer {
+    grid-area: footer;
+    background-color: #4CAF50;
+}
+#article {
+    grid-area: article;
+    background-color: #43A047;
+}
+@media(max-width: 1220px){
+    #wrap {
+        width: 96%;
+    }
+}
+@media(max-width: 768px){
+    #wrap {
+        width: 100%;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "aside section"
+        "footer footer"
+        "article article"
+        ;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 100px 100px 630px 150px 100px;
+    }
+}
+@media(max-width: 480px){
+    #wrap {
+        grid-template-areas:
+        "header"
+        "nav"
+        "aside"
+        "section"
+        "footer"
+        "article"
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 100px 200px 430px 150px 100px;
+    }
+}
+</code></pre>
+                </div>
+                <h4 class="t_tit2">결과</h4>
+                <div class="t_iframe">
+                    <iframe src="https://codepen.io/thdtjdgml415/embed/ZExrBqa?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/thdtjdgml415/pen/ZExrBqa">
+                        grid02</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

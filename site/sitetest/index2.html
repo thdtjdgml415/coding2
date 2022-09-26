@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cooket</title>
+    <link rel="stylesheet" href="/site/sitetest/css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="img/Untitled-1.jpg" alt="cooket"></a></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">cooket소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                            <li><a href="#">sub-menu1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">cooket메뉴</a>
+                        <ul class="submenu">
+                            <li><a href="#">sub-menu2</a></li>
+                            <li><a href="#">sub-menu2</a></li>
+                            <li><a href="#">sub-menu2</a></li>
+                            <li><a href="#">sub-menu2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">리뷰</a>
+                        <ul class="submenu">
+                            <li><a href="#">sub-menu3</a></li>
+                            <li><a href="#">sub-menu3</a></li>
+                            <li><a href="#">sub-menu3</a></li>
+                            <li><a href="#">sub-menu3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트</a>
+                        <ul class="submenu">
+                            <li><a href="#">sub-menu4</a></li>
+                            <li><a href="#">sub-menu4</a></li>
+                            <li><a href="#">sub-menu4</a></li>
+                            <li><a href="#">sub-menu4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">my쿡킷</a>
+                        <ul class="submenu">
+                            <li><a href="#">sub-menu4</a></li>
+                            <li><a href="#">sub-menu4</a></li>
+                            <li><a href="#">sub-menu4</a></li>
+                            <li><a href="#">sub-menu4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+        <section id="banner">
+            <div class="slideList">
+                <div class="sliderImg">
+                    <h2>이미지1</h2>
+                    <img src="img/logo2.jpg" alt="">
+                </div>
+                <div class="sliderImg">
+                    <h2>이미지2</h2>
+                    <img src="img/logo2.jpg" alt="">
+                </div>
+                <div class="sliderImg">
+                    <h2>이미지3</h2>
+                    <img src="img/logo2.jpg" alt="">
+                </div>
+            </div>
+
+        </section>
+        <!-- banner -->
+    </div>
+    <script src="script/jquery.min.js"></script>
+    <script>
+        $(".nav > ul > li").mouseover(function () {
+            $(this).find(".submenu").stop().slideDown(200);
+        })
+        $(".nav > ul > li").mouseout(function(){
+            $(this).find(".submenu").stop().slideUp(200);
+        })
+    </script>
+    <script>
+       let currentIndex = 0;
+       
+       setInterval(() => {
+        if (currentIndex < 2) {
+            currentIndex++;
+        } else {
+            currentIndex =0
+        }
+
+        let slidePosition = currentIndex * (-1000) + "px";
+        $(".slideList").animate({ left: slidePosition }, 400)
+       }, 1000);
+    </script>
+
+</body>
+
+</html>

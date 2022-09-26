@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 함수의 종류</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">함수의 유형</h2>
+
+            <div class="main_sample">
+                <h3 class="t_tit2">1. 함수 유형 : 함수 유형 : 함수와 매개변수를 이용한 형태</h3>
+                <p class="t_desc2">
+                    매개변수를 받아와서 각각 넣어준다. <br>
+                    함수를 재활용하기 쉽다. 변수만 변경해주면 값이 변하기 때문이다.
+                </p>
+                <div class="t_code">
+                    <pre><code classs="js-language"> function func(num, str1, str2) {   //재활용하기가 용의하다. 
+    document.write(num + str1 + "가" + str2 + "되었습니다.1<br>")
+}
+func("1.", "함수", "실행");//매개변수 만듬 
+func("2.", "자바스크립트", "실행"); //매개변수 만듬
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result01">
+                            <script>
+                                {
+                                    function func(num, str1, str2) {   //재활용하기가 용의하다. 
+                                        document.write(num + str1 + "가" + str2 + "되었습니다.1<br>")
+                                    }
+                                    func("1.", "함수", "실행");//매개변수 만듬 
+                                    func("2.", "자바스크립트", "실행"); //매개변수 만듬
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+                <!-- 2 -->
+                <h3 class="t_tit2">2. 함수 유형 : 함수와 변수를 이용한 형태</h3>
+                <p class="t_desc2">
+                   함수와 매개변수를 이용한 형태를 사용하다가 코드가 길어지면 매개변수를 계속 생성하면서 복잡해져서 깔끔하지 않아져서 
+                </p>
+                <div class="t_code">
+<pre><code classs="js-language"> function func(num, str1, str2) {
+    document.write(num + str1 + "가" + str2 + "되었습니다.2<br>")
+}
+const youNum1 = 1;
+const youNum2 = 2;
+const youNum3 = 3;
+const youStr1 = "함수";
+const youStr2 = "자바스크립트";
+const youStr3 = "제이쿼리";
+const youCom1 = "실행";
+
+func(youNum1, youStr1, youCom1);
+func(youNum2, youStr2, youCom1);
+func(youNum3, youStr3, youCom1);
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result01">
+                            <script>
+                                {
+                                    function func(num, str1, str2) {
+                                        document.write(num + str1 + "가" + str2 + "되었습니다.15<br>")
+                                    }
+                                    const youNum1 = 1;
+                                    const youNum2 = 2;
+                                    const youNum3 = 3;
+                                    const youStr1 = "함수";
+                                    const youStr2 = "자바스크립트";
+                                    const youStr3 = "제이쿼리";
+                                    const youCom1 = "실행";
+
+                                    func(youNum1, youStr1, youCom1);
+                                    func(youNum2, youStr2, youCom1);
+                                    func(youNum3, youStr3, youCom1);
+
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+
+
+
+                <!-- 3 -->
+                <h3 class="t_tit2">3. 함수 유형 : 함수와 배열 또는 객체를 이용한 형태</h3>
+                <p class="t_desc2">
+                    함수를 만드는 가장 일반적인 형식
+                </p>
+                <div class="t_code">
+                    <pre><code classs="js-language">function func(num, str1, str2) {   //재활용하기가 용의하다. 
+    document.write(num + str1 + "가" + str2 + "되었습니다.3<br>")
+}
+const info = [
+    {
+        num: "1.",
+        name: "함수",
+        com: "실행"
+    },
+    {
+        num: "2.",
+        name: "자바스크립트",
+        com: "실행"
+    },
+    {
+        num: "3.",
+        name: "제이쿼리",
+        com: "실행"
+    }
+]
+func(info[0].num, info[0].name, info[0].com);
+func(info[1].num, info[1].name, info[1].com);
+func(info[2].num, info[2].name, info[2].com);
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result01">
+                            <script>
+                                {
+                                    function func(num, str1, str2) {   //재활용하기가 용의하다. 
+                                        document.write(num + str1 + "가" + str2 + "되었습니다.3<br>")
+                                    }
+                                    const info = [
+                                        {
+                                            num: "1.",
+                                            name: "함수",
+                                            com: "실행"
+                                        },
+                                        {
+                                            num: "2.",
+                                            name: "자바스크립트",
+                                            com: "실행"
+                                        },
+                                        {
+                                            num: "3.",
+                                            name: "제이쿼리",
+                                            com: "실행"
+                                        }
+                                    ]
+                                    func(info[0].num, info[0].name, info[0].com);
+                                    func(info[1].num, info[1].name, info[1].com);
+                                    func(info[2].num, info[2].name, info[2].com);
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+                <!--2 -->
+                <h3 class="t_tit2">3.함수 유형 : 객체 안에 변수와 함수를 이용한 형태</h3>
+                <p class="t_desc2">
+
+                </p>
+                <div class="t_code">
+<pre><code classs="js-language">const info = {
+    num1: "1.",
+    name: "함수",
+    word1: "실행",
+    num2: "2.",
+    name2: "자바스크립트",
+    word2: "실행",
+    num3: "3.",
+    name3: "제이쿼리",
+    word3: "실행",
+
+    result1: function () {
+        document.write(info.num1 + info.name + "가" + info.word1 + "되었습니다3.<br>");
+    },
+    result2: function () {
+        document.write(info.num2 + info.name2 + "가" + info.word2 + "되었습니다3.<br>");
+    },
+    result3: function () {
+        document.write(info.num3 + info.name3 + "가" + info.word3 + "되었습니다3.<br>");
+    }
+}
+info.result1();
+info.result2();
+info.result3();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result02">
+                            <script>
+                                {
+                                    const info = {
+                                        num1: "1.",
+                                        name: "함수",
+                                        word1: "실행",
+                                        num2: "2.",
+                                        name2: "자바스크립트",
+                                        word2: "실행",
+                                        num3: "3.",
+                                        name3: "제이쿼리",
+                                        word3: "실행",
+
+                                        result1: function () {
+                                            document.write(info.num1 + info.name + "가" + info.word1 + "되었습니다3.<br>");
+                                        },
+                                        result2: function () {
+                                            document.write(info.num2 + info.name2 + "가" + info.word2 + "되었습니다3.<br>");
+                                        },
+                                        result3: function () {
+                                            document.write(info.num3 + info.name3 + "가" + info.word3 + "되었습니다3.<br>");
+                                        }
+                                    }
+                                    info.result1();
+                                    info.result2();
+                                    info.result3();
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- 3 -->
+                <h3 class="t_tit2">3. 함수 유형 : 객체 생성자 함수</h3>
+                <p class="t_desc2">
+
+                </p>
+                <div class="t_code">
+<pre><code classs="js-language"> function func(num, name, word) {
+    this.num = num;
+    this.name = name;
+    this.word = word;
+
+    this.result = function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다4.<br>");
+    }
+}
+
+//인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+const info1 = new func("1", "함수", "실행");
+const info2 = new func("2", "자바스크립트", "실행");
+const info3 = new func("3", "제이쿼리", "실행");
+
+//실행
+info1.result();
+info2.result();
+info3.result();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result03">
+                            <script>
+                                {
+                                    function func(num, name, word) {
+                                        this.num = num;
+                                        this.name = name;
+                                        this.word = word;
+
+                                        this.result = function () {
+                                            document.write(this.num + this.name + "가" + this.word + "되었습니다4.<br>");
+                                        }
+                                    }
+
+                                    //인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+                                    const info1 = new func("1", "함수", "실행");
+                                    const info2 = new func("2", "자바스크립트", "실행");
+                                    const info3 = new func("3", "제이쿼리", "실행");
+
+                                    //실행
+                                    info1.result();
+                                    info2.result();
+                                    info3.result();
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+                <!-- 4 -->
+                <h3 class="t_tit2">4. 프로트타입 (쓸데없는 다른 페이지에서도 인스턴트가 실행되는걸 막기위해 만듬 함수이름을 따로 정해서 원하는 함수만 실행)</h3>
+                <p class="t_desc2">
+
+                </p>
+                <div class="t_code">
+<pre><code classs="js-language"> function func(num, name, word) {
+    this.num = num;
+    this.name = name;
+    this.word = word;
+}
+
+func.prototype.result = function () {
+    document.write(this.num + this.name + "가" + this.word + "되었습니다5.<br>");
+}
+
+//인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+const info1 = new func("1", "함수", "실행");
+const info2 = new func("2", "자바스크립트", "실행");
+const info3 = new func("3", "제이쿼리", "실행");
+
+//실행
+info1.result();
+info2.result();
+info3.result();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result04">
+                            <script>
+                                {
+                                    function func(num, name, word) {
+                                        this.num = num;
+                                        this.name = name;
+                                        this.word = word;
+
+                                        this.result = function () {
+                                            document.write(this.num + this.name + "가" + this.word + "되었습니다5.<br>");
+                                        }
+                                    }
+
+                                    //인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+                                    const info1 = new func("1", "함수", "실행");
+                                    const info2 = new func("2", "자바스크립트", "실행");
+                                    const info3 = new func("3", "제이쿼리", "실행");
+
+                                    //실행
+                                    info1.result();
+                                    info2.result();
+                                    info3.result();
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+                <!--5-->
+                <h3 class="t_tit2">5. 함수 유형 : 객체 리터럴 함수 (함수를 객체안에 모아준다.)</h3>
+                <p class="t_desc2">
+                    함수를 변수에 할당해 주는 것으로 함수 선언문과 문법만 다르고 동작방식, 실행방식도 동일하다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-js"> function func(num, name, word) {
+    this.num = num;
+    this.name = name;
+    this.word = word;
+}
+
+func.prototype = {
+    result1: function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+    },
+    result2: function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+    },
+    result3: function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+    }
+}
+
+//인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+const info1 = new func("1", "함수", "실행");
+const info2 = new func("2", "자바스크립트", "실행");
+const info3 = new func("3", "제이쿼리", "실행");
+
+//실행
+info1.result1();
+info2.result2();
+info3.result3();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result05">
+                            <script>
+                                {
+                                    function func(num, name, word) {
+                                        this.num = num;
+                                        this.name = name;
+                                        this.word = word;
+                                    }
+
+                                    func.prototype = {
+                                        result1: function () {
+                                            document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+                                        },
+                                        result2: function () {
+                                            document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+                                        },
+                                        result3: function () {
+                                            document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+                                        }
+                                    }
+
+                                    //인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+                                    const info1 = new func("1", "함수", "실행");
+                                    const info2 = new func("2", "자바스크립트", "실행");
+                                    const info3 = new func("3", "제이쿼리", "실행");
+
+                                    //실행
+                                    info1.result1();
+                                    info2.result2();
+                                    info3.result3();
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+                <!-- 6 -->
+                <h3 class="t_tit2">6. 함수 유형 : 객체 리터럴 함수 (함수를 객체안에 모아준다.)</h3>
+                <p class="t_desc2">
+                    함수를 변수에 할당해 주는 것으로 함수 선언문과 문법만 다르고 동작방식, 실행방식도 동일하다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-js"> function func(num, name, word) {
+    this.num = num;
+    this.name = name;
+    this.word = word;
+}
+
+func.prototype = {
+    result1: function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+    },
+    result2: function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+    },
+    result3: function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+    }
+}
+
+//인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+const info1 = new func("1", "함수", "실행");
+const info2 = new func("2", "자바스크립트", "실행");
+const info3 = new func("3", "제이쿼리", "실행");
+
+//실행
+info1.result1();
+info2.result2();
+info3.result3();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result05">
+                            <script>
+                                {
+                                    function func(num, name, word) {
+                                        this.num = num;
+                                        this.name = name;
+                                        this.word = word;
+                                    }
+
+                                    func.prototype = {
+                                        result1: function () {
+                                            document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+                                        },
+                                        result2: function () {
+                                            document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+                                        },
+                                        result3: function () {
+                                            document.write(this.num + this.name + "가" + this.word + "되었습니다19.<br>")
+                                        }
+                                    }
+
+                                    //인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+                                    const info1 = new func("1", "함수", "실행");
+                                    const info2 = new func("2", "자바스크립트", "실행");
+                                    const info3 = new func("3", "제이쿼리", "실행");
+
+                                    //실행
+                                    info1.result1();
+                                    info2.result2();
+                                    info3.result3();
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>

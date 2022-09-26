@@ -1,0 +1,16 @@
+/* footer */
+
+.footer__inner {
+    margin-top: 30px;
+    border-top: 1px solid #000;
+    padding-top: 20px;
+
+}
+.footer__inner p{
+    color: #666;
+    line-height: 1.4;
+}
+.footer__inner p span {
+    margin: 30px 0 30px 0;
+    display: inline-block;
+}

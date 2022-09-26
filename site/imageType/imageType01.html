@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지유형</title>
+    <style>
+        /* font */
+        @import url('https://webfontworld.github.io/score/SCoreDream.css');
+
+        .score {
+            font-family: 'SCoreDream';
+        }
+
+        /* reset */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common */
+        .section {
+            margin: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .section>p {
+            font-size: 22px;
+            color: #666;
+            font-weight: 300;
+            text-align: center;
+            padding-top: 20px;
+            margin-bottom: 70px;
+        }
+
+        .container {
+            width: 1160px;
+            height: 500px;
+            margin: 0 auto;
+            padding: 20px 0;
+        } 
+
+        /* imageType */
+
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image__inner .image {
+            width: 48%;
+            background: #ccc;
+            width: 570px;
+            height: 370px;
+            color: #fff;
+            box-sizing: border-box;
+            padding: 180px 30px 30px 30px;
+        }
+        .image__inner .img1 {
+            background : url(https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/img/card_bg01_01.jpg?raw=true) no-repeat center / cover
+        }
+        .image__inner .img2 {
+            background : url(https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/img/card_bg01_02.jpg?raw=true) no-repeat center / cover
+        }
+        .image h3 {
+            font-size: 32px;
+            line-height: 1.4;
+            text-align: left;
+        }
+        .image p {
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 10px 0;
+            text-align: left;
+        }
+        .image a {
+            background-color: #B45A30;
+            padding: 10px 20px;
+            margin-top: 10px;
+            display: inline-block;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="imageType" class="image__wrap score section">
+        <h2>포트폴리오가 실력이다.</h2>
+        <p>이미지 유형입니다. 마우스 오버시 자세한 정보가 나와있는 구조입니다.</p>
+        <div class="image__inner container">
+            <article class="image img1">
+                <h3>동물원</h3>
+                <p>포트폴리오는 취업에 있어 정말 중요합니다. 그동안 배웠던 내용을 복습하고 배워봅시다</p>
+                <a href="#">자세히보기</a>
+            </article>
+            <article class="image img2">
+                <h3>동물원</h3>
+                <p>포트폴리오는 취업에 있어 정말 중요합니다. 그동안 배웠던 내용을 복습하고 배워봅시다</p>
+                <a href="#">자세히보기</a>
+            </article>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>눈물의 사이트 만들기1</title>
+    <!-- SEO -->
+    <meta name="author" content="song">
+    <meta name="description" content="눈물의 사이트 만들기 튜토리얼입니다.">
+    <meta name="keyword" content="눈물, 사이트, 만들기, 튜토리얼, 기초">
+    <meta name="robot" content="all">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/swiper.css" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <!-- 폰트는 항상 가장 위에서 연결되어야함 -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+
+    <!-- CSS(섹션별) -->
+    <link rel="stylesheet" href="assets/css/headermine.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/img.css">
+    <link rel="stylesheet" href="assets/css/text.css">
+    <link rel="stylesheet" href="assets/css/imagetext.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+
+    <style>
+        /* #headerType {
+            display: none;
+        } */
+
+        /* #sliderType{display: none;} */
+        /* #imageType{display: none;} */
+        /* #imgtextType{display: none;} */
+        /* #cardType{display: none;} */
+        /* #bannerType{display: none;} */
+        /* #textType{display: none;} */
+        /* #footerType{display: none;} */
+    </style>
+
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#">헤더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">이미지/텍스트 영역 바로가기</a>
+        <a href="#">카드 영역 바로가기</a>
+        <a href="#">배너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+    <header id="headerType" class="header__wrap nexon section">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#">web <em>site</em></a>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <li class="active"><a href="#headerType">헤더 영역</a></li>
+                    <li><a href="#imageType">이미지 영역</a></li>
+                    <li><a href="#imgtextType">이미지/텍스트 영역</a></li>
+                    <li><a href="#cardType">카드 영역</a></li>
+                    <li><a href="#bannerType">배너 영역</a></li>
+                </ul>
+            </nav>
+            <div class="header__member">
+                <a href="#">로그인</a>
+            </div>
+            <!-- sidemenu -->
+            <a href="#" class="side__btn"></a>
+            <nav class="side__menu">
+                <ul>
+                    <li><a href="#headerType">헤더 영역</a></li>
+                    <li><a href="#imageType">이미지 영역</a></li>
+                    <li><a href="#imgtextType">이미지/텍스트 영역</a></li>
+                    <li><a href="#cardType">카드 영역</a></li>
+                    <li><a href="#bannerType">배너 영역</a></li>
+                    <li><a href="#login">로그인</a></li>
+                </ul>
+            </nav>
+            <!-- sidemenu -->
+        </div>
+    </header>
+    <!-- //headerType -->
+    <main id="mainType">
+        <section id="sliderType" class="slider__wrap section">
+            <h2 class="blind">슬라이드 영역</h2>
+            <!-- <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__img">
+                        <div class="desc">
+                            <span>DEVELOPER</span>
+                            <h3>space</h3>
+                            <p>
+                                먼 곳에서 보지말고 직접가서 보자 <br>
+                                꿈꾸기만 하면 아무것도 이루어지지 않는다!
+                            </p>
+                            <div class="btn">
+                                <a href="#">자세히 보기</a>
+                                <a href="#" class="black">사이트 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#" class="left"><span class="ir">이전이미지</span></a>
+                        <a href="#" class="right"><span class="ir">다음이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="" class="dot active"><span class="ir">1</span></a>
+                        <a href="" class="dot"><span class="ir">2</span></a>
+                        <a href="" class="dot"><span class="ir">3</span></a>
+                        <a href="" class="play"><span class="ir">플레이</span></a>
+                        <a href="" class="stop"><span class="ir">정지</span></a>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="desc">
+                            <span>DEVELOPER</span>
+                            <h3>space</h3>
+                            <p>
+                                먼 곳에서 보지말고 직접가서 보자 <br>
+                                꿈꾸기만 하면 아무것도 이루어지지 않는다!
+                            </p>
+                            <div class="btn">
+                                <a href="#">자세히 보기</a>
+                                <a href="#" class="black">사이트 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="desc">
+                            <span>DEVELOPER</span>
+                            <h3>space</h3>
+                            <p>
+                                먼 곳에서 보지말고 직접가서 보자 <br>
+                                꿈꾸기만 하면 아무것도 이루어지지 않는다!
+                            </p>
+                            <div class="btn">
+                                <a href="#">자세히 보기</a>
+                                <a href="#" class="black">사이트 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="desc">
+                            <span>DEVELOPER</span>
+                            <h3>space</h3>
+                            <p>
+                                먼 곳에서 보지말고 직접가서 보자 <br>
+                                꿈꾸기만 하면 아무것도 이루어지지 않는다!
+                            </p>
+                            <div class="btn">
+                                <a href="#">자세히 보기</a>
+                                <a href="#" class="black">사이트 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+        <!--sliderType-->
+        <h2 class="blind">이미지 영역</h2>
+        <section id="imageType" class="image__wrap score section position">
+            <h2>우주🚀</h2>
+            <p>우주는 더이상 갈 수 없는 영역이 아닙니다. 저희가 도와드리겠습니다.</p>
+            <div class="image__inner container">
+                <article class="image img1">
+                    <h3 class="image__title">달 프로젝트</h3>
+                    <p class="image__desc">달에서 진행하는 사업에 대한 이야기를 나눠보도록 하겠습니다. 달은 지금도 개발하고 있습니다 저희도 시대보다 앞서 가기위해서... </p>
+                    <a href="#">자세히보기</a>
+                </article>
+                <article class="image img2">
+                    <h3 class="image__title">은하 프로젝트</h3>
+                    <p class="image__desc">우리 은하계가 얼마나 많은 자원을 가지고 있는지 알고 있으십니까? 은하계는 엄청난 가치를 지니고 있고 탐사를 위해 여러분에 도움이
+                        필요합니다. </p>
+                    <a href="#">자세히보기</a>
+                </article>
+            </div>
+        </section>
+        </section>
+        <!--imageType-->
+        <section id="imgtextType" class="imgText__wrap nexon section position">
+            <h2 class="blind">유용한 사이트 살펴보기</h2>
+            <div class="imgText__inner container">
+                <div class="imgText__txt">
+                    <span>우주에 관한 사이트</span>
+                    <h3>Space reference</h3>
+                    <p>우주산업에 투자해보세요!</p>
+                    <ul>
+                        <li><a href="/">튜토리얼 사이트</a></li>
+                        <li><a href="/">레퍼런스 사이트</a></li>
+                        <li><a href="/">space 사이트</a></li>
+                        <li><a href="/">twitter 사이트</a></li>
+                        <li><a href="/">spaceX 사이트</a></li>
+                        <li><a href="/">Youtube사이트</a></li>
+                    </ul>
+                </div>
+                <div class="imgText__img img1">
+                    <a href="/">레퍼런스 사이트</a>
+                </div>
+                <div class="imgText__img img2">
+                    <a href="/" class="blue">튜토리얼 사이트</a>
+                </div>
+            </div>
+        </section>
+        <!--imgTextType-->
+        <section id="cardType" class="card__wrap">
+            <h2 class="blind">카드 영역</h2>
+            <section id="cardType" class="card__wrap nexon section position">
+                <h2>SPACE PLANETS🐷</h2>
+                <p>행성에 대해 자세히 배워가시면 더욱 도움이 될 것 입니다.</p>
+                <div class="card__inner container">
+                    <article class="card">
+                        <!-- 시멘틱 태그 다음에는 제목이 와야한다. 룰임; -->
+                        <figure class="card__header">
+                            <img src="../site1/assets/img/card_bg01.jpg" alt="행성">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="tit">토성</h3>
+                            <p class="desc">
+                                토성 고리에는 엄청나게 많은 위성들이 있습니다, 그중에도 타이탄이라는 위성에는 많은 석유를 매장하고 있다는 보고가 있습니다.
+                                이자원들을 활용...
+                            </p>
+                            <a class="btn" href="/">
+                                더 자세히 보기
+                                <span aria-hidden="true">
+                                    <svg width="58" height="8" viewBox="0 0 58 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M57.3536 4.35355C57.5488 4.15829 57.5488 3.84171 57.3536 3.64645L54.1716 0.464466C53.9763 0.269204 53.6597 0.269204 53.4645 0.464466C53.2692 0.659728 53.2692 0.976311 53.4645 1.17157L56.2929 4L53.4645 6.82843C53.2692 7.02369 53.2692 7.34027 53.4645 7.53553C53.6597 7.7308 53.9763 7.7308 54.1716 7.53553L57.3536 4.35355ZM0 4.5H57V3.5H0V4.5Z"
+                                            fill="black" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../site1/assets/img/card_bg02.jpg" alt="행성">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="tit">해왕성</h3>
+                            <p class="desc">
+                                해왕성에는 수자원이 풍부해서 여러분들에게 충분한 물을 제공해 줄 수 있습니다.
+                                행성을 개발 할 수 있다면 지구에 물 부족은 존재하지 않을 것입니다.
+                            </p>
+                            <a class="btn" href="/">
+                                더 자세히 보기
+                                <span aria-hidden="true">
+                                    <svg width="58" height="8" viewBox="0 0 58 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M57.3536 4.35355C57.5488 4.15829 57.5488 3.84171 57.3536 3.64645L54.1716 0.464466C53.9763 0.269204 53.6597 0.269204 53.4645 0.464466C53.2692 0.659728 53.2692 0.976311 53.4645 1.17157L56.2929 4L53.4645 6.82843C53.2692 7.02369 53.2692 7.34027 53.4645 7.53553C53.6597 7.7308 53.9763 7.7308 54.1716 7.53553L57.3536 4.35355ZM0 4.5H57V3.5H0V4.5Z"
+                                            fill="black" />
+                                    </svg>
+                                </span>
+                            </a>
+                      </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../site1/assets/img/card_bg03.jpg" alt="행성">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="tit">달</h3>
+                            <p class="desc">
+                                달에는 현재 심심치 않게 갈 수 있습니다.
+                                여러분들은 달에 얼마나 많은 양의 자원이 있는지 알고 있으십니다.
+                                어떤 가치가 있는지 이야기를 나눠보겠습니다.
+                            </p>
+                            <a class="btn" href="/">
+                                더 자세히 보기
+                                <span aria-hidden="true">
+                                    <!-- 웹표준을 준수하기위해 보이스가 읽지 않도록 해줌 -->
+                                    <svg width="58" height="8" viewBox="0 0 58 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M57.3536 4.35355C57.5488 4.15829 57.5488 3.84171 57.3536 3.64645L54.1716 0.464466C53.9763 0.269204 53.6597 0.269204 53.4645 0.464466C53.2692 0.659728 53.2692 0.976311 53.4645 1.17157L56.2929 4L53.4645 6.82843C53.2692 7.02369 53.2692 7.34027 53.4645 7.53553C53.6597 7.7308 53.9763 7.7308 54.1716 7.53553L57.3536 4.35355ZM0 4.5H57V3.5H0V4.5Z"
+                                            fill="black" />
+                                    </svg>
+                                </span>
+
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+            </section>
+        </section>
+        <!--cardType-->
+        <section id="bannerType" class="banner__wrap nexon section position">
+            <h2 class="blind">배너 영역</h2>
+            <div class="banner__inner">
+                <h3 class="title">우주</h3>
+                <p class="desc">
+                    미지의 탐사를 원하시는 분은
+                    <a href="/" title="페이지 이동"> 많은 질문 부탁드리고 이곳을 클릭해주세요.</a>
+                </p>
+                <span class="small blind">배너유형01</span>
+            </div>
+        </section>
+        <!--bannerType-->
+        <section id="textType" class="text__wrap">
+            <h2 class="blind">텍스트 영역</h2>
+            <section id="textType" class="text__wrap nexon section position">
+                <span class="blind">텍스트 유형01</span>
+                <h2>도움을 주신 모든 분들</h2>
+                <div class="text__inner container">
+                    <div class="text t1">
+                        <h3 class="text__title">space</h3>
+                        <p class="text__desc">작년에 다양한 컨텐츠를 만들었던 Space 기업입니다.</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                    <div class="text t2">
+                        <h3 class="text__title">Tesla</h3>
+                        <p class="text__desc">전기차로 세계에서 손꼽히는 기업으로 거대규모의 기업입니다.</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                    <div class="text t3">
+                        <h3 class="text__title">MS</h3>
+                        <p class="text__desc">마이크로소프트는 소프트웨어에서 독보적인 기업입니다.</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                    <div class="text t4">
+                        <h3 class="text__title">Samsung</h3>
+                        <p class="text__desc">대한민국의 최대 기업인 삼성에서도 저희에게 투자를 해주고 있습니다.</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                    <div class="text t5">
+                        <h3 class="text__title">Meta</h3>
+                        <p class="text__desc">얼마전에 이름을 facebook에서 바꾼 메타입니다.</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                    <div class="text t6">
+                        <h3 class="text__title">apple</h3>
+                        <p class="text__desc">애플에서도 저희에게 투자하고 있습니다.</p>
+                        <a class="text_btn" href="/">더보기</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--textType-->
+    </main>
+    <!-- //mainType -->
+    <footer id="footerType" class="footer__wrap nexon section gray">
+        <h2 class="blind">푸터 영역</h2>
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <div>
+                    <h3>사이트</h3>
+                    <ul>
+                        <li><a href="/">웹 표준 사이트</a></li>
+                        <li><a href="/">반응형 사이트</a></li>
+                        <li><a href="/">페럴랙스 사이트</a></li>
+                        <li><a href="/">포트폴리오 사이트</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>헤더 영역</h3>
+                    <ul>
+                        <li><a href="/">메뉴 유형01</a></li>
+                        <li><a href="/">메뉴 유형02</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>슬라이드 영역</h3>
+                    <ul>
+                        <li><a href="/">슬라이드 유형01</a></li>
+                        <li><a href="/">슬라이드 유형02</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>이미지 영역</h3>
+                    <ul>
+                        <li><a href="/">이미지 유형01</a></li>
+                        <li><a href="/">이미지 유형02</a></li>
+                        <li><a href="/">이미지/텍스트 유형01</a></li>
+                        <li><a href="/">이미지/텍스트 유형02</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>컨텍츠 영역</h3>
+                    <ul>
+                        <li><a href="/">카드 유형01</a></li>
+                        <li><a href="/">카드 유형02</a></li>
+                        <li><a href="/">카드 유형03</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>푸터 영역</h3>
+                    <ul>
+                        <li><a href="/">푸터 메뉴 유형01</a></li>
+                        <li><a href="/">푸터 컨택트 유형02</a></li>
+                        <li><a href="/">푸터 이메일 유형03</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__right">
+                2022thdtjdgml. Portfolio Power <br>
+                All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- //footerType -->
+    <script src="../sitetest/script/jquery.min.js"></script>
+    <script src="../site1/assets/js/parallax.js"></script>
+    <script src="../site1/assets/js/active.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // autoplay: {
+            //     delay: 1000,
+            // },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
+    <script>
+        const bgColor = document.querySelectorAll(".position");
+
+        window.addEventListener("scroll",() => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+            
+            bgColor.forEach((el, i) => {
+                if(scrollTop >= el.offsetTop-1000) {
+                    document.querySelectorAll(".header__menu li").forEach((li) => {
+                        li.classList.remove("active")
+                    }) 
+                    document.querySelector(`.header__menu li:nth-child(${i+1})`).classList.add("active");
+                }  
+            });
+        });
+    </script>
+</body>
+
+</html>

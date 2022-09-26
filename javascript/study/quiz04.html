@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">수학 객체</a></li>
+                    <li><a href="../javascript08.html">숫자 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="searchEffect01.html">검색 효과</a></li>
+                    <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                    <li><a href="textEffect01.html">텍스트 효과</a></li>
+                    <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                    <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                    <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                    <li><a href="gameEffect01,html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">퀴즈 프로그램 객관식문제</h2>
+                <p class="t_desc2">
+                    자바스크립트를 이용해 다중문제가 나오도록 설정하였고 for문, forEach문을 사용해 <br>
+                    코드를 효과적으로 사용하였습니다
+                </p>
+                <h3 class="t_tit">자바스크립트 객관식문제</h3>
+                <p class="t_desc2">
+                    ▶우선 선택자를 정합니다.(각각 선택자가 무엇을 출력할지 정해주고 알맞는 이름을 써줘서 변수에 넣어준다.). <br>
+                    ▶문제의 정보를 가져와서 각각의 정보들을 quizInfo 변수에 대입해서 넣어줍니다. <br>
+                    ▶문제 출력을 담당하는 메서드와 보기를 출력하는 반복문을 updateQuiz라는 함수를 만들어서로 묶어주고 실행문을 적습니다. (한눈에 보기 쉽기 때문에 묶어줍니다.) <br>
+                    ▶이전에는 사용자의 정답과 문제의 정답만 비교해서 확인하면 되었는데 객관식에서는 사용자가 선택한 답을 문제에 답과 비교해 주어야합니다. <br>
+                    위에서 quiz__selects 클래스를 만들어 보기를 관리했고 각각에 알맞는 value 값을 주었습니다, <br>
+                    또한 조건문에 checked 메서드를 사용해 사용자가 선택한 답은 checked 되었다는 표시를 자바스크립트에 전달하여 정답을 표기하면 하나씩 다 비교해서 어디에 체크되었는지 확인
+                    할 수 있게 되었고 <br>
+                    중첩반복문을 사용해 정답일때 오답일 때 상황을 나누어 전달하였습니다. <br>
+                    자세한 내용은 코드와 설명을 보면서 다시이야기 해보겠습니다.
+                </p>
+
+                <h3 class="t_tit2">객관식 보기</h3>
+                <p class="t_desc2">
+                    퀴즈 보기를 설정합니다.
+                    버튼 태그를 radio로 설정하고 각각 선택자를 설정해 사용한다.
+                    type, id, class, name, value값을 각각 지정합니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-html">&lt;div class="quiz__answer">
+    &lt;div class="quiz__selects"&gt;
+        &lt;label for="select1"&gt;
+            &lt;input type="radio" id="select1" class="select" name="select" value="1"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="select2"&gt;
+            &lt;input type="radio" id="select2" class="select" name="select" value="2"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="select3"&gt;
+            &lt;input type="radio" id="select3" class="select" name="select" value="3"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="select4"&gt;
+            &lt;input type="radio" id="select4" class="select" name="select" value="4"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button class="confirm"&gt;정답 확인하기&lt;/button&gt;
+    &lt;div class="result"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                <h3 class="t_tit2">선택자 정하기</h3>
+                <p class="t_desc2">
+                    선택자를 정합니다 <br>
+                    객관식이기 때문에 quizSelects, quizSelect, quizChoice를 만들어 넣어줍니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">//선택자
+const quizType = document.querySelector(".quiz__type");               //퀴즈종류
+const quizNumber = document.querySelector(".quiz__question .number"); //퀴즈번호
+const quizAsk = document.querySelector(".quiz__question .ask");       //퀴즈 질문
+const quizConfirm = document.querySelector(".quiz__answer .confirm")  //정답확인버튼
+const quizResult = document.querySelector(".quiz__answer .result")    // 정답 결과
+const quizView = document.querySelector(" .quiz__view")               //강아지 //뷰어로 바꾸어서 정답과 오답박스를 출력한다.
+const quizSelects = document.querySelector(".quiz__selects");         //객관식 보기
+const quizChoice = quizSelects.querySelectorAll(".choice");           //객관식 보기 선택자를 quizSelects  집중시켜서 낭비가 없도록 합니다. 
+const quizSelect = document.querySelectorAll(".select");              //선택한 번호
+// 요소다중선택이 필요한경우 querySelectorAll을 사용해서 한다.
+</code></pre>
+                </div>
+                <h3 class="t_tit2">출력하기</h3>
+                <p class="t_desc2">
+                    ▶문제정보가 들어있는 객체를 배열로 묶어서 quizInfo에 대입합니다. <br>
+                    ▶그리고 문제를 출력하기 위해서 textContent 메서드를 사용해서 불러오도록 합니다.(배열은 0부터 시작하기 때문에 [0]을 써줍니다.)0 <br>
+                    ▶for문을 이용해서 quizInfo속에 있는 answerChoice를 불러옵니다. <br>
+                    ▶그리고 사용자가 정보를 입력하고 정답확인버튼을 누르기 전에는 정답을 숨기기 위해 'none'을 사용합니다. <br>
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">//문제정보
+const quizInfo = [
+    {
+        answerType: "웹디자인 기능사 2022년 1회",
+        answerNum: "1",
+        answerAsk: "월드 와이드 웹(WWW)서비스를 이용하기 위해 개발된 프로그램으로 인터넷에 연결된 컴퓨터를 탐색하고 원하는 정보를 읽어 들여 그 내용을 화면에 표시해 주는 클라이언트 프로그램은?",
+        answerChoice: ["배너", "포털 사이트", "웹 브라우저", "홈페이지"],
+        answerResult: "3",
+        answerEx: "월드 와이드 웹(WWW)서비스를 이용하기 위해 개발된 프로그램으로 인터넷에 연결된 컴퓨터를 탐색하고 원하는 정보를 읽어 들여 그 내용을 화면에 표시해 주는 클라이언트 프로그램은 웹 브라우저 입니다."
+    }
+]
+
+
+//문제 출력 함수: 관리하기 쉽게 하나로 묶어서 사용한다.
+function updateQuiz() {
+    //문제 출력
+    quizType.textContent = quizInfo[0].answerType;
+    quizNumber.textContent = quizInfo[0].answerNum + ". ";
+    quizAsk.textContent = quizInfo[0].answerAsk;
+    quizResult.textContent = quizInfo[0].answerEx;
+
+    //보기 출력
+
+    for (let i = 0; i < quizSelect.length; i++) {
+        quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+    }
+
+    // quizChoice.forEach((el, i) => {
+    //     quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+    // })
+}
+updateQuiz();
+
+//해설 숨기기
+quizResult.style.display = "none";
+</code></pre>
+                </div>
+                <h3 class="t_tit2">정답 판단하기</h3>
+                <p class="t_desc2">
+                    ▶사용자가 보기를 선택하였는지 checked메서드를 사용해서 확인합니다. <br>
+                    ▶결과값이 true가 나왔다면 사용자가 보기를 선택하였고 조건문을 사용해서 오답인지 정답인지 확인해야 합니다. <br>
+                    ▶정답을 선택했다면 classList.add 메서드를 사용해서 quizView변수 안에 dog에 클래스를 추가해줍니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">//정답 확인
+
+function answerQuiz() {
+
+    //사용자가 선택한 정답과 == 문제 정답
+    //사용자가 클릭한 input --> checked라는 속성을 확인해야 한다.
+    
+    for (let i = 0; i < quizSelect.length; i++) {
+        if (quizSelect[i].checked == true) {         //quizSelect[i].checked == true 보기에 체크가 된 상태
+            
+            // 체크된 번호 == 문제번호
+            if (quizSelect[i].value == quizInfo[0].answerResult) {
+                alert("정답");
+                quizView.classList.add("like");
+            } else {
+                alert("오답");
+                quizView.classList.add("dislike");
+                quizResult.style.display = "block";
+                quizConfirm.style.display = "none"
+            }
+        }
+    }
+}
+</code></pre>
+            </div>
+
+            
+            <!-- js -->
+
+            <h4 class="t_tit2">결과</h4>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://thdtjdgml415.github.io/coding2/javascript/effect/quizEffect04.html"
+                    frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                </iframe>
+            </div>
+
+            <div class="t_link">
+                <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/effect/quizEffect04.html"
+                    target="_blank">원본 소스 보기</a>
+            </div>  
+            
+
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

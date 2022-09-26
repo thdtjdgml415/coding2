@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">수학 객체</a></li>
+                    <li><a href="../javascript08.html">숫자 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="searchEffect01.html">검색 효과</a></li>
+                    <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                    <li><a href="textEffect01.html">텍스트 효과</a></li>
+                    <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                    <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                    <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                    <li><a href="gameEffect01,html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+
+        <div class="main_refer">
+            <div class="document">
+                <h4 class="t_tit2">결과</h4>
+                <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fprp4zEVazT8gVI8qRG6K9N%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D35%253A680" allowfullscreen></iframe>
+                </div>
+                <h3 class="t_tit">카드유형03</h3>
+                <p class="t_desc2">
+                    이번 유형은 전체 레이아웃을 구성하고 card__inner, card__content, card__footer로 구성하여 사용하여 작업하였습니다
+                </p>
+
+                <h3 class="t_tit2">CSS</h3>
+                <p class="t_desc2">
+                    폰트는 import방식을 사용하여 에스코어드림 폰트를 사용하였습니다.
+                    우선 오른쪽 칸에 선을 주어 적절하게 배치하였습니다.
+                    그리고 알맞은 위치에 이미지와 내용을 배치하도록 했습니다.
+                    사진에 들어가는 animal박스도 figcaption태그에 position을 card__header태그를 기준으로 잡고 배치하였습니다.
+                    또한 웹 표준을 시멘틱 태그 뒤에는 무조건 제목이 와야하지만 눈에 보이지 않게 하기위한 설정을 넣어주었습니다. (네이버 사이트를 참고하였습니다.)
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">/* fonts */
+    @import url('https://webfontworld.github.io/score/SCoreDream.css');
+
+    .score {
+        font-family: 'SCoreDream';
+        font-weight: 300;
+    }
+
+    /* reset */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: normal;
+    }
+
+    /* common 다른 유형에도 기본적으로 들어감*/
+    .container {
+        width: 1160px;
+        padding: 0 20px 200px;
+        margin: 0 auto;
+        min-width: 1160px;
+        overflow: hidden;
+    }
+
+    .section {
+        padding: 120px 0;
+
+    }
+
+    .section>h2 {
+        font-size: 50px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section>p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #666;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    /* blind : 시멘틱 태그 뒤에는 제목이 와야하지만 눈에 보이지 않게 하기윈한 설정 네이버 참조*/
+    .blind {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+    }
+
+    /* 막막하면 레이아웃 생각해서 박스만들어서 정렬한다고 생각하자 */
+    /* cardType03 */
+    body {
+        background-color: #2254c3;
+    }
+
+    .card__inner {
+        display: flex;
+    }
+
+    .card__inner .card {
+        padding: 26px;
+        width: 33.3333%;
+        background-color: #fff;
+    }
+
+    .card__inner .card:nth-child(1) {
+        border-right: 1px solid #eee;
+    }
+
+    .card__inner .card:nth-child(2) {
+        border-right: 1px solid #eee;
+    }
+<!-- 각각 카드에 오른쪽에 선을 표현하기 위해 넣었습니다. -->
+
+    .card__header {
+        position: relative;
+    }
+
+    .card__header img {
+        border-radius: 10px;
+        box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+    }
+
+    .card__header figcaption {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding: 6px 16px;
+        border-radius: 50px;
+        background-color: #fff;
+        text-align: center;
+        font-size: 14px;
+        color: #7b7b7b;
+    }
+
+    .card__contents {}
+
+    .card__contents h3 {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+    }
+
+    .card__contents p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.7;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; 
+        -webkit-box-orient: vertical;
+        margin-bottom: 30px;        <!-- 세줄효과 (검색해서 찾아보기)-->
+
+    }
+
+    .card__footer {
+        display: flex;
+        justify-content: end; /* 끝으로 정렬 */
+    }
+
+    .card__footer h4 {
+        text-align: right;
+        color: #dd2a2a;
+    }
+
+    .card__footer em {
+        display: block;
+        font-style: normal;
+        color: #666;
+    }
+    .card__footer  span {
+        width: 40px;
+        height: 40px;
+    }
+    .card__footer  span img {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: 10px;
+        display: block;
+        margin-top: 2px; 
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+</code></pre>
+                    <h3 class="t_tit2">HTML</h3>
+                    <p class="t_desc2">
+                    HTML입니다. card__header과 card__contents, card__footer로 구성하였습니다.  <br>
+                    card__header에는 이미지를 넣고 card__contents에는 정보를 card__footer에는 이름과 사진을 넣었습니다. <br>
+                    img 태그를 사용하여 이미지를 삽입하였습니다.  <br>
+                    이미지에 있는 animal 박스는 figcaption태그를 사용하여 배치하였습니다. 
+                    </p>
+                    <div class="t_code">
+<pre><code class="language-html">&lt;section id="cardType03" class="card_wrap score section"&gt;
+        &lt;h2 class="blind"&gt;동물의 세계&lt;/h2&gt;
+        &lt;div class="card__inner container"&gt;
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/card_bg03_01.jpg" alt="animal"&gt;
+                    &lt;span&gt;Architects&lt;/span&gt;
+                    &lt;figcaption&gt;animal&lt;/figcaption&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__contents"&gt;
+                    &lt;h3&gt;동물원에 동물을 보고 느끼고 만지고 하는 것이 우리 생활에..&lt;/h3&gt;
+                    &lt;p&gt;동물에 대해 배우고 각 동물의 특성을 알 수 있다면 동물원에 가서 동물들의 행동을 보고 실제로 확인하면서 더욱 즐길 수 있습니다. 여우는 종류에 따라 사는 곳이 다르며&lt;/p&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="card__footer"&gt;
+                    &lt;h4&gt;동물학자 &lt;em&gt;Hesperioidea&lt;/em&gt;&lt;/h4&gt;
+                    &lt;span&gt;
+                        &lt;img src="img/card_bg03_icon01.png" alt="animal"&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/card_bg03_02.jpg" alt="animal"&gt;
+                    &lt;span&gt;Architects&lt;/span&gt;
+                    &lt;figcaption&gt;animal&lt;/figcaption&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__contents"&gt;
+                    &lt;h3&gt;여러분들이 정서적으로 안정감을 찾으 수 있을 뿐만 아니라...&lt;/h3&gt;
+                    &lt;p&gt;동물원을 돌아다니면서 동물의 특징과 식습관을 알아보기 위함이기 때문에 공부를 해서 동물원을 좀 더 재밌고 유익하게 돌아다닐 수 있게 만드는 것이 호랑이를&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="card__footer"&gt;
+                    &lt;h4&gt;동물학자&lt;em&gt;Hesperioidea&lt;/em&gt;&lt;/h4&gt;
+                    &lt;span&gt;
+                        &lt;img src="img/card_bg03_icon02.png" alt="animal"&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+            &lt;article class="card"&gt;
+                &lt;figure class="card__header"&gt;
+                    &lt;img src="img/card_bg03_03.jpg" alt="animal"&gt;
+                    &lt;span&gt;Architects&lt;/span&gt;
+                    &lt;figcaption&gt;animal&lt;/figcaption&gt;
+                &lt;/figure&gt;
+                &lt;div class="card__contents"&gt;
+                    &lt;h3&gt;그래도 동물은 위험합니다. 여러분이 동물원에 오셔서 많은 것을 배우..&lt;/h3&gt;
+                    &lt;p&gt; 여러분은 동물에 대해 얼마나 알고 있으신가요? 동물에 대해 배우고 행동 특성 어떤 생김새를 가지고 있는지 알고 있다면 더욱 유익한 시간이 될 수
+                        있습니다.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="card__footer"&gt;
+                    &lt;h4&gt;동물학자 &lt;em&gt;Hesperioidea&lt;/em&gt;&lt;/h4&gt;
+                    &lt;span&gt;
+                        &lt;img src="img/card_bg03_icon03.png" alt="animal"&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+</code></pre>
+                    </div>
+                    <!-- js -->
+                    <div class="t_iframe">
+                        <iframe src="https://thdtjdgml415.github.io/coding2/site/cardType/cardType03.html"
+                            frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/thdtjdgml415/pen/QWmQGrG">
+                                Untitled</a> by thdtjdgml415 (<a
+                                href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                        </iframe>
+                    </div>
+                    <div class="t_link">
+                        <a href="https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/cardType03.html"
+                            target="_blank">깃허브 소스 보기</a>
+                    </div>
+                    <div class="t_link">
+                        <a href="https://thdtjdgml415.github.io/coding2/site/cardType/cardType03.html"
+                            target="_blank">원본 사이트 보기</a>
+                    </div> 
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

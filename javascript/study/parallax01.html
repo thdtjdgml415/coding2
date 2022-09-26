@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 효과</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">수학 객체</a></li>
+                    <li><a href="../javascript08.html">숫자 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="searchEffect01.html">검색 효과</a></li>
+                    <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                    <li><a href="textEffect01.html">텍스트 효과</a></li>
+                    <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                    <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                    <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                    <li><a href="gameEffect01,html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">패럴랙스 효과</h2>
+                <p class="t_desc2">
+                    페럴랙스 효과는 스크롤을 내리면서 알맞은 스크롤의 위치에서 효과가 생기는 것을 말합니다.
+                </p>
+                <!-- scrollTop -->
+                <h3 class="t_tit2">scollTop</h3>
+                <p class="t_desc2">
+                    scrollTop 속성을 이용해서 자신이 보고있는 window환경에서의 위치를 구합니다. <br>
+                    (scrollTop값은 현재 자신의 스크롤 위치라고도 합니다)
+                </p>
+                <div class="t_result">
+                    <details>
+                        <summary>scrollTop보기</summary>
+                        <div class="result">
+                            <div class="t_code">
+                                <pre><code class="language-js"> window.addEventListener("scroll", () => {
+
+// let scrollTop = window.pageYOffset;
+// let scrollTop = window.scrollY;
+// let scrollTop = document.documentElement.scrollTop;
+let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop; //한번에 처리
+</code></pre>
+                            </div>
+                    </details>
+                </div>
+                <!-- menu -->
+
+                <h3 class="t_tit2">메뉴바 위치 옮기기</h3>
+                <p class="t_desc2">
+                    section 별로 offset위치를 가져와서 클래스 active를 추가시키고 제거해서 메뉴에 배경을 변화시킵니다. <br>
+                    for문, forEach문으로 만들어 보았습니다.
+                </p>
+                <div class="t_result">
+                    <details>
+                        <summary>offset위치</summary>
+                        <div class="result">
+                            <div class="t_code">
+                                <pre><code class="language-js"> // 크기에 따라 번호가 바뀐다.
+// if (scrollTop >= document.getElementById("section1").offsetTop) {
+//     document.querySelectorAll("#parallax__nav li").forEach(li => {
+//         li.classList.remove("active")
+//     });
+//     document.querySelector("#parallax__nav li:nth-child(1)").classList.add("active")
+// }
+// if (scrollTop >= document.getElementById("section2").offsetTop) {
+//     document.querySelectorAll("#parallax__nav li").forEach(li => {
+//         li.classList.remove("active")
+//     });
+//     document.querySelector("#parallax__nav li:nth-child(2)").classList.add("active")
+// }
+// if (scrollTop >= document.getElementById("section3").offsetTop) {
+//     document.querySelectorAll("#parallax__nav li").forEach(li => {
+//         li.classList.remove("active")
+//     });
+//     document.querySelector("#parallax__nav li:nth-child(3)").classList.add("active")
+// }
+// if (scrollTop >= document.getElementById("section4").offsetTop) {
+//     document.querySelectorAll("#parallax__nav li").forEach(li => {
+//         li.classList.remove("active")
+//     });
+//     document.querySelector("#parallax__nav li:nth-child(4)").classList.add("active")
+// }
+// if (scrollTop >= document.getElementById("section5").offsetTop) {
+//     document.querySelectorAll("#parallax__nav li").forEach(li => {
+//         li.classList.remove("active")
+//     });
+//     document.querySelector("#parallax__nav li:nth-child(5)").classList.add("active")
+// }
+// if (scrollTop >= document.getElementById("section6").offsetTop) {
+//     document.querySelectorAll("#parallax__nav li").forEach(li => {
+//         li.classList.remove("active")
+//     });
+//     document.querySelector("#parallax__nav li:nth-child(6)").classList.add("active")
+// }
+// if (scrollTop >= document.getElementById("section7").offsetTop) {
+//     document.querySelectorAll("#parallax__nav li").forEach(li => {
+//         li.classList.remove("active")
+//     });
+//     document.querySelector("#parallax__nav li:nth-child(7)").classList.add("active")
+// }
+// if (scrollTop >= document.getElementById("section8").offsetTop) {
+//     document.querySelectorAll("#parallax__nav li").forEach(li => {
+//         li.classList.remove("active")
+//     });
+//     document.querySelector("#parallax__nav li:nth-child(8)").classList.add("active")
+// }
+// if (scrollTop >= document.getElementById("section9").offsetTop) {
+//     document.querySelectorAll("#parallax__nav li").forEach(li => {
+//         li.classList.remove("active")
+//     });
+//     document.querySelector("#parallax__nav li:nth-child(9)").classList.add("active")
+// }
+
+
+// for문
+// for (let i = 1; i &lt;= 9; i++) {
+//     if (scrollTop >= document.getElementById(`section${i}`).offsetTop) {
+//         document.querySelectorAll("#parallax__nav li").forEach(li => {
+//             li.classList.remove("active")
+//         });
+//         document.querySelector(`#parallax__nav li:nth-child(${i})`).classList.add("active")
+//     }
+// }
+
+// forEach문
+document.querySelectorAll(".content__item").forEach((element, index) => {
+    if (scrollTop >= document.getElementById(`section${index + 1}`).offsetTop) {
+        document.querySelectorAll("#parallax__nav li").forEach(li => {
+            li.classList.remove("active")
+        });
+        document.querySelector(`#parallax__nav li:nth-child(${index + 1})`).classList.add("active")
+    }
+});
+</code></pre>
+                            </div>
+                    </details>
+                </div>
+                <!-- menu -->
+
+                <h3 class="t_tit2">info</h3>
+                <p class="t_desc2">
+                    for문을 이용해서 section별로 확인해서 offset값을 출력해 주었습니다.
+                </p>
+                <div class="t_result">
+                    <details>
+                        <summary>메뉴바 이동</summary>
+                        <div class="result">
+                            <div class="t_code">
+                                <pre><code class="language-js">document.querySelector(".scroll span").innerText = Math.round(scrollTop);
+//하단에 각 section별로 offset위치 표시합니다.
+for (let i = 1; i &lt;= 9; i++) {
+    document.querySelector(".offset" + i).innerText = document.getElementById("section" + i).offsetTop;
+}  
+</code></pre>
+                            </div>
+                    </details>
+                </div>
+                <!-- info -->
+                <h3 class="t_tit2">info</h3>
+                <p class="t_desc2">
+                    getAttribute 메서드를 이용해서 section에 속성값을 가져와서 적용시켜줍니다. <br>
+                    scrollIntoView를 사용하여 메뉴바를 부드럽게 이동시켜줍니다.
+                </p>
+                <div class="t_result">
+                    <details>
+                        <summary>메뉴바 이동을 부드럽게 해주기</summary>
+                        <div class="result">
+                            <div class="t_code">
+                                <pre><code class="language-js">//스크롤이동
+    document.querySelectorAll("#parallax__nav li a").forEach(li => {
+        li.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector(li.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });    
+}  
+</code></pre>
+                            </div>
+                    </details>
+                </div>
+                <!-- info -->
+                <h4 class="t_tit2">결과</h4>
+                <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                    <iframe
+                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FdmrXhO1ckj8W6ImWXGa20z%2FUntitled%3Fnode-id%3D0%253A1"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="t_iframe" style="min-width: 600px; min-height: 900px; padding-top: 0;">
+                    <iframe src="https://thdtjdgml415.github.io/coding2/javascript/effect/parallaxEffect01.html"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="t_link">
+                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/effect/parallaxEffect01.html"
+                        target="_blank">원본 소스 보기</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

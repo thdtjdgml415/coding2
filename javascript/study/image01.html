@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형01</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">수학 객체</a></li>
+                    <li><a href="../javascript08.html">숫자 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="searchEffect01.html">검색 효과</a></li>
+                    <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                    <li><a href="textEffect01.html">텍스트 효과</a></li>
+                    <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                    <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                    <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                    <li><a href="gameEffect01,html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+
+        <div class="main_refer">
+            <div class="document">
+                <h3 class="t_tit">이미지유형 01번</h3>
+                <p class="t_desc2">
+                    이번에 만들어볼 사이트입니다.  <br>
+                    자세히보기가 들어가있는 형식의 사이트입니다. <br>
+                    피그마를 이용하여 이미지를 만들어 작업하였습니다. <br> 
+  
+                </p>
+
+                <h3 class="t_tit2">CSS</h3>
+                <p class="t_desc2">
+                    이미지를 백그라운드 효과 방식으로 삽입하였습니다. <br>
+                    flex를 사용하고 justify-content를 사용하여 이미지를 정렬하였습니다. <br>
+                    자세히보기와 내용을 백그라운드 이미지 삽입 방식을 통해 이미지 위에 배치하였습니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">/* font */
+@import url('https://webfontworld.github.io/score/SCoreDream.css');
+
+.score {
+    font-family: 'SCoreDream';
+}
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* common */
+.section {
+    margin: 120px 0;
+}
+
+.section>h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.section>p {
+    font-size: 22px;
+    color: #666;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 70px;
+}
+
+.container {
+    width: 1160px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* imageType */
+
+.image__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image__inner .image {
+    width: 48%;
+    background: #ccc;
+    width: 570px;
+    height: 370px;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 180px 30px 30px 30px;
+}
+.image__inner .img1 {
+    background : url(../card_bg01_01.jpg) no-repeat center / cover
+}
+.image__inner .img2 {
+    background : url(../card_bg01_02.jpg) no-repeat center / cover
+}
+.image h3 {
+    font-size: 32px;
+    line-height: 1.4;
+    text-align: left;
+}
+.image p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 10px 0;
+    text-align: left;
+}
+.image a {
+    background-color: #B45A30;
+    padding: 10px 20px;
+    margin-top: 10px;
+    display: inline-block;
+    color: #fff;
+}
+</code></pre>
+                    <h3 class="t_tit2">HTML</h3>
+                    <p class="t_desc2">
+                        HTML입니다. section으로 전체를 묶어서 사용하였고 이미지와 내용을 container 영역을 만들어서 
+                        article을 만들고 그안에 이미지와 내용을 삽입하였습니다.
+
+                    </p>
+
+                    <div class="t_code">
+<pre><code class="language-html">
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;section id="imageType" class="image__wrap score section"&gt;
+        &lt;h2&gt;포트폴리오가 실력이다.&lt;/h2&gt;
+        &lt;p&gt;이미지 유형입니다. 마우스 오버시 자세한 정보가 나와있는 구조입니다.&lt;/p&gt;
+        &lt;div class="image__inner container"&gt;
+            &lt;article class="image img1"&gt;
+                &lt;h3&gt;동물원&lt;/h3&gt;
+                &lt;p&gt;포트폴리오는 취업에 있어 정말 중요합니다. 그동안 배웠던 내용을 복습하고 배워봅시다&lt;/p&gt;
+                &lt;a href="#"&gt;자세히보기&lt;/a&gt;
+            &lt;/article&gt;
+            &lt;article class="image img2"&gt;
+                &lt;h3&gt;동물원&lt;/h3&gt;
+                &lt;p&gt;포트폴리오는 취업에 있어 정말 중요합니다. 그동안 배웠던 내용을 복습하고 배워봅시다&lt;/p&gt;
+                &lt;a href="#"&gt;자세히보기&lt;/a&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                    </div>
+                    <!-- HTML -->
+                    <h2 class="t_tit">결과</h2>
+                    <div class="t_iframe">
+                        <iframe src="https://codepen.io/thdtjdgml415/embed/NWYoVor?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/thdtjdgml415/pen/NWYoVor">
+                            Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                          </iframe>
+                    </div>
+                    <div class="t_link">
+                        <a href="https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/img/imageType/imageType01.html"
+                            target="_blank">깃허브 소스 보기</a>
+                    </div>
+
+                </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

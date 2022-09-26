@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">수학 객체</a></li>
+                    <li><a href="../javascript08.html">숫자 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="searchEffect01.html">검색 효과</a></li>
+                    <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                    <li><a href="textEffect01.html">텍스트 효과</a></li>
+                    <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                    <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                    <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                    <li><a href="gameEffect01,html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+
+        <div class="main_refer">
+            <div class="document">
+                <h3 class="t_tit">텍스트유형 02번</h3>
+                <p class="t_desc2">
+                    이번에 만들어볼 사이트입니다.  <br>
+                    자세히보기가 들어가있는 형식의 사이트입니다. <br>
+                    피그마를 이용하여 이미지를 만들어 작업하였습니다. <br> 
+  
+                </p>
+
+                <h3 class="t_tit2">CSS</h3>
+                <p class="t_desc2">
+                    이미지를 백그라운드 효과 방식으로 삽입하였습니다. <br>
+                    flex를 사용하고 justify-content를 사용하여 이미지를 정렬하였습니다. <br>
+                    자세히보기와 내용을 백그라운드 이미지 삽입 방식을 통해 이미지 위에 배치하였습니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">   .nexon {
+    font-family: 'NexonLv1GothicLow';
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* common */
+.container {
+    width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    min-width: 1200px;
+}
+
+.section {
+    padding: 120px 0;
+}
+
+.section>h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section>p {
+    font-size: 22px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* textType02 */
+.text__inner {
+    display: flex;
+}
+
+.text__head {
+    width: 413px;
+    margin-right: 50px;
+}
+
+.text__head .logo {
+    width: 230px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    background-color: #CD2020;
+    text-align: center;
+    border-radius: 50px;
+    margin-bottom: 20px;
+
+}
+
+.text__head .title {
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.text__head .desc {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.text__card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+.text__card .text {
+    padding: 0 20px 20px 20px;
+    width: 40%;
+    margin-bottom: 50px;
+    transition: all 0.5s;
+}
+
+.text__card .text:hover {
+    background-color: #ccc;
+}
+
+.text__card .text .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background: url('icons.svg') no-repeat;
+}
+
+.text__card .text:nth-child(1) .icon {
+    background-color: #8BFFF8;
+}
+
+.text__card .text:nth-child(2) .icon {
+    background-color: #D2FFEB;
+    background-position: -100px 1px;
+}
+
+.text__card .text:nth-child(3) .icon {
+    background-color: #FFE1E1;
+    background-position: -200px 1px;
+}
+
+.text__card .text:nth-child(4) .icon {
+    background-color: #D9DDFE;
+    background-position: -100px -100px;
+}
+
+.text__card .text h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.text__card .text p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #666;
+}
+</code></pre>&lt;h3 class="t_tit2"&gt;HTML&lt;/h3&gt;
+                    &lt;p class="t_desc2"&gt;
+                        HTML입니다. section으로 전체를 묶어서 사용하였고 이미지와 내용을 container 영역을 만들어서 
+                        article을 만들고 그안에 이미지와 내용을 삽입하였습니다.
+
+                    &lt;/p&gt;
+
+                    &lt;div class="t_code"&gt;
+&lt;pre&gt;&lt;code class="language-html"&gt;
+    &lt;section id="textType02" class="text__wrap nexon section"&gt;
+        &lt;div class="text__inner container"&gt;
+            &lt;div class="text__head"&gt;
+                &lt;p class="logo"&gt;FRONTEND&lt;/p&gt;
+                &lt;p class="title"&gt;프론트 앤드 개발자는 무엇을 할까?&lt;/p&gt;
+                &lt;p class="desc"&gt;프론트 앤드 개발자가 되기 위해서
+                    무엇을 해야할까요?
+                    개발자가 되기위한 지침서가 여기 있습니다.
+                    한번 보고가면 도움이 많이 될 것 같습니다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="text__card"&gt;
+                &lt;article class="text"&gt;
+                    &lt;div class="icon"&gt;
+                        &lt;span class="ir"&gt;image&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;h3&gt;텍스트 유형&lt;/h3&gt;
+                    &lt;p&gt;
+                        레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형
+                    &lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="text"&gt;
+                    &lt;div class="icon"&gt;&lt;span class="ir"&gt;image&lt;/span&gt;&lt;/div&gt;
+                    &lt;h3&gt;텍스트 유형&lt;/h3&gt;
+                    &lt;p&gt;
+                        레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형
+                    &lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="text"&gt;
+                    &lt;div class="icon"&gt;&lt;span class="ir"&gt;image&lt;/span&gt;&lt;/div&gt;
+                    &lt;h3&gt;텍스트 유형&lt;/h3&gt;
+                    &lt;p&gt;
+                        레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형
+                    &lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="text"&gt;
+                    &lt;div class="icon"&gt;&lt;span class="ir"&gt;image&lt;/span&gt;&lt;/div&gt;
+                    &lt;h3&gt;텍스트 유형&lt;/h3&gt;
+                    &lt;p&gt;
+                        레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형레이아웃 유형
+                    &lt;/p&gt;
+                &lt;/article&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+</code></pre>
+                    </div>
+                    <!-- HTML -->
+                    <h4 class="t_tit2">결과</h4>
+                    <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                        <iframe src="https://thdtjdgml415.github.io/coding2/site/cardType/layoutType/textType02.html"
+                            frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+                    </div>
+                    <div class="t_link">
+                        <a href="https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/textType/textType02.html"
+                            target="_blank">깃허브 소스 보기</a>
+                    </div>
+
+                </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

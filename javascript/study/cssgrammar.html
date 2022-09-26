@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 함수의 종류</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    
+    <main id="main">
+        <div class="document">
+        <h2 class="t_tit">CSS기본문법</h2>
+            <p class="t_desc2">
+                CSS기본 문법에 대해 설명드리겠습니다.
+            </p>
+            <div class="main_sample">
+            <!-- 내부스타일시트 -->
+            <h3 class="t_tit2">내부 스타일시트</h3>
+            <p class="t_desc2">
+                CSS를 HTML문법 안에 &lt;style&gt; 태그로 기재하여 HTML 문서 안에 CSS가 함께 저장되도록 하는 형태입니다. 
+            </p>
+            <div class="t_code">
+<pre><code classs= "HTML-language">&lt;!DOCTYPE html&gt;
+    &lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;style type = "text/css"&gt;
+            p { color : red ; }
+            &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p&gt;우리를 기쁘게 하는 것들&lt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+            p { color : red ; }의 의미는 p태그 안의 글자 색상을 빨간색으로 설정하라는 뜻입니다.
+</code></pre>
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="result01">
+                        <span style="color: red;">
+                            우리를 기쁘게하는 것들.
+                        </span> 
+                    </div>
+                </details>
+            </div>
+            <!-- 외부스타일 시트 -->
+            <h3 class="t_tit2">외부 스타일시트</h3>
+            <p class="t_desc2">
+               스타일 속성들을 따로 저장하여 HTML 문서에 파일명으로 연결할 수 있습니다. 이때 스타일은 *.css 확장 <br>
+               자를 가진 별도의 파일로 저장하고, HTML에서는 &lt;link&gt; 태그를 이용하여 선언합니다.  <br><br>
+               <i>내부 스타일시트는 그 스타일이 기술된 페이지에만 적용</i>돠는 반면, <i>외부 스타일시트는 그 스타일을 선언한 모든 HTML페이지에 적용 됩니다.</i><br>
+               ▶css 파일의 상단에는 @charset "utf-8"; @charset "euc-kr"; 등 html 문서에서 지정한 것과 동일한 문자셋을 지정합니다.
+            </p>
+            <div class="t_code">
+<pre><code classs="js-language">&lt;!DOCTYPE html&gt;
+    &lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;외부 스타일시트&lt;/title&gt;
+            &lt;link rel="stylesheet" type="text/css" href="style.css"&gt; 
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;우리를 기쁘게 하는 것들.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+
+        @charset "utf-8";
+        p {color: red; }
+</code></pre> 
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="result02">
+                        <span style="color: red;">
+                            우리를 기쁘게하는 것들.
+                        </span> 
+                    </div>
+                </details>
+            </div>
+            <!-- @import -->
+            <h3 class="t_tit2">@import</h3>
+            <p class="t_desc2">
+                @import는 CSS안으로 다른 CSS 파일을 불러들일 경우 사용합니다. CSS의 맨윗줄에 기술합니다.
+            </p>
+            <div class="t_code">
+<pre><code classs="html-language">&lt;!DOCTYPE html&gt;
+    &lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;스타일시트 포함&lt;/title&gt;
+            &lt;type="text/css"&gt;
+            @import url("style.css"); 
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;우리를 기쁘게 하는 것들.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+
+        @charset "utf-8";
+        @import url("common.css");
+</code></pre> 
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="result03">
+                        <span style="color: red;">
+                            우리를 기쁘게하는 것들.
+                        </span> 
+                    </div>
+                </details>
+            </div>
+            <!-- 인라인스타일-->
+            <h3 class="t_tit2">인라인 스타일(inline style)</h3>
+            <p class="t_desc2">
+                인라인 스타일은 태그에 직접 css를 정의해주는 기법으로, 해당 요소에 style="" 형식으로 기술합니다. <br>
+                인라인 스타일은 내부스타일이나 외부스타일에서 기술된 속성보다 우선으로 적용되므로 <i>우선순위가 절대적으로 높아야 할 경우 사용</i><br>
+                할 수 있으나, 스타일을 공통 css로 수정할 수 없고 일일이 html을 열어서 편 <br>
+                집해야 하므로 일반적으로 많이 사용하지는 않습니다. 
+            </p>
+            <div class="t_code">
+<pre><code classs="html-language">&lt;!DOCTYPE html&gt;
+    &lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;인라인 스타일&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p style="color: red;"&gt;우리를 기쁘게 하는  것들.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre> 
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="result04">
+                        <span style="color: red;">
+                            우리를 기쁘게하는 것들.
+                        </span> 
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+</main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+</html>

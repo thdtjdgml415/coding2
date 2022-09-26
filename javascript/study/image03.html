@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형03</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">수학 객체</a></li>
+                    <li><a href="../javascript08.html">숫자 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="searchEffect01.html">검색 효과</a></li>
+                    <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                    <li><a href="textEffect01.html">텍스트 효과</a></li>
+                    <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                    <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                    <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                    <li><a href="gameEffect01,html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+
+        <div class="main_refer">
+            <div class="document">
+                <h3 class="t_tit">이미지유형 03번</h3>
+                <p class="t_desc2">
+                    이번에 만들어볼 사이트입니다.  <br>
+                    마우스를 이미지에 올리면 자세히보기와 설명이 나오는 방식을 사용하였습니다. <br>
+                    이번에는 grid방식을 사용하여 작업하였습니다.(flex방식을 사용하면 웹에서 이미지를 불러올때 한번에 불러오지 못해서 오류가 발생할 수 있기 때문입니다.)
+                    피그마를 이용하여 이미지를 만들어 작업하였습니다. <br> 
+  
+                </p>
+
+                <h3 class="t_tit2">CSS</h3>
+                <p class="t_desc2">
+                   img태그와 백그라운드 효과를 사용하여 이미지를 삽입하는 방식을 사용하였습니다. <br>
+                   hover라는 css요소를 사용하여 마우스가 이미지에 올라가면 설명이 나오도록 작업하였습니다. <br>
+                   처음에 image__desc를 -100px로 위치시켜 보이지 않게하고 가상요소를 주어서 마우스가 이미지에 올라가면 0px로 바뀌도록하였습니다.
+                   또한 opacity를 사용하여 투명도를 사용하여 효과를 작업하였습니다. <br>
+                   이미지 스프라이트 방식을 사용하여 작업하였습니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">@import url('https://webfontworld.github.io/yangheeryu/GowunBatang.css');
+.gowun {
+    font-family: "GowunBatang";
+    font-weight: 400;
+}
+
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+}
+img {
+    width: 100%;
+    height: 250px;
+}
+/*common*/
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    /*들여쓰기*/
+}
+.section {
+    padding: 120px 0;
+}
+
+.section>h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    text-align: center;
+
+}
+
+.section>p {
+    font-size: 22px;
+    margin-bottom: 70px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.container__fluid {
+    width: 100%;
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+/* imageType03 */
+.image__inner {
+    display: grid;
+    grid-template-areas:
+        "box1 box1 box2 box3"
+        "box1 box1 box4 box5"
+    ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+.image__inner .image:nth-child(1) {
+    background: url(image1.jpg) no-repeat center;
+    background-size: cover;
+    grid-area: box1;
+}
+.image__inner .image:nth-child(2) {
+    grid-area: box2;
+}
+.image__inner .image:nth-child(3) {
+    grid-area: box3;
+}
+.image__inner .image:nth-child(4) {
+    grid-area: box4;
+}
+.image__inner .image:nth-child(5) {
+    grid-area: box5;
+}
+.image {
+    position: relative;
+    overflow: hidden;
+}
+.image__desc {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    bottom: -100%;
+    left: 0;
+    transition: all 0.3s ease;
+}
+.image__desc > h3 {
+    font-size: 20px;
+}
+.image__desc > p {
+    font-size: 16px;
+}
+.image:hover .image__desc {
+    bottom: 0;  
+} 
+.image__sns {
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.image__sns a {
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 5px;
+    background: url(../image_bg03_icon.svg) no-repeat;  /*svg 파일을 다운받아서 각각 nth-child()를 사용하여 이미지를 불러왔습니다.*/
+}
+.image__sns a:nth-child(2) {
+    background-position: -50px 0;
+}
+.image__sns a:nth-child(3) {
+    background-position: -100px 0;
+}
+.image__sns a:nth-child(4) {
+    background-position: -150px 0;
+}
+.image__sns a:nth-child(5) {
+    background-position: -200px 0;
+}
+.image:hover .image__sns {
+    opacity: 100;  /*투명도 작업*/
+    right: 10px;
+}
+</code></pre>
+                    <h3 class="t_tit2">HTML</h3>
+                    <p class="t_desc2">
+                        HTML입니다. 
+                        이번에는 전체 영역을 작업하기 위해서 기존에 사용하던 container태그를 사용하지 않고 container-fluid를 불러와서 작업하였습니다. <br>
+                        img태그를 사용하여 이미지 삽입과 백그라운드 방식을 사용하여 이미지를 삽입하였고 sns와 연동하기 위한 이미지를 삽입하였습니다.
+                    </p>
+
+                    <div class="t_code">
+<pre><code class="language-html">&lt;section id="imageType03" class="section gowun"&gt;
+    &lt;h2&gt;세상에서 가장 아름다운 길&lt;/h2&gt;
+    &lt;p&gt;
+        웹쓰가 선정한 죽기전에 가봐야 할 건축물 베스트5입니다.
+        전세계에서 가장 유명한 건축가가 제작한 건축물로써 한번은 꼭 가봐야 하는 곳입니다.
+    &lt;/p&gt;
+    &lt;div class="image__inner container__fluid"&gt;
+        &lt;article class="image"&gt;
+            &lt;!-- &lt;figure class="image__box"&gt;
+                &lt;img src="image1.jpg" alt=""&gt;
+            &lt;/figure&gt;            --&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;정사각형&lt;/h3&gt;
+                &lt;p&gt;기준점 위에 균형 잡힌 정사각형의 모습입니다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;인스타&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;ㅠ
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="../image3.jpg" alt=""&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;정사각형&lt;/h3&gt;
+                &lt;p&gt;기준점 위에 균형 잡힌 정사각형의 모습입니다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;인스타&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="../image4.jpg" alt=""&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;정사각형&lt;/h3&gt;
+                &lt;p&gt;기준점 위에 균형 잡힌 정사각형의 모습입니다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;인스타&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="../image5.jpg" alt=""&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;정사각형&lt;/h3&gt;
+                &lt;p&gt;기준점 위에 균형 잡힌 정사각형의 모습입니다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;인스타&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;div class="image__sns"&gt;
+            &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+            &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;인스타&lt;/span&gt;&lt;/a&gt;
+            &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;article class="image"&gt;
+            &lt;figure class="image__box"&gt;
+                &lt;img src="../image2.jpg" alt=""&gt;
+            &lt;/figure&gt;
+            &lt;div class="image__desc"&gt;
+                &lt;h3&gt;정사각형&lt;/h3&gt;
+                &lt;p&gt;기준점 위에 균형 잡힌 정사각형의 모습입니다.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="image__sns"&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;인스타&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="/" class="link"&gt;&lt;span class="ir"&gt;페이스북&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+                    </div>
+                    <!-- HTML -->
+                    <h2 class="t_tit">결과</h2>
+                    <div class="t_iframe">
+                        <iframe src="https://codepen.io/thdtjdgml415/embed/YzaBoEX?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/thdtjdgml415/pen/YzaBoEX">
+                            Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                            on <a href="https://codepen.io">CodePen</a>.
+                          </iframe>
+                    </div>
+                    <div class="t_link">
+                        <a href="https://github.com/thdtjdgml415/coding2/blob/main/site/cardType/img/imageType/imageType03.html"
+                            target="_blank">깃허브 소스 보기</a>
+                    </div>
+
+                </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

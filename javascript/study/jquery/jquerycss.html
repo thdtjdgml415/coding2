@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    
+    <main id="main">
+        <div class="document">
+         <h2 class="t_tit">스타일 관련 메서드</h2>
+        <h3 class="t_tit">CSS() 메서드 </h3>
+        <p class="t_desc2">CSS 관련 요소를 컨트롤 할 수 있는 메서드입니다.</p>
+         <p class="t_desc">
+            <table class="t_table">               
+                    <thead>
+                        <tr>
+                            <th>실행 분류</th>
+                            <th>형식</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce">취득</td>
+                            <td>$("div").css("width");</td>
+              
+                        </tr>
+                        <tr>
+                            <td class="ce" rowspan="2">생성, 변경</td>
+                            <td>$("div").css("background-color", "red").css("padding", "10px")</td>
+                        
+                        </tr>
+                        <tr>
+                            <td>$("div").css({background-color: "red", padding: "10px"})</td>
+                        </tr>
+                        <tr>
+                           
+                            <td class="ce">콜백 함수</td>
+                            <td>
+                                $("div").css("width", function(index, .w) {  <br>
+                                    //indexs는 각 div 요소의 index0,1,2    <br>
+                                    //w는 각 div 요소의 width 값            <br>
+                                    return css 속성// 각 div 요소의 css 속성을 변경합니다.   <br>
+                                });  <br>
+                                ....  <br>
+                                &lt;div&gt;내용&lt;/div&gt;   <br>
+                                &lt;div&gt;내용&lt;/div&gt;    <br>
+                                &lt;div&gt;내용&lt;/div&gt;
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+         </p>
+         <h3 class="t_tit">css()를 사용한 예제 입니다.</h3>
+         <div class="t_code">
+<pre><code class="language-js">$(document).ready(function () {
+    $("div").eq(0).css({ padding: 10, "text-align": "center" });
+    $("div").css("width", function (index) {
+        return index * 100 + 100; // 100, 200, 300
+    });
+});
+</code></pre>
+        </div>
+
+        <h4 class="t_tit2">결과</h4>
+        <div class="t_iframe">
+            <iframe src="https://codepen.io/thdtjdgml415/embed/NWMWZxy?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/thdtjdgml415/pen/NWMWZxy">
+                Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+              </iframe>
+        </div>
+        <!-- css() -->
+<hr>
+
+        <h2 class="t_tit">width, height관련 메서드</h2>
+        <p class="t_desc2">
+            넓이와 높이를 설정할 수 있는 메서드입니다.
+        </p>
+        <h3>jQuery method형식은 다음과 같습니다.</h3>
+        <p class="t_desc">
+        <table class="t_table">
+            <thead>
+                <tr>
+                    <th>메서드 종류</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="ce">width()</td>
+                    <td>innerWidth()</td>
+
+                </tr>
+                <tr>
+                    <td class="ce">innerWidth()</td>
+                    <td>
+                        padding이 적용된 요소의 가로 길이를 취득, 변경할 수 있습니다.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">outerWidth()</td>
+                    <td>
+                        border와 margin이 적용된 요소의 가로 길이를 취득, 변경할 수 있습니다.
+                        outerWidth()는 요소의 width 값 + 좌,우 border 값
+                        outerWidth(true)는 요소의 width값 + 좌,우 margin 값
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">height()</td>
+                    <td>
+                        요소의 높이를 취득 변경할 수 있습니다.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">innerHeight()</td>
+                    <td>
+                        padding이 적용된 요소의 높이를 취득, 변경할 수 있습니다.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">outerHeight()</td>
+                    <td>
+                        border와 margin이 적용된 요소의 높이를 취득, 변경할 수 있습니다.
+                        outerHeight()는 요소의 height값 + 상,하 border 값
+                        outerHeight(true)는 요소의 height값 + 상, 하 border 값 + 상,하 margin 값
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+        <h3 class="t_tit">width, height를 사용한 예제 입니다.</h3>
+        <div class="t_code">
+<pre><code class="language-js">$(document).ready(function() {
+    $("div").width(150).height(150);
+    console.log("width 150" + $("div").width());
+    console.log("height " + $("div").height());
+    console.log("innerWidth " + $("div").innerWidth());
+    console.log("innerHeight " + $("div").innerHeight());
+    console.log("outerWidth " + $("div").outerWidth(true));
+    console.log("outerHeight " + $("div").outerHeight(true));
+});
+</code></pre>
+        </div>
+
+        <h4 class="t_tit2">결과</h4>
+        <div class="t_iframe">
+            <iframe src="https://codepen.io/thdtjdgml415/embed/zYjYVBV?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/thdtjdgml415/pen/zYjYVBV">
+                Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+              </iframe>
+        </div>
+        <!-- width, height -->
+<hr>
+        <h2 class="t_tit">position관련 메서드</h2>
+        <p class="t_desc2">
+            위치 관련 메서드로 위치를 컨트롤 할 수 있습니다.
+        </p>
+        <h3>jQuery method형식은 다음과 같습니다.</h3>
+        <p class="t_desc">
+        <table class="t_table">
+            <thead>
+                <tr>
+                    <th>메서드 종류</th>
+                    <th colspan="2">설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="ce">offset()</td>
+                    <td>
+                        $("div").offset().left <br>
+                        $("div").offset().top <br>
+                        $("div").offset({left:10, top:10}) <br>
+                    </td>
+                    <td>html 기준으로 left, top 값을 취득, 변경 할 수 있습니다.</td>
+
+                </tr>
+                <tr>
+                    <td class="ce">position()</td>
+                    <td>
+                        $("div").position().left
+                        $("div").position().top
+                    </td>
+                    <td>부모 요소 기준으로 left, top 값을 취득할 수 있습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+        <h3 class="t_tit">position를 사용한 예제 입니다.</h3>
+        <div class="t_code">
+<pre><code class="language-js">$(document).ready(function () {
+    console.log($("#inner").offset().left);
+    console.log($("#inner").offset().top);
+    console.log($("#inner").position().left);
+    console.log($("#inner").position().top);
+});
+</code></pre>
+        </div>
+
+        <h4 class="t_tit2">결과</h4>
+        <div class="t_iframe">
+            <iframe src="https://codepen.io/thdtjdgml415/embed/abGbgpb?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/thdtjdgml415/pen/abGbgpb">
+                Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+              </iframe>
+        </div>
+       
+        <!-- position -->
+    </div>
+</main>
+
+       <!-- //main -->
+       <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>

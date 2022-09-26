@@ -1,0 +1,29 @@
+//container
+body {
+    background-color: $bg-basic;
+}
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    // background: rgba(0, 0, 0, 0.3);
+
+}
+/* 스킵 메뉴 */
+#skip {
+    position: relative;
+    z-index: 1000000;
+}
+#skip a {
+    background: #000;
+    color: #fff;
+    position: absolute;
+    padding: 20px 40px;
+    left: -400px;
+    top: 5px;
+}
+#skip a:active,
+#skip a:focus {
+    left: 5px;
+}
+

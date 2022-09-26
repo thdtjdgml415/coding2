@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 함수의 종류</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">이미지 IR 효과 / 이미지 스프라이트 / 백그라운드 표현</h2>
+            <hr>
+            <!-- ir -->
+            <h3 class="t_tit2">IR 효과</h3>
+            <p class="t_desc2">
+                웹접근성 연구소 사이트의 한국형 웹콘텐츠 접근성 지침에 따라 웹콘텐츠 제작기법을 보면준수해줘야 할것들이 있다. <br>
+                웹접근성은 몸이 불편한 사람이라도 정보를 이용하는데 불편함이 없도록 하는것이 목적에 있기 때문에 만약 시각 장애인이 사이트를 이용할 경우 <br>
+                텍스트는 리더기로 읽어줄 수 있지만 이미지는 읽을 수가 없다 그래서 이미지에 텍스트를 붙여준다. <br>
+                또한 css가 동작하지 않는 환경에서도 어떤 내용인지 파악이 가능해야 하기 때문에 백그라운드로 넣어주는 이미지라고 할지라도 <br>
+                텍스트를 써주는 것이 좋다. <br>
+                이런걸 ir효과한다.
+            </p>
+            <div class="t_code">
+<pre><code classs="css-language">.ir {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+</code></pre>
+                <p class="t_box">
+                    이런 식으로 텍스트는 추가해 놓았지만 css를 활용해서 화면에서 출력하지 않도록 해줍니다. <br>
+                    스크린 리더기는 화면에서 출력되지않아도 html에 추가된 텍스트를 읽습니다.
+                </p>
+
+            </div>
+
+            <!-- 이미지 스프라이트z -->
+            <h3 class="t_tit2">이미지 스프라이트 기법</h3>
+            <p class="t_desc2">
+                이미지 스프라이트 기법이란 여러개의 이미지를 따로 두고 코딩하는게 아니라 하나의 PNG 파일에 이미지를 모아서 코딩하는 방식입니다. <br>
+                여러서 이미지 파일을 일일히 부르는것이 아니라, 한 이미지파일로 통합한 후 background로 position을 잡아주어 한 이미지만 로드하게 함으로서 트래픽을 절약하고 http
+                요청횟수를 줄여 빠른 웹 브라우징을 가능하게 해줍니다. <br>
+                이미지 각각을 별도의 파일로 추가하는 대신, 이미지를 하나의 파일로 마늗ㄹ어서 포함하면 http 요청 수가 줄기 때문에 메모리와 네트워크 사용량 측면에서 효율적입니다. <br>
+                이미지 수정이나 관리가 간편합니다. <br>
+                웹 접근성을 준수하기 위해서 ir효과를 설정해야 합니다.
+            </p>
+            <div class="t_code">
+<pre><code classs="css-language"> .image__sns a {
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 5px;
+    background: url(../image_bg03_icon.svg) no-repeat;
+}
+.image__sns a:nth-child(2) {
+    background-position: -50px 0;
+}
+.image__sns a:nth-child(3) {
+    background-position: -100px 0;
+}
+.image__sns a:nth-child(4) {
+    background-position: -150px 0;
+}
+.image__sns a:nth-child(5) {
+    background-position: -200px 0;
+}
+.image:hover .image__sns {
+    right: 10px;
+    opacity: 100;
+}
+</code></pre>
+                <p class="t_iframe">
+                    <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fprp4zEVazT8gVI8qRG6K9N%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D664%253A252%26scaling%3Dscale-down%26page-id%3D648%253A101" allowfullscreen></iframe>
+                </p>
+                <p class="t_desc2">
+                    이런식으로 프레임 안쪽에 이미지를 만들고 다운받아서 position값을 사용하여 일정 이미지를 출력하는 방식입니다. <br>
+                    일정한 간격과 같은 크기의 이미지를 만들어야 불러오기 편합니다.
+                </p>
+            </div>
+
+
+            <!-- 백그라운드 표현 -->
+            <h3 class="t_tit2">백그라운드 이미지 표현 기법</h3>
+            <p class="t_desc2">
+                이미지를 표현하는 방식은 여러가지가 있습니다. 그중에 백그라운드 태그를 이용하여 이미지를 출력하는 방식을 소개해보려고 합니다. <br>
+            </p>
+            <p class="t_desc">
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>속성</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">background</td>
+                        <td>모든 background 속성을 이용한 스타일을 한줄에 설정할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">background-color</td>
+                        <td>HTML요소의 배경색을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">background-image</td>
+                        <td>HTML요소의 배경이미지를 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">background-repeat</td>
+                        <td>설정된 이미지의 반복 유무를 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">background-position</td>
+                        <td>반복되지 않는 배경이지의 상대위치를 설정합니다. </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">background-attechment</td>
+                        <td>배경이미지를 스크롤과 무관하게 해당위치를 고정시킵니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">background-size</td>
+                        <td>배경이미지의 사이즈를 설정합니다</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+            <div class="t_code">
+<pre><code classs="css-language"> .image__sns a {
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 5px;
+    background: url(../image_bg03_icon.svg) no-repeat;
+}
+.image__sns a:nth-child(2) {
+    background-position: -50px 0;
+}
+.image__sns a:nth-child(3) {
+    background-position: -100px 0;
+}
+.image__sns a:nth-child(4) {
+    background-position: -150px 0;
+}
+.image__sns a:nth-child(5) {
+    background-position: -200px 0;
+}
+.image:hover .image__sns {
+    right: 10px;
+    opacity: 100;
+}
+</code></pre>
+                <p class="t_desc2">
+                    이 방식은 background태그를 활용하여 이미지를 불어와서 여러가지 설정을 할 수 있습니다. 이러한 태그를 이용하여 다운 받은 방식의 이미지는 position태그를 사용하여 각각 불러올 수 있습니다.
+                </p>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
+    <style>
+        #main .document .t_table {
+            text-align: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- header -->
+
+    <main id="main">
+        <div class="document">
+            <!-- 09 -->
+            <h2 class="t_tit">함수</h2>
+            <h3 class="t_tit2">09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
+            <p class="t_desc2">
+
+            </p>
+            <div class="t_code">
+<pre><code class="js-language">const func = (str) => {
+    return str;
+}
+document.write(func("함수가 실행되었습니다.9&lt;br&gt;"));
+</code></pre>
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과 확인하기</summary>
+                    <div class="result09">
+                        "함수가 실행되었습니다.9"
+                    </div>
+                </details>
+            </div>
+             <!-- 10 -->
+             <h3 class="t_tit2">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
+             <p class="t_desc2">
+                 
+             </p>
+             <div class="t_code">
+ <pre><code class="js-language">const func = (str) => str; 
+document.write(func("함수가 실행되었습니다.11"))
+ </code></pre>
+             </div>
+             <div class="t_result">
+                 <details>
+                     <summary>결과 확인하기</summary>
+                     <div class="result10">
+                        "함수가 실행되었습니다.10"
+                     </div>
+                 </details>
+             </div>
+             <h3 class="t_tit2">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+             <p class="t_desc2">
+                 
+             </p>
+             <div class="t_code">
+ <pre><code class="js-language">const func = (str) => str; 
+document.write(func("함수가 실행되었습니다.11"))
+ </code></pre>
+             </div>
+             <div class="t_result">
+                 <details>
+                     <summary>결과 확인하기</summary>
+                     <div class="result11">
+                        "함수가 실행되었습니다.11"
+                     </div>
+                 </details>
+             </div>
+             <!-- 11 -->
+             <div id="sample12" class="sample">
+                <h3 class="t_tit2">12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
+                <div class="t_code">
+<pre><code class="language-js">func = str => str; 
+document.write(func("함수가 실행되었습니다.12"))
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result12">
+                            "함수가 실행되었습니다.12"
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 12 -->
+            <div id="sample13" class="sample">
+                <h3 class="t_tit2">13. 함수 유형 : 함수와 매개변수를 이용한 형태</h3>
+                <div class="t_code">
+<pre><code class="language-js">     function func(num, str1, str2){   //재활용하기가 용의하다. 
+    document.write(num + str1 + "가" + str2 + "되었습니다.15&lt;br&gt;")
+}
+const info = [
+    {
+        num : "1.",
+        name : "함수",
+        com : "실행"
+    },
+    {
+        num : "2.",
+        name : "자바스크립트",
+        com : "실행"
+    },
+    {
+        num : "3.",
+        name : "제이쿼리",
+        com : "실행"
+    }
+]
+func(info[0].num, info[0].name, info[0].com);
+func(info[1].num, info[1].name, info[1].com);
+func(info[2].num, info[2].name, info[2].com);
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result13">
+                            "함수가 실행되었습니다.13"
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 13 -->
+            <div id="sample14" class="sample">
+                <h3 class="t_tit2">14. 함수 유형 : 함수와 변수를 이용한 형태</h3>
+                <div class="t_code">
+<pre><code class="language-js"> function func(num, str1, str2){
+    document.write(num + str1 + "가" + str2 + "되었습니다.)
+}
+const youNum1 = 1;
+const youNum2 = 2;
+const youNum3 = 3;
+const youStr1 = "함수";
+const youStr2 = "자바스크립트";
+const youStr3 = "제이쿼리";
+const youCom1 = "실행";
+
+func(youNum1, youStr1, youCom1);
+func(youNum2, youStr2, youCom1);
+func(youNum3, youStr3, youCom1);
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result14">
+                            1 함수가 실행되었습니다. <br>
+                            2 자바스트립트가 실행되었습니다. <br>
+                            3 제이쿼리가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 14 -->
+            <div id="sample15" class="sample">
+                <h3 class="t_tit2">15. 함수 유형 : 함수와 배열,객체를 이용한 형태</h3>
+                <div class="t_code">
+<pre><code class="language-js">function func(num, str1, str2) {   //재활용하기가 용의하다. 
+    document.write(num + str1 + "가" + str2 + "되었습니다.")
+}
+const info = [
+    {
+        num: "1.",
+        name: "함수",
+        com: "실행"
+    },
+    {
+        num: "2.",
+        name: "자바스크립트",
+        com: "실행"
+    },
+    {
+        num: "3.",
+        name: "제이쿼리",
+        com: "실행"
+    }
+]
+func(info[0].num, info[0].name, info[0].com);
+func(info[1].num, info[1].name, info[1].com);
+func(info[2].num, info[2].name, info[2].com);
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result15">
+                            1 함수가 실행되었습니다. <br>
+                            2 자바스트립트가 실행되었습니다. <br>
+                            3 제이쿼리가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 15 -->
+            <div id="sample16" class="sample">
+                <h3 class="t_tit2">16. 함수 유형 : 객체 안에 변수와 함수를 이용한 형태</h3>
+                <div class="t_code">
+<pre><code class="language-js">const info = {
+    num1: "1.",
+    name: "함수",
+    word1: "실행",
+    num2: "2.",
+    name2: "자바스크립트",
+    word2: "실행",
+    num3: "3.",
+    name3: "제이쿼리",
+    word3: "실행",
+
+    result1: function () {
+        document.write(info.num1 + info.name + "가" + info.word1 + "되었습니다16.&lt;br&gt;");
+    },
+    result2: function () {
+        document.write(info.num2 + info.name2 + "가" + info.word2 + "되었습니다16.&lt;br&gt;");
+    },
+    result3: function () {
+        document.write(info.num3 + info.name3 + "가" + info.word3 + "되었습니다16.&lt;br&gt;");
+    }
+}
+info.result1();
+info.result2();
+info.result3();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result16">
+                            1 함수가 실행되었습니다.16 <br>
+                            2 자바스트립트가 실행되었습니다.16<br>
+                            3 제이쿼리가 실행되었습니다.16
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 16 -->
+            <div id="sample17" class="sample">
+                <h3 class="t_tit2">17. 함수 유형 : 객체 생성자 함수</h3>
+                <div class="t_code">
+<pre><code class="language-js">function func(num, name, word) {
+    this.num = num;
+    this.name = name;
+    this.word = word;
+
+    this.result = function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다17.&lt;br&gt;");
+    }
+}
+
+//인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+const info1 = new func("1", "함수", "실행");
+const info2 = new func("2", "자바스크립트", "실행");
+const info3 = new func("3", "제이쿼리", "실행");
+
+//실행
+info1.result();
+info2.result();
+info3.result();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result17">
+                            1 함수가 실행되었습니다.17 <br>
+                            2 자바스트립트가 실행되었습니다.17<br>
+                            3 제이쿼리가 실행되었습니다.17
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 17 -->
+            <div id="sample18" class="sample">
+                <h3 class="t_tit2">18. 함수 유형 : 프로토타입 함수</h3>
+                <div class="t_code">
+<pre><code class="language-js">
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result18">
+                            1 함수가 실행되었습니다.17 <br>
+                            2 자바스트립트가 실행되었습니다.17<br>
+                            3 제이쿼리가 실행되었습니다.17
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 18 -->
+            <div id="sample19" class="sample">
+                <h3 class="t_tit2">19. 함수 유형 : 객체 리터럴 함수 (함수를 객체안에 모아준다.)</h3>
+                <div class="t_code">
+<pre><code class="language-js">function func(num, name, word) {
+    this.num = num;
+    this.name = name;
+    this.word = word;
+}
+
+func.prototype = {
+    result1: function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다19.&lt;br&gt;")
+    },
+    result2: function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다19.&lt;br&gt;")
+    },
+    result3: function () {
+        document.write(this.num + this.name + "가" + this.word + "되었습니다19.&lt;br&gt;")
+    }
+}
+
+//인스턴스 생성: 다른함수랑 다르다는 걸 알려주기 위해서
+const info1 = new func("1", "함수", "실행");
+const info2 = new func("2", "자바스크립트", "실행");
+const info3 = new func("3", "제이쿼리", "실행");
+
+//실행
+info1.result1();
+info2.result2();
+info3.result3();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result19">
+                            1 함수가 실행되었습니다.19 <br>
+                            2 자바스트립트가 실행되었습니다.19<br>
+                            3 제이쿼리가 실행되었습니다.19
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 19 -->
+            <div id="sample20" class="sample">
+                <h3 class="t_tit2">20. 즉시 실행 함수</h3>
+                <div class="t_code">
+<pre><code class="language-js">function func(){
+    document.write("함수가 실행되었습니다.20");
+}())
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result20">
+                            "함수가 실행되었습니다.20"
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 20 -->
+            <div id="sample21" class="sample">
+                <h3 class="t_tit2">21. 파라미터 함수</h3>
+                <div class="t_code">
+<pre><code class="language-js">function func() {
+    document.write(str);
+}
+func("함수가 실행되었습니다.21");
+
+//
+function func(str = "함수가 실행되었습니다.21") {
+    document.write(str);
+}
+func()
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result21">
+                            "함수가 실행되었습니다.21"
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 21 -->
+            <div id="sample22" class="sample">
+                <h3 class="t_tit2">22. 아규먼트 함수</h3>
+                <div class="t_code">
+<pre><code class="language-js">function func(a,b){
+    document.write(arguments[0]);
+    document.write(arguments[1]);
+}
+func("함수가 실행되었습니다.22", "함수가 실행되었습니다.22")
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result22">
+                            함수가 실행되었습니다.22", "함수가 실행되었습니다.22
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 22 -->
+            <div id="sample23" class="sample">
+                <h3 class="t_tit2">23. 재귀함수 함수</h3>
+                <div class="t_code">
+<pre><code class="language-js"> if (num &lt;= 10) {
+    document.write("함수가 실행되었습니다" + num);
+} else {
+    document.write("함수가 실행되었습니다" + num);
+    func(num - 1);
+}
+// func();
+}
+func(10)
+
+//애니메이션
+// function func(){
+//     document.write("함수가 실행되었습니다");
+//     requestAnimationFrame(animation);
+// }
+// animation();)
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result23">
+                            "함수가 실행되었습니다."
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 23 -->
+            <div id="sample24" class="sample">
+                <h3 class="t_tit2">24. 콜백함수 인자값으로 함수를 가져와서 실행시킨다. (첫번째 함수가 실행 -> 두번째 함수가 실행)</h3>
+                <div class="t_code">
+<pre><code class="language-js"> if (num &lt;= 10) {
+    document.write("함수가 실행되었습니다" + num);
+} else {
+    document.write("함수가 실행되었습니다" + num);
+    func(num - 1);
+}
+// func();
+}
+func(10)
+
+//애니메이션
+// function func(){
+//     document.write("함수가 실행되었습니다");
+//     requestAnimationFrame(animation);
+// }
+// animation();)
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result24">
+                            함수가 실행되었습니다.2 함수가 실행되었습니다.1
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 24 -->
+            <div id="sample25" class="sample">
+                <h3 class="t_tit2">25.콜백함수 : 반복문</h3>
+                <div class="t_code">
+<pre><code class="language-js">function func(index) {
+    document.write("함수가 실행되었습니다.", + index + "&lt;br&gt;")
+}
+function callback(num) {
+    for (let i = 1; i &lt;= 10; i++) {
+        num(i);
+    }
+}
+callback(func);
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result25">
+                            함수가 실행되었습니다.1
+                            함수가 실행되었습니다.2
+                            함수가 실행되었습니다.3
+                            함수가 실행되었습니다.4
+                            함수가 실행되었습니다.5
+                            함수가 실행되었습니다.6
+                            함수가 실행되었습니다.7
+                            함수가 실행되었습니다.8
+                            함수가 실행되었습니다.9
+                            함수가 실행되었습니다.10
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 25 -->
+            <div id="sample26" class="sample">
+                <h3 class="t_tit2">26.콜백함수 : 동기/비동기</h3>
+                <div class="t_code">
+<pre><code class="language-js">// function funcA() {
+    //     document.write("funcA가 실행되었습니다. &lt;br&gt;");
+    // }
+    // function funcB() {
+    //     document.write("funcB가 실행되었습니다. &lt;br&gt;");
+    // }
+    // funcA();
+    // funcB();
+    //a
+    //b
+
+    // function funcA() {
+    //     setTimeout(() => {
+    //         console.log("funcA가 실행되었습니다.") 
+    //     },1000) 
+    // }
+    // function funcB() {
+    //     console.log("funcB가 실행되었습니다. &lt;br&gt;") 
+    // }
+    // funcA();
+    // funcB();
+    //b
+    //a
+
+    // function funcA(callBack) {
+    //     setTimeout(() => {
+    //         console.log("funcA가 실행되었습니다.&lt;br&gt;") 
+    //         callBack();
+    //     }, 1000);
+    // }
+    // function funcB() {
+    //     console.log("funcB가 실행되었습니다.&lt;br&gt;") 
+    // }
+    // funcA(function() {
+    //     funcB();
+    // })
+    // 결과값 a
+    // 결과값 b
+
+
+    function funcA(callback) {
+        setTimeout(() => {
+            console.log("funcA가 실행되었습니다.&lt;br&gt;")
+            callback();
+        }, 1000);
+    }
+    function funcB(callback) {
+        setTimeout(() => {
+            console.log("funcB가 실행되었습니다.&lt;br&gt;")
+            callback();
+        }, 1000);
+    }
+    function funcC(callback) {
+        setTimeout(() => {
+            console.log("funcC가 실행되었습니다.&lt;br&gt;")
+            callback();
+        }, 1000);
+    }
+    function funcD(callback) {
+        setTimeout(() => {
+            console.log("funcD가 실행되었습니다.&lt;br&gt;")
+        }, 1000);
+    }
+    funcA(function () {
+        funcB(function () {
+            funcC(function () {
+                funcD();
+            });
+        });
+    });
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result26">
+                            funcA가 실행되었습니다.<br>
+                            funcB가 실행되었습니다. <br>
+                            funcC가 실행되었습니다. <br>
+                            funcD가 실행되었습니다. <br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 26 -->
+            <div id="sample27" class="sample">
+                <h3 class="t_tit2">27. promise 함수</h3>
+                <div class="t_code">
+<pre><code class="language-js">
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result27">
+                           
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 27 -->
+            <div id="sample28" class="sample">
+                <h3 class="t_tit2">28. 내부 함수 : 스코프, 클로져 </h3>
+                <div class="t_code">
+<pre><code class="language-js">function func () {
+    function funcA() {
+        document.write("함수가 실행되었습니다.")
+    }
+    funcA();
+
+    function funcB() {
+        document.write("함수가 실행되었습니다.")
+    }
+    funcB();
+}
+func();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result28">
+                            함수가 실행되었습니다.함수가 실행되었습니다.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 28 -->
+            <div id="sample29" class="sample">
+                <h3 class="t_tit2">29. 클래스 </h3>
+                <div class="t_code">
+<pre><code class="language-js">class study {
+    constructor(num, name, job) {
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+
+    result() {
+        document.write(this.num + " . 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.&lt;br&gt;")
+    }
+}
+const info1 = new study("1", "웹쓰", "웹퍼블리셔");
+const info2 = new study("2", "웹스토리보이", "프론트엔드 개발자");
+info1.result();
+info2.result();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result29">
+                            1 . 내 이름은 웹쓰이며, 직업은 웹퍼블리셔입니다. &lt;br&gt;
+                            2 . 내 이름은 웹스토리보이이며, 직업은 프론트엔드 개발자입니다.
+                        </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 29 -->
+            <div id="sample30" class="sample">
+                <h3 class="t_tit2">30. 클래스 상속 </h3>
+                <div class="t_code">
+<pre><code class="language-js">class study {
+    constructor(num, name, job) {
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+
+    result() {
+        document.write(this.num + " . 내 이름은 " + this.name + "이며, 직업은 " + this.job + "입니다.&lt;br&gt;")
+    }
+}
+class study2 extends study {
+    constructor(num, name, job, age){
+        super(num, name, job);
+        this.age = age;
+    }
+    result2() {
+        document.write(this.num + " . 내 이름은 " + this.name + "이며, 직업은 " + this.job + "이며 나이는" + this.age+ "입니다.&lt;br&gt;")
+    }
+}
+const info1 = new study("1", "웹쓰", "웹퍼블리셔");
+const info2 = new study2("2", "웹스토리보이", "프론트엔드 개발자", 100);
+info1.result();
+info2.result2();
+</code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="result30">
+                            1 . 내 이름은 웹쓰이며, 직업은 웹퍼블리셔입니다. &lt;br&gt;
+                            2 . 내 이름은 웹스토리보이이며, 직업은 프론트엔드 개발자입니다.
+                        </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- 30 -->
+
+
+
+      
+
+        </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h1 class="t_tit">mouseenter / mouseover 차이</h1>
+            <h3 class="t_tit">mouseenter</h3>
+            <p class="t_desc2">
+                ✔JS 에서는 Explorer전용 이벤트이나 jQuery 에서는 브라우져를 고려하지 않고 작동이 되도록 구성요소에 마우스 포인터가 진입하면 발생오로지 자기 자신에게 마우스 포인터가 와야만
+                발생 합니다.
+            </p>
+            <h3 class="t_tit">mouseover</h3>
+            <p class="t_desc2">
+                ✔직접 이벤트를 걸지 않은 자식요소에 마우스 포인터가 와도 발생합니다.
+            </p>
+
+            <p class="t_box">
+                주로 아래와 같이 짝을 이루어 사용한다. <br>
+                mouseOver &lt;-&gt; mouseOut   <br>
+                mouseEnter &lt;-&gt; mouseLeave
+            </p>
+            <h3 class="t_tit2">MouseOver와 MouseEnter 차이</h3>
+            <p>
+                두 이벤트를 유사하지만 이벤트 전파(event propagation)와 취소 가능성(cancelable)에 큰 차이가 있다. <br>
+                <br>
+                mouseOver/mouseOut는 이벤트가 발생할 때 버블링이 일어나며 상위 요소로 전파된다. 그리고 preventDefault 메서드를 호출하여 이벤트의 기본 동작을 취소할 수 있다. <br>
+                <br>
+                한편 mouseEnter/mouseLeave는 이벤트가 발생할 때 버블링이 일어나지 않아 자기 자신만이 이벤트를 받을 수 있게 된다. 즉 target과 currentTarget이 항상 일치한다. 또한 preventDefault 메서드를 호출하여 이벤트의 기본 동작을 취소할 수 없다. <br>
+            </p>
+
+
+            <h4 class="t_tit2">결과</h4>
+            <div class="t_iframe">
+                <iframe title="mouseenter vs mouseover"
+                    src="https://codepen.io/thdtjdgml415/embed/PoewQEP?default-tab=html%2Cresult" frameborder="no"
+                    loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/thdtjdgml415/pen/PoewQEP">
+                        mouseenter vs mouseover</a> by thdtjdgml415 (<a
+                        href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>

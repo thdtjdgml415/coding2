@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">수학 객체</a></li>
+                    <li><a href="../javascript08.html">숫자 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="searchEffect01.html">검색 효과</a></li>
+                    <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                    <li><a href="textEffect01.html">텍스트 효과</a></li>
+                    <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                    <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                    <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                    <li><a href="gameEffect01,html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+
+        <div class="main_refer">
+            <div class="document">
+                <h3 class="t_tit">비트맵(bitmap)이란?</h3>
+                <p class="t_desc2">
+                    비트맵 방식은 '비트의 지도'(Map of bits)라는 뜻이다. <br>
+                    각 픽셀에 저장된 비트정보가 집합된 것이다. <br>
+                    비트맵은 벡터와 다르게 픽셀의 점 하나하나가 이미지를 이루는 요소이기 때문에 벡터보다 정교한 이미지 표현이 가능하다. <br>
+                    픽셀의 수가 많아질수록 뛰어나지만, 용량 또한 커지게 되고 비트맵 이미지는 크기를 확대하거나 축소하면 기본에 이루고 있던 픽셀의 수가 변해서 원본 이미지가 손상된다.
+                    깨짐 현상과 이미지 품질 저하가 발생하게 된다. <br>
+                    다른표현으로 픽스맵(Pixmap)이나 레스터(Raster) 이미지로도 불린다. <br>
+                    대표적인 프로그램으로는 어도비 포토샵이 있다.
+                </p>
+                <!--bitmap -->
+                <h3 class="t_tit">벡터란?</h3>
+                <p class="t_desc2">
+                    벡터 방식은 비트맵과 반대로 표현되는 그래픽의 형태들이 수학적 공식으로 이루어져 있다. <br>
+                    벡터 방식은 고정된 비트맵을 가지고 있는 것이 아니라 수학적 공식으로 이루어진 오브젝트들로 구성되어 있다. <br>
+                    수학적 공식으로 이루어진 이미지는 그떄그때 화면에 비트맵화 되어 표시되고 변화된다. <br>
+                    상황에 알맞게 변형되기 때문에 비트맵 처럼 이미지 품질 저하, 깨짐이 없다. <br>
+                    수학적 함수관계에 의해 이미지를 표현하여 만들어내는 메커니즘을 가지고 있다. <br>
+                    이렇게 만들어진 선이 두껫값과 색상 값, 곡률값을 갖거나 면이 색상 값을 가질 수 있다. <br>
+                </p>
+
+                <!--vector -->
+                <p class="t_desc">
+                <table class="t_table">
+                    <thead>
+                        <tr>
+                            <th>비교</th>
+                            <th>비트맵</th>
+                            <th>벡터 설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce">정의</td>
+                            <td>정사각형의 픽셀이 모여 만든 이미지</td>
+                            <td>전과 점이 이루는 선분, 면에 수학적 연산으로 만들어짐</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">확대시</td>
+                            <td>깨짐(계단현상): 픽셀로 되어있어서 변화에 대응하지 못함</td>
+                            <td>깨지지않음: 수학적으로 구성되어 있어서 변화에 대응 가능</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">경계</td>
+                            <td>픽셀색이 다 달라 뚜렷(x)</td>
+                            <td>면으로 이루어져 있어서 뚜렷(o)</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">작업종류</td>
+                            <td>사진보정, 합성, 복잡한 작업 ex)영화 포스터</td>
+                            <td>도형으로 만드는 작업 ex) 로고, 캐릭터, 명함 등</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">장점</td>
+                            <td>사실 표현 가능, 색감 풍부, 특수효과 사용가능</td>
+                            <td>확대시 깨지지않아 대형 인쇄물 사용가능</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">사이즈</td>
+                            <td>사이즈, 해상도 등으로 변화, 사이즈 커짐</td>
+                            <td>크기 제약 없음, 용량 변하지 않음</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">프로그램</td>
+                            <td>포토샵, 페인터 등</td>
+                            <td>일러스트레이터, 코렐, 플래시</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">확장자</td>
+                            <td>jpg, gip, png, bmp...</td>
+                            <td>ai, swf, wmf ...</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </p>
+                <!-- 벡터와 비트맵 차이점-->
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

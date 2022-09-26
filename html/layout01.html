@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#"> 라인 중학교 1학년 코딩반</a></h1>
+        <span>이름 : 송성희</span>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <header class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+        </header>
+        <nav class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li><a href="basic.html">기초 문법</a></li>
+                <li><a href="block.html">블록구조/인라인구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="sementic.html">시멘틱 태그</a></li>
+                <li><a href="seo.html">검색엔진시스템(SEO)</a></li>
+            </ul>
+            <ul>
+                <li class="active"><a href="layout01.html">레이아웃1</a></li>
+                <li><a href="layout02.html">레이아웃2</a></li>
+                <li> <a href="layout03.html">레이아웃3</a></li>
+                <li><a href="layout04.html">레이아웃4</a></li>
+                <li><a href="layout05.html">레이아웃5</a></li>
+            </ul>
+        </nav>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">레이아웃1</h2>
+                <p class="t_desc2">
+                    이번 레이아웃은 가장 기본적인 형태입니다. 우선 칸을 분리시켜 header, nav, aside, section footer로 나눠서 작업하겠습니다.
+                </p>
+                <div class="t_iframe">
+                    <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeWV94w0TLw2jYyVRWHWsMf%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+                </div>
+                <!-- float -->
+                <h3 class="t_tit">float을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    aside와 section영역을 한줄로 배치하기 위해서 float속성을 사용해서 작업했습니다.<br>
+                    하지만 오류로 인해서 footer부분이 없어지기 때문에 clear:both를 사용해서 버그를 수정했습니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-css">*{
+    margin: 0;
+}
+#body {
+    background-color: #FFF3E0;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: #FFE0B2;
+}
+#nav {
+    width: 100%;
+    height: 100px;
+    background-color: #FFCC80;
+}
+#aside {
+    width: 30%;
+    height: 780px;
+    background-color: #FFB74D;
+    float: left;
+}
+#section {
+    width: 70%;
+    height: 780px;
+    background-color: #FFA726;
+    float: left;
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #FF9800;
+    clear: both;  
+}
+/* 미디어 쿼리를 사용해서 다양한 화면에서 배치를 변경할 수 있습니다.*/
+@media(max-width: 1220px){     /* 노트북 화면*/
+    #wrap {
+        width: 96%;             /*양쪽 여백을 생기게 함*/
+        height: 100%;
+    }
+}
+@media(max-width: 768px){       /*태블릿 화면*/
+    #wrap {
+        width: 100%;            /*여백 제거*/
+        height: 100%;
+    }
+}
+@media(max-width: 480px){      /*모바일 화면*/
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section {
+        width: 100%;
+        height: 480px;
+    }
+}
+</code></pre>
+                </div>
+                <h4 class="t_tit2">결과</h4>
+                <div class="t_iframe">
+					<iframe src="https://codepen.io/thdtjdgml415/embed/GRxMpyG?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+						See the Pen <a href="https://codepen.io/thdtjdgml415/pen/GRxMpyG">
+						Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+						on <a href="https://codepen.io">CodePen</a>.
+					  </iframe>
+                </div>
+            
+
+
+
+
+            <!-- flex -->
+            <h3 class="t_tit">flex을 이용한 레이아웃</h3>
+            <p class="t_desc2">
+                flex는 제가 지정한 모든 태그들의 부모태그인 wrap태그에 display: flex를 지정 후  <br>
+                모든 태그들이 잘 배치 될 수 있도록 flex-wrap:wrap; 을 사용해서 배치합니다.
+            </p>
+            <div class="t_code">
+<pre><code class="language-css">* {
+    margin: 0;
+}
+body {
+    background-color: #FFF3E0;
+}
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: #FFE0B2;
+}
+#nav{
+    width: 100%;
+    height: 100px;
+    background-color: #FFCC80;
+}
+#aside{
+    width: 30%;
+    height: 780px;
+    background-color: #FFB74D;
+}
+#section{
+    width: 70%;
+    height: 780px;
+    background-color: #FFA726;
+}
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: #FF9800;
+}
+@media(max-width: 1220px){
+    #wrap {
+        width: 96%;
+        height: 100%;
+    }
+
+}
+@media(max-width: 768px){
+    #wrap {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section {
+        width: 100%;
+        height: 480px;
+    }
+}
+</code></pre>
+            </div>
+            <h4 class="t_tit2">결과</h4>
+            <div class="t_iframe">
+				<iframe src="https://codepen.io/thdtjdgml415/embed/qBoxqoJ?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+					See the Pen <a href="https://codepen.io/thdtjdgml415/pen/qBoxqoJ">
+					flex</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+					on <a href="https://codepen.io">CodePen</a>.
+				  </iframe>
+            </div>
+        
+
+
+
+
+
+        <!-- grid -->
+        <h3 class="t_tit">grid을 이용한 레이아웃</h3>
+        <p class="t_desc2">
+            grid를 이용한 레이아웃 배치 입니다.    <br>
+			grid는 부모태그에서 지정한 모든 태그들을 컨트롤하는 것입니다.   <br>
+			부모태그에서 grid-template-areas를 지정 후 grid-template-columns, grid-template-rows를 사용해서 지정한 영역의 행 높이& 열 넓이를 지정합니다. <br>
+			또한 grid-template-areas로 지정한 모든 자식태그에서 grid-area로 정의해 주어야합니다. 
+        </p>
+        <div class="t_code">
+<pre><code class="language-css">* {
+  margin: 0;
+}
+
+body {
+  background-color: #FFF3E0;
+}
+
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "aside section"
+    "footer footer"
+    ;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 100px 100px 780px 100px;
+}
+
+#header {
+  background-color: #FFE0B2;
+  grid-area: header;
+}
+
+#nav {
+  background-color: #FFCC80;
+  grid-area: nav;
+}
+
+#aside {
+  background-color: #FFB74D;
+  grid-area: aside;
+}
+
+#section {
+  background-color: #FFA726;
+  grid-area: section;
+}
+
+#footer {
+  background-color: #FF9800;
+  grid-area: footer;
+}
+
+/* 미디어 쿼리를 사용해서 다양한 기기환경에서 레이아웃이 깨지지 않도록 해줍니다. */
+@media(max-width : 1220px) { /* 노트북 화면 */
+  #wrap {
+    width: 96%; /* 양쪽 여백 */
+  }
+}
+
+@media(max-width : 768px) { /* 태블릿 화면 */
+  #wrap {
+    width: 100%; /* 여백 없음 */
+  }
+}
+
+@media(max-width : 480px) { /* 모바일 화면 */
+  #wrap {
+    width: 100%;
+    display: grid;
+    grid-template-areas: /* 한줄로 배치하기위한 레이아웃 재정의 */
+      "header header"
+      "nav nav"
+      "aside aside"
+      "section section"
+      "footer footer"
+      ;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 100px 380px 400px 100px;
+  }
+}
+</code></pre>
+        </div>
+        <h4 class="t_tit2">결과</h4>
+        <div class="t_iframe">
+			<iframe src="https://codepen.io/thdtjdgml415/embed/QWmQGrG?default-tab=" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+				See the Pen <a href="https://codepen.io/thdtjdgml415/pen/QWmQGrG">
+				Untitled</a> by thdtjdgml415 (<a href="https://codepen.io/thdtjdgml415">@thdtjdgml415</a>)
+				on <a href="https://codepen.io">CodePen</a>.
+			  </iframe>
+        </div>
+        </div>
+
+        </div>
+    </main>
+
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

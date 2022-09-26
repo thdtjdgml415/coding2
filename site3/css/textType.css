@@ -1,0 +1,90 @@
+/* textType */
+#textType {}
+
+.text__inner {
+    display: flex;
+    margin-top: 120px;
+    justify-content: space-between;
+}
+
+.text__inner .text__title {
+    width: 400px;
+}
+
+.text__inner .text__title span {
+    border: 1px solid #000;
+    border-radius: 30px;
+    width: 150px;
+    height: 23px;
+    margin-bottom: 10px;
+    background: #FF3344;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 23px;
+    text-align: center;
+}
+
+.text__inner .text__title h2 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 26px;
+}
+
+.text__inner .text__title .title {}
+
+.text__inner .text__title .desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.text__inner .text__desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.text__inner .text__card {
+    width: 300px;
+    margin: 20px;
+}
+
+.text__inner .text__card .icon {
+    background: url('../img/icons.svg') no-repeat;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    top: 10px;
+}
+
+.text__inner .text__card:nth-child(2) .icon {
+    background-position: -100px 0;
+ 
+}
+.text__inner .text__card:nth-child(3) .icon {
+    background-position: -200px 0;
+ 
+}
+.text__inner .text__card:nth-child(4) .icon {
+    background-position: -100px -100px;
+ 
+}
+
+.text__inner .text__card h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.text__inner .text__card p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    width: 358px;
+}

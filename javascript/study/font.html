@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="web.html">웹</a></li>
+                <li><a href="quiz01.html">퀴즈</a></li>
+                <li><a href="quiz02.html">퀴즈 주관식</a></li>
+                <li><a href="quiz03.html">퀴즈 다중문제</a></li>
+                <li><a href="quiz04.html">퀴즈 객관식</a></li>
+                <li><a href="card01.html">카드유형1</a></li>
+                <li><a href="card02.html">카드유형2</a></li>
+                <li><a href="bitandvactor.html">비트맵과벡터</a></li>
+                <li><a href="innerfuncion.html">내장함수</a></li>
+                <li><a href="structure.html">구조 관련 요소</a></li>
+                <li><a href="mediaquery.html">미디어쿼리</a></li>
+                <li><a href="cssgrammar.html">CSS기초문법</a></li>
+                <li><a href="method.html">메서드</a></li>
+                <li><a href="strmethod.html">문자열메서드</a></li>
+                <li><a href="RegExp.html">정규표현식</a></li>
+                <li><a href="search01.html">검색효과</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    
+    <main id="main">
+        <div class="document">
+         <h2 class="t_tit">css 단위 크기</h2>
+         <p class="t_desc2">
+            크기 단위 cm, mm, inch 등의 단위도 존재하나 CSS에서 사용하는 대표적인 크기 단위는 px, em, %, rem이다. px은 절대값이고 em, %는 상대값이다. 
+            대부분 브라우저의 폰트 사이즈 기본값은 16px, 1em, 100%이다.     
+         </p>
+         <hr>
+         <h2 class="t_tit2">px</h2>
+        <p class="t_desc2">
+            1050개의 픽셀을 가진다는 의미이다. 200만 화소(픽셀)의 디지털 카메라로 찍은 사진은 1600 * 1200 = 1,920,000으로 통상 200만 화소라 한다. <br>
+            픽셀은 디바이스 해상도(resolution)에 따라 상대적인 크기를 갖는다. <br>
+            px은 요소의 크기나 이미지의 크기 지정에 주로 사용된다. 
+        </p>
+        <h2 class="t_tit2">%</h2>
+        <p class="t_desc2">
+            %는 백분률 단위의 상대 단위이다. 요소에 지정된 사이즈(상속된 사이즈나 디폴트 사이즈)에 상대적인 사이즈를 설정한다.
+        </p>
+        <h2 class="t_tit2">em</h2>
+        <p class="t_desc2">
+            em은 배수(倍數) 단위로 상대 단위이다. 요소에 지정된 사이즈(상속된 사이즈나 디폴트 사이즈)에 상대적인 사이즈를 설정한다. <br>
+            예를 들어 1em은 요소에 지정된 사이즈와 같고 2em은 요소에 지정된 사이즈의 2배이다. <br>
+            폰트 사이즈 설정이나 콘텐츠를 포함하는 컨테이너의 크기 설정에 사용하면 상대적인 설정이 가능하여 편리하다.
+        </p>
+        <h2 class="t_tit2">Viewport 단위(vh, vw, vmin, vmax)</h2>
+        <p class="t_desc2">
+            em은 배수(倍數) 단위로 상대 단위이다. 요소에 지정된 사이즈(상속된 사이즈나 디폴트 사이즈)에 상대적인 사이즈를 설정한다. <br>
+            예를 들어 1em은 요소에 지정된 사이즈와 같고 2em은 요소에 지정된 사이즈의 2배이다. <br>
+            폰트 사이즈 설정이나 콘텐츠를 포함하는 컨테이너의 크기 설정에 사용하면 상대적인 설정이 가능하여 편리하다. <br>
+            IE 8 이하는 지원하지 않으며 IE 9 ~ 11, Edge는 지원이 완전하지 않으므로 주의가 필요하다.
+        </p>
+    
+    
+         <p class="t_desc">
+            <table class="t_table">               
+                    <thead>
+                        <tr>
+                            <th>단위</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ce">vw</td>
+                            <td>viewport 너비의 1/100</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">vh</td>
+                            <td>viewport 높이의 1/100</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">vmin</td>
+                            <td>viewport 너비 또는 높이 중 작은 쪽의 1/100.</td>
+                        </tr>
+                        <tr>
+                            <td class="ce">vmax</td>
+                            <td>viewport 너비 또는 높이 중 큰 쪽의 1/100.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="t_box">
+                    예를 들어 viewport 너비가 1000px, 높이가 600px인 경우,
+
+                    1vw : viewport 너비 1000px의 1%인 10px
+                    1vh : viewport 높이 600px의 1%인 6px
+                    vmin : viewport 높이 600px의 1%인 6px
+                    vmax : viewport 너비 1000px의 1%인 10px
+                </p>
+         </p>
+    </div>
+</main>
+
+       <!-- //main -->
+       <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>

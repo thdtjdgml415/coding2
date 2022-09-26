@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 조건문</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">조건문</h2>
+            <div class="main_sample">
+             <h3 class="t_tit2">중첩if문 이해하기</h3>
+                <p class="t_desc2">
+                    if문은 if문안에 또다른 if문을 중첩하여 사용할 수 있습니다. <br>
+                    코딩에 앞서 prompt()는 숫자로 입력한 데이터를 문자 데이터로 처리하기 때문에 <br>
+                    '+'연산자를 사용할 경우 더하기 연산이 아니라 <i>연결 연산</i>이 된다. <br>
+                    이 문제를 해결하기 위해 숫자 변환 명령어 Number()을 사용하겠습니다. 
+                </p>
+             <div class="t_code">
+<pre><code classs="js-language">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;if 문&lt;/title&gt;
+    &lt;script&gt;
+        var html = Number(prompt('html 점수입력',''));
+        var css = Number(prompt('css 점수입력',''));
+        var avg= (html + css + javascript) /3;
+        var comment;
+            if (avg >= 60) {
+                if (html < 40) {
+                    comment = 'HTML' + '40점 미만 불합격';
+                } else if (css < 40) {
+                    comment = 'CSS ' + '40점 미만 불합격';
+                } else if (javascript < 40) {
+                    comment = 'JAVASCRIPT' + '40점 미만 불합격';
+                } else {
+                    comment = '평균' + avg + '점 합격';
+                }
+            } else {
+                comment = '평균 ' + avg + '점 불합격';
+            }
+            docment.write(comment;)
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;    
+</code></pre>
+</div>
+
+        <h3 class="t_tit2">switch문 이해하기</h3>
+        <p class="t_desc2">
+            switch(값)의 값과 case의 값들을 하나씩 비교하여 일치하는 case를 실행시켜줍니다.<br>
+            switch문은 if문과 다르게 특정조건에 만족 했을 때 break명령어를 사용해 블록{}을 빠져 나가도록 합니다. <br>
+            default는 switch의 값과 일치하는 값이 없을 때 실행합니다.
+        </p>
+        <div class="t_code">
+<pre><code classs="js-language">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;switch문&lt;/title&gt;
+    &lt;script&gt;
+            var classifcation = prompt('아동, 청소년, 성인 중 선택입력','');
+            switch (classifcation) {
+                case '아동' :
+                    classifcation += ': 입장료 무료 ';
+                    break;
+                case '청소년':
+                    classifcation += '입장료 2,000원';
+                    break;
+                case '성인':
+                    classifcation += '입장료 5,000원';
+                    break;
+                default:
+                    classifcation = '입력 값을 다시 확인해주세요';
+            }
+            document.write(classifcation);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;    
+</code></pre> 
+</div>
+
+        </div>
+    </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+</html>

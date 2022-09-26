@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 유형02</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">수학 객체</a></li>
+                    <li><a href="../javascript08.html">숫자 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="searchEffect01.html">검색 효과</a></li>
+                    <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                    <li><a href="textEffect01.html">텍스트 효과</a></li>
+                    <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                    <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                    <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                    <li><a href="gameEffect01,html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+
+        <div class="main_refer">
+            <div class="document">
+                <h3 class="t_tit">마우스 유형02</h3>
+                <p class="t_desc2">
+                    이번 유형은 1번 유형과 동일하지만 Gsap를 사용하여 작업하였습니다.
+                    gsap는 자바스크립트 라이브러리로 복잡한 애니메이션을 만들때 주로 사용한다. <br>
+                    자바스크립트로 만들었을때 보다 부드러워지는 경향도 있어서 작업해 보았습니다.
+                </p>
+
+                <h3 class="t_tit2">CSS</h3>
+                <p class="t_desc2">
+                    1번 유형과 차이점은 마우스 커서를 두가지를 만들어 동그라미 두개의 커서가 움직이도록 만들었습니다. <br>
+                    두가지 커서에 딜레이를 주어서 이중으로 움직이도록 하였습니다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-css">/* mouseType */
+.mouse__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+    cursor: none;
+}
+
+.mouse__wrap p {
+    font-size: 2vw;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed rgb(0, 137, 250);
+    color: rgb(0, 137, 250);
+}
+
+.mouse__wrap p:last-child {
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+@media (max-width: 800px) {
+    .mouse__wrap p {
+        padding: 0 20px;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .mouse__wrap p:last-child {
+        font-size: 40px;
+        line-height: 1.5;
+        text-align: center;
+        word-break: keep-all;
+        /* 단어로 줄바꿈 */
+    }
+}
+
+.mouse__cursor { //안쪽 원
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    z-index: 9999;
+    border-radius: 50%;
+    background: rgba(255, 5, 5, 0.3);
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.2s;  /*딜레이를 생기게 하고 투명도를 주었습니다.*/
+}
+.mouse__cursor2 {   //바깥쪽 원
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 9998;
+    border-radius: 50%;
+    background: rgba(17, 0, 255, 0.5);
+    user-select: none; /* 선택이 되지 않도록 하였습니다.*/
+    pointer-events: none; /* cursor2의 영역이 너무 넓기 때문에 클릭했을때 이벤트가 발생하지 않도록 하였습니다.*/
+    transition: transform 0.3s, opacity 0.2s;
+}
+.mouse__cursor.active{
+    transform: scale(0);
+}
+.mouse__cursor2.active{
+    transform: scale(5);
+    background: rgba(255,166,0,0.5);
+}
+.mouse__cursor.active li {
+    transform: scale(5);
+}
+.mouse__cursor2.active li {
+    transform: scale(10);
+    background: rgba(11, 241, 49, 0.5);
+}
+</code></pre>
+                </div>
+                <h3 class="t_tit2">HTML</h3>
+                <p class="t_desc2">
+                    이번에는 자바스크립트에서 span을 선택자로 지정하여 같은 애니메이션만 나올 수 있도록 하였습니다.
+                </p>
+
+                <div class="t_code">
+                    <pre><code class="language-html">&lt;main id="main"&gt;
+    &lt;section id="mouseType"&gt;
+        &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
+        &lt;div class="mouse__cursor2"&gt;&lt;/div&gt;
+        &lt;div class="mouse__wrap"&gt;
+            &lt;p&gt;
+                It does not &lt;span"&gt;matter&lt;/span&gt; how slowly you go &lt;span&gt;as long as&lt;/span&gt; you do &lt;span&gt;not stop.&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;span&gt;멈추지&lt;/span&gt; 않는다면 얼마나 &lt;span&gt;천천히&lt;/span&gt; 가느냐는 &lt;span"&gt;중요하지 않다.&lt;/span&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+</code></pre>
+                </div>
+                <!-- HTML -->
+                <h3 class="t_tit2">Javascript</h3>
+                <p class="t_desc2">
+                    gsap파일을 다운 받습니다. <br>
+                    마우스커서가 2가지이기 때문에 선택자를 각각 지정하고 상단메뉴와 명언에 각 지정한 글자에서 애니메이션 효과를 주었습니다.
+
+                </p>
+
+                <div class="t_code">
+                    <pre><code class="language-js">const cursor = document.querySelector(".mouse__cursor"); //마우스 커서
+const cursor2 = document.querySelector(".mouse__cursor2");  //마우스 커서2
+const span = document.querySelectorAll(".mouse__wrap span"); //오버효과
+const header = document.querySelectorAll("#header ul li");  //상단의 메뉴
+
+window.addEventListener("mousemove", e => {  //마우스의 위치 값을 구하는 이벤트메서드 mousemove 
+    //커서 좌표값 할당 넓이에 절반을 빼주면 가운데 위치한다.
+    // cursor.style.left = e.pageX -5 + "px";
+    // cursor.style.top = e.pageY -5 + "px";
+    // cursor2.style.left = e.pageX -15 + "px";
+    // cursor2.style.top = e.pageY -15 + "px";
+
+    //GSAP gsap를 사용하면 이런식으로 마우스커서의 위치를 구할 수 있습니다.
+    gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top: e.pageY -5});
+    gsap.to(cursor2, {duration: 0.8, left: e.pageX -15, top: e.pageY -15});
+
+    //오버효과 
+    //mouseenter / mouseover / 이벤트 버블링 
+    span.forEach(span => {   //화살표함수는 this가 안먹힌다. 과거에는 function을 사용해서 할떄는 this가 먹힘
+        span.addEventListener("mouseenter", () => {
+            cursor.classList.add("active");
+            cursor2.classList.add("active");
+
+        });
+        span.addEventListener("mouseleave", () => {
+            cursor.classList.remove("active");
+            cursor2.classList.remove("active");
+        });
+    });
+    header.forEach(header => {
+        header.addEventListener("mouseenter", () => {
+            cursor.classList.add("active");
+            cursor2.classList.add("active");
+        });
+        header.addEventListener("mouseleave", () => {
+            cursor.classList.remove("active");
+            cursor2.classList.remove("active");
+        });
+    });
+});
+</code></pre>
+                </div>
+                <!-- javascript -->
+                <h2 class="t_tit">결과</h2>
+                <div class="t_iframe" style="min-width: 600px; min-height: 900px; padding-top: 0;">
+                    <iframe src="https://thdtjdgml415.github.io/coding2/javascript/study/effect/mouseEffect02.html"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="t_link">
+                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/study/effect/mouseEffect02.html"
+                        target="_blank">깃허브 소스 보기</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

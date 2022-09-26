@@ -1,0 +1,15 @@
+/* imgtextType */
+
+.img__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.img__inner {
+    width: 22%;
+}
+h2 {
+    margin: 30px 0 20px 0;
+}
+.img__inner p {
+    margin-top: 10px;
+}
