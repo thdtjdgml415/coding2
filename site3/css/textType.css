@@ -5,10 +5,12 @@
     display: flex;
     margin-top: 120px;
     justify-content: space-between;
+    width: 100%;
 }
 
 .text__inner .text__title {
-    width: 400px;
+    width: 50%;
+    white-space: nowrap;
 }
 
 .text__inner .text__title span {
@@ -38,6 +40,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
+    width: 60%;
 }
 
 .text__inner .text__desc {
@@ -87,4 +90,26 @@
     font-size: 18px;
     line-height: 150%;
     width: 358px;
+}
+@media (max-width: 700px) {
+    .text__inner {
+        display: inline-block;
+        text-align: center;
+    }
+    .text__inner .text__title {
+        width: 100%;
+    }
+    .text__inner .text__title .desc {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .text__inner .text__card {
+        text-align: left;
+        position: relative;
+    }
+    .text__inner .text__card .icon {
+        position: absolute;
+        top: 0;
+        left: -80px;
+    }
 }

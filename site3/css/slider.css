@@ -338,7 +338,20 @@
     text-align: center;
     width: 100%;
   }
-
+  .swiper-slide .desc .ellipse1,
+  .swiper-slide .desc .ellipse2,
+  .swiper-slide .desc .ellipse3,
+  .swiper-slide .desc .ellipse4,
+  .swiper-slide .desc .ellipse5,
+  .swiper-slide .desc .ellipse6 {
+    display: none;
+  }
+  .swiper-slide .desc .img1,
+  .swiper-slide .desc .img2,
+  .swiper-slide .desc .img3,
+  .swiper-slide .desc .img4 {
+    display: none ;
+  }
   .swiper-slide .desc h3 {
     font-size: 80px;
   }
@@ -359,6 +372,6 @@
   }
 
   .swiper-slide .desc .btn a {
-    padding: 10px 25px;
+    padding: 0;
   }
 }
