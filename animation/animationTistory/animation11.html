@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>눈알 dribble -성현형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body {
+            height: 100%;
+            overflow: hidden;
+        }
+        .wrapper {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 369px;
+            height: 537px;
+            transform-style: preserve-3d;
+        }
+        .me {
+            position: absolute;
+            width: 369px;
+            height: 547px;
+            transform: translateZ(80px) scale(0.8);
+        }
+        .me::before, .me::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            top: 0;
+            left: 0;
+            background: url(http://www.supah.it/dribbble/006/profile.png) no-repeat 0 0;
+        }
+        .me::after {
+            height: 30px;
+            top: auto;
+            bottom: -15px;
+            filter: blur(15px);
+            background-size: 100% 30px;
+            border-radius: 100px;
+
+        }
+        .eye, .eye::before {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 175px;
+            left: 119px;
+            z-index: -1;
+            background: url(http://www.supah.it/dribbble/006/eye.png);
+        }
+        .eye::before {
+            content: '';
+            top: -3px;
+            left: 99px;
+        }
+        .text {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            width: 390px;
+            height: 595px;
+            transform: translateZ(150px) translateX(-11px) translateY(-26px) scale(.55);
+            border: 3px solid #fff;
+            text-align: center;
+            font-size: 35px;
+            line-height: 1000px;
+            color: #fff;
+            opacity: 0.3;
+            border-radius: 15px;
+            background : linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.36) 39%, rgba(255,255,255,0) 51%, #000 100%);
+        }
+        .text::after {
+            content: 'eye moving';
+            width: 100%;
+            position: absolute;
+            bottom: 22px;
+            left: 0;
+            z-index: 1;
+            line-height: 1;
+            font-size: 18px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 20px;
+            text-indent: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <div class="me">
+                <div class="eye"></div>
+            </div>
+            <div class="text">ABC</div>
+        </div>
+    </div>
+    <script>
+        const wrap = document.querySelector(".wrapper");
+        const eye = document.querySelector(".eye")
+        const speed = 1;
+        let x = 0;
+        let y = 0;
+        let followX = 0;
+        let followY = 0;
+
+        function animate () {
+            x += (followX - x) * speed;
+            y += (followY - y) * speed;
+            eye.style.transform = `translate(${-x}px, ${-y}px)`;
+            wrap.style.transform = `translate(-50%, -50%) perspective(600px) rotateX(${-y}deg) rotateY(${-x}deg)`;
+            requestAnimationFrame(animate);
+            }
+
+            window.addEventListener('mousemove', (e) => {
+                let mouseX = Math.max(-100, Math.min(100, window.innerWidth/2 - e.clientX));
+                let mouseY = Math.max( -100, Math.min(100, window.innerHeight/2 - e.clientY));
+
+                followX = (12* mouseX)/100;
+                followY = (10* mouseY)/100;
+            });
+
+            window.addEventListener('keydown', (e)=>{
+                switch(e.keyCode) {
+                    case 37:
+                        followX = 12;
+                        break;
+                    case 38:
+                        followY = 10;
+                        break;
+                    case 39:
+                        followX = -12;
+                        break;
+                    case 40:
+                        follow = -10;
+                        break;  
+                        default:
+                            break;          
+                }
+            });
+            animate();
+    </script>
+</body>
+</html>
