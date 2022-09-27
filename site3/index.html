@@ -543,17 +543,17 @@
         const btnHam = document.querySelector(".header__ham");              //헤더에 햄버거 메뉴를
         const btnMenu = document.querySelector(".header__menu");            //헤더 메뉴
         const bgColor = document.querySelectorAll(".section");
-        
-        window.addEventListener("scroll",() => {
+
+        window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-            
+
             bgColor.forEach((el, i) => {
-                if(scrollTop >= el.offsetTop-100) {
+                if (scrollTop >= el.offsetTop - 100) {
                     document.querySelectorAll(".header__menu li").forEach((li) => {
                         li.classList.remove("active")
-                    }) 
-                    document.querySelector(`.header__menu li:nth-child(${i+1})`).classList.add("active");
-                }  
+                    })
+                    document.querySelector(`.header__menu li:nth-child(${i + 1})`).classList.add("active");
+                }
             });
         });
 
@@ -570,7 +570,7 @@
                 btnHam.classList.remove("active");  //햄버거 메뉴를 비활성화 시켜준다.
             })
         });
-        
+
     </script>
 </body>
 

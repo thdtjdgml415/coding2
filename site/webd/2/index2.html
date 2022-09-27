@@ -9,33 +9,28 @@
     <link rel="stylesheet" href="../2/css/style2.css">
     <style>
         .slide__wrap {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
 
+        }
         .slide__img {
+            position: relative;
             width: 800px;
-            height: 600px;
-            z-index: -1;
-
-
+            height: 500px;
+   
         }
-
         .slide__inner {
             display: flex;
-            flex-wrap: wrap;
-            width: 4800px;
-            height: 600px;
+            width: 3200px;
+            height: 500px;
         }
-        .slider {
-            position: relative;
+        .slide {
             width: 800px;
-            height: 600px;
+            height: 500px;
         }
+        .slide img {
+            width: 800px;
+            height: 500px;
+        }
+
     </style>
 </head>
 
@@ -56,13 +51,13 @@
                     <div class="slide__img">
                         <div class="slide__inner">
                             <div class="slide">
-                                <img src="../2/img/slider1.jpg" alt="">
+                                <img src="../2/img/slider1.jpg" alt="이미지1">
                             </div>
                             <div class="slide">
-                                <img src="../2/img/slider1.jpg" alt="">
+                                <img src="../2/img/slider1.jpg" alt="이미지2">
                             </div>
                             <div class="slide">
-                                <img src="../2/img/slider1.jpg" alt="">
+                                <img src="../2/img/slider1.jpg" alt="이미지3">
                             </div>
                         </div>
                     </div>
@@ -147,34 +142,27 @@
         </footer>
     </div>
     <script>
-        const slideWrap = document.querySelector(".slide__wrap");
-        const slideInner = document.querySelector(".slide__inner"); //움직이는 영역 
-        const sliderImg = document.querySelector("slide__img"); //보여주는 영역
+        const slideImg = document.querySelector(".slide__img");
+        const slideInner = document.querySelector(".slide__inner");
         const slide = document.querySelectorAll(".slide");
 
-        let currentIndex = 0
+        currentIndex = 0;
         let slideCount = slide.length;
-        let sliderWidth = sliderImg.offsetWidth;
-        let slideClone = slideInner.firstElementChild.cloneNode(ture);
-        slideInner.appendChild(slideClone);
-
-        function sliderEffect() {
-            currentIndex++;
+        let slideWidth = slideImg.offsetWidth;
+        let slideClone = slideInner.firstElementChild.cloneNode(true);
+        slideInner.appendChild(slideClone)
+        
+        function slideEffect () {
             slideInner.style.transition = "all 1s";
-            slideInner.style.transfrom = `translateX(-${slideWidth} * ${currentIndex}px)`;
+            slideInner.style.transform = "translateX(-"+slideWidth*currentIndex+"px)"
+            currentIndex++
 
 
-            if (currentIndex == slideCount) {
-                setTimeout(() => {
-                    slideInner.style.transition = '0s';
-                    slideInner.style.transfrom = "translateX(0px)"
-
-                }, 900);
-                currentIndex = 0;
+            if(currentIndex == slideCount) {
+                slideInner.style.transition = '0s';
+                slideInner.style.transform = 'translateX(0px)
             }
         }
-        setInterval(sliderEffect, 2000);
-
 
 
     </script>
