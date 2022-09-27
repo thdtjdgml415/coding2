@@ -7,6 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>정부24 연습</title>
     <link rel="stylesheet" href="../2/css/style2.css">
+    <style>
+        .slide__wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slide__img {
+            width: 800px;
+            height: 600px;
+            z-index: -1;
+
+
+        }
+
+        .slide__inner {
+            display: flex;
+            flex-wrap: wrap;
+            width: 4800px;
+            height: 600px;
+        }
+        .slider {
+            position: relative;
+            width: 800px;
+            height: 600px;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,7 +52,21 @@
         </header>
         <section id="contents">
             <div id="banner">
-                <img src="../2/img/slider1.jpg" alt="">
+                <div class="slide__wrap">
+                    <div class="slide__img">
+                        <div class="slide__inner">
+                            <div class="slide">
+                                <img src="../2/img/slider1.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../2/img/slider1.jpg" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="../2/img/slider1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- banner -->
             <div class="tabs">
@@ -102,6 +146,38 @@
             </div>
         </footer>
     </div>
+    <script>
+        const slideWrap = document.querySelector(".slide__wrap");
+        const slideInner = document.querySelector(".slide__inner"); //움직이는 영역 
+        const sliderImg = document.querySelector("slide__img"); //보여주는 영역
+        const slide = document.querySelectorAll(".slide");
+
+        let currentIndex = 0
+        let slideCount = slide.length;
+        let sliderWidth = sliderImg.offsetWidth;
+        let slideClone = slideInner.firstElementChild.cloneNode(ture);
+        slideInner.appendChild(slideClone);
+
+        function sliderEffect() {
+            currentIndex++;
+            slideInner.style.transition = "all 1s";
+            slideInner.style.transfrom = `translateX(-${slideWidth} * ${currentIndex}px)`;
+
+
+            if (currentIndex == slideCount) {
+                setTimeout(() => {
+                    slideInner.style.transition = '0s';
+                    slideInner.style.transfrom = "translateX(0px)"
+
+                }, 900);
+                currentIndex = 0;
+            }
+        }
+        setInterval(sliderEffect, 2000);
+
+
+
+    </script>
 </body>
 
 </html>
