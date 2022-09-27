@@ -15,6 +15,7 @@
             position: relative;
             width: 800px;
             height: 500px;
+            overflow: hidden;
    
         }
         .slide__inner {
@@ -159,10 +160,16 @@
 
 
             if(currentIndex == slideCount) {
-                slideInner.style.transition = '0s';
-                slideInner.style.transform = 'translateX(0px)
+                setTimeout(() =>{
+                    slideInner.style.transition = '0s';
+                    slideInner.style.transform = 'translateX(0px)';
+    
+                    currentIndex = 0
+
+                },900)
             }
         }
+        setInterval(slideEffect,2000);
 
 
     </script>
