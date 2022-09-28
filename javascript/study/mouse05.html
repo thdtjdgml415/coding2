@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 유형05</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <header id="header">
+            <h1><a href="../index.html">Javascript</a></h1>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="../javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="../javascript05.html">문자열 객체</a></li>
+                    <li><a href="../javascript06.html">배열 객체</a></li>
+                    <li><a href="../javascript07.html">수학 객체</a></li>
+                    <li><a href="../javascript08.html">숫자 객체</a></li>
+                    <li><a href="../javascript09.html">브라우저 객체</a></li>
+                    <li><a href="../javascript10.html">요소 객체</a></li>
+                    <li><a href="../javascript11.html">이벤트 객체</a></li>
+                </ul>
+                <ul class="effect">
+                    <li><a href="searchEffect01.html">검색 효과</a></li>
+                    <li><a href="quizEffect01.html">퀴즈 효과</a></li>
+                    <li><a href="textEffect01.html">텍스트 효과</a></li>
+                    <li><a href="mouseEffect01.html">마우스 효과</a></li>
+                    <li><a href="sliderEffect01.html">슬라이드 효과</a></li>
+                    <li><a href="parallaxEffect01.html">패렐랙스 효과</a></li>
+                    <li><a href="gameEffect01,html">게임 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+
+        <div class="main_refer">
+            <div class="document">
+                <h3 class="t_tit">05. 마우스 이펙트 : 기울기 효과/ 반전효과</h3>
+                <p class="t_desc2">
+                    마우스 이펙트는 마우스 커서 해당위치에 커서대신 다양한 효과를 주거나 요소에 위치에서 다양한 변화를 주는 효과입니다.
+                </p>
+
+                <h3 class="t_tit2">CSS</h3>
+                <p class="t_desc2">
+                    마우스의 위치에 따라 이미지에게 3D효과를 주며 움직이도록 하였습니다. <br>
+                    3d로 보이도록 만들었습니다.
+                </p>
+                <div class="t_code">
+                    <pre><code class="language-css">/* mouseType */
+.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+
+.mouse__img {
+    transform: perspective(600px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d; /*3d 로 공간을 만든다.*/
+    will-change: transform; /*3d로 할때 메모리를 덜 먹도록 해준다.*/
+    transition: all 0.5s;
+}
+.mouse__img figcaption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 1vw;
+    line-height: 1.6;
+    transform: translate3d(-50%, -50%, 100px);
+    padding: 1vw;
+    white-space: nowrap;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+}
+.mouse__wrap figure {
+    width: 50vw;   
+    position: relative;
+}
+.mouse__wrap figure::before {
+    content: '';
+    position: absolute;
+    left: 5%;
+    bottom: -30px;
+    width: 90%;
+    height: 100px;
+    background: url(../../assets/img/effect_bg_19@2x.jpg) center no-repeat;
+    background-size: 100% 40px;
+    filter: blur(15px) grayscale(50%);
+    opacity: 0.7;
+}
+.mouse__cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1000;
+    pointer-events: none;
+    user-select: none;
+    mix-blend-mode: difference /*반전효과*/;
+}
+
+.mouse__wrap figure img {}
+.mouse__info {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+}
+</code></pre>
+                </div>
+                <h3 class="t_tit2">HTML</h3>
+                <p class="t_desc2">
+                    마우스 위치에 따른 위치를 보여주는 코드를 만들었습니다. <br>
+                    mousePage는 한 페이지에서 마우스의 위치를 나타냅니다. <br>
+                    centerPage는 마우스의 위치 기준을 가운데로 하고 나오는 크기입니다. <br>
+                    maxPage는 이미지가 움직일 수 있는 최대 와 최소를 정해놓은 크기입니다. <br>
+                    anglePage는 마우스의 위치에 따라 이미지의 움직임이 너무 커서 조절해놓은 위치입니다.
+                </p>
+
+                <div class="t_code">
+                    <pre><code class="language-html">&lt;main id="main"&gt;
+    &lt;section id="mouseType"&gt;
+        &lt;div class="mouse__cursor"&gt;&lt;/div&gt;
+        &lt;div class="mouse__wrap"&gt;
+            &lt;div class="mouse__img"&gt;
+                &lt;figure&gt;
+                    &lt;img src="../../assets/img/effect_bg_19@2x.jpg" alt="이미지"&gt;
+                &lt;/figure&gt;
+                &lt;figcaption&gt;
+                    &lt;p&gt;It does not matter how slowly you go as long as you do not stop.&lt;/p&gt;
+                    &lt;p&gt;멈추지 않는다면 얼마나 천천히 가느냐는 중요하지 않다.&lt;/p&gt;
+                &lt;/figcaption&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;div class="mouse__info"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;mousePageX : &lt;span class="mousePageX"&gt;0&lt;/span&gt;px&lt;/li&gt;
+            &lt;li&gt;mousePageY :&lt;span class="mousePageY"&gt;0&lt;/span&gt;px&lt;/li&gt;
+            &lt;li&gt;centerPageX :&lt;span class="centerPageX"&gt;0&lt;/span&gt;px&lt;/li&gt;
+            &lt;li&gt;centerPageY :&lt;span class="centerPageY"&gt;0&lt;/span&gt;px&lt;/li&gt;
+            &lt;li&gt;maxPageX :&lt;span class="maxPageX"&gt;0&lt;/span&gt;px&lt;/li&gt;
+            &lt;li&gt;maxPageY :&lt;span class="maxPageY"&gt;0&lt;/span&gt;px&lt;/li&gt;
+            &lt;li&gt;anglePageX :&lt;span class="anglePageX"&gt;0&lt;/span&gt;px&lt;/li&gt;
+            &lt;li&gt;anglePageY :&lt;span class="anglePageY"&gt;0&lt;/span&gt;px&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+</code></pre>
+                </div>
+                <!-- HTML -->
+                <h3 class="t_tit2">Javascript</h3>
+                <p class="t_desc2">
+                    👉페이지 내에서 마우스의 위치를 구합니다. <br>
+                    👉화면의 크기의 절반을 잘라서 가운데를 기준으로 만들고 mousePage를 빼서 위치를 구합니다. <br>
+                    👉Mathmax는 최대값을 뽑고 Math.min은 최소를 뽑습니다. <br>
+                    👉처음에 centerPage와 200을 비교해 적은쪽으로 -200비교하여 둘중 높은 값을 비교합니다. <br>
+                    👉결국 -200&lt; centerPage &lt;200이라고 생각할 수 있습니다. <br>
+                    👉마우스의 위치에 따른 이미지의 움직임이 너무 크기 때문에 maxPage에 0.1를 곱하여 값을 줄여줍니다. <br>
+                    👉softPage는 마우스에 움직임에 따라 값이 1px씩 움직이지 않고 한번에 움직이기 때문에 softPage와 anglePage의 차에서 0.4를 곱해서 좀더 천천히 값이 욺직이도록 하였습니다.
+                </p>
+
+                <div class="t_code">
+                    <pre><code class="language-js">const mouseMove = (e) => {
+    //마우스 좌표값
+    let mousePageX = e.pageX;
+    let mousePageY = e.pageY;
+
+    //마우스 좌표 기준점을 가운데로 변경
+    let centerPageX = window.innerWidth /2 - mousePageX;
+    let centerPageY = window.innerHeight /2 - mousePageY;
+
+    //최소값은 -100 최대값은 100설정 
+    let maxPageX = Math.max(-200, Math.min(200, centerPageX));
+    let maxPageY = Math.max(-200, Math.min(200, centerPageY));
+
+    //각도 줄이는 설정
+    let anglePageX = maxPageX * 0.1;
+    let anglePageY = maxPageY * 0.1;
+
+    //부드럽게 설정
+    let softPageX = 0, softPageY = 0;
+    softPageX += (anglePageX-softPageX) * 0.4;
+    softPageY += (anglePageY-softPageY) * 0.4;
+
+    //이미지 움직이기
+    const imgMove = document.querySelector(".mouse__img");
+    imgMove.style.transform = "perspective(600px) rotateX("+ softPageY +"deg) rotateY("+ -softPageX +"deg)"
+    //커서
+    gsap.to(".mouse__cursor", {duration: .3, left:mousePageX -50, top:mousePageY-50 })
+
+    //출력
+    document.querySelector(".mousePageX").textContent = mousePageX;
+    document.querySelector(".mousePageY").textContent = mousePageY;
+    document.querySelector(".centerPageX").textContent = centerPageX;
+    document.querySelector(".centerPageY").textContent = centerPageY;
+    document.querySelector(".maxPageX").textContent = maxPageX;
+    document.querySelector(".maxPageY").textContent = maxPageY;
+    document.querySelector(".anglePageX").textContent = Math.round(anglePageX);
+    document.querySelector(".anglePageY").textContent = Math.round(anglePageY);
+}
+window.addEventListener("mousemove", mouseMove);
+</code></pre>
+                </div>
+                <!-- javascript -->
+                <h2 class="t_tit">설명</h2>
+                <div class="t_iframe">
+                    <iframe
+                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FXlt1Fl2i1GtY9tiqxeO5uY%2FUntitled%3Fnode-id%3D12%253A54"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <h2 class="t_tit">결과</h2>
+                <div class="t_iframe" style="min-width: 600px; min-height: 900px; padding-top: 0;">
+                    <iframe src="https://thdtjdgml415.github.io/coding2/javascript/study/effect/mouseEffect05.html"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="t_link">
+                    <a href="https://github.com/thdtjdgml415/coding2/blob/main/javascript/study/effect/mouseEffect05.html"
+                        target="_blank">깃허브 소스 보기</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:thdtjdgml415@naver.com">thdtjdgml415@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

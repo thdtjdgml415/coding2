@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>검색 이펙트</title>
+    <title>검색 이펙트04</title>
 
     <link rel="stylesheet" href="../../assets/css/search.css">
     <link rel="stylesheet" href="../../assets/css/dracula.css">
@@ -659,7 +659,6 @@ li {
 
             </div>
         </div>
-        </div>
     </main>
     <!-- //main -->
 
@@ -1059,9 +1058,9 @@ li {
             { name: "writing-mode", desc: "텍스트 줄을 가로 또는 세로로 배치할지 여부와 블록이 진행되는 방향을 설정합니다." },
             { name: "z-index", desc: "요소들의 수직 위치를 설정합니다." },
         ];
-        const searchList = document.querySelector(".search__list");
-        const searchNum = document.querySelector(".search__info .num");
-        const searchBox = document.querySelector(".search__box input");
+        const searchList = document.querySelector(".search__list"); // 객체 리스트
+        const searchNum = document.querySelector(".search__info .num"); // 갯수
+        const searchBox = document.querySelector(".search__box input"); // keywordbox
         const searchDesc = document.querySelector(".search__desc"); //정보 박스
 
 
@@ -1069,12 +1068,14 @@ li {
         cssProperty.map((element, index) => {
             searchList.innerHTML += `<span><strong>${element.name}</strong></span>`;
             searchNum.textContent = `${index + 1}`;
+ 
         });
 
         const searchchoice = document.querySelectorAll(".search__list span");
         searchchoice.forEach((e) => {
             e.addEventListener("click", (el) => {
                findProperty(el.target.innerText)
+               console.log(el)
             })
         })
 
