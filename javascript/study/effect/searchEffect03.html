@@ -676,6 +676,7 @@ li {
 
             <div class="search__info">
                 <div class="keyword">
+                    <span>all</span>
                     <span>a</span>
                     <span>b</span>
                     <span>c</span>
@@ -704,7 +705,7 @@ li {
                     <span>z</span>
                 </div>
                 <div>전체 속성 갯수 : <span class="num"></span></div>
-                <div>목록 속성 갯수 : <span class="subnum"></span></div>
+                <div><em></em> 속성 갯수 : <span class="subnum"></span></div>
             </div>
             <div class="search__list">
                 <div class="css">
@@ -1112,29 +1113,31 @@ li {
     <script>
         //선택자
         const searchKeyword = document.querySelectorAll(".search__info .keyword span");         //알파벳
-        const searchList = document.querySelectorAll(".search__list ul li");    //목록 리스트
-        const searchInfo = document.querySelector(".search__info .num")         //전체 갯수
-        const searchNum = document.querySelector(".search__info .subnum")       //검색 목록 갯수
+        const searchList = document.querySelectorAll(".search__list ul li");                    //목록 리스트
+        const searchInfo = document.querySelector(".search__info .num")                         //전체 갯수
+        const searchNum = document.querySelector(".search__info .subnum")  
+        const searchApha = document.querySelector(".search__info div em")                     //검색 목록 갯수
         let count = 0;
 
         //전체 갯수
         searchInfo.textContent = searchList.length;
         searchNum.textContent = searchList.length;
         searchKeyword.forEach(el => {
-            el.addEventListener("click", () => {
+            el.addEventListener("click", (e) => {   
                 const searchWord = el.innerText; //사용자가 클릭한 알파벳
                 searchWord.textContent = searchNum.length;
+                searchApha.innerHTML = e.target.innerHTML;    
+                console.log(searchKeyword)
 
                 searchList.forEach(el => {
                     const cssName = el.querySelector("strong").innerText;
-                    // console.log(cssName)
-
 
                     //알파벳 첫글자 == CSS속성의 첫글자
-                    if (searchWord.charAt(0) === cssName.charAt(0)) {
+                    if(searchWord.charAt(0) === cssName.charAt(0)) {
                         el.classList.remove("hide");
+                        
                         count++      
-                    } else {
+                    }else {
                         el.classList.add("hide")
                     }
                     searchNum.textContent = count;
