@@ -1073,6 +1073,7 @@ li {
         //출력하기
         function updateList(list) {
             let listCSS = "";
+            console.log(listCSS)
             //data.star의 값을 starImg에 넣어 별 갯수를 나오게 하고 innerHTML로 별 이미지를 출력함
             //숫자를 별로 치환해주기!
             for (const data of list) {
@@ -1084,6 +1085,7 @@ li {
 
         //클릭하기
         searchClick.forEach(el => {
+            console.log(el)
             el.addEventListener("click", (e) => {
                 const target = el.dataset.star;
                 const filterList = cssProperty.filter(data => data.star == target)
@@ -1100,13 +1102,8 @@ li {
                 updateList(filterList2);
             });
         })
-
-
-
         //dataset 안쓰고 가져오는 방법(고민)
         //조건문 들어간거 완료하기
-
-
     </script>
 
 </body>

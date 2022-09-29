@@ -170,7 +170,6 @@
                 </div>
             </div>
         </section>
-
     </main>
     <!-- //main -->
     <footer id="footer">
@@ -305,6 +304,7 @@
         }
         window.addEventListener("mousemove", mouseMove);
 
+        //마우스 오버 하면 커지고 반전효과
         const cursor = document.querySelector(".mouse__cursor")
         const spanWrap = document.querySelectorAll(".line .spanWrap span").forEach((e,i) => {
             let attr = e.getAttribute("class");
@@ -316,10 +316,6 @@
             });
 
         })
-
-
-        //마우스 오버 하면 커지고 반전효과
-
     </script>
 </body>
 
