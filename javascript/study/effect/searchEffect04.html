@@ -1071,13 +1071,21 @@ li {
  
         });
 
+        //클릭하기
         const searchchoice = document.querySelectorAll(".search__list span");
         searchchoice.forEach((e) => {
             e.addEventListener("click", (el) => {
-               findProperty(el.target.innerText)
-               console.log(el)
+               findProperty(el.target.innerText);
             })
         })
+
+        //쌤버전
+        // document.querySelectorAll(".search__list span").forEach(span => {
+        //     span.addEventListener("click", () => {
+        //         const clickWord = span.innerText;
+        //         findProperty(clickWord);
+        //     })
+        // })
 
         //입력하기
         searchBox.addEventListener("keyup", () => {

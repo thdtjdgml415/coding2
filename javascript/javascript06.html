@@ -1885,9 +1885,38 @@ document.querySelector(".sample14_P3").innerHTML = result3;
             const num = ['a','b','c','d','e','f','g','h','i','k'];
 
             //bdfhk 출력 4가지
-            const numinner  = num.charAt("0")
 
+            // 01
+            console.log(`${num[1]}, ${num[3]}, ${num[5]}, ${num[7]}, ${num[9]}`);
+            console.log('='.repeat(50));
+            // 02
+            for(let i = 1; i < num.length; i +=2) {
+                console.log(num[i]);
+            }
+            console.log('='.repeat(50));
+            // 03
+            for(let key in num) {
+                if(key % 2 === 1) {
+                    console.log(num[key]);
+                }
+            }
+            console.log('='.repeat(50));
+            // 04
+            const target = ['b', 'd', 'f', 'h', 'k'];
+            for(let val of num) {
+                if(target.includes(val)) {
+                    console.log(val);
+                }
+            }
 
+        }
+        //e,f만 출력하는 방법 3가지 slice splice 안쓰고
+        {
+            const num = ['a','b','c','d','e','f','g','h','i','k'];
+
+            num.map((e) => {
+                if(e==e || f==f) {}
+            })
         }
    </script>
 </body>
