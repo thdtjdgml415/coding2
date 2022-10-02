@@ -1,27 +1,31 @@
 /* textType */
-#textType {
-}
-.text__wrap {
-}
+#textType {}
+
+.text__wrap {}
+
 .text__wrap .text__inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 50px;
 }
+
 .text__wrap .text__inner .text1 h2 {
   margin-bottom: 20px;
   font-weight: bold;
 }
+
 .text__wrap .text__inner .text1 ul li {
   margin-bottom: 20px;
 }
+
 .text__wrap .text__inner .text1 ul li span {
-    color: #ccc;
-    font-size: 14px;
+  color: #ccc;
+  font-size: 14px;
 }
-.text__wrap .text__inner1 .tab {
-}
+
+.text__wrap .text__inner1 .tab {}
+
 .text__wrap .text__inner .text1 {
   width: 30%;
   border: 1px solid #ccc;
@@ -29,6 +33,7 @@
   margin-bottom: 20px;
   position: relative;
 }
+
 .text__wrap .text__inner .text2 {
   width: 60%;
   border: 1px solid #ccc;
@@ -36,25 +41,31 @@
   margin-bottom: 20px;
   position: relative;
 }
+
 .text__wrap .text__inner .text2 .text2_list1 {
-    float: left;
+  float: left;
 }
+
 .text__wrap .text__inner .text2 h2 {
   font-weight: bold;
   margin-bottom: 20px;
 }
+
 .text__wrap .text__inner .text2 li {
-    margin-bottom: 10px;
-    font-size: 14px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
-.text__wrap .text__inner .text2 .text2_list2{
-    float: right;
+
+.text__wrap .text__inner .text2 .text2_list2 {
+  float: right;
 }
+
 .text__wrap .text__inner .text2 span {
-    text-align: right;
-    display: block;
-    position: absolute;
+  text-align: right;
+  display: block;
+  position: absolute;
 }
+
 .text__wrap .text__inner .text2 li em {
   background: rgb(88, 88, 224);
   color: #fff;
@@ -66,29 +77,33 @@
 }
 
 .text__wrap .text__inner .text3 {
-   border: 1px solid #ccc;
-   background-image: url(/site2/webd/2/img/effect_bg_03.jpg);
-   background-size: cover;
-   width: 372px;
+  border: 1px solid #ccc;
+  background-image: url(/site2/webd/2/img/effect_bg_03.jpg);
+  background-size: cover;
+  width: 372px;
 }
+
 .text__wrap .text__inner .text3 h2 {
-    color: #fff;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
+  color: #fff;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
 }
+
 .text__wrap .text__inner .text3 p {
-    color: #fff;
-    font-size: 14px;
-    padding: 20px;
-    margin-bottom: 10px;
+  color: #fff;
+  font-size: 14px;
+  padding: 20px;
+  margin-bottom: 10px;
 }
+
 .text__wrap .text__inner .text3 a {
-    border: 3px solid #fff;
-    color: #fff;
-    padding: 10px 50px;
-    margin-left: 20px;
+  border: 3px solid #fff;
+  color: #fff;
+  padding: 10px 50px;
+  margin-left: 20px;
 }
+
 .text__wrap .text__inner .text4 {
   border: 1px solid #ccc;
   width: 60%;
@@ -96,35 +111,44 @@
   position: relative;
   height: 170.9px;
 }
-.text__wrap .text__inner .text4 .text__desc{
-    display: flex;
+
+.text__wrap .text__inner .text4 .text__desc {
+  display: flex;
 }
+
 .text__wrap .text__inner .text4 .text__desc .text__desc1 {
-    border-right: 1px solid #ccc;
-    font-size: 14px;
+  border-right: 1px solid #ccc;
+  font-size: 14px;
 }
+
 .text__wrap .text__inner .text4 .text__desc .text__desc1 p {
-    margin-bottom: 10px;
-    margin-right: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
+
 .text__wrap .text__inner .text4 .text__desc .text__desc1 em {
-    color: #ccc;
+  color: #ccc;
 }
+
 .text__wrap .text__inner .text4 .text__desc .text__desc2 {
-    font-size: 14px;
+  font-size: 14px;
 }
+
 .text__wrap .text__inner .text4 .text__desc .text__desc2 p {
-    margin-left: 10px;
-    margin-bottom: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
+
 .text__wrap .text__inner .text4 .text__desc .text__desc2 em {
-    color: #ccc;
+  color: #ccc;
 }
+
 .text__wrap .text__inner .text4 h2 {
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 
 }
+
 .more2 {
   border: 1px solid #000;
   width: 30px;
