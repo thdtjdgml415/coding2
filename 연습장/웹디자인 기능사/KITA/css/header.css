@@ -1,0 +1,15 @@
+/* headerType */
+
+.header__inner img {
+    width: 150px;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__inner ul li {
+    display: inline-block;
+    margin-right: 30px;
+    font-weight: 500;
+}

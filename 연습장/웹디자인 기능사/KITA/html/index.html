@@ -1,24 +1,108 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KITA</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-    wrap
-    <header id="header">
-        <h2><a href="#"><img src="../img/logo.jpg" alt="KITA"></a></h2>
-    <ul>
-        <li>무역통상정보</li>
-        <li>회원/업무지원</li>
-        <li>무역통계</li>
-        <li>협회안내</li>
-    </ul>
-    </header>
-    <section></section>
-    <footer></footer>
-    
+    <div id="wrap">
+        <header id="header">
+            <div class="header__inner container">
+                <h2><a href="#"><img src="../img/logo.jpg" alt="KITA"></a></h2>
+                <ul>
+                    <li>무역통상정보</li>
+                    <li>회원/업무지원</li>
+                    <li>무역통계</li>
+                    <li>협회안내</li>
+                </ul>
+            </div>
+        </header>
+        <section id="slideType">
+            <div class="slider__wrap container">
+                <div class="slider__img">
+                    <div class="slider__inner">
+                        <div class="slider"><img src="../img/slider__bg01.jpg" alt="이미지1"></div>
+                        <div class="slider"><img src="../img/slider__bg01.jpg" alt="이미지2"></div>
+                        <div class="slider"><img src="../img/slider__bg01.jpg" alt="이미지3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cardType">
+            <div class="card__wrap container">
+                <div class="card__inner">
+                    <div class="card">
+                        <span>모집마감: -4일</span>
+                        <h3>2019태국 국제식품전시회 업체모집</h3>
+                        <ul>
+                            <li><em>사업기간</em>2019-05-28 ~ 2019-06-01</li>
+                            <li><em>모집기간</em>2019-01-17 ~ 2019-02-12</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span>모집마감: -4일</span>
+                        <h3>2019태국 국제식품전시회 업체모집</h3>
+                        <ul>
+                            <li><em>사업기간</em>2019-05-28 ~ 2019-06-01</li>
+                            <li><em>모집기간</em>2019-01-17 ~ 2019-02-12</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span>모집마감: -4일</span>
+                        <h3>2019태국 국제식품전시회 업체모집</h3>
+                        <ul>
+                            <li><em>사업기간</em>2019-05-28 ~ 2019-06-01</li>
+                            <li><em>모집기간</em>2019-01-17 ~ 2019-02-12</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span>모집마감: -4일</span>
+                        <h3>2019태국 국제식품전시회 업체모집</h3>
+                        <ul>
+                            <li><em>사업기간</em>2019-05-28 ~ 2019-06-01</li>
+                            <li><em>모집기간</em>2019-01-17 ~ 2019-02-12</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <footer></footer>
+    </div>
+    <script>
+        const sliderImg = document.querySelector(".slider__img");
+        const sliderInner = document.querySelector(".slider__inner");
+        const slider = document.querySelectorAll(".slider");
+
+        currentIndex = 0;
+        let sliderCount = slider.length;
+        let sliderWidth = sliderImg.offsetWidth;
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true);
+        sliderInner.appendChild(sliderClone)
+
+        function sliderEffect() {
+            sliderInner.style.transition = "all 0.6s";
+            sliderInner.style.transform = "translateX(-" + sliderWidth * currentIndex + "px)";
+
+            currentIndex++
+            console.log(currentIndex)
+
+            if (currentIndex == sliderCount) {
+                setTimeout(() => {
+                    sliderInner.style.transition = "all 0s"
+                    sliderInner.style.transform = "translateX(0px)"
+                },900)
+                currentIndex = 0
+            }
+        }
+        // setInterval(sliderEffect ,2000)
+
+    </script>
 </body>
+
 </html>
