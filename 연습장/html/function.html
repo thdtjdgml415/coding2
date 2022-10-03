@@ -395,9 +395,100 @@
                         num(i);
                     }
                 }
-                callBack(func);
+                // callBack(func);
             }
         }
+        // 23
+        {
+            function func(e) {
+                const str = e.startsWith("reference", 7);
+                console.log(str)
+                if (str == true) {
+                    document.write("true")
+                }
+            }
+            // func("javascript reference")
+            //아무것도 안나옴
+        }
+        //24
+        {
+            function func(a) {
+                for (let i = 0; i < a.length; i++) {
+                    let number = a[i]
+                    if (number > 3) {
+                        document.write(number);
+                    }
+                }
+            }
+            // func([1, 2, 3, 4, 5]);
+            //4,5
+        }
+        //25
+        {
+            // function func(numbers) {
+            //     const result = numbers.filter(number => {
+            //         numbers.push(number)
+            //         return number > 3;
+            //     });
+            //     document.write(result)
+            // }
+            // func([1, 2, 3, 4, 5])
+        }
+        //26 
+        {
+            // function func(e) {
+            //     e.forEach((el, idx) => {
+            //         for (let i = 0; i < 6; i++) {
+            //             if (idx == i) {
+            //                 document.write("#")
+            //             }
+            //         }
+            //     })
+            // }
+            // func(['a', 's', 'd', 'a', 'd', 's'])
+        }
+        //27 
+        {
+            // function func(index) {
+            //     document.write("함수가 실행되었습니다." + index + "<br>")
+            // }
+            // function callback(num) {
+            //     for (let i = 1; i <= 10; i++) {
+            //         if (i % 2 == 0) {
+            //             num(i)
+            //         }
+            //     }
+            // }
+            // callback(func);
+        }
+        //28
+        {
+            // function func() {
+            //     function funcA() {
+            //         document.write("함수가 실행되었습니다.1")
+            //     }
+            //     funcA();
+
+            //     function funcB() {
+            //         document.write("함수가 실행되었습니다.2")
+            //     }
+            //     funcB();
+            // }
+            // func();
+        }
+        //29
+        {
+            var arr = [1,2,3,4,5,6]
+
+            for (var i = 0; i < 5; i++) {
+                arr[i] = function (id) {
+                    return function () {
+                        return id;
+                    }
+                }(i)
+            }
+        }
+
     </script>
 </body>
 
