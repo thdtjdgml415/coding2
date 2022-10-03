@@ -33,8 +33,9 @@
                 </div>
             </div>
         </section>
-        <section id="cardType">
-            <div class="card__wrap container">
+        <section id="cardType" class="container section">
+            <h2>KITA사업일정</h2>
+            <div class="card__wrap">
                 <div class="card__inner">
                     <div class="card">
                         <span>모집마감: -4일</span>
@@ -70,6 +71,52 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section id="textType">
+            <div class="text__wrap container">
+                <div class="text__inner">
+                    <div class="top">
+                        <div class="text1">
+                            <h2><a href="#" class="btn active">보도자료 |</a><a href="#" class="btn"><em> 언론기고</em></a></h2>
+                            <ul class="submenu active">
+                                <li>민관합동 현장중심 수출활력촉진단 가동<em>2019-01-31</em></li>
+                                <li>민간기업이 주도하는 유럽 스타트업 캠퍼스<em>2019-01-29</em></li>
+                            </ul>
+                            <ul class="submenu">
+                                <li>민관합동 현장중심 수<em>2019-01-31</em></li>
+                                <li>민간기업이 주도하는 유럽 스타트업 캠퍼스<em>2019-01-29</em></li>
+                            </ul>
+                        </div>
+                        <div class="text2">
+                            <h3>온라인 세미나</h3>
+                            <p>무역협회에서 실시하는 국내 무역 관련 세미나, 설명회등을 VOD 서비스로 제공</p>
+                            <a href="#">바로가기</a>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="text3">
+                            <h2>KTIA 연구보고서</h2>
+                            <ul>
+                                <li><em>[trade Brief]</em>2019년 수출기업 경영환경 전망 조사</li>
+                                <li><em>[KTIA]</em>[토론회 자료] WTO 전자상거해 협상을 위한 공청회 겸 디지털통상 토론회 발...</li>
+                                <li><em>[KTIA]</em>[설명회 자료] 브렉시트(Brecit) 설명회 발표자료</li>
+                                <li><em>[trade Brief]</em> 스타트업 사례를 통해 본 2018 중국 AI시장 트렌드</li>
+                            </ul>
+                        </div>
+                        <div class="text4">
+                            <h3>KITA 통상정보</h3>
+                            <ul>
+                                <li>한미 통상현안 사례분석집 <em>2019-01-15</em></li>
+                                <li>한미 통상현안 사례분석집 <em>2019-01-15</em></li>
+                            </ul>
+                            <ul>
+                                <li>한미 통상현안 사례분석집 <em>2019-01-15</em></li>
+                                <li>한미 통상현안 사례분석집 <em>2019-01-15</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </section>
         <footer></footer>
@@ -96,12 +143,31 @@
                 setTimeout(() => {
                     sliderInner.style.transition = "all 0s"
                     sliderInner.style.transform = "translateX(0px)"
-                },900)
+                }, 900)
                 currentIndex = 0
             }
         }
         // setInterval(sliderEffect ,2000)
+        
+        {
+            let subMenu = document.querySelectorAll(".submenu");
+            let tabBtn = document.querySelectorAll(".btn");
 
+            tabBtn.forEach((i,id)=>{
+                i.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    tabBtn.forEach((a)=>{
+                        a.classList.remove("active");
+                    })
+                    i.classList.add("active")
+                    subMenu.forEach((el)=>{
+                        el.classList.remove("active");
+                    })
+                    subMenu[id].classList.add("active")
+                })
+            })
+            
+        }
     </script>
 </body>
 

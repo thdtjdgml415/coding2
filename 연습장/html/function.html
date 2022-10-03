@@ -374,56 +374,43 @@
         }
         //21
         {
-            function func(e) {
-                for (let i = 0; i <= e; i++) {
-                    document.write("# <br>");
-                    for (let j = 0; j <= e; j++) {
-                        document.write("$");
-                    }
-                }
-            }
+            // function func(e) {
+            //     for (let i = 0; i <= e; i++) {
+            //         document.write("# <br>");
+            //         for (let j = 0; j <= e; j++) {
+            //             document.write("$");
+            //         }
+            //     }
+            // }
             // func(5)
         }
         //22
         {
             {
-                function func(index) {
-                    document.write("함수" + index + "<br>")
-                }
-                function callBack(num) {
-                    for (let i = 0; i <= 10; i++) {
-                        num(i);
-                    }
-                }
+                // function func(index) {
+                //     document.write("함수" + index + "<br>")
+                // }
+                // function callBack(num) {
+                //     for (let i = 0; i <= 10; i++) {
+                //         num(i);
+                //     }
+                // }
                 // callBack(func);
             }
         }
-        // 23
+        //23
         {
-            function func(e) {
-                const str = e.startsWith("reference", 7);
-                console.log(str)
-                if (str == true) {
-                    document.write("true")
-                }
-            }
-            // func("javascript reference")
-            //아무것도 안나옴
+            // function func(a) {
+            //     for (let i = 0; i < a.length; i++) {
+            //         let number = a[i]
+            //         if (number > 3) {
+            //             document.write(number);
+            //         }
+            //     }
+            // }
+            // func([1, 2, 3, 4, 5]);
         }
         //24
-        {
-            function func(a) {
-                for (let i = 0; i < a.length; i++) {
-                    let number = a[i]
-                    if (number > 3) {
-                        document.write(number);
-                    }
-                }
-            }
-            // func([1, 2, 3, 4, 5]);
-            //4,5
-        }
-        //25
         {
             // function func(numbers) {
             //     const result = numbers.filter(number => {
@@ -434,7 +421,7 @@
             // }
             // func([1, 2, 3, 4, 5])
         }
-        //26 
+        //25
         {
             // function func(e) {
             //     e.forEach((el, idx) => {
@@ -447,7 +434,7 @@
             // }
             // func(['a', 's', 'd', 'a', 'd', 's'])
         }
-        //27 
+        //26 
         {
             // function func(index) {
             //     document.write("함수가 실행되었습니다." + index + "<br>")
@@ -461,38 +448,34 @@
             // }
             // callback(func);
         }
+        //27
+        {
+            function whatYourName(name, callback) {
+                console.log('name: ', name);
+                callback();
+            }
+
+            function finishFunc() {
+                console.log('finish function');
+            }
+
+            whatYourName('miniddo', finishFunc);
+        }
         //28
         {
-            // function func() {
-            //     function funcA() {
-            //         document.write("함수가 실행되었습니다.1")
-            //     }
-            //     funcA();
+            let fruit = 'apple';	// Global Variable
 
-            //     function funcB() {
-            //         document.write("함수가 실행되었습니다.2")
-            //     }
-            //     funcB();
-            // }
-            // func();
-        }
-        //29
-        {
-            var arr = []
-
-            for (var i = 0; i < 5; i++) {
-                arr[i] = function (id) {
-                    return function () {
-                        return id;
-                    }
-                }(i)
+            function callbackFunc(callback) {
+                let vegetable = 'tomato';	// Local Variable
+                callback(vegetable);
             }
-        }
-        
-        {
 
-        }
+            function eat(vegetable) {
+                console.log(`fruit: ${fruit} / vegetable: ${vegetable}`);
+            }
 
+            callbackFunc(eat);
+        }
     </script>
 </body>
 

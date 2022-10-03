@@ -1,0 +1,58 @@
+.text__wrap {}
+.text__wrap .text__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.text__wrap .text__inner .top {}
+.text__wrap .text__inner .text1 {
+    border: 1px solid #000;
+    width: 350px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.text__wrap .text__inner .text1 h2 {
+    margin-bottom: 30px;
+}
+.text__wrap .text__inner .text1 .submenu {
+    display: none;
+}
+.text__wrap .text__inner .text1 .submenu.active {
+    display: block;
+}
+.text__wrap .text__inner .text1 ul li {
+    margin-bottom: 10px;
+    
+}
+.text__wrap .text__inner .text1 ul li em {
+    color: rgb(39, 38, 38);
+    font-size: 14px;
+}
+.text__wrap .text__inner .text1 .btn {
+    color: #ccc;
+}
+.text__wrap .text__inner .text1 .btn.active {
+    color: #000;
+}
+.text__wrap .text__inner .text2 {
+    border: 1px solid #000;
+    width: 350px;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+.text__wrap .text__inner .text3 {
+    border: 1px solid #000;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 730px;
+    margin-bottom: 20px;
+}
+.text__wrap .text__inner .text4 {
+    border: 1px solid #000;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 730px;
+}
+
+.text__wrap .text__inner .bottom {}

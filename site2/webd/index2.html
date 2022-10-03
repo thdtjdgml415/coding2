@@ -189,7 +189,7 @@
             console.log(currentIndex)
 
 
-            if(currentIndex == sliderCount ) {
+            if(currentIndex == sliderCount) {
                 setTimeout(() => {
                     sliderInner.style.transition = "0s";
                     sliderInner.style.transform = "translateX(0px)";
@@ -206,12 +206,11 @@
         const tabBtn = document.querySelectorAll(".btn")
 
         tabBtn.forEach((a, idx)=>{
-            a.addEventListener( "click", (el) => {
+            a.addEventListener("click", (el) => {
                 el.preventDefault();
                 tabBtn.forEach((e) => {
                     e.classList.remove("active")
                 })
-                console.log(idx)
                 a.classList.add("active")
                 submenu.forEach ((active)=>{
                     active.classList.remove("active")
