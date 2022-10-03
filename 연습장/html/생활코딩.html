@@ -1,0 +1,13 @@
+<script>
+    {
+        var grades = {
+            'list' : {'egoing' : 10, 'k8805' : 8, 'soriargi' : 80},
+            'show' : function() {
+                for(let name in this.list) {
+                    console.log(name, this.list[name]);
+                }
+            }
+        } 
+        grades.show();
+    }
+</script>

@@ -51,7 +51,9 @@
 }
 
 /* 폰트 */
-
+.namu {
+    font-family: 'NanumGothic';
+}
 
 /* 배경 */
 .gray {
