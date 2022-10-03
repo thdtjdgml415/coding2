@@ -181,11 +181,12 @@
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);
         sliderInner.appendChild(sliderClone)
    
-        
         function sliderEffect () {
+            
             sliderInner.style.transition =  "all 0.6s"
             sliderInner.style.transform = "translateX(-" + sliderWidth * currentIndex + "px)";
             currentIndex++;
+            console.log(currentIndex)
 
 
             if(currentIndex == sliderCount ) {
@@ -197,7 +198,7 @@
                 currentIndex = 0;
             }
         } 
-        // setInterval(sliderEffect,2000);
+        setInterval(sliderEffect,2000);
         
     </script>
     <script>

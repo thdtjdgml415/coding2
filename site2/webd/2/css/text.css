@@ -8,6 +8,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 50px;
+  background-color: #f3f7f8;
 }
 
 .text__wrap .text__inner .text1 h2 {

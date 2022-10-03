@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정부24 연습</title>
+    <link rel="stylesheet" href="../webd/5/css/style2.css">
+    <style>
+        .slide__wrap {
+
+        }
+        .slide__img {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            overflow: hidden;
+   
+        }
+        .slide__inner {
+            display: flex;
+            width: 3200px;
+            height: 500px;
+        }
+        .slide {
+            width: 800px;
+            height: 500px;
+        }
+        .slide img {
+            width: 800px;
+            height: 500px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="clearfix">
+        <header id="header">
+            <h2><img src="../2/img/logo1.jpg" alt=""></h2>
+            <ul>
+                <li class="active"><a href="#">서비스</a></li>
+                <li><a href="#">정책정보</a></li>
+                <li><a href="#">기관정보</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </header>
+        <section id="contents">
+            <div id="banner">
+                <div class="slide__wrap">
+                    <div class="slide__img">
+                        <div class="slide__inner">
+                            <div class="slide">
+                                <img src="../webd/5/img/slider1.jpg" alt="이미지1">
+                            </div>
+                            <div class="slide">
+                                <img src="../webd/5/img/slider1.jpg" alt="이미지2">
+                            </div>
+                            <div class="slide">
+                                <img src="../webd/5/img/slider1.jpg" alt="이미지3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- banner -->
+            <div class="tabs">
+                <ul>
+                    <li class="active"><a href="#">자주 찾는 서비스 |</a>
+                        <ul class="clearfix">
+                            <li><a href="#"><img src="../webd/5/img/article1.jpg" alt=""><span> 주민등록표등본<br>(초본)교부</span></a>
+                            </li>
+                            <li><a href="#"><img src="../webd/5/img/article2.jpg" alt=""><span> 주민등록표등본<br>(초본)교부</span></a>
+                            </li>
+                            <li><a href="#"><img src="../webd/5/img/article3.jpg" alt=""><span> 주민등록표등본<br>(초본)교부</span></a>
+                            </li>
+                            <li><a href="#"><img src="../webd/5/img/article4.jpg" alt=""><span> 주민등록표등본<br>(초본)교부</span></a>
+                            </li>
+                            <li><a href="#"><img src="../webd/5/img/article5.jpg" alt=""><span> 주민등록표등본<br>(초본)교부</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">키워드 서비스</a>
+                        <ul style="display: none;">
+                            <li><a href="#"><img src="../webd/5/img/aside1.jpg" alt=""><span> 주민등록표등본<br>(초본)교부</span></a>
+                            </li>
+                            <li><a href="#"><img src="../webd/5/img/aside2.jpg" alt=""><span> 주민등록표등본<br>(초본)교부</span></a>
+                            </li>
+                            <li><a href="#"><img src="../webd/5/img/aside3.jpg" alt=""><span> 주민등록표등본<br>(초본)교부</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="layer clearfix">
+                <div>
+                    <h2>공지사항</h2>
+                    <img src="../webd/5/img/aside1.jpg" alt="">
+                    <ul>
+                        <li>sdadsadadsdadsdadadasda</li>
+                        <li>sdadsadadsdadsdadadasda</li>
+                        <li>sdadsadadsdadsdadadasda</li>
+                    </ul>
+                    <a href="#" class="more"></a>
+                </div>
+                <div>
+                    <h2>자료실</h2>
+                    <img src="../webd/5/img/aside2.jpg" alt="">
+                    <ul>
+                        <li>sdadsadadsdadsdadadasda</li>
+                        <li>sdadsadadsdadsdadadasda</li>
+                        <li>sdadsadadsdadsdadadasda</li>
+                    </ul>
+                    <a href="#" class="more"></a>
+                </div>
+                <div>
+                    <h2>FAQ</h2>
+                    <img src="../webd/5/img/aside3.jpg" alt="">
+                    <ul>
+                        <li>sdadsadadsdadsdadadasda</li>
+                        <li>sdadsadadsdadsdadadasda</li>
+                        <li>sdadsadadsdadsdadadasda</li>
+                    </ul>
+                    <a href="#" class="more"></a>
+                </div>
+            </div>
+        </section>
+        <footer id="footer" class="clearfix">
+            <h2><img src="../webd/5/img/logo2.jpg" alt="정부24"></h2>
+            <address>
+                03171 서울특별시 세동대로 209 (세종로) 행정안전부 <br>
+                정부24 콜센터 1588-2188 정부민원안내콜센터 국번없이 110 <br>
+                Copyright &copy; Ministry of th Interior and Safety. All Rights reserved.
+            </address>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="../webd/5/img/snsN.gif" alt="네이버"></a></li>
+                    <li><a href="#"><img src="../webd/5/img/snsF.gif" alt="트위터"></a></li>
+                    <li><a href="#"><img src="../webd/5/img/snsT.gif" alt="페이스북"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const slideImg = document.querySelector(".slide__img");
+        const slideInner = document.querySelector(".slide__inner");
+        const slide = document.querySelectorAll(".slide");
+
+        currentIndex = 0;
+        let slideCount = slide.length;
+        let slideWidth = slideImg.offsetWidth;
+        let slideClone = slideInner.firstElementChild.cloneNode(true);
+        slideInner.appendChild(slideClone)
+        
+        function slideEffect () {
+            slideInner.style.transition = "all 1s";
+            slideInner.style.transform = "translateX(-"+slideWidth*currentIndex+"px)"
+            currentIndex++
+
+            if(currentIndex == slideCount) {
+                setTimeout(() =>{
+                    slideInner.style.transition = '0s';
+                    slideInner.style.transform = 'translateX(0px)';
+    
+                    currentIndex = 0
+
+                },900)
+            }
+        }
+        setInterval(slideEffect,2000);
+    </script>
+        <script src="../webd/5/script/jquery.min.js"></script>
+        <script src="../webd/5/script/index1.js"></script>
+</body>
+</html>
