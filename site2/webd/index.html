@@ -5,175 +5,220 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cookit</title>
-    <!-- SEO -->
-    <meta name="author" content="song">
-    <meta name="description" content="눈물의 사이트 만들기 튜토리얼입니다.">
-    <meta name="keyword" content="눈물, 사이트, 만들기, 튜토리얼, 기초">
-    <meta name="robot" content="all">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../webd/1/css/fonts.css">
-    <!-- 폰트는 항상 가장 위에서 연결되어야함 -->
-    <link rel="stylesheet" href="../webd/1/css/reset.css">
-    <link rel="stylesheet" href="../webd/1/css/common.css">
-
-    <!-- CSS(섹션별) -->
-    <link rel="stylesheet" href="../webd/1/css/header.css">
-    <link rel="stylesheet" href="../webd/1/css/card.css">
-    <link rel="stylesheet" href="../webd/1/css/img.css">
-    <link rel="stylesheet" href="../webd/1/css/text.css">
-    <link rel="stylesheet" href="../webd/1/css/imagetext.css">
-    <link rel="stylesheet" href="../webd/1/css/slider.css">
-    <link rel="stylesheet" href="../webd/1/css/footer.css">
-    <link rel="stylesheet" href="../webd/1/css/modal.css">
-
-    
-    
+    <title>KITA</title>
+    <link href="https://webfontworld.github.io/sunn/SUIT.css" rel="stylesheet">>
+    <link rel="stylesheet" href="../webd/2/css/style.css">
+    <style>
+        * {
+            font-family: 'SUIT';
+        }
+    </style>
 </head>
 
-
 <body>
-    <div id="skip">
-        <a href="#">헤더 영역 바로가기</a>
-        <a href="#">슬라이드 영역 바로가기</a>
-        <a href="#">이미지 영역 바로가기</a>
-        <a href="#">이미지/텍스트 영역 바로가기</a>
-        <a href="#">카드 영역 바로가기</a>
-        <a href="#">배너 영역 바로가기</a>
-        <a href="#">텍스트 영역 바로가기</a>
-        <a href="#">푸터 영역 바로가기</a>
-    </div>
-    <!-- //skip -->
-    <header id="headerType01" class="header__wrap nexon">
-        <div class="header__inner">
-            <div class="header__logo">
-                <img src="/site2/site1/assets/img/Untitled-1.jpg" alt="">
-            </div>
-            <nav class="header__menu">
-                <ul>
-                    <li><a href="#">COOKIT소개</a></li>
-                    <li><a href="#">COOKIT메뉴</a></li>
-                    <li><a href="#">리뷰</a></li>
-                    <li><a href="#">이벤트</a></li>
-                    <li><a href="#">MY쿡킷</a></li>
-                </ul>
+    <header id="header">
+        <div class="header__inner container">
+            <h2><a href="#"><img src="../webd/2/img/logo.jpg" alt="KITA"></a></h2>
+            <nav>
+                <li>무역통상정보</li>
+                <li>회원/업무지원</li>
+                <li>무역통계</li>
+                <li>협회안내</li>
             </nav>
         </div>
     </header>
-    <!-- //headerType -->
-    <main id="mainType" class="container">
-        <section id="sliderType01">
-            <div class="slider__wrap ">
+    <!-- header -->
+    <section id="contents">
+        <article id="sliderType">
+            <div class="slider__wrap container">
                 <div class="slider__img">
-                    <div class="slider"><img src="../site1/assets/img/Untitled-2.jpg" alt="이미지1"></div>
-                    <div class="slider"><img src="../site1/assets/img/logo2.jpg" alt="이미지2"></div>
-                </div>
-            </div>
-        </section>
-        <!--sliderType-->
-        <section id="imageType01">
-            <div class="image__wrap">
-                <div class="image__inner">
-                    <div class="image__header">
-                        <h2 class="image__title">우리집도 COOKIT 배송이 되나요?</h2>
-                        <p class="image__desc">배송이 가능한지 알려드려요.</p>
-                        <a href="#">🖱배송지 검색</a>
+                    <div class="slider__inner">
+                        <div class="slider"><img src="/site2/webd/2/img/slider__bg01.jpg" alt=""></div>
+                        <div class="slider"><img src="/site2/webd/2/img/slider__bg01.jpg" alt=""></div>
+                        <div class="slider"><img src="/site2/webd/2/img/slider__bg01.jpg" alt=""></div>
                     </div>
-                    <div class="figure">
-                        <img src="../site1/assets/img/article1.jpg" alt="">
-                    </div>
-                   
-                </div>
-                <div class="image__inner">
-                    <div class="image__header">
-                        <h2 class="image__title">우리집도 COOKIT 배송이 되나요?</h2>
-                        <p class="image__desc">배송이 가능한지 알려드려요.</p>
-                        <a href="#">63:28:32<span>남은시간</span></a>
-                    </div>
-                    <div class="figure">
-                        <img src="../site1/assets/img/article2.jpg" alt="">
-                    </div>
-            </div>
-        </section>
-        <!--imageType-->
-        <section id="imgTextType">
-            <div class="imageText__wrap">
-                <div class="imageText__header">
-                    <h2>실시간 베스트 | 생생한 리뷰</h2>
-                </div>
-                <div class="imageText__inner">
-                    <div class="imageText__desc">
-                        <figcaption class="Text__award">
-                            <p class="a">
-                                BEST
-                                01
-                            </p>
-                        </figcaption>
-                        <img src="/site2/site1/assets/img/img1.jpg" alt="평양식 어복냉면">
-                        <p class="title">평양식 어복냉면</p>
-                        <p class="price">33,800원<span>/3인분</span></p>
-                        <img class="market" src="../site1/assets/img/market.jpg" alt="">
-                    </div>
-                    <div class="imageText__desc">
-                        <figcaption class="Text__award">
-                            <p>03</p>
-                        </figcaption>
-                        <img src="/site2/site1/assets/img/img2.jpg" alt="평양식 어복냉면">
-                        <p class="title">평양식 어복냉면</p>
-                        <p class="price">33,800원<span>/3인분</span></p>
-                        <img class="market" src="../site1/assets/img/market.jpg" alt="">
-                    </div>
-                    <div class="imageText__desc">
-                        <figcaption class="Text__award">
-                            <p>02</p>
-                        </figcaption>
-                        <img src="/site2/site1/assets/img/img3.jpg" alt="평양식 어복냉면">
-                        <p class="title">평양식 어복냉면</p>
-                        <p class="price">33,800원<span>/3인분</span></p>
-                        <img class="market" src="../site1/assets/img/market.jpg" alt="">
+                    <div class="click">
+                        <div class="left"></div>
+                        <div class="right"></div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <div id="modal">
-        <div class="modal__wrap">
-            <div class="modal__btn">소스 보기</div>
-            <div class="modal__cont">
-                <div class="modal__box">
-                    
+        </article>
+        <!-- slide -->
+        <article id="cardType">
+            <div class="card__wrap container">
+                <h2>KITA 사업 일정</h2>
+                <a href="#" class="more">+</a>
+                <div class="card__inner">
+                    <div class="card">
+                        <span>모집 마감 -4일</span>
+                        <div class="card__title">
+                            2019 태국 국제식품 전시회 업체모집
+                        </div>
+                        <ul>
+                            <li><em>사업기간</em>2019-05-28 ~ 2019-06-01</li>
+                            <li><em>모집기간</em>2019-01-17 ~ 2019-02-12</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span>모집 마감 -4일</span>
+                        <div class="card__title">
+                            2019 태국 국제식품 전시회 업체모집
+                        </div>
+                        <ul>
+                            <li><em>사업기간</em>2019-05-28 ~ 2019-06-01</li>
+                            <li><em>모집기간</em>2019-01-17 ~ 2019-02-12</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span>모집 마감 -4일</span>
+                        <div class="card__title">
+                            2019 태국 국제식품 전시회 업체모집
+                        </div>
+                        <ul>
+                            <li><em>사업기간</em>2019-05-28 ~ 2019-06-01</li>
+                            <li><em>모집기간</em>2019-01-17 ~ 2019-02-12</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span>모집 마감 -4일</span>
+                        <div class="card__title">
+                            2019 태국 국제식품 전시회 업체모집
+                        </div>
+                        <ul>
+                            <li><em>사업기간</em>2019-05-28 ~ 2019-06-01</li>
+                            <li><em>모집기간</em>2019-01-17 ~ 2019-02-12</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </article>
+        <!-- card -->
+        <article id="textType">
+            <div class="text__wrap container">
+                <div class="text__inner">
+                    <div class="text1">
+                        <h2><a href="#" class="btn active">보도자료 |</a><a href="#" class="btn"> 언론기고</a></h2>
+                        <ul class="submenu active">
+                            <li>민관합동 현장 중심 수출활력촉진단 가동<br><span>2019-01-31</span></li>
+                            <li>민간기업이 주도하는 유럽 스타트업 캠퍼스<br><span>2019-01-29</span></li>
+                        </ul>
+                        <a href="#" class="more2">+</a>
+                        <ul class="submenu">
+                            <li>민관합동 현장 중심 수출활력촉진단 가동<br><span>2019-01-31</span></li>
+                            <li>민간기업이 주sdadks;lad;asdkd<br><span>2019-01-29</span></li>
+                        </ul>
+                        <a href="" class="more2">+</a>
+                    </div>
+                    <div class="text2">
+                        <h2>KITA연구보고서</h2>
+                        <ul class="text2_list1">
+                            <li><em>[Trade Brief]</em> 2019년 수출기업의 경영환경 전망 조사</li>
+                            <li><em>[KITA]</em>[토론회 자료]WTO 전자상거래 협상을 위한 공청회 겸 디지털 통...</li>
+                            <li><em>[KITA]</em>[설명회 자료]브렉시트(Brexit) 설명회 발표자료</li>
+                            <li><em>[Trade Brief]</em> 스타트업 사례를 통해 본 2018 중국 AI시장 트렌드</li>
+                        </ul>
+                        <ul class="text2_list2">
+                            <li>2019-01-28</li>
+                            <li>2019-01-28</li>
+                            <li>2019-01-28</li>
+                            <li>2019-01-28</li>
+                        </ul>
+                        <a href="" class="more2">+</a>
+                    </div>
+                    <div class="text3">
+                        <h2>온라인세미나</h2>
+                        <p>무역 협회에서 실시하는 국내 무역 관련 세미나, <br> 설명회 등을 VOD 서비스로 제공</p>
+                        <a href="#">바로가기</a>
+                    </div>
+                    <div class="text4">
+                        <h2>KITA 통상정보</h2>
+                        <div class="text__desc">
+                            <div class="text__desc1">
+                                <p>한미 통상현안 사례분석집 <br> <em> 2019-01-15</em></p>
+                                <p>[통상리포트] 킥오브된 브렉시트 후반전: 향후.. <br><em>2018-10-31</em></p>
+                            </div>
+                            <div class="text__desc2">
+                                <p>한미 통상현안 사례분석집 <br><em>2019-01-15</em></p>
+                                <p>[통상리포트] 킥오브된 브렉시트 후반전: 향후.. <br><em>2018-10-31</em></p>
+                            </div>
+                            <a href="" class="more2">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- text -->
+    </section>
+    <!-- section -->
+    <footer id="footer">
+        <div class="footer__inner container clearfix">
+            <p>이용약관 | 개인정보처리방침 | 저작권 정책 | 이메일주소무단수집거부 | 온라인 고객상담 | 신문고</p>
+            <div class="bottom clearfix">
+                <img src="../webd/2/img/footerlogo.jpg" alt="">  
+                <p>(06164)서울시 강남구 영동대로 511(삼성동) <br>CopyRight &copy; KITA All rights reserved</p>
+                <div class="footer__imgs">
+                    <img src="/site2/webd/2/img/F.jpg" class="img1" alt="">
+                    <img src="/site2/webd/2/img/T.jpg" class="img2" alt="">
+                    <img src="/site2/webd/2/img/Y.jpg" class="img3" alt="">
+                </div>
+                <div class="bottom__desc">트레이드 콜센터<em>1566-5114</em></div>
+            </div>
+             
         </div>
-      
-    </div>
-    <!-- //mainType -->
-    <footer id="footerType">
-        <div class="footer__inner container">
-            <div class="footer__logo">
-                <img src="../site1/assets/img/bottom.jpg" alt="">
-            </div>
-            <div class="footer__desc">
-                <p class="p1">
-                     이용약관 <span>|</span> 개인정보 처리 방침  <span>|</span>  법적고지  <span>|</span>  사업자정보 확인
-                </p>
-                <p class="p2">
-                    씨제이제일제당(주)  <span>|</span>  대표자: 신현태
-                </p>
-                <p class="p3">
-                    주소: 서울 중구 동호로 330 CJ제일제당 센터 (우) 04560  <span>|</span>  사업자등록번호: 104-86-09535
-                </p>
-                <p class="p4">
-                    통신판매업신고 중구 제07767호<span>|</span>개인정보보호책임자:류화정
-                </p>
-            </div>
        
-        </div>
     </footer>
-    <!-- //footerType -->
-</main>
+    <!-- footer -->
+
+    <script>
+        const sliderImg = document.querySelector(".slider__img");
+        const sliderInner = document.querySelector(".slider__inner");
+        const slider = document.querySelectorAll(".slider");
+
+        currentIndex = 0; 
+        let sliderCount = slider.length;
+        let sliderWidth = sliderImg.offsetWidth;
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true);
+        sliderInner.appendChild(sliderClone)
+   
+        function sliderEffect () {
+            
+            sliderInner.style.transition =  "all 0.6s"
+            sliderInner.style.transform = "translateX(-" + sliderWidth * currentIndex + "px)";
+            currentIndex++;
+            console.log(currentIndex)
+
+
+            if(currentIndex == sliderCount) {
+                setTimeout(() => {
+                    sliderInner.style.transition = "0s";
+                    sliderInner.style.transform = "translateX(0px)";
+
+                },900)
+                currentIndex = 0;
+            }
+        } 
+        setInterval(sliderEffect,2000);
+        
+    </script>
+    <script>
+        const submenu = document.querySelectorAll(".submenu")
+        const tabBtn = document.querySelectorAll(".btn")
+
+        tabBtn.forEach((a, idx)=>{
+            a.addEventListener("click", (el) => {
+                el.preventDefault();
+                tabBtn.forEach((e) => {
+                    e.classList.remove("active")
+                })
+                a.classList.add("active")
+                submenu.forEach ((active)=>{
+                    active.classList.remove("active")
+                })
+                submenu[idx].classList.add("active")
+            })
+        })
+    </script>
 </body>
-<script src="../webd/1/script/slider.js"></script>
 
 </html>
