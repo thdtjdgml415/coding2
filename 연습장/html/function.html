@@ -473,8 +473,105 @@
             function eat(vegetable) {
                 console.log(`fruit: ${fruit} / vegetable: ${vegetable}`);
             }
-
             callbackFunc(eat);
+        }
+        {
+            {
+                function func(afterSchool) {
+                    let list = ['a', 'b', 'c']
+                    let i = 0;
+                    if (i <= list.length) {
+                        i = 1;
+                    } else {
+                        i = 10;
+                    }
+                    let answer = "";
+                    for (let x of afterSchool) {
+                        if (x == 'n') answer += i;
+                        else answer += x;
+                    }
+                    return (answer);
+                }
+                let str = "오늘은 남는 사람 n명"
+                console.log(func(str));
+            }
+        }
+        {
+            function solution(numbers) {
+                let answer = 0;
+                for (let i = 0; i <= 10; i++) {
+                    if (!numbers.includes(i)) {
+                        answer += i;
+                        // console.log(answer)
+                    }
+                }
+                if (answer <= 10) {
+                    answer = 0;
+                } else {
+                    answer = 1;
+                }
+                return answer;
+            }
+            // console.log(solution([1, 2, 3, 4, 5, 6, 7, 8, 0]));
+        }
+
+        {
+            function good() {
+                let list = [1, 2, 3, 4, 5, 6];
+                let i = 0;
+
+                for (let q = 0; q <= 23; q++) {
+                    if (q % 2 == 0) {
+                        i++
+                    } else {
+                        i--
+                    }
+                    if (q == 2) break;
+                    console.log(list[i]);
+                }
+            }
+            good();
+        }
+        {
+            function func() {
+                let i = 0, sum = 0, sel = 0;
+
+                for (let sel = 1; sel <= 8; sel++) {
+                    if (sel < 4) break;
+                }
+                if (sel <= 4) {
+                    while (i <= 5) {
+                        i++;
+                        sum += i;
+                    }
+                } else {
+                    while (i <= 3) {
+                        i++;
+                        sum += i;
+                    }
+                }
+                console.log(sum);
+            }
+            func()
+        }
+        {
+            function party() {
+                let join = 0;
+                let people = ['철수', '민수', '상수', '변수', '무리수']
+                let enable = 4;
+
+                if (people.length <= 5) {
+                    enable = 3;
+                } else {
+                    enable = 8;
+                }
+                while (join < people.length) {
+                    join++;
+                    if (join == enable) break;
+                }
+                console.log("오늘 파티 참가 가능한 인원수는 총 " + join + "명");
+            }
+            party();
         }
     </script>
 </body>
