@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="/Project/css/login.css">
+    <link rel="stylesheet" href="/Project/css/reset.css">
+    <style>
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        * {
+            font-style: 'GmarketSans.css';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login__popup container">
+        <div class="login__wrap">
+            <div class="login__inner">
+                <div class="login__desc">
+                    <p>
+                        계정을 만들면 IT.D <a href="푸터 이용약관">웹사이트 약관</a>, <a href="푸터 이용약관">개인정보 처리방침</a>및 <a href="푸터 이용약관">
+                        라이선스 계약 조건</a>에 동의하는 것입니다.
+                    </p>
+                </div>
+                <div class="header__wrap">
+                    <div class="login__contents">
+                        <div class="login__box">
+                            <div class="login__header">
+                                <h2>E-mail 로그인</h2>
+                            </div>
+                            <form name="로그인" action="메인페이지">
+                                <fieldset>
+                                    <legend>로그인 입력 폼</legend>
+                                    <div>
+                                        <label for="youEmail">이메일</label>
+                                        <input type="email" name="youEmail" id="youEmail" placeholder="이메일을 입력해주세요."
+                                            class="input__style" required>
+                                    </div>
+                                    <div>
+                                        <label for="youPass">비밀번호</label>
+                                        <input type="password" name="youPass" id="youPass" placeholder="비밀번호를 입력해주세요."
+                                            class="input__style" required>
+                                    </div>
+                                    <button type="submit" class="input__button">로그인</button>
+                                </fieldset>
+                            </form>
+                            <div class="login__footer">
+                                <a href="회원가입페이지"> 회원가입</a>
+                                <a href="비밀번호 찾기"> 비밀번호 찾기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
