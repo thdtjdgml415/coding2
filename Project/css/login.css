@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  background-color: leaer;
 }
 
 .login__popup .login__wrap .login__inner .login__desc p {
