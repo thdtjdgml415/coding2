@@ -354,7 +354,7 @@
     <div id="sample1" class="sample">
         <h2>01. 결괏값을 작성하시오.<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+            <pre class="line-numbers"><code class="language-js">
 function tunc() {
     let i = 10, hap = 0;
     while(i > 1) {
@@ -390,10 +390,69 @@ func(['a','b','c','d','e'], 'e')
         </div>
     </div>
 
-   
+    <hr>
 
+    <div id="sample3" class="sample">
+        <h2>03. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">
+function func() {
+    let i = 10, sum = 10;
+    while (i > 1) {
+        if (i % 4 == 2) {
+            sum += i;
+            break;
+        }
+        i--;
+    }
+    document.write(sum);
+}
+func();
+</code></pre>
+        </div>
+    </div>
 
-    </script>
+    <hr>
+
+    <div id="sample4" class="sample">
+        <h2>04. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">
+function test(arrstr) {
+    let result = '';
+    for (let i = 0; i &lt; arrSubject.length; i++) {
+        result += arrSubject[i].charAt(2);
+    }
+    let str = result;
+    return str;
+}
+let arrSubject = ['web', 'story', 'boy'];
+let result = test(arrSubject);
+
+document.write(result);
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample4" class="sample">
+        <h2>05. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">
+function solution(s) {
+    var answer = [];
+    answer = s.split('').reverse().splice(2).shift();
+    return answer;
+}
+document.write(solution('abcde'));
+</code></pre>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+
 </body>
 
 </html>
