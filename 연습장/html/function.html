@@ -574,17 +574,60 @@
             // party();
         }
         {
-         
-            function func (k,j) {
-                let answer = 0;
-                k.forEach((el) => {
-                    if(el.includes(j)){
-                        answer++
-                    } 
-                    document.write(answer)
-                })
+
+            // function func (k,j) {
+            //     let answer = 0;
+            //     k.forEach((el) => {
+            //         if(el.includes(j)){
+            //             answer++
+            //         } 
+            //         document.write(answer)
+            //     })
+            // }
+            // func(['a','b','c','d','e'], 'e')
+        }
+        {
+            function q7() {
+                const str = "taraeaea";
+                return str.split('').map(word => {
+                    if (word !== "a") return word;
+                }).join('');
             }
-            func(['a','b','c','d','e'], 'e')
+
+            console.log(q7());
+        }
+        {
+            function q10(arr) {
+                let flag = false;
+                let n = 1;
+                while (!flag) {
+                    n++;
+                    for (let i = 1; i < arr.length; i++) {
+                        if ((arr[0] * n) % arr[i] === 0) {
+                            flag = true;
+                        }
+                        else {
+                            flag = false;
+                            break;
+                        }
+                    }
+                }
+                return arr[0] * n
+            }
+
+            console.log(q10([2, 6, 8, 14]));
+        }
+        {
+            function q1(num) {
+                let answer = 0;
+                while (num) {
+                    answer += num % 10;
+                    num = parseInt(num / 10);
+                }
+                return answer;
+            }
+
+            console.log(q1(1996));
         }
     </script>
 </body>

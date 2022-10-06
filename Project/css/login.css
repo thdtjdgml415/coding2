@@ -35,7 +35,7 @@
 
 .login__popup .login__wrap .login__inner .login__desc h2 {
   margin-bottom: 10px;
-
+  padding-top: 50px;
 }
 
 .login__popup .login__wrap .login__inner .login__desc p {}
@@ -51,7 +51,9 @@
 }
 
 
-
+.login__inner {
+  margin-top: 100px;
+}
 .login__inner .login__contents .login__box h2 {
   text-align: center;
   margin-bottom: 20px;
