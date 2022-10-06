@@ -1,13 +1,12 @@
 <script>
-    {
-        var grades = {
-            'list' : {'egoing' : 10, 'k8805' : 8, 'soriargi' : 80},
-            'show' : function() {
-                for(let name in this.list) {
-                    console.log(name, this.list[name]);
-                }
-            }
-        } 
-        grades.show();
+    function func(s) {
+        let answer = "";
+        for (let x of s) {
+            if (x != 'w') answer += "#";
+            else answer += x;
+            return answer;
+        }
+        let str = "webstoryboy";
+        document.write(func(str));
     }
 </script>

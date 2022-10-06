@@ -461,20 +461,6 @@
 
             // whatYourName('miniddo', finishFunc);
         }
-        //28
-        {
-            // let fruit = 'apple';	// Global Variable
-
-            // function callbackFunc(callback) {
-            //     let vegetable = 'tomato';	// Local Variable
-            //     callback(vegetable);
-            // }
-
-            // function eat(vegetable) {
-            //     console.log(`fruit: ${fruit} / vegetable: ${vegetable}`);
-            // }
-            // callbackFunc(eat);
-        }
         {
             // {
             //     function func(afterSchool) {
@@ -575,47 +561,53 @@
         }
         {
             //1번 문제
-            function func (k,j) {
+            function func(k, j) {
                 let answer = 0;
                 k.forEach((el) => {
-                    if(el.includes(j)){
+                    if (el.includes(j)) {
                         answer++;
-                    } 
+                    }
                 })
                 // document.write(answer);
             }
-            func(['a','b','c','d','e'], 'e');
+            func(['a', 'b', 'c', 'd', 'e'], 'e');
         }
         {
             //2번문제
-            function func (j,k) {
+            function func(j, k) {
                 let i = 0;
-                j.forEach ((e,idx)=>{
-                    if(idx < 2) {
+                j.forEach((e, idx) => {
+                    if (idx < 2) {
                         j.map((el, i) => {
                             // document.write(i)
                         })
                     }
                 })
             }
-            func(['1','2','3','4'], "e");
-        }   
+            func(['1', '2', '3', '4'], "e");
+        }
         //3번 문제
         {
-            function func () {
+            function func() {
                 let k, i = 0;
 
-                for (i=0; i <= 8; i++) {
-                     k+=i;
-                     console.log(k)
+                for (i = 0; i <= 8; i++) {
+                    k += i;
+                    // console.log(k)
                 }
-                document.write(k+i)
+                // document.write(k + i)
             }
             func();
         }
+        //4번 문제
         {
-
+            function func() {
+                let i, j = 0;
+                // console.log(j)
+            }
+            func()
         }
+        //5번 문제
         {
             // function q7() {
             //     const str = "taraeaea";
@@ -625,6 +617,84 @@
             // }
 
             // console.log(q7());
+        }
+        //6번
+        {
+            let fruit = 'apple';	// Global Variable
+
+            function callbackFunc(callback) {
+                let vegetable = 'tomato';	// Local Variable
+                callback(vegetable);
+            }
+
+            function eat(vegetable) {
+                // console.log(`fruit: ${fruit} / vegetable: ${vegetable}`);
+            }
+            callbackFunc(eat);
+        }
+        //7번
+        {
+            const num = (el) => {
+                let x = 0;
+                for (let i of el) {
+                    if (i == 'd') x++;
+                    else break;
+                }
+                // document.write(x)
+            }
+            num(['a', 'd', 'v', 'd', 'e'])
+        }
+        //8번 못만듬;
+        {
+            // const solution = (arr) => {
+            //     const alpha = ['a', 'b', 'c', 'a', 's', 'c', 'a']
+            //     return alpha.filter(function (el) {
+            //         el.toLowerCase().indexOf(arr.toLowerCase()) > -1;
+            //     })
+            //     let a = 'a'
+            //     solution(a)
+            // }
+        }
+        //8번 답 0
+        {
+            function solution(numbers) {
+                let answer = 0;
+                for (let i = 0; i < 10; i++) {
+                    if (!numbers.includes(i)) {
+                        answer += i;
+                        break;
+                    }
+                }
+                // return answer;
+            }
+            document.write(solution([1, 2, 3, 5, 6, 7, 8, 9, 10, 11]))
+        }
+        //9번 답 :4
+        {
+            function func() {
+                let i = 10, k = 0;
+                while (i > 3) {
+                    if (i % 2 == 0) {
+                        k += 1;
+                    }
+                    i--
+                }
+                console.log(k)
+            }
+            func()
+        }
+        //10번 finish function name:  song
+        {
+            function whatYourName(name, callback) {
+                console.log('name: ', name);
+                callback();
+            }
+
+            function finishFunc() {
+                console.log('finish function');
+            }
+
+            whatYourName('SONG', finishFunc);
         }
         {
             // function q10(arr) {
@@ -668,7 +738,7 @@
             // for(let i = 1; i < list.length; i++) {
             //     result.push(list[i] + result[i-1]);
             // } 
-            
+
             // return result;
             // }
             // document.write(sum(arr));
