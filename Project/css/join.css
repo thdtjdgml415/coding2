@@ -10,8 +10,8 @@ body {
   
 
   .login__popup .login__wrap {
-    width: 1000px;
-    height: 510px;
+    width: 550px;
+    height: 640px;
     margin: 0 auto;
     background: #fff;
   }
@@ -23,7 +23,7 @@ body {
   }
     /* 왼쪽 */
   .login__popup .login__wrap .login__inner .login__desc {
-    width: 50%;
+    width: 100%;
     height: 510px;
     display: flex;
     flex-direction: column;
@@ -51,12 +51,12 @@ body {
 
   /* 오른쪽 */
   .login__inner .header__wrap {
-    width: 50%;
+    width: 100%;
     height: 510px;
   }
   
   .header__wrap .login__contents {
-    width: 500px;
+    width: 100%;
     height: 510px;
   }
   
@@ -66,7 +66,8 @@ body {
   }
   .login__inner .login__contents .login__box h2 {
     text-align: center;
-    margin: 30px 0;
+    margin-top: 50px;
+    margin-bottom: 15px;
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
@@ -84,7 +85,7 @@ body {
     line-height: 20px;
     display: block;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     color: #888888;
   }
   
@@ -116,7 +117,7 @@ body {
     font-size: 12px;
     line-height: 12px;
     color: #888888;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 
   }
   
@@ -126,6 +127,7 @@ body {
     margin-bottom: 10px;
     padding: 10px;
     box-sizing: border-box;
+    border: 1px solid #DCDCDC;
   }
   
   .login__box .input__style2 {
@@ -134,23 +136,24 @@ body {
     margin-bottom: 10px;
     padding: 10px;
     box-sizing: border-box;
+    border: 1px solid #DCDCDC;
   }
-  
-  /* 개인정보 이용약관  */
-  .login__box .join__info {
-    display: flex;
-    justify-content: space-between
-  }
-  .login__box .join__info .join__desc{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 140%;
-    display: inline-block;
-    text-align: right;
-    color: #195EB1;
+  .login__box .input__style3 {
+    width: 388px;
+    height: 45px;
     margin-bottom: 10px;
-    padding-left: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #DCDCDC;
+  }
+
+  .login__box .input__style4 {
+    width: 388px;
+    height: 45px;
+    margin-bottom: 35px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #DCDCDC;
   }
   
   .login__box .input__button {
@@ -178,9 +181,7 @@ body {
     border: 1px solid #777777;
     border-radius: 10px;
   }
-  .join__info input {
-    margin-right: 10px;
-  }
+
 
   .login__box p {
     Font-size: 12px;
