@@ -568,18 +568,18 @@
                         answer++;
                     }
                 })
-                // document.write(answer);
+                document.write(answer);
             }
             func(['a', 'b', 'c', 'd', 'e'], 'e');
         }
         {
-            //2번문제
+            //2번문제   01230123
             function func(j, k) {
                 let i = 0;
                 j.forEach((e, idx) => {
                     if (idx < 2) {
                         j.map((el, i) => {
-                            // document.write(i)
+                            document.write(i)
                         })
                     }
                 })
@@ -593,9 +593,9 @@
 
                 for (i = 0; i <= 8; i++) {
                     k += i;
-                    // console.log(k)
+                    console.log(k)
                 }
-                // document.write(k + i)
+                document.write(k + i)
             }
             func();
         }
@@ -603,7 +603,7 @@
         {
             function func() {
                 let i, j = 0;
-                // console.log(j)
+                console.log(i,j)
             }
             func()
         }
@@ -618,7 +618,7 @@
 
             // console.log(q7());
         }
-        //6번
+        //5번 fruit: apple / vegetable: tomato
         {
             let fruit = 'apple';	// Global Variable
 
@@ -628,11 +628,11 @@
             }
 
             function eat(vegetable) {
-                // console.log(`fruit: ${fruit} / vegetable: ${vegetable}`);
+                console.log(`fruit: ${fruit} / vegetable: ${vegetable}`);
             }
             callbackFunc(eat);
         }
-        //7번
+        //6번
         {
             const num = (el) => {
                 let x = 0;
@@ -640,7 +640,7 @@
                     if (i == 'd') x++;
                     else break;
                 }
-                // document.write(x)
+                console.log(x)
             }
             num(['a', 'd', 'v', 'd', 'e'])
         }
@@ -655,7 +655,7 @@
             //     solution(a)
             // }
         }
-        //8번 답 0
+        //7번 답 0
         {
             function solution(numbers) {
                 let answer = 0;
@@ -669,7 +669,7 @@
             }
             document.write(solution([1, 2, 3, 5, 6, 7, 8, 9, 10, 11]))
         }
-        //9번 답 :4
+        //8번 답 :4
         {
             function func() {
                 let i = 10, k = 0;
@@ -683,7 +683,7 @@
             }
             func()
         }
-        //10번 finish function name:  song
+        //9번 finish function name:  song
         {
             function whatYourName(name, callback) {
                 console.log('name: ', name);
