@@ -3,6 +3,7 @@
   height: 765px;
   padding: 50px 81px;
   box-sizing: border-box;
+  margin: 0 auto;
 
 }
 #joinAgree > h2 {
@@ -156,7 +157,7 @@ label {
 
 #agreeCheck4 {
   width: 15px;
-  height: 15px; 
+  height: 15px;
   border-radius: 50%;
   margin-bottom: 40px;
 }
