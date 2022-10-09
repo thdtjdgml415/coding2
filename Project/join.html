@@ -21,34 +21,42 @@
                 <div class="header__wrap">
                     <div class="login__contents">
                         <div class="login__box">
-                            <form name="로그인" action="메인페이지">
+                            <form name="회원가입" action="메인페이지">
                                 <fieldset>
                                     <h2>IT.<em>D</em></h2>
                                     <span>Create an account 📌</span>
                                     <legend>회원가입 입력 폼</legend>
-                                    <div>
-                                        <p class="input__title">ID</p>
-                                        <label for="youID">ID</label>
-                                        <input type="id" name="youID" id="youID" placeholder="아이디를 입력해주세요."
-                                            class="input__style1" required>
+                                    <div class="input__top">
+                                        <div>
+                                            <p class="input__title">ID</p>
+                                            <label for="youID">ID</label>
+                                            <input type="id" name="youID" id="youID" placeholder="아이디를 입력해주세요."
+                                                class="input__style1" required>
+                                        </div>  
+                                        <div>
+                                            <p class="input__title">Name</p>
+                                            <label for="youName">Name</label>
+                                            <input type="name" name="youName" id="youName" placeholder="성함을 입력해주세요."
+                                                class="input__style2" required>
+                                        </div>  
                                     </div>
                                     <div>
                                         <p class="input__title">E-MAIL</p>
                                         <label for="youEmail">이메일</label>
                                         <input type="eamil" name="youEmail" id="youEmail" placeholder="이메일을 입력해주세요."
-                                            class="input__style2" required>
+                                            class="input__style3" required>
                                     </div>
                                     <div>
                                         <p class="input__title">PASSWORD</p>
                                         <label for="youPass">비밀번호</label>
                                         <input type="password" name="youPass" id="youPass" placeholder="비밀번호를 입력해주세요."
-                                            class="input__style3" required>
+                                            class="input__style4" required>
                                     </div>
                                     <div>
                                         <p class="input__title">PASSWORD CHECK</p>
                                         <label for="youPassC">비밀번호 확인</label>
                                         <input type="password" name="youPassC" id="youPassC" placeholder="비밀번호를 다시한번 입력해주세요."
-                                            class="input__style4" required>
+                                            class="input__style5" required>
                                     </div>
                              
                                     <button type="submit" class="input__button">계정 생성</button>

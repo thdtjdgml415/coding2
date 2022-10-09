@@ -561,51 +561,51 @@
         }
         {
             //1번 문제
-            function func(k, j) {
-                let answer = 0;
-                k.forEach((el) => {
-                    if (el.includes(j)) {
-                        answer++;
-                    }
-                })
-                document.write(answer);
-            }
-            func(['a', 'b', 'c', 'd', 'e'], 'e');
+            // function func(k, j) {
+            //     let answer = 0;
+            //     k.forEach((el) => {
+            //         if (el.includes(j)) {
+            //             answer++;
+            //         }
+            //     })
+            //     document.write(answer);
+            // }
+            // func(['a', 'b', 'c', 'd', 'e'], 'e');
         }
         {
             //2번문제   01230123
-            function func(j, k) {
-                let i = 0;
-                j.forEach((e, idx) => {
-                    if (idx < 2) {
-                        j.map((el, i) => {
-                            document.write(i)
-                        })
-                    }
-                })
-            }
-            func(['1', '2', '3', '4'], "e");
+            // function func(j, k) {
+            //     let i = 0;
+            //     j.forEach((e, idx) => {
+            //         if (idx < 2) {
+            //             j.map((el, i) => {
+            //                 document.write(i)
+            //             })
+            //         }
+            //     })
+            // }
+            // func(['1', '2', '3', '4'], "e");
         }
         //3번 문제
         {
-            function func() {
-                let k, i = 0;
+            // function func() {
+            //     let k, i = 0;
 
-                for (i = 0; i <= 8; i++) {
-                    k += i;
-                    console.log(k)
-                }
-                document.write(k + i)
-            }
-            func();
+            //     for (i = 0; i <= 8; i++) {
+            //         k += i;
+            //         console.log(k)
+            //     }
+            //     document.write(k + i)
+            // }
+            // func();
         }
         //4번 문제
         {
-            function func() {
-                let i, j = 0;
-                console.log(i,j)
-            }
-            func()
+            // function func() {
+            //     let i, j = 0;
+            //     console.log(i, j)
+            // }
+            // func()
         }
         //5번 문제
         {
@@ -620,29 +620,29 @@
         }
         //5번 fruit: apple / vegetable: tomato
         {
-            let fruit = 'apple';	// Global Variable
+            // let fruit = 'apple';	// Global Variable
 
-            function callbackFunc(callback) {
-                let vegetable = 'tomato';	// Local Variable
-                callback(vegetable);
-            }
+            // function callbackFunc(callback) {
+            //     let vegetable = 'tomato';	// Local Variable
+            //     callback(vegetable);
+            // }
 
-            function eat(vegetable) {
-                console.log(`fruit: ${fruit} / vegetable: ${vegetable}`);
-            }
-            callbackFunc(eat);
+            // function eat(vegetable) {
+            //     console.log(`fruit: ${fruit} / vegetable: ${vegetable}`);
+            // }
+            // callbackFunc(eat);
         }
         //6번
         {
-            const num = (el) => {
-                let x = 0;
-                for (let i of el) {
-                    if (i == 'd') x++;
-                    else break;
-                }
-                console.log(x)
-            }
-            num(['a', 'd', 'v', 'd', 'e'])
+            // const num = (el) => {
+            //     let x = 0;
+            //     for (let i of el) {
+            //         if (i == 'd') x++;
+            //         else break;
+            //     }
+            //     console.log(x)
+            // }
+            // num(['a', 'd', 'v', 'd', 'e'])
         }
         //8번 못만듬;
         {
@@ -657,44 +657,44 @@
         }
         //7번 답 0
         {
-            function solution(numbers) {
-                let answer = 0;
-                for (let i = 0; i < 10; i++) {
-                    if (!numbers.includes(i)) {
-                        answer += i;
-                        break;
-                    }
-                }
-                // return answer;
-            }
-            document.write(solution([1, 2, 3, 5, 6, 7, 8, 9, 10, 11]))
+            // function solution(numbers) {
+            //     let answer = 0;
+            //     for (let i = 0; i < 10; i++) {
+            //         if (!numbers.includes(i)) {
+            //             answer += i;
+            //             break;
+            //         }
+            //     }
+            //     // return answer;
+            // }
+            // document.write(solution([1, 2, 3, 5, 6, 7, 8, 9, 10, 11]))
         }
         //8번 답 :4
         {
-            function func() {
-                let i = 10, k = 0;
-                while (i > 3) {
-                    if (i % 2 == 0) {
-                        k += 1;
-                    }
-                    i--
-                }
-                console.log(k)
-            }
-            func()
+            // function func() {
+            //     let i = 10, k = 0;
+            //     while (i > 3) {
+            //         if (i % 2 == 0) {
+            //             k += 1;
+            //         }
+            //         i--
+            //     }
+            //     console.log(k)
+            // }
+            // func()
         }
         //9번 finish function name:  song
         {
-            function whatYourName(name, callback) {
-                console.log('name: ', name);
-                callback();
-            }
+            // function whatYourName(name, callback) {
+            //     console.log('name: ', name);
+            //     callback();
+            // }
 
-            function finishFunc() {
-                console.log('finish function');
-            }
+            // function finishFunc() {
+            //     console.log('finish function');
+            // }
 
-            whatYourName('SONG', finishFunc);
+            // whatYourName('SONG', finishFunc);
         }
         {
             // function q10(arr) {
@@ -742,6 +742,136 @@
             // return result;
             // }
             // document.write(sum(arr));
+        }
+        //test5
+        //3
+        {
+            // function solution(n) {
+            //     let answer;
+            //     answer = Math.ceil(n / 12);
+            //     return answer;
+            // }
+            // console.log(solution(178));
+        }
+        //4
+        {
+            // function solution(n) {
+            //     let answer = 0;
+            //     for (let i = 1; i < n; i++) {
+            //         answer = answer + i;
+            //     }
+            //     return answer;
+            // }
+            // console.log(solution(5));
+        }
+        //5
+        {
+            // function solution(a) {
+            //     let answer = [];
+            //     let sum = 0, min = 1000;
+            //     for (let x of a) {
+            //         if (x % 2 === 1) {
+            //             sum += x;
+            //             if (x < min) min = x;
+            //         }
+            //         console.log(x)
+            //     }
+            //     answer.push(sum);
+            //     answer.push(min);
+            //     return answer;
+            // }
+            // a = [12, 77, 38, 41, 53, 92, 85];
+            // console.log(solution(a));
+        }
+        //7
+        {
+            // function solution(arr) {
+            //     let answer = arr;
+            //     let sum = answer.reduce((a, b) => a + b, 0);
+            //     console.log(sum)
+            //     for (let i = 0; i < 8; i++) {
+            //         for (let j = i + 1; j < 9; j++) {
+            //             if ((sum - (answer[i] + answer[j])) == 100) {
+            //                 answer.splice(j, 1);
+            //                 answer.splice(i, 1);
+            //             }
+            //         }
+            //     }
+            //     return answer;
+            // }
+            // let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+            // console.log(solution(arr));
+        }
+        //10
+        {
+            // function solution(s, t) {
+            //     let answer = s.split(t).length;
+            //     return answer - 1;
+            // }
+
+            // let str = "javascript react vue";
+            // console.log(solution(str, 'a'));
+        }
+        //14
+        {
+            // function solution(s) {
+                //max = Number.MIN_SAFE_INTEGER; 정수값 표현 방식
+            //     let answer = "", max = Number.MIN_SAFE_INTEGER;
+            //     for (let x of s) {
+            //         if (x.length > max) {
+            //             console.log(max)
+            //             max = x.length;
+            //             answer = x;             
+            //         }
+            //     }
+            //     return answer;
+
+            // }
+            // let str = ["teacher", "time", "student", "beautiful", "good"];
+            // console.log(solution(str));
+        }
+        //16
+        {
+            // function solution (s) {
+            //     let answer = "";
+            //     for (let i =0; i<s.length; i++) {
+            //         if(s.indexOf(s[i])===i) answer+=s[i];
+            //         console.log(i ,s.indexOf(s[i]))
+            //     }
+            //     return answer;
+            // }
+            // console.log(solution("ksekkset"));
+        }
+        //17
+        {
+            function solution(s) {
+                let answer;
+                answer = s.filter(function (v,i) {
+                    console.log(v ,i)
+                    return s.indexOf(v) ===i;
+                });
+                return answer;
+            }
+            let str = ["good", "time", "good", "time", "student"];
+            console.log(solution(str));
+        }
+        //19
+        {
+            function solution(s){
+                let answer;
+                let stack = [ ];
+                for(let x of s) {
+                    if(x===')') {
+                        while(stack.pop()!=='(');
+                        console.log(x, stack)
+                        }
+                        else stack.push(x);
+                    }
+                    answer = stack.join("");
+                    return answer;
+                }
+                let str = "(A(BC)DEF(G(H)(IJ)K)LM(N)";
+                console.log(solution(str));
         }
     </script>
 </body>
