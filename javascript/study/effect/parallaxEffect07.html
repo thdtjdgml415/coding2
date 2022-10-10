@@ -191,6 +191,7 @@
                 height: 100vh;
             }
         }
+
         /* option */
         /* .reveal > div {
             opacity: 0;
@@ -230,17 +231,20 @@
             100% {width: 0; left: 100%;};
         } */
         /* tjdgus */
-        .reveal > div,
-        .reavel > span {
+        .reveal>div,
+        .reavel>span {
             opacity: 1;
         }
-        .reveal.show > div,
-        .reveal.show > span {
-            animation : opacity 1s linear forwards;
+
+        .reveal.show>div,
+        .reveal.show>span {
+            animation: opacity 1s linear forwards;
         }
+
         .reveal {
             position: relative;
         }
+
         .reveal::before {
             content: '';
             position: absolute;
@@ -251,6 +255,7 @@
             background: #fff;
             z-index: 1;
         }
+
         .reveal.reveal-TWO::after {
             content: '';
             position: absolute;
@@ -260,70 +265,172 @@
             height: 100%;
             z-index: 1;
             background: aqua;
-        } 
+        }
+
         /* 1개 */
         .reveal.show::before {
             animation: reveal 1s;
         }
+
         .reveal.reveal-RTL.show::before {
             animation: reveal-RTL 1s;
         }
+
         .reveal.reveal-TTB.show::before {
             animation: reveal-TTB 1s;
         }
+
         .reveal.reveal-BTT.show::before {
             animation: reveal-BTT 1s;
         }
+
         /* 2개 */
         .reveal.show::after {
             animation: reveal 1s 0.3s;
         }
+
         .reveal.reveal-RTL.show::after {
             animation: reveal-RTL 1s 0.3s;
         }
+
         .reveal.reveal-TTB.show::after {
             animation: reveal-TTB 1s 0.3s;
         }
+
         .reveal.reveal-BTT.show::after {
             animation: reveal-BTT 1s 0.3s;
         }
-        @keyframes opacity {
-            0% {opacity: 0;}
-            60% {opacity: 0;}
-            70% {opacity: 1;}
-            100% {opacity: 1;}
-        }
-        @keyframes reveal {
-            0% {width: 0; left: 0;}
-            50% {width: 100%; left: 0;}
-            80% {width: 100%; left: 0;}
-            100% {width: 0; left: 100%;}
-        }
-        @keyframes reveal-RTL {
-            0%   {width: 0; right: 0; left: auto;}
-            50%  {width: 100%; right: 0; left: auto;}
-            80%  {width: 100%; right: 0; left: auto;}
-            100% {width: 0; right: 100%; left: auto;}
-        }
-        @keyframes reveal-TTB {
-            0%   {width: 100%; height: 0%;   top: 0;}
-            50%  {width: 100%; height: 100%; top: 0;}
-            80%  {width: 100%; height: 100%; top: 0;}
-            100% {width: 100%; height: 0%;   top: 100%;}
-        }
-        @keyframes reveal-BTT {
-            0%   {width: 100%; height:0; bottom: 0; top: auto;}
-            50%  {width: 100%; height:100%; bottom: 0; top: auto;}
-            80%  {width: 100%; height:100%; bottom: 0; top: auto;}
-            100% {width: 100%; height:0; bottom: 100%; top: auto;}
-        }
+
         .content__item__num {
             display: none;
         }
+
         .content__item__title {
             display: none;
         }
-        </style>
+
+        @keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes reveal {
+            0% {
+                width: 0;
+                left: 0;
+            }
+
+            50% {
+                width: 100%;
+                left: 0;
+            }
+
+            80% {
+                width: 100%;
+                left: 0;
+            }
+
+            100% {
+                width: 0;
+                left: 100%;
+            }
+        }
+
+        @keyframes reveal-RTL {
+            0% {
+                width: 0;
+                right: 0;
+                left: auto;
+            }
+
+            50% {
+                width: 100%;
+                right: 0;
+                left: auto;
+            }
+
+            80% {
+                width: 100%;
+                right: 0;
+                left: auto;
+            }
+
+            100% {
+                width: 0;
+                right: 100%;
+                left: auto;
+            }
+        }
+
+        @keyframes reveal-TTB {
+            0% {
+                width: 100%;
+                height: 0%;
+                top: 0;
+            }
+
+            50% {
+                width: 100%;
+                height: 100%;
+                top: 0;
+            }
+
+            80% {
+                width: 100%;
+                height: 100%;
+                top: 0;
+            }
+
+            100% {
+                width: 100%;
+                height: 0%;
+                top: 100%;
+            }
+        }
+
+        @keyframes reveal-BTT {
+            0% {
+                width: 100%;
+                height: 0;
+                bottom: 0;
+                top: auto;
+            }
+
+            50% {
+                width: 100%;
+                height: 100%;
+                bottom: 0;
+                top: auto;
+            }
+
+            80% {
+                width: 100%;
+                height: 100%;
+                bottom: 0;
+                top: auto;
+            }
+
+            100% {
+                width: 100%;
+                height: 0;
+                bottom: 100%;
+                top: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -359,7 +466,8 @@
                 <figure class="content__item__imgWrap reveal reveal-RTL">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal reveal-RTL" data-delay="500">직업에서 행복을 찾아라. 아니면 행복이 무엇인지 절대 모를 것이다</p>
+                <p class="content__item__desc reveal reveal-RTL" data-delay="500">직업에서 행복을 찾아라. 아니면 행복이 무엇인지 절대 모를 것이다
+                </p>
             </section>
             <!-- section02 -->
             <section id="section3" class="content__item">
@@ -404,7 +512,8 @@
                 <figure class="content__item__imgWrap reveal reveal-TWO reveal-RTL">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal reveal-TWO reveal-RTL">좋은 성과를 얻으려면 한 걸음 한 걸음이 힘차고 충실하지 않으면 안 된다.</p>
+                <p class="content__item__desc reveal reveal-TWO reveal-RTL">좋은 성과를 얻으려면 한 걸음 한 걸음이 힘차고 충실하지 않으면 안 된다.
+                </p>
             </section>
             <!-- section07 -->
             <section id="section8" class="content__item">
@@ -527,7 +636,7 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-<pre><code class="language-js">function scroll() {
+                            <pre><code class="language-js">function scroll() {
     
 let scrollTop = window.scrollY;
 
@@ -595,44 +704,40 @@ scroll()
     <script>
 
         //reveal 클래스 자식에 글씨만 있다면, 가상으로 span태그를 만들어서 넣어주세요
-    function scroll() {
-        
-        let scrollTop = window.scrollY;
-
         const reveal = document.querySelectorAll(".reveal");
-
-        reveal.forEach((el)=>{
-            let text = el.innerText;
-            if(text) {
-                el.innerHTML = "<span>" + text + "</span>";
-            }
-            
-        })
-
-        reveal.forEach(el => {
-            let revealOffset =  el.offsetTop + el.parentElement.offsetTop;
-            let revealDelay = el.dataset.delay;
-
-            // 딜레이 주기
-            if(scrollTop > revealOffset - window.innerHeight) {
-                if (revealDelay == undefined) {
-                    el.classList.add("show");
-                }else {
-                    setTimeout(() => {
-                        el.classList.add("show");
-                    } ,revealDelay)
+      
+            reveal.forEach((el) => {
+                let text = el.innerText;
+                if (text) {
+                    el.innerHTML = "<span>" + text + "</span>";
                 }
-            }
+            });
+            function scroll() {
+                let scrollTop = window.scrollY;
+            reveal.forEach(el => {
 
+                let revealOffset = el.offsetTop + el.parentElement.offsetTop;
+                let revealDelay = el.dataset.delay;
 
-            // if(scrollTop > revealOffset - window.innerHeight/2) {
-            //     el.classList.add("show");
-            // }
-        })
-        document.querySelector("#parallax__info .scroll span").innerText = Math.round(scrollTop);
-        requestAnimationFrame(scroll);
-    }
-    scroll()
+                // 딜레이 주기
+                if (scrollTop > revealOffset - window.innerHeight) {
+                    if (!revealDelay == undefined) {
+                        el.classList.add("show");
+                    } else {
+                        setTimeout(() => {
+                            el.classList.add("show");
+                        }, revealDelay)
+                    }
+                }
+
+                // if(scrollTop > revealOffset - window.innerHeight/2) {
+                //     el.classList.add("show");
+                // }
+            })
+            document.querySelector("#parallax__info .scroll span").innerText = Math.round(scrollTop);
+            requestAnimationFrame(scroll);
+        }
+        scroll()
     </script>
 </body>
 
