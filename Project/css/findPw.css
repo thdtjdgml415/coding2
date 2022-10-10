@@ -177,31 +177,47 @@ label {
 /* 모바일 */
 @media (max-width: 480px) {
   .login__contents .login__box h2 {
-    padding-right: 81px;
+    padding-top: 100px;
+    text-align: center;
+    margin: 30px 0 20px 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    color: #555555;
+  }
+  .login__popup .login__wrap {
+    width: 100%;
+    height: 497px;
+  }
+  .login__contents {
+    width: 100%;
+    height: 497px;
+  }
+  .login__contents .login__box h2 {
+
   }
   .login__box .login__desc {
-    width: 275px;
+    width: 216px;
     display: inline-block;
-    padding: 0 79px;
+    padding: 0px 79px;
   }
 
   .login__contents .login__box span {
-    width: 275px;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
     display: block;
-    text-align: right;
     margin-bottom: 12px;
     color: #888888;
   }
 
   .login__box .input__style1 {
-    width: 275px;
+    width: 216px;
   }
   .login__box .input__style2 {
-    width: 275px;
+    width: 216px;
   }
   .login__box a {
     text-align: left;
@@ -209,11 +225,11 @@ label {
   }
 
   .login__box .input__button {
-    width: 50%;
+    width: 216px;
   }
   
   .login__box .join__button {
-    width: 50%;
+    width: 216px;
    
   }
 }
