@@ -1,15 +1,17 @@
-.login__popup .login__wrap {
+.login__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.login__box {
     width: 550px;
-    height: 497px;
+    height: 397px;
     margin: 0 auto;
 }
 
-.login__inner {
-    width: 100%;
-}
-
-.login__inner .login__box h2 {
-    padding-top: 100px;
+.login__box h2 {
     text-align: center;
     margin: 30px 0 20px 0;
     font-style: normal;
@@ -19,11 +21,11 @@
     color: #555555;
 }
 
-.login__inner .login__box h2 em {
+.login__box h2 em {
     color: #388FC0;
 }
 
-.login__inner .login__box span {
+.login__box span {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -34,7 +36,7 @@
     color: #888888;
 }
 
-.login__inner .login__box .input__header {
+.login__box .input__header {
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -75,7 +77,7 @@
 .login__box .input__style2 {
     width: 388px;
     height: 45px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px;
     box-sizing: border-box;
 }
@@ -101,7 +103,7 @@
     width: 388px;
     height: 45px;
     display: block;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 15px;
     line-height: 140%;
     background: linear-gradient(180deg, #388FC0 0%, #195EB1 100%);
@@ -141,7 +143,6 @@
     color: #195EB1;
 }
 
-
 label {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -159,19 +160,13 @@ label {
 
 /* 모바일 */
 @media (max-width: 480px) {
-    .login__inner .login__box h2 {
-        padding-right: 81px;
-    }
-    .login__inner .login__box span {
-        text-align: left;
-        padding-left: 81px;
-    }
-    
+
+
     .login__box .login__desc {
         display: inline-block;
         padding-right: 81px;
     }
-    
+
     .login__box .login__desc {
         width: 275px;
         padding: 0 81px;
@@ -190,5 +185,3 @@ label {
         width: 275px;
     }
 }
-
-
