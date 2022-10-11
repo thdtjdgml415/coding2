@@ -1,5 +1,5 @@
-.login__popup {}
-
+.login__popup {
+}
 
 .login__popup .login__wrap {
   margin: 0 auto;
@@ -44,7 +44,7 @@
 }
 
 .login__inner .login__contents .login__box h2 em {
-  color: #388FC0;
+  color: #388fc0;
 }
 
 .login__inner .login__contents .login__box span {
@@ -69,41 +69,55 @@
   line-height: 12px;
   color: #888888;
   margin-bottom: 4px;
-
-}
-
-.input__top {
-  display: flex;
-  justify-content: space-between;
 }
 
 .login__box .input__style1 {
-  width: 185px;
+  width: 70%;
   height: 45px;
   margin-bottom: 10px;
   padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #DCDCDC;
+  border: 1px solid #dcdcdc;
   display: inline-block;
 }
 
 .login__box .input__style2 {
-  width: 185px;
+  width: 70%;
   height: 45px;
   margin-bottom: 10px;
   padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #DCDCDC;
+  border: 1px solid #dcdcdc;
   display: inline-block;
 }
 
 .login__box .input__style3 {
-  width: 388px;
+  width: 70%;
   height: 45px;
   margin-bottom: 10px;
   padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #DCDCDC;
+  border: 1px solid #dcdcdc;
+}
+
+.login__box .check {
+  width: 27%;
+  height: 45px;
+  background: #388fc0;
+  color: #fff;
+  display: inline-block;
+  line-height: 45px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.input__error {
+    display: flex;
+    justify-content: space-between;
+}
+.overlay .input__alert {
+  display: flex;
+  justify-content: flex-start
 }
 
 .login__box .input__style4 {
@@ -112,7 +126,7 @@
   margin-bottom: 10px;
   padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #DCDCDC;
+  border: 1px solid #dcdcdc;
 }
 
 .login__box .input__style5 {
@@ -121,7 +135,7 @@
   margin-bottom: 35px;
   padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #DCDCDC;
+  border: 1px solid #dcdcdc;
 }
 
 .login__box .input__button {
@@ -132,7 +146,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 140%;
-  background: linear-gradient(180deg, #388FC0 0%, #195EB1 100%);
+  background: linear-gradient(180deg, #388fc0 0%, #195eb1 100%);
   color: #fff;
   border-radius: 10px;
 }
@@ -142,7 +156,7 @@
   height: 45px;
   display: block;
   background: #fff;
-  color: #3F72AF;
+  color: #3f72af;
   font-weight: 400;
   font-size: 15px;
   line-height: 140%;
@@ -150,12 +164,10 @@
   border-radius: 10px;
 }
 
-
 .login__box p {
-  Font-size: 12px;
-  Line-height: 140%;
-  color: #195EB1;
-
+  font-size: 12px;
+  line-height: 140%;
+  color: #195eb1;
 }
 
 label {
@@ -169,117 +181,15 @@ label {
 
 /* 노트북 */
 @media (max-width: 1220px) {
- 
 }
 
 /* 태블릿 */
-@media (max-width: 748px) {}
+@media (max-width: 748px) {
+}
 
 /* 모바일 */
 @media (max-width: 480px) {
-  login__popup {
-    width: 480px;
-  }
-  login__wrap {
-    width: 100%;
-  }
-  login__inner {
-    width: 100%;
-  }
-  header__wrap {
-    width: 100%;
-  }
-  login__contents {
-    width: 100%;
-  }
-  .login__inner .header__wrap {}
-
-  .header__wrap .login__contents {}
-
-  .input__top {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .login__box .input__style1 {
-    width: 100%;
-    height: 45px;
-    margin-bottom: 28px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #DCDCDC;
-  }
-
-  .login__box .input__style2 {
-    width: 100%;
-    height: 45px;
-    margin-bottom: 28px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #DCDCDC;
-  }
-  .login__box .input__style3 {
-    width: 275px;
-    height: 45px;
-    margin-bottom: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #DCDCDC;
-  }
-  
-  .login__box .input__style4 {
-    width: 275px;
-    height: 45px;
-    margin-bottom: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #DCDCDC;
-  }
-  
-  .login__box .input__style5 {
-    width: 275px;
-    height: 45px;
-    margin-bottom: 35px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #DCDCDC;
-  }
-
-  .login__box .input__top div:nth-child(1) {
-    width: 275px;
-    height: 45px;
-    margin-bottom: 28px;
-  }
-  
-  .login__box .input__top div:nth-child(2) {
-    width: 275px;
-    height: 45px;
-    margin-bottom: 28px;
-  }
-  
-
-  .login__box .input__button {
-    width: 275px;
-    height: 45px;
-    margin-bottom: 10px;
-    display: block;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 140%;
-    background: linear-gradient(180deg, #388FC0 0%, #195EB1 100%);
-    color: #fff;
-    border-radius: 10px;
-  }
-  .login__box .join__button {
-    width: 275px;
-    height: 45px;
-    display: block;
-    background: #fff;
-    color: #3F72AF;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 140%;
-    border: 1px solid #777777;
-    border-radius: 10px;
+  .login__inner .header__wrap {
+    width: 95%;
   }
 }

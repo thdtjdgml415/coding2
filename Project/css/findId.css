@@ -1,6 +1,19 @@
 body {
     background: #f5f5f5;
 }
+
+.login__box.container {
+    width: 388px;
+    margin: 0 auto;
+}
+
+/* login__inner */
+.login__inner {
+    width: 550px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
 .login__wrap {
     width: 100%;
     height: 100vh;
@@ -25,7 +38,7 @@ body {
 }
 
 .login__box h2 em {
-    color: #388FC0;
+    color: #388fc0;
 }
 
 .login__box span {
@@ -49,7 +62,6 @@ body {
     color: #777777;
 }
 
-
 .login__box .login__header h2 {
     margin-bottom: 20px;
 }
@@ -61,6 +73,7 @@ body {
     line-height: 140%;
     display: inline-block;
     color: #888888;
+    margin-bottom: 20px;
 }
 
 .login__box .input__title {
@@ -70,21 +83,20 @@ body {
     line-height: 12px;
     color: #888888;
     margin-bottom: 6px;
-
+    text-align: left;
 }
 
 .login__box .input__style2 {
-    width: 388px;
+    width: 100%;
     height: 45px;
     margin-bottom: 10px;
     padding: 10px;
     box-sizing: border-box;
-    margin: 0 auto;
 }
 
 .login__box .join__info {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .login__box .join__info .join__desc {
@@ -94,30 +106,30 @@ body {
     line-height: 140%;
     display: inline-block;
     text-align: right;
-    color: #195EB1;
+    color: #195eb1;
     margin-bottom: 10px;
     padding-left: 10px;
 }
 
 .login__box .input__button {
-    width: 388px;
+    width: 100%;
     height: 45px;
     display: block;
     font-weight: 300;
     font-size: 15px;
     line-height: 140%;
-    background: linear-gradient(180deg, #388FC0 0%, #195EB1 100%);
+    background: linear-gradient(180deg, #388fc0 0%, #195eb1 100%);
     color: #fff;
     border-radius: 10px;
-    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .login__box .join__button {
-    width: 388px;
+    width: 100%;
     height: 45px;
     display: block;
     background: #fff;
-    color: #3F72AF;
+    color: #3f72af;
     font-weight: 400;
     font-size: 15px;
     line-height: 140%;
@@ -126,10 +138,10 @@ body {
     margin: 0 auto;
 }
 
-.login__box>p {
-    Font-size: 12px;
-    Line-height: 140%;
-    color: #195EB1;
+.login__box > p {
+    font-size: 12px;
+    line-height: 140%;
+    color: #195eb1;
 }
 
 .login__box a {
@@ -138,9 +150,8 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 140%;
-    padding-right: 81px;
     margin-bottom: 10px;
-    color: #195EB1;
+    color: #195eb1;
 }
 
 label {
@@ -153,34 +164,27 @@ label {
 }
 
 /* 노트북 */
-@media (max-width: 1220px) {}
+@media (max-width: 1220px) {
+}
 
 /* 태블릿 */
-@media (max-width: 748px) {}
+@media (max-width: 748px) {
+}
 
 /* 모바일 */
 @media (max-width: 480px) {
-
-
     .login__box .login__desc {
         display: inline-block;
-        padding-right: 81px;
     }
 
-    .login__box .login__desc {
-        width: 275px;
-
+    .login__inner {
+        width: 96%;
     }
-
-    .login__box .input__style2 {
-        width: 275px;
+    .login__box.container {
+        width: 90%;
     }
+}
 
-    .login__box .input__button {
-        width: 275px;
-    }
-
-    .login__box .join__button {
-        width: 275px;
-    }
+.Email_info {
+    text-align: center;
 }

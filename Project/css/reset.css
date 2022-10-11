@@ -7,10 +7,7 @@
 * {
   font-family: 'GmarketSans';
 }
-.container {
-  width: 1200px;
-  margin: 0 auto;
-}
+
 #skip {
   position: relative;
   z-index: 1000000;

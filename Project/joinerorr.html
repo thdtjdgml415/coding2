@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../Project/css/joinerorr.css">
+    <link rel="stylesheet" href="../Project/css/reset.css">
+</head>
+
+<body>
+    <section id="join" class="container">
+        <div class="join__inner">
+            <form action="adminJoinSave.php" name="join" method="post" onsubmit="return joinChecks()">
+                <fieldset>
+                    <h2>IT.<em>D</em></h2>
+                    <span>Create an account 📌</span>
+                    <legend>회원가입</legend>
+                    <div class="join__box">
+                        <div class="overlap">
+                            <label for="youId">ID</label>
+                            <input type="id" id="youID" name="youID" placeholder="아이디를 적어주세요!" required>
+                            <a href="#c" class="check" onclick="idChecking()">중복검사</a>
+                            <p class="msg" id="youidComment">
+                                <!--아이디가 존재합니다.-->
+                            </p>
+                        </div>
+                        <div class="overlap">
+                            <label for="youEmail">이메일</label>
+                            <input type="email" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!" required>
+                            <a href="#c" class="check" onclick="emailChecking()">중복검사</a>
+                          
+                        </div>
+                        <div class="overlap">
+                            <label for="youNickName">닉네임</label>
+                            <input type="text" id="youNickName" name="youNickName" placeholder="닉네임을 적어주세요!" required>
+                            <a href="#c" class="check" onclick="nickChecking()">중복검사</a>
+                            <p class="msg" id="youNickNameComment" id="youNickNameComment">
+                                <!--*닉네임이 존재합니다.-->
+                            </p>
+                        </div>
+                        <div class="overlap">
+                            <label for="youName">이름</label>
+                            <input type="text" id="youName" name="youName" placeholder="이름을 적어주세요!" required>
+                            <p class="msg" id="youNameComment">
+                                <!--*이름은 한글로만 작성해 주세요-->
+                            </p>
+                        </div>
+                        <div>
+                            <label for="youPass">비밀번호</label>
+                            <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 적어주세요!" maxlength="15"
+                                required>
+                            <p class="msg" id="youPassComment">
+                                <!--*비밀번호가 일치하지 않습니다.-->
+                            </p>
+                        </div>
+                        <div>
+                            <label for="youNameC">비밀번호 확인</label>
+                            <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 다시 적어주세요!" required>
+                            <p class="msg" id="youPassCComment">
+                                <!--*비밀번호를 다시 확인해주세요-->
+                            </p>
+                        </div>
+                    </div>
+                    <button class="join__btn" type="submit">회원가입 완료</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <!-- join -->
+    </main>
+</body>
+
+</html>
