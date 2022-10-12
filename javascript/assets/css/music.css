@@ -1,0 +1,134 @@
+.music__wrap {}
+.music__inner {
+    width: 500px;
+    background: #000;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    padding: 10px;
+    padding-top: 0;
+}
+.music__header {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border-bottom: 1px dashed #fff;
+}
+.music__header h2 {
+    font-size: 14px;
+}
+.music__contents {
+    background: #c4c4c4;
+    width: 100%;
+    height: 100%;
+}
+.music__view {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.music__view .img {
+    width: 40%;
+}
+.music__view .img img {
+    width: 60%;
+}
+.music__view  .title {
+    width: 70%;
+    text-align: center;
+    justify-content: space-between;
+
+}
+.music__view .title  h3 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+.music__view .title p {
+    color: red;
+}
+
+.music__control {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    padding-top: 0;
+}
+.music__control .progress {
+    width: 100%;
+    height: 6px;
+    background: #000;
+    border-radius: 5px;
+}
+.music__control .progress .bar{
+    width: 30%;
+    height: inherit;
+    background: #7FFF5B;
+    border-radius: 5px;
+}
+.music__control .progress .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+.music__control .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.control i {
+    transform: scale(0.7);
+}
+
+.music__control .control .repeat {
+   background-image: url(../img/musicbutton.svg);
+   width: 50px;
+   height: 50px;
+   background-position: -200px 0;    
+}
+.music__control .control .prev {
+    background-image: url(../img/musicbutton.svg);
+    width: 50px;
+    height: 50px;
+    background-position: -100px 0;    
+ }
+ .music__control .control div .play {
+    background-image: url(../img/musicbutton.svg);
+    width: 50px;
+    height: 50px;
+    background-position: 0 0;
+    display: block;    
+ }
+ .music__control .control div .stop {
+    background-image: url(../img/musicbutton.svg);
+    width: 50px;
+    height: 50px;
+    background-position: 15px 0;    
+ }
+ .music__control .control .next {
+    background-image: url(../img/musicbutton.svg);
+    width: 50px;
+    height: 50px;
+    background-position: -150px 0;    
+ }
+ .music__control .control .list {
+    background-image: url(../img/musicbutton.svg);
+    width: 50px;
+    height: 50px;
+    background-position: -350px 0;    
+ }
+.music__control .control .repeat_one {}
+.music__control .control .shuffle {}
+.music__control .control .prev {}
+.music__control .control .play {}
+.music__control .control .stop {}
+.music__control .control .next {}
+.music__control .control .list {}
+.music__footer {}

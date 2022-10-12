@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../assets/css/game.css">
+    <link rel="stylesheet" href="../../assets/css/bg.css">
+    <link rel="stylesheet" href="../../assets/css/music.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>SONG GAME</h1>
+        <div class="time"></div>
+    </header>
+    <!-- header -->
+    <main id="main"></main>
+    <div class="icon1">
+        <img src="../../assets/img/gameMusic.png" alt="">
+        <span>Music</span>
+    </div>
+    <div class="icon2">
+        <img src="../../assets/img/gameMovie.png" alt="">
+        <span>Movie</span>
+    </div>
+    <div class="icon3">
+        <img src="../../assets/img/gameREADing.png" alt="">
+        <span>READ</span>
+    </div>
+    <div class="icon4">
+        <img src="../../assets/img/gamefolder.png" alt="">
+        <span>folder</span>
+    </div>
+    <div class="mouse__cursor"></div>
+    <!-- main -->
+    <footer id="footer">
+        <div class="agent"></div>
+    </footer>
+
+    <!-- music player -->
+    <div class="music__wrap">
+        <div class="music__inner">
+            <div class="music__header">
+                <div>*</div>
+                <h2>Music player</h2>
+                <div>*</div>
+            </div>
+            <div class="music__contents">
+                <div class="music__view">
+                    <div class="img">
+                        <img src="../../assets/img/musicbg01.png" alt="">
+                    </div>
+                    <div class="title">
+                        <h3>Fluffing a Duck</h3>
+                        <p>youtube music</p>
+                    </div>
+                </div>
+                <div class="music__control">
+                    <div class="progress">
+                        <div class="bar">
+                            <audio id="main-audio" src="../../assets/audio/Music_audio01.mp3"></audio>
+                        </div>
+                        <div class="timer">
+                            <span class="current">0:00</span>
+                            <span class="duration">4:00</span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <i title="전체반복" class="repeat"></i>
+                        <!-- <i title="한곡 반복" class="repeat_one"></i>
+                        <i title="랜덤 재생" class="shuffle"></i> -->
+                        <i title="이전곡 재생" class="prev" id="control-prev"></i>
+                        <div>
+                            <i title="재생" class="play" id="control-play"></i>
+                            <!-- <i title="정지" class="stop">정지</i> -->
+                        </div>
+                        <i title="다음곡 재생" class="next" id="control-next"></i>
+                        <i title="재생목록" class="list"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="music__footer"></div>
+        </div>
+    </div>
+    <!-- //music player -->
+    <!-- footer -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="../../assets/js/gsap.min.js"></script>
+    <script src="../../assets/js/music.js"></script>
+    <script>
+        const cursor = document.querySelector(".mouse__cursor");
+        window.addEventListener("mousemove", (e) => {
+
+            //25를 빼서 마우스커서가 정중앙에 올 수 있도록 배치
+            cursor.style.left = e.clientX + 10 + "px";
+            cursor.style.top = e.clientY + 10 + "px";
+        });
+        $(".icon1").draggable({
+            drag: function () {
+                $(".cursor img").attr("src", "../../assets/img/cursor.cluster01.png")
+            }
+        });
+        $(".icon2").draggable({
+            drag: function () {
+                $(".cursor img").attr("src", "../../assets/img/cursor.cluster02.png")
+            }
+        });
+        $(".icon3").draggable({
+            drag: function () {
+                $(".cursor img").attr("src", "../../assets/img/cursor.cluster03.png")
+            }
+        });
+        $(".icon4").draggable({
+            drag: function () {
+                $(".cursor img").attr("src", "../../assets/img/cursor.cluster04.png")
+            }
+        });
+        function printTime() {
+            const clock = document.querySelector(".time");
+            const now = new Date();
+            clock.textContent = new Date();
+            const nowTime = now.getFullYear() + "년 " + now.getMonth() + "월 " + now.getDate() + "일 " + now.getHours() + "시 " + now.getMinutes() + "분 " + now.getSeconds() + "초";
+
+            clock.innerText = nowTime;
+            setTimeout(printTime, 1000);
+        }
+        function printAgent() {
+            const agent = document.querySelector(".agent");
+            const os = navigator.userAgent.toLocaleLowerCase();
+
+            agent.innerText = os;
+
+            if (os.indexOf("window") >= 0) {
+                agent.innerText = "현재 윈도우를 사용하고 있습니다, 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+                document.querySelector("body").classList.add("window")
+            } else if (os.indexOf(macintosh) >= 0) {
+                agent.innerText = "현재 맥을 사용하고 있습니다, 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+                document.querySelector("body").classList.add("macintosh")
+            } else if (os.indexOf(iphone) >= 0) {
+                agent.innerText = "현재 아이폰을 사용하고 있습니다 , 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+                document.querySelector("body").classList.add("iphone")
+            } else if (os.indexOf(android) >= 0) {
+                agent.innerText = "현재 안드로이드폰 사용하고 있습니다, 화면 크기는 " + screen.width + " *" + screen.height + "입니다.";
+                document.querySelector("body").classList.add("android")
+            }
+        }
+        window.onload = function () {
+
+            printTime();
+            printAgent();
+        }
+
+    </script>
+</body>
+
+</html>
