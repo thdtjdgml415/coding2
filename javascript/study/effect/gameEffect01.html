@@ -52,7 +52,7 @@
             <div class="music__contents">
                 <div class="music__view">
                     <div class="img">
-                        <img src="../../assets/img/musicbg01.png" alt="">
+                        <img src="../../assets/img/musicbg01.png" alt="song">
                     </div>
                     <div class="title">
                         <h3>Fluffing a Duck</h3>
@@ -70,20 +70,31 @@
                         </div>
                     </div>
                     <div class="control">
-                        <i title="전체반복" class="repeat"></i>
-                        <!-- <i title="한곡 반복" class="repeat_one"></i>
-                        <i title="랜덤 재생" class="shuffle"></i> -->
+                        <i title="전체반복" class="repeat" id="control-repeat"></i>
+                        <!-- <i title="한곡 반복" class="repeat_one"></i> -->
+                        <!-- <i title="랜덤 재생" class="shuffle"></i> -->
                         <i title="이전곡 재생" class="prev" id="control-prev"></i>
                         <div>
                             <i title="재생" class="play" id="control-play"></i>
-                            <!-- <i title="정지" class="stop">정지</i> -->
+                            <!-- <i title="정지" class="stop"></i> -->
                         </div>
                         <i title="다음곡 재생" class="next" id="control-next"></i>
-                        <i title="재생목록" class="list"></i>
+                        <i title="재생목록" class="list" id="control-list"></i>
                     </div>
                 </div>
             </div>
-            <div class="music__footer"></div>
+            <div class="music__footer">
+                <div class="music__list">
+                    <h3><span class="list"></span>뮤직리스트</h3>
+                    <ul>
+                        <!-- <li>
+                            <strong>제목</strong>
+                            <em>아티스트</em>
+                            <span>재생시간</span>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <!-- //music player -->
@@ -150,7 +161,6 @@
             }
         }
         window.onload = function () {
-
             printTime();
             printAgent();
         }

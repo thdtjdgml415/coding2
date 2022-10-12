@@ -54,7 +54,6 @@
 
 .music__control {
     width: 100%;
-    height: 300px;
     padding: 20px;
     padding-top: 0;
 }
@@ -82,7 +81,10 @@
     justify-content: space-between;
     margin-top: 30px;
 }
+.music__control .control i:hover {
+    background-color: #ccc;
 
+}
 .control i {
     transform: scale(0.7);
 }
@@ -110,7 +112,8 @@
     background-image: url(../img/musicbutton.svg);
     width: 50px;
     height: 50px;
-    background-position: 15px 0;    
+    background-position: -50px 0;   
+    display: block; 
  }
  .music__control .control .next {
     background-image: url(../img/musicbutton.svg);
@@ -124,11 +127,63 @@
     height: 50px;
     background-position: -350px 0;    
  }
-.music__control .control .repeat_one {}
-.music__control .control .shuffle {}
+.music__control .control .repeat_one {
+    background-image: url(../img/musicbutton.svg);
+    width: 50px;
+    height: 50px;
+    background-position: -300px 0;
+    display: block;  
+}
+.music__control .control .shuffle {
+    background-image: url(../img/musicbutton.svg);
+    width: 50px;
+    height: 50px;
+    background-position: -250px 0;
+    display: block;  
+}
 .music__control .control .prev {}
 .music__control .control .play {}
 .music__control .control .stop {}
 .music__control .control .next {}
 .music__control .control .list {}
-.music__footer {}
+.music__footer {
+    background: #c4c4c4;
+}
+.music__list {
+    padding: 20px;
+}
+.music__list h3{
+    font-size: 24px;
+    border-top: 3px solid #000;
+}
+.music__list h3 .list{
+    background-image: url(../img/musicbutton.svg);
+    width: 24px;
+    height: 24px;
+    background-position: -350px 0;
+    display: inline-block;  
+    vertical-align: -5px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.music__list ul {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.music__list li {
+    border-bottom: 1px solid #000;
+    list-style: none;
+}
+.music__list li strong {
+    display: block;
+    font-size: 20px;
+}
+.music__list li em {
+    font-style: normal;
+}
+.music__list li span {
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
