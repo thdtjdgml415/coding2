@@ -16,13 +16,13 @@
             <h2>IT.<em>D</em></h2>
             <p>Terms of service 🥑</p>
             <div class="checkbox__top">
-                <input type="checkbox" name="agreeCheck4" id="agreeCheck4">
-                <label for="agreeCheck4">IT.D 이용약관, 개인정보 수집 및 이용에 모두 동의합니다.</label>
+                <input type="checkbox" name="agreeCheckall" id="agreeCheckAll">
+                <label for="agreeCheckall">IT.D 이용약관, 개인정보 수집 및 이용에 모두 동의합니다.</label>
             </div>
             <div class="agree__inner">
                 <div>
                     <div class="checkbox__inner">
-                        <input type="checkbox" name="agreeCheck1" id="agreeCheck1">
+                        <input type="checkbox" name="agreeCheck" id="agreeCheck">
                         <label for="agreeCheck1">IT.D 이용약관 동의</label>
                     </div>
                     <div class="desc">
@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <div class="checkbox__footer">
-                        <input type="checkbox" name="agreeCheck2" id="agreeCheck2">
+                        <input type="checkbox" name="agreeCheck" id="agreeCheck">
                         <label for="agreeCheck2">IT.D 개인정보 수집 및 이용 동의</label>
                     </div>
                     <div class="desc">
@@ -55,8 +55,18 @@
             </div>
         </div>
     </section>
-    
+
     <script>
+        // 모든 체크박스
+        const agreeCheckAll = document.querySelector('input[name=agreeCheckall]');
+
+        agreeCheckAll.addEventListener("change", (e) => {
+            let agreecheck = document.querySelectorAll('input[name=agreeCheck]');
+            for (let i = 0; i < agreecheck.length; i++) {
+                agreecheck[i].checked = e.target.checked;
+            }
+        });
+          
     </script>
 </body>
 

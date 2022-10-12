@@ -71,12 +71,8 @@ const musicPrevBtn = musicWrap.querySelector("#control-prev");
 const musicNextBtn = musicWrap.querySelector("#control-next");
 const musicProgress = musicWrap.querySelector(".progress");
 const musicProgressBar = musicWrap.querySelector(".progress .bar");
-const musicProgressCurrent = musicWrap.querySelector(
-  ".progress .timer .current"
-);
-const musicProgressDuration = musicWrap.querySelector(
-  ".progress .timer .duration"
-);
+const musicProgressCurrent = musicWrap.querySelector(".progress .timer .current");
+const musicProgressDuration = musicWrap.querySelector(".progress .timer .duration");
 const musicRepeat = musicWrap.querySelector("#control-repeat");
 const musicListenBtn = musicWrap.querySelector("#control-list");
 const music__list = musicWrap.querySelector(".music__list");
@@ -85,7 +81,6 @@ const musicListUl = musicWrap.querySelector(".music__list ul");
 let musicIndex = 1;
 
 //음악 재생
-// 음악 재생
 function loadMusic(num) {
   musicName.innerText = allMusic[num - 1].name;
   musicArtist.innerText = allMusic[num - 1].artist;
@@ -124,9 +119,10 @@ function nextMusic() {
 }
 // 뮤직 진행바
 musicAudio.addEventListener("timeupdate", (e) => {
+
   const currentTime = e.target.currentTime; //현재 재생되는 시간
   const duration = e.target.duration; //오디오의 총 길이
-  let progressWidth = (currentTime / duration) * 100; //전체 길이에서 현재 진행되는 시간을 백운위로 나눔
+  let progressWidth = (currentTime / duration) * 100; //전체 길이에서 현재 진행되는 시간을 백분위로 나눔
 
   musicProgressBar.style.width = `${progressWidth}%`;
 
@@ -138,13 +134,13 @@ musicAudio.addEventListener("timeupdate", (e) => {
 
     if (totalSec < 10) total = `0${totalSec}`; //초가 한자리 수 일때 십의 자리에 0을 붙임
     musicProgressDuration.innerText = `${totalMin}:${totalSec}`;
-
-    // 진행시간
-    let currentMin = Math.floor(currentTime / 60);
-    let currentSec = Math.floor(currentTime % 60);
-    if (currentSec < 10) currentSec = `0${currentSec}`;
-    musicProgressCurrent.innerText = `${currentMin}:${currentSec}`;
   });
+  // 진행시간
+  let currentMin = Math.floor(currentTime / 60);
+  let currentSec = Math.floor(currentTime % 60);
+  if (currentSec < 10) currentSec = `0${currentSec}`;
+  musicProgressCurrent.innerHTML = `${currentMin}:${currentSec}`;
+
 });
 
 musicProgress.addEventListener("click", (e) => {

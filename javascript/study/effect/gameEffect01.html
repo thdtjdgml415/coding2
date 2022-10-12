@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>game01</title>
 
     <link rel="stylesheet" href="../../assets/css/game.css">
     <link rel="stylesheet" href="../../assets/css/bg.css">
@@ -35,7 +35,9 @@
         <img src="../../assets/img/gamefolder.png" alt="">
         <span>folder</span>
     </div>
-    <div class="mouse__cursor"></div>
+    <div class="mouse__cursor">
+        <img src="../../assets/img/cursor.cluster.png" alt="">
+    </div>
     <!-- main -->
     <footer id="footer">
         <div class="agent"></div>
@@ -65,8 +67,8 @@
                             <audio id="main-audio" src="../../assets/audio/Music_audio01.mp3"></audio>
                         </div>
                         <div class="timer">
-                            <span class="current">0:00</span>
-                            <span class="duration">4:00</span>
+                            <span class="current"></span>
+                            <span class="duration"></span>
                         </div>
                     </div>
                     <div class="control">
@@ -104,42 +106,46 @@
     <script src="../../assets/js/gsap.min.js"></script>
     <script src="../../assets/js/music.js"></script>
     <script>
-        const cursor = document.querySelector(".mouse__cursor");
-        window.addEventListener("mousemove", (e) => {
-
-            //25를 빼서 마우스커서가 정중앙에 올 수 있도록 배치
-            cursor.style.left = e.clientX + 10 + "px";
-            cursor.style.top = e.clientY + 10 + "px";
-        });
+             const mouseMove = (e) => {
+            //마우스 좌표값
+            let mousePageX = e.pageX;
+            let mousePageY = e.pageY;
+            //커서
+            gsap.to(".mouse__cursor", {duration: .3, left:mousePageX +1, top:mousePageY+1 })
+        }
+        window.addEventListener("mousemove", mouseMove);
         $(".icon1").draggable({
-            drag: function () {
-                $(".cursor img").attr("src", "../../assets/img/cursor.cluster01.png")
-            }
+            // drag: function () {
+            //     $("mouse__cursor img").attr("src", "../../assets/img/cursorcluster.png")
+            // },
         });
         $(".icon2").draggable({
-            drag: function () {
-                $(".cursor img").attr("src", "../../assets/img/cursor.cluster02.png")
-            }
+            // drag: function () {
+            //     $("mouse__cursor img").attr("src", "../../assets/img/cursorcluster02.png")
+            // },
         });
         $(".icon3").draggable({
-            drag: function () {
-                $(".cursor img").attr("src", "../../assets/img/cursor.cluster03.png")
-            }
+            // drag: function () {
+            //     $(".mouse__cursor img").attr("src", "../../assets/img/cursorcluster03.png")
+            // },
         });
         $(".icon4").draggable({
-            drag: function () {
-                $(".cursor img").attr("src", "../../assets/img/cursor.cluster04.png")
-            }
+            // drag: function () {
+            //     $("mouse__cursor img").attr("src", "../../assets/img/cursorcluster04.png")
+            // },
         });
+        $(".music__wrap").draggable()
         function printTime() {
             const clock = document.querySelector(".time");
             const now = new Date();
             clock.textContent = new Date();
-            const nowTime = now.getFullYear() + "년 " + now.getMonth() + "월 " + now.getDate() + "일 " + now.getHours() + "시 " + now.getMinutes() + "분 " + now.getSeconds() + "초";
-
+            let s = (now.getSeconds() < 10) ? `0${now.getSeconds()}` : now.getSeconds();
+            let h = now.getHours() -12
+            const nowTime = now.getFullYear() + "년 " + now.getMonth() + "월 " + now.getDate() + "일 " + h + "시 " + now.getMinutes() + "분 " + s + "초";
+            
             clock.innerText = nowTime;
             setTimeout(printTime, 1000);
-        }
+        } 
         function printAgent() {
             const agent = document.querySelector(".agent");
             const os = navigator.userAgent.toLocaleLowerCase();
@@ -164,6 +170,8 @@
             printTime();
             printAgent();
         }
+
+  
 
     </script>
 </body>

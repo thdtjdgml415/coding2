@@ -48,7 +48,7 @@ label {
   text-align: left;
 }
 
-#agreeCheck4 {
+#agreeCheckAll {
   text-align: center;
 }
 
@@ -175,26 +175,20 @@ label {
   cursor: pointer;
 }
 
-#agreeCheck4 {
+#agreeCheckAll {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-#agreeCheck1 {
+#agreeCheck {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-#agreeCheck2 {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
 .checkbox__top {
     margin-bottom: 40px;
     display: flex;
