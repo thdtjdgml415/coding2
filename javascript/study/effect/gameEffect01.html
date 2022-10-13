@@ -88,7 +88,8 @@
             <div class="music__footer">
                 <div class="music__list">
                     <h3><span class="list"></span>뮤직리스트</h3>
-                    <ul>
+                    <div class="closeList"></div>
+                    <ul class="show">
                         <!-- <li>
                             <strong>제목</strong>
                             <em>아티스트</em>
@@ -111,7 +112,7 @@
             let mousePageX = e.pageX;
             let mousePageY = e.pageY;
             //커서
-            gsap.to(".mouse__cursor", {duration: .3, left:mousePageX +1, top:mousePageY+1 })
+            gsap.to(".mouse__cursor", {duration: .3, left:mousePageX - 25, top:mousePageY - 25 })
         }
         window.addEventListener("mousemove", mouseMove);
         $(".icon1").draggable({
@@ -171,6 +172,15 @@
             printAgent();
         }
 
+        const listBtn = document.querySelector(".music__list .closeList");
+        const MusicList = document.querySelector(".music__list ul");
+
+        listBtn.addEventListener("click", ()=>{
+            MusicList.classList.toggle("show")
+        })
+        musicListenBtn.addEventListener("click", () => {
+            MusicList.classList.toggle("show")
+        })
   
 
     </script>

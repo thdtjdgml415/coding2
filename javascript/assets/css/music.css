@@ -151,6 +151,7 @@
 }
 .music__list {
     padding: 20px;
+    position: relative;
 }
 .music__list h3{
     font-size: 24px;
@@ -167,13 +168,33 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+.music__list .closeList{
+    background-image: url(../../assets/img/musicbutton.svg);
+    width: 24px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -222px 17px;
+    position: absolute;
+    right: 40px;
+    top: 7px; 
+
+}
 .music__list ul {
     max-height: 200px;
     overflow-y: scroll;
+    display: none;
+}
+.music__list ul.show {
+    display: block;
 }
 .music__list li {
     border-bottom: 1px solid #000;
     list-style: none;
+    position: relative;
+}
+.music__list li.playing {
+    color: #7FFF5B;;
 }
 .music__list li strong {
     display: block;
