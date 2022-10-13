@@ -89,7 +89,7 @@
                 <div class="music__list">
                     <h3><span class="list"></span>뮤직리스트</h3>
                     <div class="closeList"></div>
-                    <ul class="show">
+                    <ul>
                         <!-- <li>
                             <strong>제목</strong>
                             <em>아티스트</em>
@@ -141,7 +141,7 @@
             const now = new Date();
             clock.textContent = new Date();
             let s = (now.getSeconds() < 10) ? `0${now.getSeconds()}` : now.getSeconds();
-            let h = now.getHours() -12
+            let h = (now.getHours() < 10) ? `${now.getHour() -12}` : now.getHours();
             const nowTime = now.getFullYear() + "년 " + now.getMonth() + "월 " + now.getDate() + "일 " + h + "시 " + now.getMinutes() + "분 " + s + "초";
             
             clock.innerText = nowTime;

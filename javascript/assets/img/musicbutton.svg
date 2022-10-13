@@ -68,6 +68,5 @@
 <rect x="374" y="34" width="4" height="4" fill="black"/>
 <rect x="378" y="34" width="4" height="4" fill="black"/>
 <rect x="382" y="34" width="4" height="4" fill="black"/>
-<rect width="48" height="48" transform="translate(396)" fill="white"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M413 17H415V19H413V17ZM417 21H415V19H417V21ZM419 23H417V21H419V23ZM421 23H419V25H417V27H415V29H413V31H415V29H417V27H419V25H421V27H423V29H425V31H427V29H425V27H423V25H421V23ZM423 21V23H421V21H423ZM425 19V21H423V19H425ZM425 19V17H427V19H425Z" fill="black"/>
 </svg>
