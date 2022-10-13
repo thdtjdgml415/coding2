@@ -73,8 +73,9 @@
                         </div>
                     </div>
                     <div class="music__volume">
+                        <img src="../../assets/img/volume.png" alt="">
                         <audio id="volume" src="../../assets/audio/Music_audio01.mp3"></audio>
-                        <input type="range" id="volume_control" min="0" max="100">
+                        <input type="range" id="volume_control" min="0" max="10">
                     </div>
                     <div class="control">
                         <i title="전체반복" class="repeat" id="control-repeat"></i>
@@ -103,7 +104,6 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- //music player -->
@@ -129,19 +129,20 @@
         </div>
     </div> -->
     <!-- footer -->
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="../../assets/js/gsap.min.js"></script>
     <script src="../../assets/js/music.js"></script>
     <script src="../../assets/js/common.js"></script>
     <script>
-       
-             const mouseMove = (e) => {
+
+        const mouseMove = (e) => {
             //마우스 좌표값
             let mousePageX = e.pageX;
             let mousePageY = e.pageY;
             //커서
-            gsap.to(".mouse__cursor", {duration: .3, left:mousePageX - 25, top:mousePageY - 25 })
+            gsap.to(".mouse__cursor", { duration: .3, left: mousePageX - 25, top: mousePageY - 25 })
         }
         window.addEventListener("mousemove", mouseMove);
         $(".icon1").draggable({
@@ -170,12 +171,12 @@
             const now = new Date();
             clock.textContent = new Date();
             let s = (now.getSeconds() < 10) ? `0${now.getSeconds()}` : now.getSeconds();
-            let h = (now.getHours() < 10) ? `${now.getHour() -12}` : now.getHours();
+            let h = (now.getHours() < 10) ? `${now.getHour() - 12}` : now.getHours();
             const nowTime = now.getFullYear() + "년 " + now.getMonth() + "월 " + now.getDate() + "일 " + h + "시 " + now.getMinutes() + "분 " + s + "초";
-            
+
             clock.innerText = nowTime;
             setTimeout(printTime, 1000);
-        } 
+        }
         function printAgent() {
             const agent = document.querySelector(".agent");
             const os = navigator.userAgent.toLocaleLowerCase();
@@ -200,7 +201,7 @@
             printTime();
             printAgent();
         }
-        
+
     </script>
 </body>
 

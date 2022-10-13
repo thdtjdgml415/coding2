@@ -60,6 +60,7 @@ const musicWrap = document.querySelector('.music__wrap');
 const musicView = musicWrap.querySelector('.music__view .img img');
 const musicName = musicWrap.querySelector('.music__view .title h3');
 const musicArtist = musicWrap.querySelector('.music__view .title p');
+const musicWindow = musicWrap.querySelector('.music__inner'); //뮤직 전체 창
 const musicAudio = musicWrap.querySelector('#main-audio'); // 음악
 const musicPlay = musicWrap.querySelector('#control-play'); // 재생 버튼
 const musicPrevBtn = musicWrap.querySelector('#control-prev'); // 이전 버튼
@@ -265,7 +266,15 @@ window.addEventListener('load', () => {
 
 const abjvolume = document.getElementById("volume_control");
 
-abjvolume.addEventListener("change", ()=>{
-    musicAudio.volume = abjvolume.value/100;
-    console.log(musicAudio)
+abjvolume.addEventListener("change", (e)=>{
+    musicAudio.volume = abjvolume.value/10;
+    
 })
+//아이콘 클릭시 나오게 하기
+const Icon1 = document.querySelector(".icon1");
+
+Icon1.addEventListener("click", () => {
+    musicWindow.classList.toggle('show')
+})
+
+
