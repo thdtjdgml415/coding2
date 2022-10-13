@@ -69,4 +69,15 @@
 <rect x="378" y="34" width="4" height="4" fill="black"/>
 <rect x="382" y="34" width="4" height="4" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M413 17H415V19H413V17ZM417 21H415V19H417V21ZM419 23H417V21H419V23ZM421 23H419V25H417V27H415V29H413V31H415V29H417V27H419V25H421V27H423V29H425V31H427V29H425V27H423V25H421V23ZM423 21V23H421V21H423ZM425 19V21H423V19H425ZM425 19V17H427V19H425Z" fill="black"/>
+<rect width="2" height="2" transform="matrix(-1 0 0 1 429 15)" fill="black"/>
+<rect x="413" y="29" width="2" height="2" fill="black"/>
+<rect x="411" y="31" width="2" height="2" fill="black"/>
+<rect x="411" y="15" width="2" height="2" fill="black"/>
+<rect x="425" y="29" width="2" height="2" fill="black"/>
+<rect x="427" y="31" width="2" height="2" fill="black"/>
+<rect x="429" y="33" width="2" height="2" fill="black"/>
+<rect x="429" y="33" width="2" height="2" fill="black"/>
+<rect x="409" y="33" width="2" height="2" fill="black"/>
+<rect x="409" y="13" width="2" height="2" fill="black"/>
+<rect x="429" y="13" width="2" height="2" fill="black"/>
 </svg>
