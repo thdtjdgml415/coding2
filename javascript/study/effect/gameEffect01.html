@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../assets/css/game.css">
     <link rel="stylesheet" href="../../assets/css/bg.css">
     <link rel="stylesheet" href="../../assets/css/music.css">
+    <link rel="stylesheet" href="../../assets/css/modal.css">
 </head>
 
 <body>
@@ -64,12 +65,16 @@
                 <div class="music__control">
                     <div class="progress">
                         <div class="bar">
-                            <audio id="main-audio" src="../../assets/audio/Music_audio01.mp3"></audio>
+                            <audio id="main-audio" src="../assets/audio/Music_audio01.mp3"></audio>
                         </div>
                         <div class="timer">
                             <span class="current"></span>
                             <span class="duration"></span>
                         </div>
+                    </div>
+                    <div class="music__volume">
+                        <audio id="volume" src="../../assets/audio/Music_audio01.mp3"></audio>
+                        <input type="range" id="volume_control" min="0" max="100">
                     </div>
                     <div class="control">
                         <i title="전체반복" class="repeat" id="control-repeat"></i>
@@ -98,15 +103,39 @@
                     </ul>
                 </div>
             </div>
+
         </div>
     </div>
     <!-- //music player -->
+    <!-- modal -->
+    <!-- <div class="modal__wrap">
+        <div class="modal__btn">소스 보기</div>
+        <div class="modal__cont">
+            <div class="modal__box">
+                <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                    <iframe src="https://github1s.com/thdtjdgml415/coding2/blob/main/class/index.html"
+                        frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    </iframe>
+                </div>
+            </div>
+            <div class="modal__close">
+                <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </div>
+        </div>
+    </div> -->
     <!-- footer -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="../../assets/js/gsap.min.js"></script>
     <script src="../../assets/js/music.js"></script>
+    <script src="../../assets/js/common.js"></script>
     <script>
+       
              const mouseMove = (e) => {
             //마우스 좌표값
             let mousePageX = e.pageX;
@@ -171,18 +200,7 @@
             printTime();
             printAgent();
         }
-
-        const listBtn = document.querySelector(".music__list .closeList");
-        const MusicList = document.querySelector(".music__list ul");
-
-        listBtn.addEventListener("click", ()=>{
-            MusicList.classList.toggle("show")
-        })
-        musicListenBtn.addEventListener("click", () => {
-            MusicList.classList.toggle("show")
-        })
-  
-
+        
     </script>
 </body>
 

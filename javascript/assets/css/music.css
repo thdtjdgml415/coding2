@@ -89,6 +89,11 @@
     transform: scale(0.7);
 }
 
+.music__volume {
+    text-align: center;
+    border-radius: 5px;
+}
+
 .music__control .control .repeat {
    background-image: url(../img/musicbutton.svg);
    width: 50px;
@@ -183,10 +188,9 @@
 .music__list ul {
     max-height: 200px;
     overflow-y: scroll;
-    display: none;
 }
 .music__list ul.show {
-    display: block;
+
 }
 .music__list li {
     border-bottom: 1px solid #000;
