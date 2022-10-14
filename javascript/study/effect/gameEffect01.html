@@ -108,7 +108,7 @@
     </div>
     <!-- //music player -->
     <!-- modal -->
-    <!-- <div class="modal__wrap">
+    <div class="modal__wrap">
         <div class="modal__btn">소스 보기</div>
         <div class="modal__cont">
             <div class="modal__box">
@@ -127,7 +127,7 @@
                 </svg>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- footer -->
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -142,7 +142,7 @@
             let mousePageX = e.pageX;
             let mousePageY = e.pageY;
             //커서
-            gsap.to(".mouse__cursor", { duration: .3, left: mousePageX - 25, top: mousePageY - 25 })
+            gsap.to(".mouse__cursor", { duration: 0, left: mousePageX - 25, top: mousePageY - 25 })
         }
         window.addEventListener("mousemove", mouseMove);
         $(".icon1").draggable({
@@ -171,7 +171,7 @@
             const now = new Date();
             clock.textContent = new Date();
             let s = (now.getSeconds() < 10) ? `0${now.getSeconds()}` : now.getSeconds();
-            let h = (now.getHours() < 10) ? `${now.getHour() - 12}` : now.getHours();
+            let h = (now.getHours() < 10) ? `0${(now.getHours()-12)}` : now.getHours();
             const nowTime = now.getFullYear() + "년 " + now.getMonth() + "월 " + now.getDate() + "일 " + h + "시 " + now.getMinutes() + "분 " + s + "초";
 
             clock.innerText = nowTime;

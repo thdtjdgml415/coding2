@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 찾기</title>
+    <link rel="stylesheet" href="../Project/css/cgPw.css">
+    <link rel="stylesheet" href="../Project/css/reset.css">
+    <style>
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+    </style>
+</head>
+
+<body>
+    <div class="login__popup">
+        <div class="login__wrap">
+            <div class="login__inner">
+                <div class="login__box container">
+                    <form name="로그인" action="메인페이지">
+                        <fieldset>
+                            <h2>IT.<em>D</em></h2>
+                            <span>Change Password 🔍</span>
+                            <legend>비밀번호 찾기 폼</legend>
+                            <p class="login__desc">
+                                회원가입 시 입력한 이메일과 아이디를 통해 비밀번호를 찾아보세요.
+                                임시 비밀번호를 이메일로 보내드립니다!
+                            </p>
+                            <div>
+                                <p class="input__title">새 비밀번호</p>
+                                <label for="NewPass">새 비밀번호</label>
+                                <input type="NewPass" name="NewPass" id="NewPass" placeholder="비밀번호를 입력해주세요."
+                                    class="input__style2" required>
+                            </div>
+                            <div>
+                                <div class="error__title">
+                                    <p class="input__title">비밀번호 확인</p>
+                                    <p class="error__pw">비밀번호가 일치하지 않습니다.</p>
+                                </div>
+                                <label for="PassC">비밀번호 확인</label>
+                                <input type="PassC" name="PassC" id="PassC" placeholder="비밀번호를 입력해주세요."
+                                    class="input__style2" required>
+                            </div>
+                            <a href="#">아이디 찾기</a>
+                            <button type="submit" class="input__button">비밀번호 변경</button>
+                            <button type="submit" class="join__button">이전 페이지로 돌아가기</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
