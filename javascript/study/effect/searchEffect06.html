@@ -1143,8 +1143,8 @@ li {
         //랜덤 정렬 클릭
         document.querySelector('.btn6').addEventListener('click', (e) => {
             e.preventDefault();
-              // 시작값을 데이터 끝 숫자 부터 시작
-              for (let i = cssProperty.length - 1; i >= 0; i--) {
+            // 시작값을 데이터 끝 숫자 부터 시작
+            for (let i = cssProperty.length - 1; i >= 0; i--) {
                 const randomIndex = Math.floor(Math.random() * (i + 1));
                 // console.log(randomIndex);
                 [cssProperty[i], cssProperty[randomIndex]] = [cssProperty[randomIndex], cssProperty[i]]; // 중복 제거
@@ -1152,7 +1152,6 @@ li {
             }
             updateList();
         });
-
     </script>
 
 </body>
