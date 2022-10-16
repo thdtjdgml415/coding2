@@ -335,7 +335,7 @@ setInterval(sliderEffect, 2000);
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-css">.slider__wrap {
+                            <pre><code class="language-css">      .slider__wrap {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -356,7 +356,8 @@ setInterval(sliderEffect, 2000);
     /*이미지를 감싸고 있는 부모 : 움직이는 부분*/
     display: flex;
     flex-wrap: wrap;
-    width: 4800px;  /* 총 이미지 넓이에 따라 넓이를 변경해주어야함 */
+    width: 4800px;
+    /* 총 이미지 넓이에 따라 넓이를 변경해주어야함 */
     height: 600px;
 }
 
@@ -397,7 +398,7 @@ setInterval(sliderEffect, 2000);
     content: '이미지5';
 }
 
-.slider:nth-child(5) {
+.slider:nth-child(6) {
     content: '이미지1';
 }
 
@@ -420,25 +421,81 @@ setInterval(sliderEffect, 2000);
 .slider:nth-child(5)::before {
     content: "image 05";
 }
-.slider:nth-child(6)::before {    /*1번 이미지를 추가해 주어서 뒤에서 초기화 했을때 티가 나지 않는다.*/
-    content: "image 06";   
+
+.slider:nth-child(6)::before {
+    content: "image 06";
 }
+
 @media (max-width: 800px) {
     .slider__img {
         width: 400px;
         height: 300px;
     }
 }
+
+.slider__btn {}
+
+.slider__btn a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.2s;
+    display: block;
+    color: #fff;
+}
+
+.slider__btn a:hover {
+    background: #A4B8c6;
+}
+
+.slider__btn a.prev {
+    left: 0;
+}
+
+.slider__btn a.next {
+    right: 0;
+}
+
+.slider__dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+.slider__dot .dot {
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    border-radius: 50%;
+    text-indent: -9999px;
+    transition: all 0.3s;
+    margin: 2px;
+}
+
+.slider__dot .dot.active {
+    background: rgba(255, 255, 255, 0.9);
+}
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-html">&lt;div class="slider__inner"&gt;
-    &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_16-min.jpg" alt="이미지1"&gt;&lt;/div&gt;
-    &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_17-min.jpg" alt="이미지2"&gt;&lt;/div&gt;
-    &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_18-min.jpg" alt="이미지3"&gt;&lt;/div&gt;
-    &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_19-min.jpg" alt="이미지4"&gt;&lt;/div&gt;
-    &lt;div class="slider"&gt;&lt;img src="../assets/img2/effect_bg_20-min.jpg" alt="이미지5"&gt;&lt;/div&gt;
-&lt;/div&gt;  
+<pre><code class="language-html">  &lt;div class="slider__btn"&gt;
+    &lt;a href="#" class="prev"&gt;prev&lt;/a&gt;
+    &lt;a href="#" class="next"&gt;next&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="slider__dot"&gt;
+    &lt;!-- &lt;a href="#" class="dot active"&gt;이미지1&lt;/a&gt;
+    &lt;a href="#" class="dot"&gt;이미지2&lt;/a&gt;
+    &lt;a href="#" class="dot"&gt;이미지3&lt;/a&gt;
+    &lt;a href="#" class="dot"&gt;이미지4&lt;/a&gt;
+    &lt;a href="#" class="dot"&gt;이미지5&lt;/a&gt; --&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                     </div>
@@ -515,7 +572,7 @@ setInterval(sliderEffect, 2000);
 
         //닷 버튼 클릭 했을 때
         let sliderDotActive = document.querySelectorAll(".slider__dot .dot").forEach((dot, index) => {
-            dot.addEventListener("click", (e)=>{
+            dot.addEventListener("click", (e) => {
                 gotoSlider(index)
             })
         })
