@@ -134,7 +134,7 @@
 </code></pre>
                         </div>
                         <div>
-<pre><co    de class="language-css">:root {
+                            <pre><co    de class="language-css">:root {
     --htmlColor : #223547;
     --cssColor : #472222;
     --javascriptColor : #224736;
@@ -577,7 +577,7 @@ li {
 </code></pre>
                         </div>
                         <div>
-<pre>   <code class="language-html">    &lt;main id="main"&gt;
+                            <pre>   <code class="language-html">    &lt;main id="main"&gt;
     &lt;div class="search__wrap"&gt;
         &lt;span&gt;charAt()를 이용하여 검색하기&lt;/span&gt;
         &lt;h1&gt;CSS 속성 검색하기&lt;/h1&gt;
@@ -666,7 +666,8 @@ li {
                             fill="white" stroke="#786CFF" stroke-linecap="round" />
                     </svg>
                 </span>
-                <audio id="audio" src="../../javascript/assets/audio/Virtual Roaming Charges - half.cool.mp3" loop="loop"></audio>
+                <audio id="audio" src="../../javascript/assets/audio/Virtual Roaming Charges - half.cool.mp3"
+                    loop="loop"></audio>
             </div>
             <span>CSS 속성 검색 이벤트</span>
             <h1><a href="searchEffect.html">2분 동안 CSS 속성 검색하기</a></h1>
@@ -1464,37 +1465,143 @@ li {
 
         const searchList = document.querySelector(".search__list"); //리스트 출력
         const searchStart = document.querySelector(".search__box .start") //시작 버튼
+        const searchInput = document.querySelector(".search__box #search") //인풋박스 입력
+        const searchAnswers = document.querySelector(".search__answers"); //정답
+        const searchMissAnswer = document.querySelector(".search__missAnswers"); //오답
+        const searchTime = document.querySelector(".time")   //타이머
+        const correctList = document.querySelector(".search__info .now"); //맞춘 정답  
+        const ListAll = document.querySelector(".search__info .num"); //전체 속성 갯수  
+        const searchResult = document.querySelector(".search__result"); //애니메이션 묶음
+        const Result = document.querySelector(".search__result .result"); //애니메이션
+        const searchRestart = document.querySelector(".search__result .restart"); //재시작 버튼
 
+        let timeReamining = 10,//남은시간
+            timeInterval = "", //시간간격
+            answers = {},//새로운 답
+            score = 0;//맞춘 갯수
 
+            ListAll.innerHTML = cssProperty.length;
+       
         //리스트 출력
         function updateList() {
-            cssProperty.forEach(data=>{
-                searchList.innerHTML += `<span>${data.name}</span>` 
+            cssProperty.forEach(data => {
+                searchList.innerHTML += `<span>${data.name}</span>`
             })
         }
         updateList()
 
+        //퀴즈 스타트
         function startQuiz() {
 
             //시작버튼 없애기 & 속성리스트 없애기
             searchStart.style.display = "none";
             searchList.style.display = "none";
 
-            //다시 시작할 때, 기존 데이터 초기화
+            //다시 시작할 때 기존 데이터 초기화
+            searchMissAnswer.style.display = "none";
             searchAnswers.style.display = "none";
 
+            timeInterval = setInterval(reduceTime, 1000); //1초마다 시간이 줄어들도록 함
+
+            //정답 체크
+            checkAnswer()
         }
-        startQuiz()
+
         //인풋 체크하기
         function checkInput() {
             let input = event.currentTarget.value.trim().toLowerCase();
-            console.log(input)
-        }
-     
 
+            if (answers.hasOwnProperty(input) && !answers[input]) {
+                answers[input] = true;
+                score++
+                correctList.innerHTML = score;
+
+                //정답 표시
+                searchAnswers.style.display = "block";
+                searchAnswers.innerHTML += `<span>${input}</span>`;
+
+                //정답 초기화 
+                searchInput.value = "";
+            }
+        }
+
+        //정답 체크하기 : 정답을 객체 파일로
+        function checkAnswer() {
+            cssProperty.forEach(item => {
+                let answer = item.name.trim().toLocaleLowerCase();
+                answers[answer] = false;
+            })
+        }
+
+        //오답 보여주기
+        function missAnswer() {
+            searchMissAnswer.style.display = "block";
+
+            cssProperty.forEach(item => {
+                let answer = item.name.trim().toLocaleLowerCase();
+                if (!answers[answer]) {
+                    searchMissAnswer.innerHTML += `<span>${answer}</span>`
+                }
+            });
+        }
+
+        //시간 출력하기
+        function reduceTime() {
+            timeReamining--;
+
+            if (timeReamining == 0) endQuiz();
+
+            searchTime.innerText = displayTime();
+        }
+
+        //시간 체크 
+        function displayTime() {
+            if (timeReamining <= 0) {
+                return "0:00";
+            } else {
+                let minutes = Math.floor(timeReamining / 60);
+                let seconds = timeReamining % 60;
+
+                //초가 한자리 수 일때 0을 추가
+                if (seconds < 10) seconds = "0" + seconds;
+                return minutes + ":" + seconds;
+            }
+        }
+
+        function endQuiz() {
+            //시작버튼 생기기
+            searchStart.style.display = "block";
+            searchStart.style.pointerEvents = "none";
+
+            //오답 보여주기
+            missAnswer()
+
+            //시간 정지
+            clearInterval(timeInterval)
+
+            //메세지 보여주기
+            searchResult.classList.add('show');
+            let point = Math.round((score / cssProperty.length) * 100);
+            Result.innerHTML = `게임이 끝났습니다. <br> 당신은 ${cssProperty.length}중에 ${score}개 맞았습니다. <br>점수는 ${point}입니다.`;
+
+
+        }
+        //다시 시작하기
+        function restart() {
+            searchResult.classList.remove('show');
+            timeReamining = 120;
+            score = 0;
+            correctList.innerHTML = "0";
+            searchStart.style.display = "none";
+            searchList.style.display = "none";
+            startQuiz();
+        }
 
         //버튼 이벤트
         searchStart.addEventListener("click", startQuiz);
+        searchInput.addEventListener("input", checkInput);
+        searchRestart.addEventListener("click", restart);
+
     </script>
 
 </body>

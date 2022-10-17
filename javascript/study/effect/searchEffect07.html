@@ -1500,8 +1500,8 @@ li {
             searchList.style.display = "none";
 
             //다시 시작할 때, 기존 데이터 초기화
-            searchAnswers.style.display = "none"
-            searchMissAnswers.style.display = "none"
+            searchAnswers.style.display = "none";
+            searchMissAnswers.style.display = "none";
 
             //시간 설정
             timeInterval = setInterval(reduceTime, 1000);
@@ -1623,7 +1623,7 @@ li {
         //버튼 이벤트
         searchStart.addEventListener("click", startQuiz);
         searchInput.addEventListener("input", checkInput); //글 입력 감지
-        searchRestart.addEventListener("click", restart);
+        searchRestart.addEventListener("click", restart); //재시작
 
 
         // 음악 정지눌렀을 때 
