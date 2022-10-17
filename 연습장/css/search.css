@@ -283,7 +283,7 @@ li {
   cursor: pointer;
   margin-bottom: 10px;
 }
-.search__audio .play {
+.search__audio .stop {
   display: none;
 }
 

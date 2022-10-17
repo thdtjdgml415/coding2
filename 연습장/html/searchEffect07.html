@@ -1474,6 +1474,9 @@ li {
         const searchResult = document.querySelector(".search__result"); //애니메이션 묶음
         const Result = document.querySelector(".search__result .result"); //애니메이션
         const searchRestart = document.querySelector(".search__result .restart"); //재시작 버튼
+        const musicStop = document.querySelector(".search__audio .stop"); //노래 멈춤
+        const musicPlay = document.querySelector(".search__audio .play"); //노래 시작
+        const music = document.querySelector(".search__audio #audio")
 
         let timeReamining = 10,//남은시간
             timeInterval = "", //시간간격
@@ -1502,6 +1505,10 @@ li {
             searchAnswers.style.display = "none";
 
             timeInterval = setInterval(reduceTime, 1000); //1초마다 시간이 줄어들도록 함
+
+            //노래 시작
+            musicPlay.style.display="block";
+            music.play();
 
             //정답 체크
             checkAnswer()
@@ -1601,6 +1608,17 @@ li {
         searchStart.addEventListener("click", startQuiz);
         searchInput.addEventListener("input", checkInput);
         searchRestart.addEventListener("click", restart);
+
+        musicPlay.addEventListener("click", () => {
+            music.play();
+            musicStop.style.display = "block";
+            musicPlay.style.display = "none";
+        })
+        musicStop.addEventListener("click", () => {
+            music.pause();
+            musicPlay.style.display = "block";
+            musicStop.style.display = "none";
+        })
 
     </script>
 
