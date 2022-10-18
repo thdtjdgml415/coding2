@@ -412,21 +412,23 @@ const searchStart = document.querySelector(".search__box .start") //시작 버�
 const searchInput = document.querySelector(".search__box #search") //인풋박스 입력
 const searchAnswers = document.querySelector(".search__answers"); //정답
 const searchMissAnswer = document.querySelector(".search__missAnswers"); //오답
-const searchTime = document.querySelector(".timer")   //타이머
+const searchTime = document.querySelector(".search__wrap .timer")   //타이머
 const correctList = document.querySelector(".search__info .now"); //맞춘 정답  
 const ListAll = document.querySelector(".search__info .num"); //전체 속성 갯수  
 const searchResult = document.querySelector(".search__result"); //애니메이션 묶음
 const Result = document.querySelector(".search__result .result"); //애니메이션
 const searchRestart = document.querySelector(".search__result .restart"); //재시작 버튼
-const musicStop = document.querySelector(".search__audio .stop"); //노래 멈춤
-const musicPlays = document.querySelector(".search__audio .play"); //노래 시작
+const musicStopBtn = document.querySelector(".search__audio .stop"); //노래 멈춤
+const musicPlayBtn = document.querySelector(".search__audio .play"); //노래 시작
 const music = document.querySelector(".search__audio #audio");
+const searchWrap = document.querySelector(".search__wrap");
+const searchHint = document.querySelector(".search__info .hint"); //힌트 버튼
 
-let timeReamining = 10,//남은시간
-    timeInterval = "", //시간간격
+let timeReamining = 120,//남은시간
+
     answers = {},//새로운 답
     score = 0;//맞춘 갯수
-
+    timeInterval = "",    //시간 간격
     ListAll.innerHTML = cssProperty.length;
 
 //리스트 출력
@@ -445,13 +447,12 @@ function startQuiz() {
     searchList.style.display = "none";
 
     //다시 시작할 때 기존 데이터 초기화
-    searchMissAnswer.style.display = "none";
-    searchAnswers.style.display = "none";
+    searchAnswers.innerHTML = "";
+    searchMissAnswer.innerHTML = "";
 
     timeInterval = setInterval(reduceTime, 1000); //1초마다 시간이 줄어들도록 함
 
     //노래 시작
-    musicPlays.style.display="block";
     music.play();
 
     //정답 체크
@@ -499,10 +500,11 @@ function missAnswer() {
 //시간 출력하기
 function reduceTime() {
     timeReamining--;
-
+    
     if (timeReamining == 0) endQuiz();
-
-    searchTime.innerText = displayTime();
+    
+    searchTime.innerHTML = displayTime();
+   console.log(searchTime)
 }
 
 //시간 체크 
@@ -539,13 +541,13 @@ function endQuiz() {
 }
 //다시 시작하기
 function restart() {
-    searchResult.classList.remove('show');
-    timeReamining = 120;
-    score = 0;
-    correctList.innerHTML = "0";
-    searchStart.style.display = "none";
-    searchList.style.display = "none";
-    startQuiz();
+    setTimeout(()=>{
+        searchResult.classList.remove('show');
+        timeReamining = 120;
+        score = 0;
+        correctList.innerHTML = "0";
+        startQuiz();
+    }, 1000)
 }
 
 //버튼 이벤트
@@ -554,13 +556,25 @@ searchInput.addEventListener("input", checkInput);
 searchRestart.addEventListener("click", restart);
 
 //음악 클릭
-musicPlays.addEventListener("click", () => {
+musicPlayBtn.addEventListener("click", () => {
     music.play();
-    musicStop.style.display = "block";
-    musicPlays.style.display = "none";
+    musicStopBtn.style.display = "block";
+    musicPlayBtn.style.display = "none";
 })
-musicStop.addEventListener("click", () => {
+musicStopBtn.addEventListener("click", () => {
     music.pause();
-    musicPlays.style.display = "block";
-    musicStop.style.display = "none";
+    musicPlayBtn.style.display = "block";
+    musicStopBtn.style.display = "none";
 })
+
+//힌트 버튼 클릭시 등장
+searchHint.addEventListener("click", () => {
+    searchList.classList.toggle("show");
+    searchList.style.display = "block";
+})
+
+//아이콘 클릭시 등장
+document.querySelector(".icon2").addEventListener("click", ()=>{
+    searchWrap.classList.toggle("show");
+})
+

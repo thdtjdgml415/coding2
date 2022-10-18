@@ -1,47 +1,66 @@
-
 .search__wrap {
   max-width: 1400px;
   margin: 0 auto;
   border: 3px solid var(--htmlColor);
   border-radius: 20px;
-  background-color: #f1f3f6;
+  background-image: url(../img/game3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 30px;
   text-align: center;
-  height: 800px;
+  height: 1500px;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+  display: none;
 }
-.search__wrap > span {
+
+.search__wrap.show {
+  display: block;
+}
+
+.search__wrap>span {
   font-size: 20px;
   margin-bottom: 20px;
   display: inline-block;
 }
-.search__wrap > h1 a {
-  font-family: "Tmon";
-  color: var(--htmlColor);
+
+.search__wrap>h1 a {
+  color: #fff;
+  background-color: #0ddd6f;
+  background-image: linear-gradient(96deg, #0ddd6f 0%, #6284FF 50%, #FF0000 100%);
   font-size: 5vw;
   margin-bottom: 10px;
 }
+
 .search__wrap .desc {
   line-height: 1.4;
   padding: 20px 0;
+  font-size: 18px;
+  color: #f40dcd;
 }
-.search__wrap .time {
+
+.search__wrap .timer {
   width: 140px;
   height: 140px;
   line-height: 140px;
   text-align: center;
   border-radius: 50%;
   margin: 0 auto;
-  background: var(--htmlColor);
+  background: #fff;
+  font-size: 34px;
 }
-.search__wrap .time span {
-  color: #fff;
+
+.search__wrap .timer span {
+  color: #000;
   font-size: 34px;
   font-weight: 100;
 }
+
 .search__box {
   margin-bottom: 20px;
   position: relative;
 }
+
 .search__box label {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -50,6 +69,7 @@
   margin: -1px;
   overflow: hidden;
 }
+
 .search__box input {
   border: 2px solid var(--htmlColor);
   padding: 15px 40px;
@@ -58,74 +78,113 @@
   font-size: 20px;
   margin-top: 20px;
 }
+
 .search__box .start {
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  background: #223547;
+  background: #f40dcd;
   width: 30%;
   border-radius: 50px;
-  font-size: 20px;
-  border: 2px solid var(--htmlColor);
+  font-size: 18px;
+  border: 2px solid #f40dcd;
   padding: 15px 40px;
   color: #fff;
   cursor: pointer;
 }
+
+.search__list {
+  display: none;
+}
+
+.search__list.show{
+  display: block;
+}
+
+
 .search__list li {
   text-align: left;
   line-height: 1.7;
 }
+
 .search__list li.show {
   display: block;
 }
+
 .search__list li.hide {
   display: none;
 }
+
 .search__list span {
   display: inline-block;
   padding: 10px 20px;
-  border: 1px solid var(--htmlColor);
+  border: 1px solid #fff;
   border-radius: 50px;
   margin: 5px;
   transition: all 0.3s;
   cursor: pointer;
+  color: #000;
+  background: rgb(225, 255, 0);
+  font-size: 18px;
 }
+
 .search__list span:hover {
-  background-color: var(--htmlColor);
-  color: #fff;
+  background-color: rgb(255, 0, 0);
+  color: #000;
 }
+
 .search__list em {
   float: right;
   font-style: normal;
 }
+
 .search__list .line {
   margin: 50px 0;
 }
+
 .search__list .line li {
   background: #e3eaf5;
   padding: 10px 30px;
   margin-bottom: 5px;
   border-radius: 50px;
 }
+
 .search__list .line li:hover {
   background: #d3e2fa;
   cursor: pointer;
 }
+
 .search__info {
   text-align: right;
   margin-bottom: 30px;
   padding-bottom: 10px;
-  border-bottom: 2px dashed var(--htmlColor);
+  border-bottom: 2px dashed #fff;
 }
+
+.search__info .num {
+  color: yellow;
+} 
+.search__info .now {
+  color: yellow;
+} 
+.search__info i {
+  color: yellowgreen;
+}
+.search__info .hint {
+  color: yellowgreen;
+}
+
 .search__info .type {
   text-align: center;
   margin-bottom: 10px;
 }
+
 .search__info .keyword {
   text-align: center;
   margin-bottom: 10px;
 }
+
 .search__info .keyword span {
   border: 2px solid var(--htmlColor);
   border-radius: 50px;
@@ -133,11 +192,13 @@
   display: inline-block;
   margin-bottom: 4px;
 }
+
 .search__info .keyword span:hover {
   background-color: var(--htmlColor);
   color: #fff;
   cursor: pointer;
 }
+
 .search__info.center {
   text-align: center;
   display: flex;
@@ -146,6 +207,7 @@
   gap: 10px;
   padding-bottom: 40px;
 }
+
 .search__desc {
   padding: 20px 40px 20px 60px;
   margin-bottom: 50px;
@@ -157,13 +219,16 @@
   background-repeat: no-repeat;
   background-position: 22px 17px;
 }
+
 .search__click {
   margin-top: 10px;
   margin-bottom: 30px;
 }
+
 .search__click li {
   display: inline;
 }
+
 .search__click li a {
   display: inline-block;
   border: 1px solid var(--htmlColor);
@@ -171,10 +236,12 @@
   padding: 10px 20px;
   margin: 5px 0;
 }
+
 .search__click li a:hover {
   background-color: var(--htmlColor);
   color: #fff;
 }
+
 .search__result {
   position: fixed;
   right: 3vw;
@@ -189,15 +256,18 @@
   border-radius: 50%;
   border: 6px solid #22ff00;
 }
+
 .search__result.show {
   display: flex;
   animation: rubberBand 1s 0.6s ease-in;
 }
+
 .search__result .result {
   font-size: 1.4vw;
   margin-top: 30px;
   line-height: 1.5;
 }
+
 .search__result .restart {
   background: #22ff00;
   color: #fff;
@@ -212,7 +282,8 @@
   cursor: pointer;
   margin-bottom: 10px;
 }
-.search__audio .play {
+
+.search__audio .stop {
   display: none;
 }
 
@@ -250,35 +321,43 @@
   .search__wrap {
     padding: 20px;
   }
-  .search__wrap > span {
+
+  .search__wrap>span {
     font-size: 16px;
     margin-bottom: 10px;
   }
-  .search__wrap > h1 {
+
+  .search__wrap>h1 {
     font-size: 44px;
   }
+
   .search__box input {
     font-size: 16px;
     padding: 12px 30px;
   }
 }
+
 /* footer */
 #footer {
   text-align: center;
 }
+
 #footer a {
   color: #000;
   font-family: "NexonLv1Gothic";
   padding-bottom: 50px;
 }
+
 #footer a:hover {
   text-decoration: underline;
 }
+
 .search__answers {
   border-bottom: 2px dashed var(--htmlColor);
   padding-bottom: 40px;
   display: none;
 }
+
 .search__answers span {
   display: inline-block;
   background: var(--htmlColor);
@@ -286,16 +365,20 @@
   color: #fff;
   border-radius: 30px;
   margin: 3px;
+  font-size: 20px;
 }
+
 .search__missAnswers {
-  border-bottom: 2px dashed var(--htmlColor);
+  border-bottom: 2px dashed #22ff00;
   padding: 40px 0;
   display: none;
 }
+
 .search__missAnswers span {
   display: inline-block;
   border: 1px solid var(--htmlColor);
-  color: var(--htmlColor);
+  color: rgb(225, 255, 0);
   padding: 10px 20px;
   border-radius: 30px;
+  font-size: 25px;
 }

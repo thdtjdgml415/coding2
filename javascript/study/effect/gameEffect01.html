@@ -44,6 +44,67 @@
     <footer id="footer">
         <div class="agent"></div>
     </footer>
+    <div class="music__wrap">
+        <div class="music__inner">
+            <div class="music__header">
+                <div>*</div>
+                <h2>Music player</h2>
+                <div>*</div>
+            </div>
+            <div class="music__contents">
+                <div class="music__view">
+                    <div class="img">
+                        <img src="../../assets/img/musicbg01.png" alt="song">
+                    </div>
+                    <div class="title">
+                        <h3>Fluffing a Duck</h3>
+                        <p>youtube music</p>
+                    </div>
+                </div>
+                <div class="music__control">
+                    <div class="progress">
+                        <div class="bar">
+                            <audio id="main-audio" src="../assets/audio/Music_audio01.mp3"></audio>
+                        </div>
+                        <div class="timer">
+                            <span class="current"></span>
+                            <span class="duration"></span>
+                        </div>
+                    </div>
+                    <div class="music__volume">
+                        <img src="../../assets/img/volume.png" alt="">
+                        <audio id="volume" src="../../assets/audio/Music_audio01.mp3"></audio>
+                        <input type="range" id="volume_control" min="0" max="10">
+                    </div>
+                    <div class="control">
+                        <i title="전체반복" class="repeat" id="control-repeat"></i>
+                        <!-- <i title="한곡 반복" class="repeat_one"></i> -->
+                        <!-- <i title="랜덤 재생" class="shuffle"></i> -->
+                        <i title="이전곡 재생" class="prev" id="control-prev"></i>
+                        <div>
+                            <i title="재생" class="play" id="control-play"></i>
+                            <!-- <i title="정지" class="stop"></i> -->
+                        </div>
+                        <i title="다음곡 재생" class="next" id="control-next"></i>
+                        <i title="재생목록" class="list" id="control-list"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="music__footer">
+                <div class="music__list">
+                    <h3><span class="list"></span>뮤직리스트</h3>
+                    <div class="closeList"></div>
+                    <ul>
+                        <!-- <li>
+                            <strong>제목</strong>
+                            <em>아티스트</em>
+                            <span>재생시간</span>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- music player -->
     <div class="search__wrap">
         <div class="search__audio">
@@ -64,7 +125,7 @@
                         fill="white" stroke="#786CFF" stroke-linecap="round" />
                 </svg>
             </span>
-            <audio id="audio" src="../../javascript/assets/audio/Virtual Roaming Charges - half.cool.mp3"
+            <audio id="audio" src="../../assets/audio/Virtual Roaming Charges - half.cool.mp3"
                 loop="loop"></audio>
         </div>
         <span>CSS 속성 검색 이벤트</span>
@@ -83,8 +144,9 @@
             <div class="start">버튼을 누르면 게임이 시작됩니다.</div>
         </div>
         <div class="search__info center">
-            <div>전체 속성 갯수 : <span class="num">0</span></div>
-            <div>현재 맞춘 개수 : <span class="now">0</span></div>
+            <div><i>전체 속성 갯수 : </i><span class="num">0</span></div>
+            <div><i>현재 맞춘 개수 : </i><span class="now">0</span></div>
+            <div class="hint">힌트</div>
         </div>
         <div class="search__answers"></div>
         <div class="search__missAnswers"></div>
@@ -96,8 +158,7 @@
                         style="animation: 3.9s linear infinite both bee-a0_ft;">
                         <g id="bee-Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                             transform="translate(217.528,187.235) translate(-218.184,-198.765)">
-                            <g id="bee-Artboard"
-                                transform="translate(218.184,198.765) translate(-1258.18,-1122.76)">
+                            <g id="bee-Artboard" transform="translate(218.184,198.765) translate(-1258.18,-1122.76)">
                                 <g id="bee-drop" fill="#946BC6"
                                     transform="translate(1394.27,1301.5) translate(-27.7667,-6.5)">
                                     <rect id="bee-Rectangle" width="25.9539" height="13" rx="6.5"
@@ -107,8 +168,7 @@
                                         transform="translate(49.0334,-83.5)"
                                         style="animation: 3.9s linear infinite both bee-Oval_t, 3.9s linear infinite both bee-Oval_d;" />
                                 </g>
-                                <g id="bee-scene"
-                                    transform="translate(1258.18,1122.76) translate(-218.184,-198.765)">
+                                <g id="bee-scene" transform="translate(1258.18,1122.76) translate(-218.184,-198.765)">
                                     <g id="bee-flower-2" transform="translate(90.0588,372) translate(0,-206.381)"
                                         style="animation: 3.9s linear infinite both bee-flower-2_t;">
                                         <path id="bee-Path-9"
@@ -164,11 +224,9 @@
                                                 transform="translate(30.2037,10.1784) translate(-22.289,-10.1784)">
                                                 <rect id="bee-Rectangle-5" width="11" height="16.6487" rx="5.5"
                                                     transform="translate(5.5,12.0325) translate(-5.5,-8.32434)" />
-                                                <rect id="bee-Rectangle-Copy-5-2" width="11" height="16.6487"
-                                                    rx="5.5"
+                                                <rect id="bee-Rectangle-Copy-5-2" width="11" height="16.6487" rx="5.5"
                                                     transform="translate(22.5658,8.32434) translate(-5.5,-8.32434)" />
-                                                <rect id="bee-Rectangle-Copy-6-2" width="11" height="16.6487"
-                                                    rx="5.5"
+                                                <rect id="bee-Rectangle-Copy-6-2" width="11" height="16.6487" rx="5.5"
                                                     transform="translate(39.078,12.0325) translate(-5.5,-8.32434)" />
                                             </g>
                                             <path id="bee-Combined-Shape-3"
@@ -193,8 +251,7 @@
                                             transform="translate(9.5,81.5) scale(-1,1) translate(-9.5,-81.5)" />
                                     </g>
                                     <g id="bee-leg-r" transform="translate(258.693,329) translate(-9.5,-55)" />
-                                    <g id="bee-plants"
-                                        transform="translate(94.5778,321.5) translate(-94.5778,-64.5)">
+                                    <g id="bee-plants" transform="translate(94.5778,321.5) translate(-94.5778,-64.5)">
                                         <path id="bee-Rectangle-6"
                                             d="M42.5,0C67.9051,0,88.5,20.5949,88.5,46L88.5,96C88.5,100.418,84.9183,104,80.5,104L50.5,104C46.0817,104,42.5,100.418,42.5,96L42.5,0L42.5,0Z"
                                             fill="#537B88" transform="translate(65.5,52) translate(-65.5,-52)" />
@@ -217,8 +274,7 @@
                                             transform="translate(81.0586,181.765) translate(-81.0586,-181.765)">
                                             <g id="bee-Group-3" fill="#7AB6AE"
                                                 transform="translate(103.222,73.0275) translate(-14.8162,-15.337)">
-                                                <rect id="bee-Rectangle-8" width="29.6325" height="13.1271"
-                                                    rx="6.56355"
+                                                <rect id="bee-Rectangle-8" width="29.6325" height="13.1271" rx="6.56355"
                                                     transform="translate(14.8162,6.56355) translate(-14.8162,-6.56355)" />
                                                 <rect id="bee-Rectangle-Copy-7-4" width="29.6325" height="12.5416"
                                                     rx="6.27078"
@@ -252,8 +308,8 @@
                                                         transform="translate(19.4275,179.229) translate(-19.4275,-22.5293)">
                                                         <g id="bee-Group-3-Copy" fill="#7AB6AE"
                                                             transform="translate(32.4334,22.5899) rotate(-136) translate(-15.2019,-15.6629)">
-                                                            <rect id="bee-Rectangle-11" width="29.6325"
-                                                                height="13.1271" rx="6.56355"
+                                                            <rect id="bee-Rectangle-11" width="29.6325" height="13.1271"
+                                                                rx="6.56355"
                                                                 transform="translate(15.2019,6.88946) translate(-14.8162,-6.56355)" />
                                                             <rect id="bee-Rectangle-Copy-7-5" width="29.6325"
                                                                 height="12.5416" rx="6.27078"
@@ -304,8 +360,7 @@
                                         </g>
                                         <g transform="translate(112.695,185.347) translate(-112.695,-199.854)"
                                             style="animation: 3.9s linear infinite both bee-a2_t;">
-                                            <g id="bee-body"
-                                                transform="translate(105.5,147.52) translate(-77.5,-77.5)">
+                                            <g id="bee-body" transform="translate(105.5,147.52) translate(-77.5,-77.5)">
                                                 <ellipse id="bee-Oval-Copy-2" fill="#283138" rx="77.5" ry="77.5"
                                                     transform="translate(77.5,77.5)" />
                                                 <path id="bee-Combined-Shape-7"
@@ -385,8 +440,8 @@
                                                             d="M30.5342,0C30.5566,2.49713,-30.5104,1.82316,-30.5342,0C-30.709,-13.3918,-16.8636,-24.25,0,-24.25C16.8636,-24.25,30.414,-13.3924,30.5342,0Z"
                                                             transform="translate(100.299,0) scale(1,1.3) translate(0.000815516,24.25)" />
                                                     </g>
-                                                    <ellipse id="bee-Oval-4" stroke="#336775" stroke-width="6"
-                                                        rx="40.5" ry="40.5" transform="translate(79.5,43.5)" />
+                                                    <ellipse id="bee-Oval-4" stroke="#336775" stroke-width="6" rx="40.5"
+                                                        ry="40.5" transform="translate(79.5,43.5)" />
                                                     <ellipse id="bee-Oval-Copy-4" stroke="#336775" stroke-width="6"
                                                         rx="40.5" ry="40.5" transform="translate(169.5,43.5)" />
                                                     <path id="bee-Path-4"
@@ -404,8 +459,7 @@
                                     <g id="bee-leg-m-l" transform="translate(212.5,329.75) translate(-9.5,-54.25)">
                                         <path id="bee-leg2"
                                             d="M9,98.5L14,98.5C16.7614,98.5,19,100.739,19,103.5C19,106.261,16.7614,108.5,14,108.5L0,108.5L0,108.5L0,107.5C0,102.529,4.02944,98.5,9,98.5Z"
-                                            fill="#283138"
-                                            transform="translate(9.5,103.5) translate(-9.5,-103.5)" />
+                                            fill="#283138" transform="translate(9.5,103.5) translate(-9.5,-103.5)" />
                                     </g>
                                 </g>
                             </g>
@@ -423,8 +477,7 @@
                             <path d="M0,0L0,-61.2126L0,-104.133" stroke="#283138" fill="none" stroke-width="5"
                                 stroke-linecap="round" stroke-linejoin="round" transform="translate(2.17979,95)"
                                 style="animation: 3.9s linear infinite both bee-a7_d;" />
-                            <g transform="translate(0.5,96.5)"
-                                style="animation: 3.9s linear infinite both bee-a8_t;">
+                            <g transform="translate(0.5,96.5)" style="animation: 3.9s linear infinite both bee-a8_t;">
                                 <path id="bee-leg4"
                                     d="M9,100L14,100C16.7614,100,19,102.239,19,105C19,107.761,16.7614,110,14,110L0,110L0,110L0,109C0,104.029,4.02944,100,9,100Z"
                                     fill="#283138" transform="translate(0,0) scale(-1,1) translate(-19,-105)"
@@ -436,8 +489,8 @@
                 <div class="result"></div>
                 <button class="restart">다시 도전하기</button>
             </div>
-            <!-- sbg__wrap -->
         </div>
+        <!-- sbg__wrap -->
     </div>
     <!-- search Game -->
     <!-- modal -->
@@ -445,11 +498,7 @@
         <div class="modal__btn">소스 보기</div>
         <div class="modal__cont">
             <div class="modal__box">
-                <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
-                    <iframe src="https://github1s.com/thdtjdgml415/coding2/blob/main/class/index.html"
-                        frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                    </iframe>
-                </div>
+
             </div>
             <div class="modal__close">
                 <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
@@ -463,7 +512,6 @@
     </div>
     <!-- footer -->
     <script src="../../assets/js/highlight.min.js"></script>
-    <script src="../../assets/js/common.js"></script>
     <script>
         hljs.highlightAll();
     </script>
@@ -510,7 +558,7 @@
             const now = new Date();
             clock.textContent = new Date();
             let s = (now.getSeconds() < 10) ? `0${now.getSeconds()}` : now.getSeconds();
-            let h = (now.getHours() < 10) ? `0${(now.getHours()-12)}` : now.getHours();
+            let h = (now.getHours() < 10) ? `0${(now.getHours() - 12)}` : now.getHours();
             const nowTime = now.getFullYear() + "년 " + now.getMonth() + "월 " + now.getDate() + "일 " + h + "시 " + now.getMinutes() + "분 " + s + "초";
 
             clock.innerText = nowTime;
