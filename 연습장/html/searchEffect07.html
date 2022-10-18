@@ -7,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>검색 이펙트07</title>
 
-    <link rel="stylesheet" href="../../assets/css/search.css">
-    <link rel="stylesheet" href="../../assets/css/dracula.css">
-    <link rel="stylesheet" href="../../assets/css/beeanimation.css">
-    <link rel="stylesheet" href="../../assets/css/bg.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/dracula.css">
+    <link rel="stylesheet" href="../css/beeanimation.css">
 
     <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
@@ -135,7 +134,7 @@
 </code></pre>
                         </div>
                         <div>
-<pre><co    de class="language-css">:root {
+                            <pre><co    de class="language-css">:root {
     --htmlColor : #223547;
     --cssColor : #472222;
     --javascriptColor : #224736;
@@ -578,7 +577,7 @@ li {
 </code></pre>
                         </div>
                         <div>
-<pre>   <code class="language-html">    &lt;main id="main"&gt;
+                            <pre>   <code class="language-html">    &lt;main id="main"&gt;
     &lt;div class="search__wrap"&gt;
         &lt;span&gt;charAt()를 이용하여 검색하기&lt;/span&gt;
         &lt;h1&gt;CSS 속성 검색하기&lt;/h1&gt;
@@ -667,7 +666,8 @@ li {
                             fill="white" stroke="#786CFF" stroke-linecap="round" />
                     </svg>
                 </span>
-                <audio id="audio" src="../../assets/audio/Virtual Roaming Charges - half.cool.mp3" loop="loop"></audio>
+                <audio id="audio" src="../../javascript/assets/audio/Virtual Roaming Charges - half.cool.mp3"
+                    loop="loop"></audio>
             </div>
             <span>CSS 속성 검색 이벤트</span>
             <h1><a href="searchEffect.html">2분 동안 CSS 속성 검색하기</a></h1>
@@ -1463,102 +1463,96 @@ li {
             { num: 382, name: 'z-index', desc: ' 엘리먼트의 겹쳐지는 순서를 지정한다.' },
         ];
 
-        const searchTime = document.querySelector(".time span"); //타이머
-        const searchList = document.querySelector(".search__list");
-        const searchAnswers = document.querySelector(".search__answers");
-        const searchMissAnswers = document.querySelector(".search__missAnswers");
-        const searchStart = document.querySelector(".search__box .start");
-        const searchInput = document.querySelector(".search__box #search");
-        const searchAudio = document.querySelector('#audio');
-        const audioStartBtn = document.querySelectorAll(".search__audio span");
-        const searchInfo = document.querySelector(".search__info .now") //현재 맞춘 갯수
-        let searchInfoAll = document.querySelector(".search__info .num") //전체 갯수
-        const searchResult = document.querySelector(".search__result .result");
-        const searchResultWrap = document.querySelector(".search__result");
-        const searchRestart = document.querySelector(".search__result .restart");
-        const musicStop = document.querySelector(".search__audio .stop");
+        const searchList = document.querySelector(".search__list"); //리스트 출력
+        const searchStart = document.querySelector(".search__box .start") //시작 버튼
+        const searchInput = document.querySelector(".search__box #search") //인풋박스 입력
+        const searchAnswers = document.querySelector(".search__answers"); //정답
+        const searchMissAnswer = document.querySelector(".search__missAnswers"); //오답
+        const searchTime = document.querySelector(".time")   //타이머
+        const correctList = document.querySelector(".search__info .now"); //맞춘 정답  
+        const ListAll = document.querySelector(".search__info .num"); //전체 속성 갯수  
+        const searchResult = document.querySelector(".search__result"); //애니메이션 묶음
+        const Result = document.querySelector(".search__result .result"); //애니메이션
+        const searchRestart = document.querySelector(".search__result .restart"); //재시작 버튼
+        const musicStop = document.querySelector(".search__audio .stop"); //노래 멈춤
+        const musicPlay = document.querySelector(".search__audio .play"); //노래 시작
+        const music = document.querySelector(".search__audio #audio")
 
+        let timeReamining = 10,//남은시간
+            timeInterval = "", //시간간격
+            answers = {},//새로운 답
+            score = 0;//맞춘 갯수
 
-        let timeReamining = 10, //남은 시간
-            timeInterval = "", //시간 간격   
-            score = 0,   //점수
-            answers = {}; //새로운 정답
-
-        searchInfoAll.innerHTML = cssProperty.length;
-
+            ListAll.innerHTML = cssProperty.length;
+       
+        //리스트 출력
         function updateList() {
             cssProperty.forEach(data => {
-                searchList.innerHTML += `<span>${data.name}</span>`;
+                searchList.innerHTML += `<span>${data.name}</span>`
             })
         }
         updateList()
 
-        //게임 시작하기
+        //퀴즈 스타트
         function startQuiz() {
 
-            //시작버튼 없애기 & 속성 리스트 없애기
+            //시작버튼 없애기 & 속성리스트 없애기
             searchStart.style.display = "none";
             searchList.style.display = "none";
 
-            //다시 시작할 때, 기존 데이터 초기화
+            //다시 시작할 때 기존 데이터 초기화
+            searchMissAnswer.style.display = "none";
             searchAnswers.style.display = "none";
-            searchMissAnswers.style.display = "none";
 
-            //시간 설정
-            timeInterval = setInterval(reduceTime, 1000);
+            timeInterval = setInterval(reduceTime, 1000); //1초마다 시간이 줄어들도록 함
 
-
-            // 음악 추가하기
-            musicStop.style.display = "block";
-            searchAudio.play();
-
-
-            //점수 계산
+            //노래 시작
+            musicPlay.style.display="block";
+            music.play();
 
             //정답 체크
-            checkAnswers();
-
-
+            checkAnswer()
         }
+
         //인풋 체크하기
         function checkInput() {
             let input = event.currentTarget.value.trim().toLowerCase();
 
             if (answers.hasOwnProperty(input) && !answers[input]) {
                 answers[input] = true;
-                score++;
+                score++
+                correctList.innerHTML = score;
 
                 //정답 표시
                 searchAnswers.style.display = "block";
                 searchAnswers.innerHTML += `<span>${input}</span>`;
-                searchInfo.innerHTML = `${score}`
 
-                //정답 초기화
+                //정답 초기화 
                 searchInput.value = "";
-
             }
         }
 
-        //정답 체크하기 : 정답을 객체 파일로 만들기
-        function checkAnswers() {
+        //정답 체크하기 : 정답을 객체 파일로
+        function checkAnswer() {
             cssProperty.forEach(item => {
                 let answer = item.name.trim().toLocaleLowerCase();
                 answers[answer] = false;
-            });
+            })
         }
 
         //오답 보여주기
-        function missAnswers() {
+        function missAnswer() {
+            searchMissAnswer.style.display = "block";
 
-            searchMissAnswers.style.display = "block";
             cssProperty.forEach(item => {
                 let answer = item.name.trim().toLocaleLowerCase();
                 if (!answers[answer]) {
-                    searchMissAnswers.innerHTML += `<span>${answer}</span>`
+                    searchMissAnswer.innerHTML += `<span>${answer}</span>`
                 }
             });
         }
-        //시간 설정하기
+
+        //시간 출력하기
         function reduceTime() {
             timeReamining--;
 
@@ -1567,7 +1561,7 @@ li {
             searchTime.innerText = displayTime();
         }
 
-        //시간 표시하기
+        //시간 체크 
         function displayTime() {
             if (timeReamining <= 0) {
                 return "0:00";
@@ -1575,70 +1569,57 @@ li {
                 let minutes = Math.floor(timeReamining / 60);
                 let seconds = timeReamining % 60;
 
-                //초가 단위가 한자리 수 일 떄 0을 추가
+                //초가 한자리 수 일때 0을 추가
                 if (seconds < 10) seconds = "0" + seconds;
                 return minutes + ":" + seconds;
             }
         }
 
-        //게임 끝났을 때
         function endQuiz() {
-            // alert("게임이 끝났습니다!")
-
-            //시작 버튼 만들기
+            //시작버튼 생기기
             searchStart.style.display = "block";
             searchStart.style.pointerEvents = "none";
 
             //오답 보여주기
-            missAnswers();
-
-            //음악 끄기
-            searchAudio.pause();
-            musicStop.style.display = "none";
-            document.querySelector(".search__audio .play").style.display = "none";
+            missAnswer()
 
             //시간 정지
-            clearInterval(timeInterval);
+            clearInterval(timeInterval)
 
-            //메세지 출력
-            searchResultWrap.classList.add('show')
+            //메세지 보여주기
+            searchResult.classList.add('show');
             let point = Math.round((score / cssProperty.length) * 100);
-            searchResult.innerHTML = `게임이 끝났습니다.<br> 당신은  ${cssProperty.length}개중에  ${score}개를 맞추었습니다. <br> 당신의 점수는 ${point} 입니다.`;
+            Result.innerHTML = `게임이 끝났습니다. <br> 당신은 ${cssProperty.length}중에 ${score}개 맞았습니다. <br>점수는 ${point}입니다.`;
+
 
         }
-
         //다시 시작하기
         function restart() {
-                searchResultWrap.classList.remove('show')
-                timeReamining = 120;
-                score = 0;  
-                searchInfo.innerHTML = ""; //데이터 초기화
-                searchStart.style.display = "none";
-                searchList.style.display = "none";
-                searchAnswers.innerHTML = "";
-                //음악 다시시작
-                searchAudio.play()
-                startQuiz();
+            searchResult.classList.remove('show');
+            timeReamining = 120;
+            score = 0;
+            correctList.innerHTML = "0";
+            searchStart.style.display = "none";
+            searchList.style.display = "none";
+            startQuiz();
         }
 
         //버튼 이벤트
         searchStart.addEventListener("click", startQuiz);
-        searchInput.addEventListener("input", checkInput); //글 입력 감지
-        searchRestart.addEventListener("click", restart); //재시작
+        searchInput.addEventListener("input", checkInput);
+        searchRestart.addEventListener("click", restart);
 
-
-        // 음악 정지눌렀을 때 
-        musicStop.addEventListener("click", () => {
-            searchAudio.pause();
-            musicStop.style.display = "none";
-            document.querySelector(".search__audio .play").classList.add("show");
-            document.querySelector(".search__audio .play").style.display = "block";
-        })
-        const musicPlay = document.querySelector(".search__audio .play").addEventListener("click", () => {
-            searchAudio.play();
+        musicPlay.addEventListener("click", () => {
+            music.play();
             musicStop.style.display = "block";
-            document.querySelector(".search__audio .play").style.display = "none";
+            musicPlay.style.display = "none";
         })
+        musicStop.addEventListener("click", () => {
+            music.pause();
+            musicPlay.style.display = "block";
+            musicStop.style.display = "none";
+        })
+
     </script>
 
 </body>
