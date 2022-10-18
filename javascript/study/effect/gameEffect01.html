@@ -45,68 +45,6 @@
         <div class="agent"></div>
     </footer>
     <!-- music player -->
-    <div class="music__wrap">
-        <div class="music__inner">
-            <div class="music__header">
-                <div>*</div>
-                <h2>Music player</h2>
-                <div>*</div>
-            </div>
-            <div class="music__contents">
-                <div class="music__view">
-                    <div class="img">
-                        <img src="../../assets/img/musicbg01.png" alt="song">
-                    </div>
-                    <div class="title">
-                        <h3>Fluffing a Duck</h3>
-                        <p>youtube music</p>
-                    </div>
-                </div>
-                <div class="music__control">
-                    <div class="progress">
-                        <div class="bar">
-                            <audio id="main-audio" src="../assets/audio/Music_audio01.mp3"></audio>
-                        </div>
-                        <div class="timer">
-                            <span class="current"></span>
-                            <span class="duration"></span>
-                        </div>
-                    </div>
-                    <div class="music__volume">
-                        <img src="../../assets/img/volume.png" alt="">
-                        <audio id="volume" src="../../assets/audio/Music_audio01.mp3"></audio>
-                        <input type="range" id="volume_control" min="0" max="10">
-                    </div>
-                    <div class="control">
-                        <i title="전체반복" class="repeat" id="control-repeat"></i>
-                        <!-- <i title="한곡 반복" class="repeat_one"></i> -->
-                        <!-- <i title="랜덤 재생" class="shuffle"></i> -->
-                        <i title="이전곡 재생" class="prev" id="control-prev"></i>
-                        <div>
-                            <i title="재생" class="play" id="control-play"></i>
-                            <!-- <i title="정지" class="stop"></i> -->
-                        </div>
-                        <i title="다음곡 재생" class="next" id="control-next"></i>
-                        <i title="재생목록" class="list" id="control-list"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="music__footer">
-                <div class="music__list">
-                    <h3><span class="list"></span>뮤직리스트</h3>
-                    <div class="closeList"></div>
-                    <ul>
-                        <!-- <li>
-                            <strong>제목</strong>
-                            <em>아티스트</em>
-                            <span>재생시간</span>
-                        </li> -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //music player -->
     <div class="search__wrap">
         <div class="search__audio">
             <span class="play">
@@ -126,7 +64,8 @@
                         fill="white" stroke="#786CFF" stroke-linecap="round" />
                 </svg>
             </span>
-            <audio id="audio" src="../../assets/audio/Virtual Roaming Charges - half.cool.mp3" loop="loop"></audio>
+            <audio id="audio" src="../../javascript/assets/audio/Virtual Roaming Charges - half.cool.mp3"
+                loop="loop"></audio>
         </div>
         <span>CSS 속성 검색 이벤트</span>
         <h1><a href="searchEffect.html">2분 동안 CSS 속성 검색하기</a></h1>
@@ -134,7 +73,7 @@
             2분 동안 CSS 속성을 많이 검색하면 점수가 올라갑니다.<br />
             힌트보기는 한번 이용할 수 있습니다.
         </p>
-        <div class="time">
+        <div class="timer">
             <span>2:00</span>
         </div>
 

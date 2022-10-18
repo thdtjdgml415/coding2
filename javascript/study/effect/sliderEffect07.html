@@ -24,8 +24,7 @@
             position: relative;
             width: 800px;
             height: 600px;
-            z-index: -1;
-            /* overflow: hidden; */
+            overflow: hidden;
         }
 
         .slider__inner {
@@ -185,11 +184,12 @@
             border-right: 10px solid transparent;
             border-top: 10px solid transparent;
             border-bottom: 10px solid transparent;
-      
+            display: none;
+
         }
 
         .slider__dot .play.show {
-            display: block;
+            display: inline-block;
         }
 
         .slider__dot .stop {
@@ -198,10 +198,11 @@
             height: 20px;
             vertical-align: -5px;
             position: relative;
+            display: none;
         }
 
         .slider__dot .stop.show {
-            display: block;
+            display: inline-block;
         }
 
         .slider__dot .stop::before {
@@ -631,19 +632,34 @@ setInterval(sliderEffect, 2000);
             clearInterval(sliderTimer);
         }
 
+
         function imgClone() {
             sliderInner.appendChild(cloneFirst);
             sliderInner.insertBefore(cloneLast, sliderFirst); //인자값이 어디에 복사될건지 조건을 적어야함
         }
 
-        function creatDot() {
+        function creatDot(index) {
             for (let i = 0; i < sliderLength; i++) {
-                dotIndex += `<a href="#" class="dot">이미지${i}</a>`;
+                dotIndex += `<a href="#" class="dot">이미지</a>`;
             }
             dotIndex += "<a href='#' class='play'></a>";
+            dotIndex += "<a href='#' class='stop show'></a>";
             sliderDot.innerHTML = dotIndex;
             sliderDot.firstElementChild.classList.add('active');
+
         }
+
+        document.querySelector(".play").addEventListener("click", () => {
+            document.querySelector('.play').classList.remove('show');
+            document.querySelector('.stop').classList.add('show');
+            autoPlay();
+        });
+        document.querySelector(".stop").addEventListener("click", () => {
+            document.querySelector('.play').classList.add('show');
+            document.querySelector('.stop').classList.remove('show');
+            stopPlay();
+        });
+
 
         function gotoSlider(index) {
             sliderInner.classList.add("transition");
@@ -674,17 +690,11 @@ setInterval(sliderEffect, 2000);
             let nextIndex = currentIndex + 1;
             gotoSlider(nextIndex)
         });
-        
-        document.querySelector(".play").addEventListener("click", () => {
-            
-        }); 
-        document.querySelector(".stop").addEventListener("click", () => {
-            
-        }); 
+
 
         sliderInner.addEventListener("mouseenter", stopPlay); //마우스 오버되면 슬라이드 멈춤
         sliderInner.addEventListener("mouseleave", autoPlay); //마우스 나오면 다시 시작
-        sliderInner.addEventListener("transitionend", checkIndex); 
+        sliderInner.addEventListener("transitionend", checkIndex); //
     </script>
 </body>
 
