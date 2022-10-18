@@ -25,7 +25,7 @@
             width: 800px;
             height: 600px;
             z-index: -1;
-            overflow: hidden;
+            /* overflow: hidden; */
         }
 
         .slider__inner {
@@ -596,8 +596,8 @@ setInterval(sliderEffect, 2000);
         const sliderBtn = document.querySelector(".slider__btn");//슬라이드 버튼
         const sliderBtnPrev = document.querySelector(".slider__btn .prev");          //왼쪽 버튼
         const sliderBtnNext = document.querySelector(".slider__btn .next");          //오른쪽 버튼
-        const sliderBtnPlay = document.querySelector(".slider__dot .play");          //플레이 버튼
-        const sliderBtnStop = document.querySelector(".slider__dot .stop");          //정지 버튼
+        // const sliderBtnPlay = document.querySelector(".slider__dot .play");          //플레이 버튼
+        // const sliderBtnStop = document.querySelector(".slider__dot .stop");          //정지 버튼
 
 
         let currentIndex = 0, //현재이미지
@@ -676,14 +676,12 @@ setInterval(sliderEffect, 2000);
         });
         
         document.querySelector(".play").addEventListener("click", () => {
-            if(document.querySelector(".play"))
-            sliderBtnPlay.classList.remove('show');
-            sliderBtnStop.classList.add('show');
+            
         }); 
 
-        sliderInner.addEventListener("mouseleave", autoPlay); //마우스 나오면 다시 시작
         sliderInner.addEventListener("mouseenter", stopPlay); //마우스 오버되면 슬라이드 멈춤
-        sliderInner.addEventListener("transitionend", checkIndex);
+        sliderInner.addEventListener("mouseleave", autoPlay); //마우스 나오면 다시 시작
+        sliderInner.addEventListener("transitionend", checkIndex); 
     </script>
 </body>
 
