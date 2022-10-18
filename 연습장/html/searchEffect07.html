@@ -645,7 +645,7 @@ li {
             </div>
         </div>
     </section>
-    <!-- section -->
+    <!-- modal -->
     <main id="main">
         <div class="search__wrap">
             <div class="search__audio">
@@ -1609,6 +1609,7 @@ li {
         searchInput.addEventListener("input", checkInput);
         searchRestart.addEventListener("click", restart);
 
+        //음악 클릭
         musicPlay.addEventListener("click", () => {
             music.play();
             musicStop.style.display = "block";

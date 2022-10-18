@@ -1,5 +1,5 @@
         // 모달
-        const modalBtn = document.querySelector(".modal__btn");
+        const modalBtn   = document.querySelector(".modal__btn");
         const modalClose = document.querySelector(".modal__close");
         const modalCont = document.querySelector(".modal__cont")
 
