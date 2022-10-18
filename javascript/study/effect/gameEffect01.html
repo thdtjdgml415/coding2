@@ -26,7 +26,7 @@
     </div>
     <div class="icon2">
         <img src="../../assets/img/gameMovie.png" alt="">
-        <span>Movie</span>
+        <span>서치게임</span>
     </div>
     <div class="icon3">
         <img src="../../assets/img/gameREADing.png" alt="">
@@ -113,9 +113,9 @@
         <div class="modal__cont">
             <div class="modal__box">
                 <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
-                    <!-- <iframe src="https://github1s.com/thdtjdgml415/coding2/blob/main/class/index.html"
+                    <iframe src="https://github1s.com/thdtjdgml415/coding2/blob/main/class/index.html"
                         frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                    </iframe> -->
+                    </iframe>
                 </div>
             </div>
             <div class="modal__close">
@@ -146,24 +146,24 @@
         }
         window.addEventListener("mousemove", mouseMove);
         $(".icon1").draggable({
-            // drag: function () {
-            //     $("mouse__cursor img").attr("src", "../../assets/img/cursorcluster.png")
-            // },
+            drag: function () {
+                $(".mouse__cursor img").attr("src", "../assets/img/cursorcluster.png")
+            },
         });
         $(".icon2").draggable({
-            // drag: function () {
-            //     $("mouse__cursor img").attr("src", "../../assets/img/cursorcluster02.png")
-            // },
+            drag: function () {
+                $(".mouse__cursor img").attr("src", "../../assets/img/cursorcluster01.png")
+            },
         });
         $(".icon3").draggable({
-            // drag: function () {
-            //     $(".mouse__cursor img").attr("src", "../../assets/img/cursorcluster03.png")
-            // },
+            drag: function () {
+                $(".mouse__cursor img").attr("src", "../../assets/img/cursorcluster02.png")
+            },
         });
         $(".icon4").draggable({
-            // drag: function () {
-            //     $("mouse__cursor img").attr("src", "../../assets/img/cursorcluster04.png")
-            // },
+            drag: function () {
+                $(".mouse__cursor img").attr("src", "../../assets/img/cursorcluster04.png")
+            },
         });
         $(".music__wrap").draggable()
         function printTime() {

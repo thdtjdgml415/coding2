@@ -39,6 +39,7 @@
   border-radius: 0.5rem;
   box-shadow: 0 10px 20px -5px hsl(180deg 2% 10%);
   transform: scale(0);
+  display: none;
  
 }
 .modal__box .title {
@@ -173,6 +174,7 @@ iframe {
 .modal__cont.show .modal__box {
   /*스크립트 배경*/
   animation: zoomOut 0.5s 1s ease forwards; /*초를 두개써서딜레이를 줄 수 있다*/
+  display: block;
 }
 
 .modal__cont.show .modal__close {

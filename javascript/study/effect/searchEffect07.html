@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../assets/css/search.css">
     <link rel="stylesheet" href="../../assets/css/dracula.css">
     <link rel="stylesheet" href="../../assets/css/beeanimation.css">
+    <link rel="stylesheet" href="../../assets/css/bg.css">
 
     <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
@@ -1471,7 +1472,7 @@ li {
         const searchAudio = document.querySelector('#audio');
         const audioStartBtn = document.querySelectorAll(".search__audio span");
         const searchInfo = document.querySelector(".search__info .now") //현재 맞춘 갯수
-        const searchInfoAll = document.querySelector(".search__info .num") //전체 갯수
+        let searchInfoAll = document.querySelector(".search__info .num") //전체 갯수
         const searchResult = document.querySelector(".search__result .result");
         const searchResultWrap = document.querySelector(".search__result");
         const searchRestart = document.querySelector(".search__result .restart");
@@ -1610,11 +1611,11 @@ li {
         function restart() {
                 searchResultWrap.classList.remove('show')
                 timeReamining = 120;
-                score = 0;
-                searchInfo = "0"; //데이터 초기화
+                score = 0;  
+                searchInfo.innerHTML = ""; //데이터 초기화
                 searchStart.style.display = "none";
                 searchList.style.display = "none";
-                audioStartBtn.classList.remove('playing')
+                searchAnswers.innerHTML = "";
                 //음악 다시시작
                 searchAudio.play()
                 startQuiz();
