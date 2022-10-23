@@ -7,6 +7,6 @@
   //   "editor.defaultFormatter": "esbenp.prettier-vscode"
   // },
 
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5502
   // "editor.formatOnSave": true
 }

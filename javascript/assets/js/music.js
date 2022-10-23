@@ -120,6 +120,7 @@ musicAudio.addEventListener('timeupdate', (e) => {
     const duration = e.target.duration; //오디오의 총 길이
     let progressWidth = (currentTime / duration) * 100; //전체 길에이서 현재 진행되는 시간을 백분위로 나눔
     musicProgressBar.style.width = `${progressWidth}%`;
+    
     // 전체시간
     musicAudio.addEventListener('loadeddata', () => {
         let audioDuration = musicAudio.duration;
@@ -128,12 +129,14 @@ musicAudio.addEventListener('timeupdate', (e) => {
         if (totalSec < 10) totalSec = `0${totalSec}`; //초가 한 자릿수 일때 앞에 0을 붙임
         musicProgressDuration.innerText = `${totalMin}:${totalSec}`; //완성된 시간 문자열을 출력
     });
+
     // 진행시간
     let currentMin = Math.floor(currentTime / 60);
     let currentSec = Math.floor(currentTime % 60);
     if (currentSec < 10) currentSec = `0${currentSec}`;
     musicProgressCurrent.innerText = `${currentMin}:${currentSec}`;
 });
+
 // 진행버튼 클릭
 musicProgress.addEventListener('click', (e) => {
     let progressWidth = musicProgress.clientWidth; // 진행바 전체 길이
@@ -141,6 +144,7 @@ musicProgress.addEventListener('click', (e) => {
     let songDuration = musicAudio.duration; // 오디오 전체 길이
     musicAudio.currentTime = (clickedOffsetX / progressWidth) * songDuration; // 백분위로 나눈 숫자에 다시 전체 길이를 곱하여 현재 재생값으로 바꾼다.
 });
+
 // 반복 버튼 클릭
 musicRepeat.addEventListener('click', () => {
     let getAttr = musicRepeat.getAttribute('class');
