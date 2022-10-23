@@ -12,6 +12,7 @@
   max-height: calc(100vh - 210px);
   overflow-y: auto;
   display: none;
+  position: relative;
 }
 
 .search__wrap.show {
@@ -22,6 +23,18 @@
   font-size: 20px;
   margin-bottom: 20px;
   display: inline-block;
+  color: #fff;
+}
+.search__wrap .closeGame {
+  background-image: url(../img/musicbutton.svg);
+  position: absolute;
+  background: #fff;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
 
 .search__wrap>h1 a {

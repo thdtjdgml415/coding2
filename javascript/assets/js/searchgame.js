@@ -578,3 +578,11 @@ document.querySelector(".icon2").addEventListener("click", ()=>{
     searchWrap.classList.toggle("show");
 })
 
+//게임 끄기
+const closeBtn = document.querySelector(".closeGame");
+
+closeBtn.addEventListener('click', ()=>{
+    searchWrap.classList.remove('show')
+})
+
+
